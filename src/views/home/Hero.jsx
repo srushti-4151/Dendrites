@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-[133px] lg:items-start justify-center z-10 px-4">
+        <div className="absolute inset-0 flex items-end lg:top-36 lg:items-start justify-center z-10 px-4">
           <div className="max-w-[1410px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
@@ -98,7 +98,7 @@ const Hero = () => {
             <img src={mainline} alt="" srcset="" />
           </div>
           <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-40 lg:h-40 rounded-full flex justify-center items-center cursor-pointer">
-            <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-[145px] lg:h-[145px] rounded-full flex justify-center items-center">
+            <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-50 lg:h-50 rounded-full flex justify-center items-center">
               <div className="text-center ">
                 <div className="hidden lg:flex justify-center">
                   {timeMarketSVG}
@@ -110,8 +110,8 @@ const Hero = () => {
             </div>
           </div>
           <div className="h-[1px] w-10 bg-[#80acd3] mb-20"></div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[165px] lg:h-[165px] rounded-full flex justify-center items-center cursor-pointer">
-            <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-[145px] lg:h-[145px] rounded-full flex justify-center items-center">
+          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-40 lg:h-40 rounded-full flex justify-center items-center cursor-pointer">
+            <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-50 lg:h-50 rounded-full flex justify-center items-center">
               <div className="text-center ">
                 <div className="hidden lg:flex justify-center">
                   {customizedSolutionsSVG}
@@ -123,8 +123,8 @@ const Hero = () => {
             </div>
           </div>
           <div className="h-[1px] w-10 bg-[#80acd3] mb-20"></div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[165px] lg:h-[165px] rounded-full flex justify-center items-center cursor-pointer">
-            <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-[145px] lg:h-[145px] rounded-full flex justify-center items-center">
+          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-40 lg:h-40 rounded-full flex justify-center items-center cursor-pointer">
+            <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-50 lg:h-50 rounded-full flex justify-center items-center">
               <div className="text-center ">
                 <div className="hidden lg:flex justify-center">
                   {innovationDriverSVG}

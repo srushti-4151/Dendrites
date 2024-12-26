@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/zeta-logo.svg";
+// import logo from "../assets/zeta-logo.svg";
+import logo from "../assets/dendrites-Trimmed-removebg-preview.png";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import { closeModal, openModal } from "../redux/ModalSlice";
@@ -87,7 +88,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex gap-5">
+            {/* <div className="flex gap-5">
               <div>
                 <Link className="text-[#a7b8b8] font-bold text-[13px] hover:text-white duration-300 br-[20px]">
                   DE
@@ -98,7 +99,7 @@ const Navbar = () => {
                   EN
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -116,7 +117,7 @@ const Navbar = () => {
           <div className="flex justify-between gap-20 items-center p-2 lg:p-0 px-6">
             {/* Logo Section */}
             <Link to="/" className="">
-              <img src={logo} className="w-[138px]" alt="Zeta Logo" />
+              <img src={logo} className="w-72 h-8 bg-transparent" alt="Zeta Logo" />
             </Link>
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex justify-center items-center gap-14 py-4">

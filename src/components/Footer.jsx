@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/zeta-logo.svg";
+import logo from "../assets/dendrites-Trimmed-removebg-preview.png";
 import { FaAngleDown, FaArrowRightLong } from "react-icons/fa6";
 import { IoCallOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
@@ -115,7 +115,7 @@ const Footer = () => {
           <div>
             <img
               src={logo}
-              className="w-[160px] cursor-pointer"
+              className="w-64 h-6 cursor-pointer"
               alt="Zeta Logo"
             />
           </div>

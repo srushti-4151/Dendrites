@@ -49,7 +49,7 @@ const HomeAnimatedSection = () => {
       );
       const svg = document.querySelector("#solution-bg");
       const animationElement = document.querySelector(
-        ".rsce_solutionpath .animation"
+        ".waypoint-box .scroll-wave"
       );
 
       if (!animationElement) return;
@@ -95,7 +95,7 @@ const HomeAnimatedSection = () => {
         //   svg.pauseAnimations();
         //   svg.setCurrentTime(Math.min(9.999, scrollPercentage * 10));
         // } else {
-        const cursor = document.querySelector("#solution-cursor");
+        const cursor = document.querySelector("#actioncursor");
         const pt = path.getPointAtLength(scrollPercentage * pathLen);
         const ptNext = path.getPointAtLength(scrollPercentage * pathLen + 0.01);
         const angleDeg =
@@ -117,7 +117,7 @@ const HomeAnimatedSection = () => {
       pathColor.style.strokeDashoffset = `${pathLen * (1 - scrollPercentage)}`;
     };
 
-    const rsceSolutionPointsToggle = () => {
+    const rsceSolutionnumboxsToggle = () => {
       const svg = document.getElementById("solution-bg");
       if (!svg) return;
 
@@ -125,14 +125,14 @@ const HomeAnimatedSection = () => {
       const cursor =
         isFirefox ||
         !("setCurrentTime" in svg && typeof svg.setCurrentTime === "function")
-          ? document.getElementById("solution-cursor2")
-          : document.getElementById("solution-cursor");
+          ? document.getElementById("actioncursor2")
+          : document.getElementById("actioncursor");
 
       if (!cursor) return;
 
-      const points = svg.querySelectorAll(".point");
+      const numboxs = svg.querySelectorAll(".point");
 
-      points.forEach((svgPoint) => {
+      numboxs.forEach((svgPoint) => {
         // const pointNo = Array.from(svgPoint.classList).find((cls) => cls.match(/\d+/));
         const tempPointNo = Array.from(svgPoint.classList).find((cls) =>
           cls.match(/\d+/)
@@ -142,10 +142,10 @@ const HomeAnimatedSection = () => {
         if (!pointNo) return;
 
         const point = document.querySelector(
-          `.rsce_solutionpath .points .point[data-point='${pointNo}']`
+          `.waypoint-box .numboxs .point[data-point='${pointNo}']`
         );
         const counter = document.querySelector(
-          `.rsce_solutionpath .counters .counter[data-point='${pointNo}']`
+          `.waypoint-box .numdash .cnumdash[data-point='${pointNo}']`
         );
 
         if (!point || !counter) return;
@@ -163,17 +163,17 @@ const HomeAnimatedSection = () => {
       });
     };
 
-    const positionSolutionPoints = () => {
+    const positionSolutionnumboxs = () => {
       const svg = document.querySelector("#solution-bg");
-      const points = document.querySelectorAll(
-        ".rsce_solutionpath .points .point"
+      const numboxs = document.querySelectorAll(
+        ".waypoint-box .numboxs .point"
       );
 
-      points.forEach((point) => {
+      numboxs.forEach((point) => {
         const pointNo = point.getAttribute("data-point");
         const svgPoint = svg.querySelector(`.point${pointNo}`);
         const counterItem = document.querySelector(
-          `.rsce_solutionpath .counters .point${pointNo}`
+          `.waypoint-box .numdash .point${pointNo}`
         );
 
         if (svgPoint) {
@@ -207,40 +207,40 @@ const HomeAnimatedSection = () => {
     // Attach listeners
     document.addEventListener("scroll", rsceSolutionPathMove);
     window.addEventListener("resize", rsceSolutionPathMove);
-    document.addEventListener("scroll", rsceSolutionPointsToggle);
-    window.addEventListener("resize", positionSolutionPoints);
+    document.addEventListener("scroll", rsceSolutionnumboxsToggle);
+    window.addEventListener("resize", positionSolutionnumboxs);
 
     // Initial calls
     rsceSolutionPathMove();
-    rsceSolutionPointsToggle();
-    positionSolutionPoints();
+    rsceSolutionnumboxsToggle();
+    positionSolutionnumboxs();
 
     // Cleanup on component unmount
     return () => {
       document.removeEventListener("scroll", rsceSolutionPathMove);
       window.removeEventListener("resize", rsceSolutionPathMove);
-      document.removeEventListener("scroll", rsceSolutionPointsToggle);
-      window.removeEventListener("resize", positionSolutionPoints);
+      document.removeEventListener("scroll", rsceSolutionnumboxsToggle);
+      window.removeEventListener("resize", positionSolutionnumboxs);
     };
   }, []);
 
   return (
     <div className="">
       <div
-        className="rsce_solutionpath ce_rsce_solutionpath block overflow-hidden"
+        className="waypoint-box meta_waypoint-box block overflow-hidden"
         id="solutionpath"
       >
-        <div className="wrap">
-          <div className="top">
-            <h2 className="headline">
+        <div className="corezone">
+          <div className="roofdock">
+            <h2 className="metatext">
               <strong>Zeta Solution Path</strong>
             </h2>
-            <div className="subline">
+            <div className="basemeta-text">
               We have developed <strong> a unique solution </strong> for
               implementing your project efficiently and successfully!
             </div>
           </div>
-          <div className="animation">
+          <div className="scroll-wave">
             <div className="background">
               <svg
                 version="1.1"
@@ -555,7 +555,7 @@ M474.5,2211.6c7.4,0,13.5,6,13.5,13.5s-6,13.5-13.5,13.5s-13.5-6-13.5-13.5S467,221
                     />
                   </g>
                 </g>
-                <g id="solution-cursor">
+                <g id="actioncursor">
                   <g>
                     <path
                       style={{ fill: "#80ACD3" }}
@@ -572,7 +572,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </g>
                 </g>
               </svg>
-              <div id="solution-cursor2">
+              <div id="actioncursor2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48.029"
@@ -593,7 +593,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 </svg>
               </div>
             </div>
-            <div className="points">
+            <div className="numboxs">
               <Link 
                 to=""
                 className="point position_right point1 positioned visible"
@@ -636,7 +636,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </figure>
                 </span>
                 <span className="text_container">
-                  <h3 className="headline">Your Vision</h3>
+                  <h3 className="metatext">Your Vision</h3>
                   <span className="text">
                     Everything starts with your idea and from here, we take over
                     the planning and implementation for you!
@@ -650,7 +650,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "361.899px", left: 182 }}
               >
                 <span className="text_container">
-                  <h3 className="headline">Process Solutions</h3>
+                  <h3 className="metatext">Process Solutions</h3>
                   <span className="text">
                     Your process solution from upstream to downstream -
                     everything from a single source!
@@ -734,7 +734,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </figure>
                 </span>
                 <span className="text_container">
-                  <h3 className="headline">CO2 Footprint</h3>
+                  <h3 className="metatext">CO2 Footprint</h3>
                   <span className="text">
                     Whether retrofitting or new planning - optimize the
                     sustainability of your process infrastructure!
@@ -748,7 +748,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "981.898px", left: 473 }}
               >
                 <span className="text_container">
-                  <h3 className="headline">Automation</h3>
+                  <h3 className="metatext">Automation</h3>
                   <span className="text">
                     Increase your production efficiency with our flexible
                     automation solutions!
@@ -832,7 +832,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </figure>
                 </span>
                 <span className="text_container">
-                  <h3 className="headline">Pharma 4.0</h3>
+                  <h3 className="metatext">Pharma 4.0</h3>
                   <span className="text">
                     Get to know the digital twin of your production plant!
                   </span>
@@ -880,7 +880,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </figure>
                 </span>
                 <span className="text_container">
-                  <h3 className="headline">Procurement</h3>
+                  <h3 className="metatext">Procurement</h3>
                   <span className="text">
                     Time-to-market - our procurement strategies shorten your
                     project's duration!
@@ -929,7 +929,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </figure>
                 </span>
                 <span className="text_container">
-                  <h3 className="headline">CQV</h3>
+                  <h3 className="metatext">CQV</h3>
                   <span className="text">
                     From DQ, IQ, OQ to PQ - we ensure your qualification and
                     validation process!
@@ -978,7 +978,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                   </figure>
                 </span>
                 <span className="text_container">
-                  <h3 className="headline">Lifecycle Management</h3>
+                  <h3 className="metatext">Lifecycle Management</h3>
                   <span className="text">
                     You can rely on us - we are by your side 24/7!
                   </span>
@@ -991,7 +991,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "2588.89px", left: "371.336px" }}
               >
                 <span className="text_container">
-                  <h3 className="headline">Magnetic Agitators</h3>
+                  <h3 className="metatext">Magnetic Agitators</h3>
                   <span className="text">
                     Whether from below, above or at an angle - we have the
                     solution for your stirring task!
@@ -1034,15 +1034,15 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 </span>
               </Link>
             </div>
-            <div className="counters">
+            <div className="numdash">
               <div
                 ref={ref1}
-                className="counter position_left point1 positioned visible"
+                className="cnumdash position_left point1 positioned visible"
                 data-point={1}
                 style={{ top: "63.9998px", left: "38.6004px" }}
               >
                 <span
-                  className="count animating"
+                  className="celement animating"
                   data-from={0}
                   data-to={980}
                   style={{ minWidth: "173.562px" }}
@@ -1056,13 +1056,12 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
               <div
                 ref={ref2}
-                className="counter position_right point2 positioned"
+                className="cnumdash position_right point2 positioned"
                 data-point={2}
                 style={{ top: "361.899px", left: 582 }}
               >
-                {/* <span className="count" data-from={0} data-to={1400} style={{ minWidth: '234.125px' }}>0</span> */}
                 <span
-                  className="count"
+                  className="celement"
                   data-from={0}
                   data-to={1400}
                   style={{ minWidth: "234.125px" }}
@@ -1073,13 +1072,13 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
               <div
                 ref={ref3}
-                className="counter position_left point3 positioned"
+                className="cnumdash position_left point3 positioned"
                 data-point={3}
                 style={{ top: "521.934px", left: "352.571px" }}
               >
                 {/* <span className="count" data-from={0} data-to={23500} style={{ minWidth: '284.781px' }}>0</span> */}
                 <span
-                  className="count"
+                  className="celement"
                   data-from={0}
                   data-to={23500}
                   style={{ minWidth: "284.781px" }}
@@ -1094,11 +1093,11 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
               <div
                 ref={ref4}
-                className="counter counter_larger position_right point4 positioned"
+                className="cnumdash counter_larger position_right point4 positioned"
                 data-point={4}
                 style={{ top: "981.898px", left: 873 }}
               >
-                <span className="count">
+                <span className="celement">
                 {inView4 && <CountUp start={0} end={13} duration={1} />}
                 </span>
                 <span className="text">
@@ -1107,11 +1106,11 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
               <div
                 ref={ref5}
-                className="counter position_left point5 positioned"
+                className="cnumdash position_left point5 positioned"
                 data-point={5}
                 style={{ top: "1281.93px", left: "232.571px" }}
               >
-                <span className="count">
+                <span className="celement">
                 {inView5 && <CountUp start={0} end={31} duration={1} />}
                 </span>
                 <span className="text">
@@ -1120,33 +1119,33 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
               <div
                 ref={ref6}
-                className="counter counter_larger position_left point6 positioned"
+                className="cnumdash counter_larger position_left point6 positioned"
                 data-point={6}
                 style={{ top: "1663.93px", left: "38.0714px" }}
               >
-                <span className="count">
+                <span className="celement">
                 0{inView6 && <CountUp start={0} end={3} duration={2} />}
                 </span>
                 <span className="text">Continents</span>
               </div>
               <div
                 ref={ref7}
-                className="counter position_left point7 positioned"
+                className="cnumdash position_left point7 positioned"
                 data-point={7}
                 style={{ top: "2023.28px", left: "180.334px" }}
               >
-                <span className="count">
+                <span className="celement">
                   0{inView7 && <CountUp start={0} end={9} duration={2} />}
                 </span>
                 <span className="text">Countries</span>
               </div>
               <div
                 ref={ref8}
-                className="counter position_left point8 positioned"
+                className="cnumdash position_left point8 positioned"
                 data-point={8}
                 style={{ top: "2261.93px", left: "352.571px" }}
               >
-                <span className="count">
+                <span className="celement">
                 {/* 4.225.781 */}
                 {inView8 && <CountUp start={0} end={42} duration={1.7} />}
                 </span>
@@ -1157,11 +1156,11 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
               <div
                 ref={ref9}
-                className="counter counter_larger position_right point9 positioned"
+                className="cnumdash counter_larger position_right point9 positioned"
                 data-point={9}
                 style={{ top: "2588.89px", left: "771.336px" }}
               >
-                <span className="count">
+                <span className="celement">
                   0{inView9 && <CountUp start={0} end={8} duration={1.7} />}
                 </span>
                 <span className="text">
@@ -1171,14 +1170,14 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
             </div>
           </div>
 
-          <div className="bottom">
+          <div className="depthdock">
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
               }}
             >
-              <figure className="icon">
+              <figure className="symbolwrap">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -1222,20 +1221,20 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 </svg>
               </figure>
             </div>
-            <h3 className="headline">
+            <h3 className="metatext">
               Are you already <strong>convinced of ZETA?</strong>
             </h3>
-            <div className="btn_container">
+            <div className="arraowbtnholder">
               <a
                 href="https://www.zeta.com/en/inquiry.html"
                 target="_SELF"
-                className="button buttonWhiteTransparent"
+                className="button readybutton"
               >
                 <FaArrowRightLong />{" "}
                 <span style={{ maxWidth: "93.7815px" }}>I'm ready!</span>
               </a>
             </div>
-            <div className="readmore-container">
+            <div className="morezone">
               <a
                 className="readmore"
                 href="https://www.zeta.com/en/company/about-zeta.html"
@@ -1245,8 +1244,9 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
             </div>
           </div>
         </div>
-        <div className="zahnraeder">
-          <div className="rt">
+
+        <div className="settingsglyph">
+          <div className="settingsglyph-first">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1351,7 +1351,7 @@ c-32.8-39.7-53-88.3-57.9-139.5H191C196.7,701.6,231.2,784.9,289.1,850.8L289.1,850
               />
             </svg>
           </div>
-          <div className="lm">
+          <div className="settingsglyph-middle">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -1456,7 +1456,7 @@ c-32.8-39.7-53-88.3-57.9-139.5H191C196.7,701.6,231.2,784.9,289.1,850.8L289.1,850
               />
             </svg>
           </div>
-          <div className="rb">
+          <div className="settingsglyph-last">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

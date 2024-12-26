@@ -59,7 +59,7 @@ const Services = () => {
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
-    dispatch(closeModal());
+    dispatch(closeModal()); //close the modal 
   }
 
   return (
@@ -102,6 +102,7 @@ const Services = () => {
         <div className="w-1/2 py-10 group transition">
           <div className="sideshapesvg transition-colors duration-500 text-[#77a7d1] group-hover:text-[#acd6fc]">{sideshape}</div>
           <div className="relative px-16 pl-32 py-36 z-20">
+            <form>
             <div className="flex justify-between mb-10">
               <h3 className="uppercase text-3xl font-bold text-[#00223E] ">
                 Easy Search
@@ -115,6 +116,9 @@ const Services = () => {
               {/* Search Icon */}
               <span className="text-[#00223E] px-2">{SearchIcon}</span>
 
+              {/* input container */}
+              <div className="input-container flex items-center relative w-full">
+
               {/* Label */}
               <label htmlFor="search" className="text-white">
                 Your <strong>search terms</strong>
@@ -124,19 +128,16 @@ const Services = () => {
               <input
                 id="search"
                 type="search"
-                name="s"
-                value=""
                 autoComplete="off"
                 className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
               />
-
+              </div>
               {/* Close Icon */}
               {/* <a href="#close" className="text-white">
                 {CloseSearchIcon}
               </a> */}
 
             </div>
-
             <div className="pt-10 group flex flex-wrap gap-4">
               {[
                 "Cultured Meat",
@@ -155,6 +156,7 @@ const Services = () => {
                 </button>
               ))}
             </div>
+            </form>
           </div>
         </div>
       </div>

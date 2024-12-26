@@ -40,4 +40,39 @@
     z-index: 10;
   }
 
+
+  .input-container {
+    position: relative; /* Set relative positioning for label movement */
+  
+    /* Style for the input field */
+    input {
+      position: relative;
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      color: #ffffff;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+  
+    /* Style for the label */
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      pointer-events: none; /* Make sure label doesn't block input clicks */
+    }
+  
+    /* Move label up on focus or when input is not empty */
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: -10px; /* Move label upward */
+      font-size: 12px; /* Shrink the font size */
+      color: #00bfff; /* Change label color */
+    }
+  }
 }

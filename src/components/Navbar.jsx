@@ -11,20 +11,22 @@ const Navbar = () => {
   const [topValue, setTopValue] = useState(40);
   const dispatch = useDispatch();
   const location = useLocation();
+  const modalContent = useSelector((state) => state.modal.modalContent);
 
   useEffect(() => {
     // Close modal when path changes
-    if (location.pathname !== window.location.pathname) {
+    if (modalContent && location.pathname !== "/") {  // Only close if modalContent exists (it's open)
       dispatch(closeModal());
+      console.log("Modal closed due to path change:", location.pathname);
     }
-  }, [location, dispatch]); 
+    
+  }, [location, dispatch, modalContent]); 
 
   const handleModalOpen = (modalName) => {
-    // Close any existing modal before opening a new one
-    // dispatch(closeModal());  // Close the previously opened modal
-    dispatch(openModal(modalName));  // Open the new modal
+    if (modalContent !== modalName) {  // Open the modal only if it's not already open
+      dispatch(openModal(modalName));
+    }
   }; 
-  
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;

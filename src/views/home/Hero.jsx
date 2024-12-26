@@ -12,10 +12,10 @@ import {
 const Hero = () => {
   return (
     <>
-      <div className="relative bg-[#00223e] rsce_intro">
+      <div className="relative bg-[#00223e] hero_section">
         <div className="background">
-          <div className="zahnrad absolute">{zahnradSVG}</div>
-          <div className="video-container">
+          <div className="SettingIconSvg absolute">{zahnradSVG}</div>
+          <div className="image-carrier">
             <img
               src={landingpageImage}
               alt="landingpageImage"

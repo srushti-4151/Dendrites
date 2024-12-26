@@ -37,7 +37,6 @@ const HomeAnimatedSection = () => {
   const { ref: ref8, inView: inView8 } = useInView({ threshold: 0.5 });
   const { ref: ref9, inView: inView9 } = useInView({ threshold: 0.5 });
 
-
   // const customers = useCountUp(980, 0.9); // Count to 980 in 2 seconds
   // const employees = useCountUp(1400, 2.5); // Count to 1400 in 2.5 seconds
 

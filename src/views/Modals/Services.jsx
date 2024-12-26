@@ -49,7 +49,7 @@ const Services = () => {
       description: "You can rely on us-we are by your side 14/7!",
     },
     {
-      image:   LifecycleManagement,
+      image: LifecycleManagement,
       title: "Lifecycle Management",
       description:
         "You can rely on us-ervices along the entire product life cycle.",
@@ -59,8 +59,8 @@ const Services = () => {
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
-    dispatch(closeModal()); //close the modal 
-  }
+    dispatch(closeModal()); //close the modal
+  };
 
   return (
     <>
@@ -80,9 +80,9 @@ const Services = () => {
                   >
                     {" "}
                     <div className="w-[100px] h-[100px] border border-[#80acd3a1] flex justify-center items-center rounded-full">
-                        <div className="w-[86px] h-[86px] rounded-full flex justify-center items-center group-hover:bg-[#80acd3a1] duration-300">
-                          {service.image}
-                        </div>{" "}
+                      <div className="w-[86px] h-[86px] rounded-full flex justify-center items-center group-hover:bg-[#80acd3a1] duration-300">
+                        {service.image}
+                      </div>{" "}
                     </div>
                     <div className="p-2 pl-6 w-[75%]">
                       <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wide">
@@ -100,62 +100,67 @@ const Services = () => {
         </div>
 
         <div className="w-1/2 py-10 group transition">
-          <div className="sideshapesvg transition-colors duration-500 text-[#77a7d1] group-hover:text-[#acd6fc]">{sideshape}</div>
+          <div className="sideshapesvg transition-colors duration-500 text-[#77a7d1] group-hover:text-[#acd6fc]">
+            {sideshape}
+          </div>
           <div className="relative px-16 pl-32 py-36 z-20">
             <form>
-            <div className="flex justify-between mb-10">
-              <h3 className="uppercase text-3xl font-bold text-[#00223E] ">
-                Easy Search
-              </h3>
-              <button onClick={handleCloseModal} className="text-3xl font-bold text-[#00223E]">
-                  {CloseModalIcon}
-              </button>
-            </div>
-
-            <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
-              {/* Search Icon */}
-              <span className="text-[#00223E] px-2">{SearchIcon}</span>
-
-              {/* input container */}
-              <div className="input-container flex items-center relative w-full">
-
-              {/* Label */}
-              <label htmlFor="search" className="text-white">
-                Your <strong>search terms</strong>
-              </label>
-
-              {/* Search Input */}
-              <input
-                id="search"
-                type="search"
-                autoComplete="off"
-                className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
-              />
-              </div>
-              {/* Close Icon */}
-              {/* <a href="#close" className="text-white">
-                {CloseSearchIcon}
-              </a> */}
-
-            </div>
-            <div className="pt-10 group flex flex-wrap gap-4">
-              {[
-                "Cultured Meat",
-                "Products",
-                "Building Equipment",
-                "ZETA",
-                "Digitalisation",
-              ].map((item, index) => (
+              <div className="flex justify-between mb-10">
+                <h3 className="uppercase text-3xl font-bold text-[#00223E] ">
+                  Easy Search
+                </h3>
                 <button
-                  key={index}
-                  className={`text-lg px-3 py-2 bg-transparent border border-[#0f2550] text-[#153063] rounded-lg transition-colors duration-500
+                  onClick={handleCloseModal}
+                  className="text-3xl font-bold text-[#00223E]"
+                >
+                  {CloseModalIcon}
+                </button>
+              </div>
+
+              <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
+                {/* Search Icon */}
+                <span className="text-[#00223E] px-2">{SearchIcon}</span>
+
+                {/* input container */}
+                <div className="input-container flex items-center relative w-full">
+                  {/* Search Input */}
+                  <input
+                    id="search"
+                    placeholder=" " //do not remove this 
+                    autoComplete="off"
+                    className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                  />
+                  {/* Label */}
+                  <label
+                    htmlFor="search"
+                    className="text-white opacity-50 group-hover:opacity-100 duration-500 tracking-wide"
+                  >
+                    Your <strong>search terms</strong>
+                  </label>
+
+                  <Link className="mr-2 close-button">
+                    {CloseSearchIcon}
+                  </Link>
+                </div>
+              </div>
+              <div className="pt-10 group flex flex-wrap gap-4">
+                {[
+                  "Cultured Meat",
+                  "Products",
+                  "Building Equipment",
+                  "ZETA",
+                  "Digitalisation",
+                ].map((item, index) => (
+                  <button
+                    key={index}
+                    className={`text-lg px-3 py-2 bg-transparent border border-[#0f2550] text-[#153063] rounded-lg transition-colors duration-500
                    group-hover:border-white group-hover:text-white hover:text-[#1c2b47] hover:bg-white  
                     `}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
             </form>
           </div>
         </div>

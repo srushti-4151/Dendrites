@@ -93,11 +93,11 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 hidden  lg:flex items-end z-10 px-4 bottom-[35px] left-64">
+        <div className="absolute inset-0 hidden lg:flex items-end justify-center z-10 px-4 bottom-[35px]">
           <div className="pb-20">
             <img src={mainline} alt="" srcset="" />
           </div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[165px] lg:h-[165px] rounded-full flex justify-center items-center cursor-pointer">
+          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-40 lg:h-40 rounded-full flex justify-center items-center cursor-pointer">
             <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-[145px] lg:h-[145px] rounded-full flex justify-center items-center">
               <div className="text-center ">
                 <div className="hidden lg:flex justify-center">

@@ -751,8 +751,8 @@ export const sideshape = (
 export const SearchIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="19.763"
-    height="19.764"
+    width="17.763"
+    height="17.764"
     viewBox="0 0 19.763 19.764"
   >
     <g transform="translate(1 1)">
@@ -760,7 +760,7 @@ export const SearchIcon = (
         d="M19.921,12.211A7.711,7.711,0,1,1,12.211,4.5,7.711,7.711,0,0,1,19.921,12.211Z"
         transform="translate(-4.5 -4.5)"
         fill="none"
-        stroke="#fff"
+        stroke="#00223E"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -769,7 +769,7 @@ export const SearchIcon = (
         d="M29.168,29.168l-4.193-4.193"
         transform="translate(-11.819 -11.818)"
         fill="none"
-        stroke="#fff"
+        stroke="#00223E"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -788,7 +788,7 @@ export const CloseSearchIcon = (
     <path
       d="M27.518,25.317l-5.137-5.137,5.137-5.137a1.558,1.558,0,1,0-2.2-2.2l-5.137,5.137-5.137-5.137a1.558,1.558,0,0,0-2.2,2.2l5.137,5.137-5.137,5.137a1.506,1.506,0,0,0,0,2.2,1.547,1.547,0,0,0,2.2,0l5.137-5.137,5.137,5.137a1.565,1.565,0,0,0,2.2,0A1.547,1.547,0,0,0,27.518,25.317Z"
       transform="translate(-11.859 -11.76)"
-      fill="#bdd4ea"
+      fill="#fff"
       stroke="none"
       strokeWidth="0"
     ></path>

@@ -1,16 +1,30 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/zeta-logo.svg";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { closeModal, openModal } from "../redux/ModalSlice";
 import { useDispatch, useSelector } from "react-redux";
-import Services from "../views/Modals/Services";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [topValue, setTopValue] = useState(40);
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Close modal when path changes
+    if (location.pathname !== window.location.pathname) {
+      dispatch(closeModal());
+    }
+  }, [location, dispatch]); 
+
+  const handleModalOpen = (modalName) => {
+    // Close any existing modal before opening a new one
+    // dispatch(closeModal());  // Close the previously opened modal
+    dispatch(openModal(modalName));  // Open the new modal
+  }; 
+  
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -39,12 +53,12 @@ const Navbar = () => {
   // ];
 
   const links = [
-    { name: "Services", onClick: () => {console.log("Dispatching openModal for Services"); dispatch(openModal("Services")) }},
-    { name: "Solutions", onClick: () => dispatch(openModal("Solutions")) },
+    { name: "Services", onClick: () => handleModalOpen("Services")},
+    { name: "Solutions", onClick: () => handleModalOpen("Solutions") },
     { name: "Products", path: "/products" },
-    { name: "Innovation", onClick: () => dispatch(openModal("Innovation")) },
-    { name: "Company", onClick: () => dispatch(openModal("Company")) },
-    { name: "Jobs", onClick: () => dispatch(openModal("Jobs")) },
+    { name: "Innovation", onClick: () => handleModalOpen("Services") },
+    { name: "Company", onClick: () => handleModalOpen("Services") },
+    { name: "Jobs", onClick: () => handleModalOpen("Services") },
   ];
 
   return (
@@ -199,11 +213,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
-      {/* Render Modal Based on State */}
-      {/* {activeModal === "Services" && (
-        <Services onClose={() => dispatch(closeModal())} />
-      )} */}
     </>
   );
 };

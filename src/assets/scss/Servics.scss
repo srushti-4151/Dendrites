@@ -1,0 +1,43 @@
+.outer {
+  background: rgba(0, 34, 62, 0.99);
+  width: 100%;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .service-container {
+    padding: 3.5rem 0.5rem 0 1rem;
+    height: 100%;
+  }
+
+  /* Scrollbar modal content */
+  .scrollbar-modal {
+    // max-height: 100vh;
+    margin-top: 49px;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+  }
+  .scrollbar-modal::-webkit-scrollbar {
+    width: 4px;
+    background-color: #79a8d8a1;
+  }
+  .scrollbar-modal::-webkit-scrollbar-thumb {
+    background-color: #79a8d8a1;
+    border-radius: 15px;
+  }
+  .scrollbar-modal::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .sideshapesvg {
+    position: absolute;
+    width: 50vw;
+    height: 800px;
+    top: 0;
+    // top: 50%;
+    z-index: 10;
+  }
+
+}

@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { RouteData } from "./Routes/Routes";
 import LeftButtom from "./views/home/LeftButtom";
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Services from "./views/Modals/Services";
 import Solutions from "./views/Modals/Solutions";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,6 +15,19 @@ function App() {
   const modalContent = useSelector((state) => state.modal.modalContent);
   console.log("Current Modal Content:", modalContent);
 
+  // Disable body scroll when modal is open
+  useEffect(() => {
+    if (modalContent) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Re-enable scrolling
+    }
+
+    // Cleanup on component unmount or when modal content changes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [modalContent]);
 
   // Render the correct modal based on `modalContent`
   const renderModal = () => {
@@ -37,7 +50,7 @@ function App() {
       </Routes>
        {/* Render Modal */}
        {modalContent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+        <div className="fixed inset-0 z-50">
           {renderModal()}
         </div>
       )}

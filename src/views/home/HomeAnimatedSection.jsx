@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+// import MobileHomeAnimation from "./MobileHomeAnimation";
 
 // const useCountUp = (end, duration) => {
 //   const [count, setCount] = useState(0);
@@ -39,7 +40,6 @@ const HomeAnimatedSection = () => {
 
   // const customers = useCountUp(980, 0.9); // Count to 980 in 2 seconds
   // const employees = useCountUp(1400, 2.5); // Count to 1400 in 2.5 seconds
-
 
   useEffect(() => {
     const rsceSolutionPathMove = () => {
@@ -593,14 +593,14 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </div>
             </div>
             <div className="numboxs">
-              <Link 
+              <Link
                 to=""
                 className="point position_right point1 positioned visible"
                 data-point={1}
                 style={{ top: "63.9998px", left: "438.6px" }}
               >
                 <span className="image_container">
-                  <figure> 
+                  <figure>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="25.473"
@@ -1097,7 +1097,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "981.898px", left: 873 }}
               >
                 <span className="celement">
-                {inView4 && <CountUp start={0} end={13} duration={1} />}
+                  {inView4 && <CountUp start={0} end={13} duration={1} />}
                 </span>
                 <span className="text">
                   Global <br /> business <br /> partners
@@ -1110,7 +1110,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "1281.93px", left: "232.571px" }}
               >
                 <span className="celement">
-                {inView5 && <CountUp start={0} end={31} duration={1} />}
+                  {inView5 && <CountUp start={0} end={31} duration={1} />}
                 </span>
                 <span className="text">
                   Locations <br /> in total
@@ -1123,7 +1123,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "1663.93px", left: "38.0714px" }}
               >
                 <span className="celement">
-                0{inView6 && <CountUp start={0} end={3} duration={2} />}
+                  0{inView6 && <CountUp start={0} end={3} duration={2} />}
                 </span>
                 <span className="text">Continents</span>
               </div>
@@ -1145,8 +1145,8 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                 style={{ top: "2261.93px", left: "352.571px" }}
               >
                 <span className="celement">
-                {/* 4.225.781 */}
-                {inView8 && <CountUp start={0} end={42} duration={1.7} />}
+                  {/* 4.225.781 */}
+                  {inView8 && <CountUp start={0} end={42} duration={1.7} />}
                 </span>
                 <span className="text">
                   Project hours <br />
@@ -1562,6 +1562,8 @@ c-32.8-39.7-53-88.3-57.9-139.5H191C196.7,701.6,231.2,784.9,289.1,850.8L289.1,850
           </div>
         </div>
       </div>
+
+      {/* <MobileHomeAnimation /> */}
     </div>
   );
 };

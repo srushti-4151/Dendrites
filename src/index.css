@@ -262,57 +262,57 @@
 /* Base Glow Styles for Stars */
 .glow {
   position: absolute;
-  width: 20px;
+  width: 55px;
   /* Size of the "star" */
-  height: 20px;
-  background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
-  border-radius: 50%;
+  height: 55px;
+  /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
+  border-radius: 50%; */
   opacity: 1;
   /* Initially hidden */
-  animation: twinkle 5s infinite ease-in-out;
+  animation: twinkle 4s infinite ease-in-out;
   pointer-events: none;
 }
 
 /* Different Positions for Each Star */
 .star-1 {
-  top: 46%;
-  left: 49%;
+  top: 44%;
+  left: 46%;
   animation-delay: 0s;
 }
 
 .star-2 {
-  top: 50%;
-  left: 54%;
+  top: 47%;
+  left: 51%;
   animation-delay: 1s;
 }
 
 .star-3 {
-  top: 38%;
-  left: 51%;
+  top: 36%;
+  left: 48%;
   animation-delay: 2s;
 }
 
 .star-4 {
-  top: 50%;
-  left: 43%;
+  top: 48%;
+  left: 41%;
   animation-delay: 3s;
 }
 
 .star-5 {
-  top: 41%;
-  left: 43%;
+  top: 38%;
+  left: 41%;
   animation-delay: 4s;
 }
 
 @media (max-width: 1024px) {
   .glow {
     position: absolute;
-    width: 5px;
+    width: 44px;
     /* Size of the "star" */
-    height: 5px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%);
-    border-radius: 50%;
-    opacity: 0;
+    height: 44px;
+    /* background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%); */
+    /* border-radius: 50%; */
+    opacity: 1;
     /* Initially hidden */
     animation: twinkle 5s infinite ease-in-out;
     pointer-events: none;
@@ -320,31 +320,31 @@
 
   .star-1 {
     top: 28%;
-    left: 54%;
+    left: 49%;
     animation-delay: 0s;
   }
 
   .star-2 {
     top: 35%;
-    left: 54%;
+    left: 51%;
     animation-delay: 1s;
   }
 
   .star-3 {
     top: 32%;
-    left: 47%;
+    left: 45%;
     animation-delay: 2s;
   }
 
   .star-4 {
-    top: 28%;
-    left: 43%;
+    top: 30%;
+    left: 37%;
     animation-delay: 3s;
   }
 
   .star-5 {
-    top: 34%;
-    left: 41%;
+    top: 35%;
+    left: 38%;
     animation-delay: 4s;
   }
 }

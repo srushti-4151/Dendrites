@@ -8,6 +8,7 @@ import {
   timeMarketSVG,
   zahnradSVG,
 } from "../../assets/svg";
+import star from "../../assets/star.png";
 
 const Hero = () => {
   return (
@@ -21,11 +22,11 @@ const Hero = () => {
               alt="landingpageImage"
               className="lg:w-full lg:h-auto object-cover"
             />
-            <div className="glow star-1"></div>
-            <div className="glow star-2"></div>
-            <div className="glow star-3"></div>
-            <div className="glow star-4"></div>
-            <div className="glow star-5"></div>
+            <div className="glow star-1"><img src={star} alt="star"/></div>
+            <div className="glow star-2"><img src={star} alt="star"/></div>
+            <div className="glow star-3"><img src={star} alt="star"/></div>
+            <div className="glow star-4"><img src={star} alt="star"/></div>
+            <div className="glow star-5"><img src={star} alt="star"/></div>
           </div>
         </div>
 

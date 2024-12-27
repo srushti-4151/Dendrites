@@ -1,0 +1,1140 @@
+
+// .waypoint-box {
+//     position: relative;
+//     background-color: #002e55;
+//     padding-top: 100px;
+//     padding-bottom: 100px;
+//   }
+  
+//   .waypoint-box .settingsglyph {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     overflow: hidden;
+//     z-index: 1;
+//     pointer-events: none;
+//   }
+  
+//   .waypoint-box .settingsglyph .settingsglyph-first {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     -moz-transform: translate(50%, 30px);
+//     -webkit-transform: translate(50%, 30px);
+//     -o-transform: translate(50%, 30px);
+//     -ms-transform: translate(50%, 30px);
+//     transform: translate(50%, 30px);
+//   }
+  
+//   .waypoint-box .settingsglyph .settingsglyph-middle {
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//   }
+  
+//   .waypoint-box .settingsglyph .settingsglyph-last {
+//     position: absolute;
+//     top: 100%;
+//     right: 0;
+//     -moz-transform: translate(50%, -80%);
+//     -webkit-transform: translate(50%, -80%);
+//     -o-transform: translate(50%, -80%);
+//     -ms-transform: translate(50%, -80%);
+//     transform: translate(50%, -80%);
+//   }
+  
+//   .waypoint-box .corezone {
+//     width: 1144px;
+//     max-width: 100%;
+//     margin: auto;
+//   }
+  
+//   .waypoint-box .roofdock {
+//     position: relative;
+//     z-index: 2;
+//     text-align: center;
+//     margin-bottom: 120px;
+//   }
+  
+//   .waypoint-box .roofdock .metatext {
+//     font-family: 'Ubuntu';
+//     color: white;
+//     font-weight: 300;
+//     font-size: 57px;
+//     line-height: 1.1754386;
+//     text-transform: uppercase;
+//     margin: 0;
+//     text-shadow: 0 0 15px rgba(255, 255, 255, 0.49);
+//   }
+  
+//   .waypoint-box .roofdock .metatext b,
+//   .waypoint-box .roofdock .metatext strong {
+//     display: block;
+//     font-family: 'Ubuntu';
+//     font-weight: bold;
+//   }
+  
+//   .waypoint-box .roofdock .basemeta-text {
+//     display: block;
+//     width: 470px;
+//     max-width: 100%;
+//     margin: 25px auto 0 auto;
+//     font-family: 'Ubuntu';
+//     font-weight: 300;
+//     font-size: 18px;
+//     line-height: 1.38888889;
+//     color: #80acd3;
+//   }
+  
+//   .waypoint-box .roofdock .basemeta-text b,
+//   .waypoint-box .roofdock .basemeta-text strong {
+//     font-family: 'Ubuntu';
+//     font-weight: bold;
+//     color: #fff;
+//   }
+  
+//   .waypoint-box .scroll-wave {
+//     position: relative;
+//     text-align: center;
+//     z-index: 3;
+//   }
+  
+//   .waypoint-box .scroll-wave .background {
+//     position: relative;
+//     display: inline-block;
+//     text-align: left;
+//     pointer-events: none;
+//   }
+  
+//   .waypoint-box .scroll-wave .background #solution-bg {
+//     position: relative;
+//     display: block;
+//     margin: 0 auto;
+//     z-index: 1;
+//     overflow: visible;
+//   }
+  
+//   .waypoint-box .scroll-wave .background #actioncursor2 {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 2;
+//     -moz-transform-origin: 0 0;
+//     -webkit-transform-origin: 0 0;
+//     -o-transform-origin: 0 0;
+//     -ms-transform-origin: 0 0;
+//     transform-origin: 0 0;
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//   }
+  
+  
+//   .waypoint-box .scroll-wave .numboxs .point.positioned {
+//     pointer-events: all;
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point {
+//     display: table;
+//     width: 400px;
+//     position: absolute;
+//     opacity: 0;
+//     pointer-events: none;
+//     -moz-transform: translate(0, -50%);
+//     -webkit-transform: translate(0, -50%);
+//     -o-transform: translate(0, -50%);
+//     -ms-transform: translate(0, -50%);
+//     transform: translate(0, -50%);
+//     text-decoration: none;
+//     color: inherit;
+//   }
+  
+//   .visible {
+//     visibility: visible;
+//   }
+  
+//   .waypoint-box {
+//     position: relative;
+//     background-color: #002e55;
+//     padding-top: 100px;
+//     padding-bottom: 100px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box {
+//       padding-top: 80px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box {
+//       padding-top: 60px
+//     }
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box {
+//       padding-bottom: 80px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box {
+//       padding-bottom: 60px
+//     }
+//   }
+  
+//   .waypoint-box .corezone {
+//     width: 1144px;
+//     max-width: 100%
+//   }
+  
+//   .waypoint-box .settingsglyph {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     overflow: hidden;
+//     z-index: 1;
+//     pointer-events: none
+//   }
+  
+//   .waypoint-box .settingsglyph .settingsglyph-first {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     -moz-transform: translate(50%, 30px);
+//     -webkit-transform: translate(50%, 30px);
+//     -o-transform: translate(50%, 30px);
+//     -ms-transform: translate(50%, 30px);
+//     transform: translate(50%, 30px)
+//   }
+  
+//   .waypoint-box .settingsglyph .settingsglyph-middle {
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%)
+//   }
+  
+//   .waypoint-box .settingsglyph .settingsglyph-last {
+//     position: absolute;
+//     top: 100%;
+//     right: 0;
+//     -moz-transform: translate(50%, -80%);
+//     -webkit-transform: translate(50%, -80%);
+//     -o-transform: translate(50%, -80%);
+//     -ms-transform: translate(50%, -80%);
+//     transform: translate(50%, -80%)
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .settingsglyph .rt svg {
+//       width: 100%;
+//       height: auto
+//     }
+  
+//     .waypoint-box .settingsglyph .lm svg {
+//       width: 100%;
+//       height: auto
+//     }
+  
+//     .waypoint-box .settingsglyph .rb svg {
+//       width: 100%;
+//       height: auto
+//     }
+//   }
+  
+//   .waypoint-box .roofdock {
+//     position: relative;
+//     z-index: 2;
+//     text-align: center;
+//     margin-bottom: 120px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .top {
+//       margin-bottom: 96px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .top {
+//       margin-bottom: 72px
+//     }
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .top {
+//       margin-bottom: 40px
+//     }
+//   }
+  
+//   .waypoint-box .roofdock .metatext {
+//     font-family: 'Ubuntu';
+//     font-weight: 300;
+//     font-size: 57px;
+//     line-height: 1.1754386;
+//     text-transform: uppercase;
+//     margin: 0;
+//     text-shadow: 0 0 15px rgba(255, 255, 255, 0.49)
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .top .metatext {
+//       font-size: 45.6px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .top .metatext {
+//       font-size: 34.2px
+//     }
+//   }
+  
+//   .waypoint-box .roofdock .metatext b,
+//   .waypoint-box .roofdock .metatext strong {
+//     display: block;
+//     font-family: 'Ubuntu';
+//     font-weight: bold
+//   }
+  
+//   .waypoint-box .roofdock .basemeta-text {
+//     display: block;
+//     width: 470px;
+//     max-width: 100%;
+//     margin: 25px auto 0 auto;
+//     font-family: 'Ubuntu';
+//     font-weight: 300;
+//     font-size: 18px;
+//     line-height: 1.38888889;
+//     color: #80acd3
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .top .basemeta-text {
+//       font-size: 14.4px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .top .basemeta-text {
+//       font-size: 13px
+//     }
+//   }
+  
+//   .waypoint-box .roofdock .basemeta-text b,
+//   .waypoint-box .roofdock .basemeta-text strong {
+//     font-family: 'Ubuntu';
+//     font-weight: bold;
+//     color: #fff
+//   }
+  
+//   .waypoint-box .scroll-wave {
+//     position: relative;
+//     text-align: center;
+//     z-index: 3
+//   }
+  
+//   .waypoint-box .scroll-wave .background {
+//     position: relative;
+//     display: inline-block;
+//     text-align: left;
+//     pointer-events: none;
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .animation .background {
+//       display: none
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .background #solution-bg {
+//     position: relative;
+//     display: block;
+//     margin: 0 auto;
+//     z-index: 1;
+//     overflow: visible
+//   }
+  
+//   .waypoint-box .scroll-wave .background #actioncursor g {
+//     -moz-transform: translate(0, -24px) rotate(90deg);
+//     -webkit-transform: translate(0, -24px) rotate(90deg);
+//     -o-transform: translate(0, -24px) rotate(90deg);
+//     -ms-transform: translate(0, -24px) rotate(90deg);
+//     transform: translate(0, -24px) rotate(90deg)
+//   }
+  
+//   .waypoint-box .scroll-wave .background #actioncursor g>path {
+//     -moz-transform: translate(0, -1px);
+//     -webkit-transform: translate(0, -1px);
+//     -o-transform: translate(0, -1px);
+//     -ms-transform: translate(0, -1px);
+//     transform: translate(0, -1px)
+//   }
+  
+//   .waypoint-box .scroll-wave .background #actioncursor2 {
+//     display: none;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 2;
+//     -moz-transform-origin: 0 0;
+//     -webkit-transform-origin: 0 0;
+//     -o-transform-origin: 0 0;
+//     -ms-transform-origin: 0 0;
+//     transform-origin: 0 0
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .animation .numboxs {
+//       position: relative;
+//       top: auto;
+//       left: auto
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point {
+//     display: table;
+//     width: 400px;
+//     position: absolute;
+//     opacity: 0;
+//     pointer-events: none;
+//     -moz-transform: translate(0, -50%);
+//     -webkit-transform: translate(0, -50%);
+//     -o-transform: translate(0, -50%);
+//     -ms-transform: translate(0, -50%);
+//     transform: translate(0, -50%);
+//     text-decoration: none;
+//     color: white;
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .animation .numboxs .point {
+//       display: inline-table;
+//       max-width: 100%;
+//       position: relative;
+//       top: auto !important;
+//       left: auto !important;
+//       opacity: 1 !important;
+//       pointer-events: all !important;
+//       -moz-transform: translate(0, 0);
+//       -webkit-transform: translate(0, 0);
+//       -o-transform: translate(0, 0);
+//       -ms-transform: translate(0, 0);
+//       transform: translate(0, 0);
+//       margin-top: 30px
+//     }
+  
+//     .waypoint-box .animation .numboxs .point:first-child {
+//       margin-top: 0
+//     }
+//   }
+  
+//   @media screen and (max-width: 460px) {
+//     .waypoint-box .animation .numboxs .point {
+//       width: 100%;
+//       max-width: 100%
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.positioned {
+//     pointer-events: all
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point:before {
+//     content: "";
+//     opacity: 0;
+//     display: block;
+//     width: 100px;
+//     height: 1px;
+//     background-color: rgba(128, 172, 211, 0.5);
+//     position: absolute;
+//     left: -100px;
+//     top: 50%;
+//     -moz-transform: translate(0, 0);
+//     -webkit-transform: translate(0, 0);
+//     -o-transform: translate(0, 0);
+//     -ms-transform: translate(0, 0);
+//     transform: translate(0, 0)
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .image_container,
+//   .waypoint-box .scroll-wave .numboxs .point .text_container {
+//     display: table-cell;
+//     vertical-align: middle
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+  
+//     .waypoint-box .animation .numboxs .point .image_container,
+//     .waypoint-box .animation .numboxs .point .text_container {
+//       opacity: 1 !important
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .image_container figure {
+//     position: relative;
+//     display: block;
+//     width: 118px;
+//     height: 118px
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .animation .numboxs .point .image_container figure {
+//       width: 100px;
+//       height: 100px
+//     }
+//   }
+  
+//   @media screen and (max-width: 400px) {
+//     .waypoint-box .animation .numboxs .point .image_container figure {
+//       width: 70px;
+//       height: 70px
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .image_container figure .circle {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: 100%;
+//     height: 100%;
+//     -moz-object-fit: contain;
+//     -webkit-object-fit: contain;
+//     -o-object-fit: contain;
+//     -ms-object-fit: contain;
+//     object-fit: contain;
+//     -moz-object-position: center center;
+//     -webkit-object-position: center center;
+//     -o-object-position: center center;
+//     -ms-object-position: center center;
+//     object-position: center center;
+//     font-family: "object-fit:contain; object-position:center center;";
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     overflow: visible;
+//     z-index: 2
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .image_container figure .circle path {
+//     stroke-dasharray: 367.6025390625;
+//     stroke-dashoffset: 367.6025390625
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .animation .numboxs .point .image_container figure .circle path {
+//       stroke-dashoffset: 0
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .image_container figure>svg:not(.circle),
+//   .waypoint-box .scroll-wave .numboxs .point .image_container figure>img {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: 59.3220339%;
+//     height: 59.3220339%;
+//     -moz-object-fit: contain;
+//     -webkit-object-fit: contain;
+//     -o-object-fit: contain;
+//     -ms-object-fit: contain;
+//     object-fit: contain;
+//     -moz-object-position: center center;
+//     -webkit-object-position: center center;
+//     -o-object-position: center center;
+//     -ms-object-position: center center;
+//     object-position: center center;
+//     font-family: "object-fit:contain; object-position:center center;";
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     opacity: 0;
+//     z-index: 3
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+  
+//     .waypoint-box .animation .numboxs .point .image_container figure>svg:not(.circle),
+//     .waypoint-box .animation .numboxs .point .image_container figure>img {
+//       opacity: 1
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .image_container figure:after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: 90%;
+//     height: 90%;
+//     border-radius: 100%;
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     z-index: 1;
+//     background-color: transparent;
+//     -webkit-transition: all .3s ease-in-out;
+//     -moz-transition: all .3s ease-in-out;
+//     transition: all .3s ease-in-out
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .text_container {
+//     width: 340px;
+//     max-width: 100%;
+//     text-align: left;
+//     padding-left: 18px;
+//     -ms-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//     opacity: 0
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .text_container .metatext {
+//     position: relative;
+//     font-family: 'Ubuntu';
+//     font-weight: bold;
+//     font-size: 30px;
+//     line-height: 1.16666667;
+//     margin: 0;
+//     padding-top: 35.5px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .animation .numboxs .point .text_container .metatext {
+//       font-size: 24px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .animation .numboxs .point .text_container .metatext {
+//       font-size: 18px
+//     }
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .animation .numboxs .point .text_container .metatext {
+//       padding-top: 0
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .text_container .metatext:after {
+//     content: "";
+//     display: block;
+//     width: 120px;
+//     height: 1px;
+//     background-color: #80acd3;
+//     position: absolute;
+//     bottom: -6.5px;
+//     left: 0
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point .text_container .text {
+//     display: block;
+//     font-family: 'Ubuntu';
+//     font-weight: 300;
+//     font-size: 16px;
+//     line-height: 1.25;
+//     margin-top: 16px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .scroll-wave .numboxs .point .text_container .text {
+//       font-size: 13px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .scroll-wave .numboxs .point .text_container .text {
+//       font-size: 13px
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.position_left {
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%)
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .scroll-wave .numboxs .point.position_left {
+//       -moz-transform: translate(0, 0);
+//       -webkit-transform: translate(0, 0);
+//       -o-transform: translate(0, 0);
+//       -ms-transform: translate(0, 0);
+//       transform: translate(0, 0)
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.position_left:before {
+//     left: auto;
+//     right: -100px;
+//     -moz-transform: translate(0, 0);
+//     -webkit-transform: translate(0, 0);
+//     -o-transform: translate(0, 0);
+//     -ms-transform: translate(0, 0);
+//     transform: translate(0, 0)
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.position_left .text_container {
+//     text-align: right;
+//     padding-left: 0;
+//     padding-right: 18px
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.position_left .text_container .metatext:after {
+//     right: 0;
+//     left: auto
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.visible {
+//     opacity: 1
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.visible:before {
+//     animation: fade-in-line .2s linear forwards;
+//     transition: .3s;
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.visible .image_container figure>img,
+//   .waypoint-box .scroll-wave .numboxs .point.visible .image_container figure>svg:not(.circle) {
+//     animation: fade-in .4s linear forwards;
+//     animation-delay: 0.6s;
+//     transition: .3s;
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.visible .image_container figure .circle path {
+//     animation: circle-rotate-in .4s linear forwards;
+//     animation-delay: 0.2s
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point.visible .text_container {
+//     animation: fade-in .4s linear forwards;
+//     animation-delay: 0.6s;
+//     transition: .3s;
+//   }
+  
+//   .waypoint-box .scroll-wave .numboxs .point:hover .image_container figure:after {
+//     background-color: rgba(223, 233, 248, 0.3)
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash {
+//     position: absolute;
+//     display: inline-block;
+//     opacity: 0;
+//     pointer-events: none;
+//     -moz-transform: translate(0, -50%);
+//     -webkit-transform: translate(0, -50%);
+//     -o-transform: translate(0, -50%);
+//     -ms-transform: translate(0, -50%);
+//     transform: translate(0, -50%);
+//     text-align: left;
+//     color: rgba(128, 172, 211, 0.3)
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash.positioned {
+//     pointer-events: all
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash.visible {
+//     animation: fade-in .3s linear forwards;
+//     transition: .3s;
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash .celement {
+//     display: block;
+//     /* font-family: 'Bitter'; */
+//     font-weight: bold;
+//     font-size: 84px;
+//     line-height: 1.16666667
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .scroll-wave .numdash .cnumdash .celement {
+//       font-size: 67.2px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .scroll-wave .numdash .cnumdash .celement {
+//       font-size: 50.4px
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash .text {
+//     display: block;
+//     font-family: 'Bitter';
+//     font-weight: normal;
+//     font-size: 30px;
+//     line-height: 1.03333333
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .scroll-wave .numdash .cnumdash .text {
+//       font-size: 24px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .scroll-wave .numdash .cnumdash .text {
+//       font-size: 18px
+//     }
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash.position_left {
+//     -moz-transform: translate(-50%, -50%);
+//     -webkit-transform: translate(-50%, -50%);
+//     -o-transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
+//     text-align: right
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash.point2,
+//   .waypoint-box .scroll-wave .numdash .cnumdash.point7 {
+//     -moz-transform: translate(0, -100%);
+//     -webkit-transform: translate(0, -100%);
+//     -o-transform: translate(0, -100%);
+//     -ms-transform: translate(0, -100%);
+//     transform: translate(0, -100%)
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash.point3 {
+//     -moz-transform: translate(-50%, 50%);
+//     -webkit-transform: translate(-50%, 50%);
+//     -o-transform: translate(-50%, 50%);
+//     -ms-transform: translate(-50%, 50%);
+//     transform: translate(-50%, 50%)
+//   }
+  
+//   .waypoint-box .scroll-wave .numdash .cnumdash.cnumdash_larger .celement {
+//     font-size: 120px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .scroll-wave .numdash .cnumdash.cnumdash_larger .celement {
+//       font-size: 96px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .scroll-wave .numdash .cnumdash.cnumdash_larger .celement {
+//       font-size: 72px
+//     }
+//   }
+  
+//   .waypoint-box .depthdock {
+//     position: relative;
+//     display: block;
+//     width: 500px;
+//     max-width: 100%;
+//     margin: -38px auto 0 auto;
+//     text-align: center;
+//     z-index: 4
+//   }
+  
+//   .waypoint-box .depthdock .symbolwrap {
+//     margin-left: 23px;
+//     margin-top: -5px;
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+//     .waypoint-box .depthdock .symbolwrap {
+//       margin-left: 0;
+//       margin-top: 60px
+//     }
+//   }
+  
+//   .waypoint-box .depthdock .symbolwrap svg rect {
+//     fill: transparent;
+//     -webkit-transition: all 1s ease-in-out;
+//     -moz-transition: all 1s ease-in-out;
+//     transition: all 1s ease-in-out;
+//     opacity: 0
+//   }
+  
+//   .waypoint-box .depthdock .symbolwrap.animate svg rect {
+//     fill: #002e55;
+//     opacity: 1
+//   }
+  
+//   .waypoint-box .depthdock .metatext,
+//   .waypoint-box .depthdock .arraowbtnholder,
+//   .waypoint-box .depthdock .morezone {
+//     opacity: 1
+//   }
+  
+//   @media screen and (max-width: 1024px) {
+  
+//     .waypoint-box .depthdock .metatext,
+//     .waypoint-box .depthdock .arraowbtnholder,
+//     .waypoint-box .depthdock .morezone {
+//       opacity: 1
+//     }
+//   }
+  
+//   .waypoint-box .depthdock.animate .metatext,
+//   .waypoint-box .depthdock.animate .arraowbtnholder,
+//   .waypoint-box .depthdock.animate .morezone {
+//     opacity: 1;
+//     -webkit-transition: all 1s ease-in-out;
+//     -moz-transition: all 1s ease-in-out;
+//     transition: all 1s ease-in-out
+//   }
+  
+//   .waypoint-box .depthdock .metatext {
+//     /* font-family: 'Ubuntu'; */
+//     color: white;
+//     font-weight: 300;
+//     font-size: 40px;
+//     line-height: 1.15;
+//     letter-spacing: 0.025em;
+//     text-transform: uppercase;
+//     text-shadow: 0 0 15px rgba(255, 255, 255, 0.52);
+//     margin: 0;
+//     margin-top: 0px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .depthdock .metatext {
+//       font-size: 32px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .depthdock .metatext {
+//       font-size: 24px
+//     }
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .depthdock .metatext {
+//       margin-top: 20px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .depthdock .metatext {
+//       margin-top: 20px
+//     }
+//   }
+  
+//   .waypoint-box .depthdock .metatext b,
+//   .waypoint-box .depthdock .metatext strong {
+//     display: block;
+//     font-family: 'Ubuntu';
+//     font-weight: bold
+//   }
+  
+//   .waypoint-box .depthdock .arraowbtnholder {
+//     margin-top: 50px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .depthdock .arraowbtnholder {
+//       margin-top: 40px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .depthdock .arraowbtnholder {
+//       margin-top: 30px
+//     }
+//   }
+  
+//   .waypoint-box .depthdock .morezone {
+//     margin-top: 50px
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .depthdock .morezone {
+//       margin-top: 40px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .depthdock .morezone {
+//       margin-top: 30px
+//     }
+//   }
+  
+//   .waypoint-box .depthdock .morezone .readmore {
+//     display: inline-block;
+//     font-family: 'Ubuntu';
+//     font-weight: 500;
+//     font-size: 17px;
+//     line-height: 1.11764706;
+//     color: #80acd3;
+//     padding-bottom: 5px;
+//     text-decoration: none;
+//     position: relative;
+//     line-height: normal
+//   }
+  
+//   @media screen and (min-width: 768px) and (max-width:1023px) {
+//     .waypoint-box .depthdock .morezone .readmore {
+//       font-size: 13.6px
+//     }
+//   }
+  
+//   @media screen and (max-width: 767px) {
+//     .waypoint-box .depthdock .morezone .readmore {
+//       font-size: 13px
+//     }
+//   }
+  
+//   .waypoint-box .depthdock .morezone .readmore:after {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 1px;
+//     bottom: 0;
+//     left: 0;
+//     background-color: #80acd3;
+//     visibility: visible;
+//     -moz-transform: scaleX(1);
+//     -webkit-transform: scaleX(1);
+//     -o-transform: scaleX(1);
+//     -ms-transform: scaleX(1);
+//     transform: scaleX(1);
+//     -moz-transition: all .3s ease-in-out 0s;
+//     -webkit-transition: all .3s ease-in-out 0s;
+//     -o-transition: all .3s ease-in-out 0s;
+//     -ms-transition: all .3s ease-in-out 0s;
+//     transition: all .3s ease-in-out 0s
+//   }
+  
+//   .waypoint-box .depthdock .morezone .readmore:hover:after {
+//     visibility: hidden;
+//     -moz-transform: scaleX(0);
+//     -webkit-transform: scaleX(0);
+//     -o-transform: scaleX(0);
+//     -ms-transform: scaleX(0);
+//     transform: scaleX(0)
+//   }
+  
+//   @keyframes fade-in-line {
+//     0% {
+//       opacity: 0;
+//       width: 0
+//     }
+  
+//     100% {
+//       opacity: 1;
+//       width: 100px
+//     }
+//   }
+  
+//   @keyframes fade-in {
+//     0% {
+//       opacity: 0
+//     }
+  
+//     100% {
+//       opacity: 1
+//     }
+//   }
+  
+//   @keyframes circle-rotate-in {
+//     0% {
+//       stroke-dashoffset: 367.6025390625
+//     }
+  
+//     100% {
+//       stroke-dashoffset: 0
+//     }
+//   }
+  
+//   .arraowbtnholder {
+//     display: flex;
+//     justify-content: center;
+//   }
+  
+//   .arraowbtnholder .btn {
+//     display: flex;
+//     justify-content: center;
+//   }
+  
+//   .button,
+//   .ce_button,
+//   .btn {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: .5rem;
+//     max-width: 100%;
+//     vertical-align: middle;
+//     line-height: 40px;
+//     cursor: pointer;
+//     font-family: 'Ubuntu';
+//     font-weight: bold;
+//     font-size: 17px;
+//     padding: 0 30px;
+//     -ms-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//     white-space: nowrap;
+//     border-radius: 5px;
+//     -webkit-transition: all .3s ease-in-out;
+//     -moz-transition: all .3s ease-in-out;
+//     transition: all .3s ease-in-out;
+//     text-decoration: none
+//   }
+  
+//   .button.readybutton,
+//   .ce_button.readybutton,
+//   .btn.readybutton {
+//     border: 1px solid #fff;
+//     background-color: #fff;
+//     color: #00223e;
+//     box-shadow: 0 0 30px rgba(0, 34, 62, 0.21)
+//   }
+  
+//   .button.readybutton:hover,
+//   .ce_button.readybutton:hover,
+//   .btn.readybutton:hover {
+//     background-color: transparent;
+//     color: #fff;
+//   }

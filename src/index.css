@@ -307,9 +307,9 @@
 @media (max-width: 1024px) {
   .glow {
     position: absolute;
-    width: 20px;
+    width: 5px;
     /* Size of the "star" */
-    height: 20px;
+    height: 5px;
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%);
     border-radius: 50%;
     opacity: 0;
@@ -337,7 +337,7 @@
   }
 
   .star-4 {
-    top: 27%;
+    top: 28%;
     left: 43%;
     animation-delay: 3s;
   }

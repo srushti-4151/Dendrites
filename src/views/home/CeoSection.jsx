@@ -52,15 +52,15 @@ const CeoSection = () => {
             </div>
 
             {/* Text and Button Section */}
-            <div className="text-center tracking-wider">
+            <div className="text-center tracking-wider lg:leading-[40px] leading-[30px]">
               <p className="text-[24px] md:text-[40px] text-white uppercase">
                 {ceo?.text1}
               </p>
               <p className="text-[24px] md:text-[40px] text-white font-bold uppercase">
                 {ceo?.text2}
               </p>
-              <div className="flex justify-center items-center pt-7">
-                <button className="flex items-center gap-3 bg-[#80acd3] px-8 py-[9px] font-bold text-white rounded-md transition duration-500 hover:bg-white hover:text-[#80acd3]">
+              <div className="flex justify-center items-center lg:pt-14 pt-8">
+                <button className="tracking-tight lg:text-base text-sm flex items-center gap-3 bg-[#80acd3] lg:px-8 py-[10px] px-6 font-bold text-white rounded-md transition duration-500 hover:bg-white hover:text-[#80acd3]">
                   <FaArrowRightLong size={22}/>
                   {ceo?.btn}
                 </button>

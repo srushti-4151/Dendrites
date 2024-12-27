@@ -49,7 +49,8 @@ const HomeSliderSection = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
+    // dots: true,
+    dots: windowWidth >= 600, // Show dots only for screens 600px or wider
     prevArrow: (
       <button className="">
         <IoIosArrowBack
@@ -78,7 +79,7 @@ const HomeSliderSection = () => {
     <div className="slider-container">
       <Slider {...sliderSettings}>
         {homeSliderData.map((slide, index) => (
-          <div key={index} className="relative w-full h-[300px] lg:h-[770px]">
+          <div key={index} className="relative w-full h-[350px] lg:h-[770px]">
             {/* Background Image */}
             <img
               src={slide?.image}
@@ -91,7 +92,7 @@ const HomeSliderSection = () => {
 
             {/* Oval Shape on Right Side */}
             <div
-              className="absolute top-0 left-0 h-full w-[68%] bg-[#6a929c] opacity-20"
+              className="absolute top-0 left-0 h-full w-[68%] lg:bg-[#6a929c] bg-[#175b9b] opacity-20"
               style={{
                 clipPath: "ellipse(100% 100% at 0% 50%)",
               }}
@@ -99,7 +100,7 @@ const HomeSliderSection = () => {
             {/*Text Overlay */}
             <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
               <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
-                <div className="lg:max-w-[600px] mb-6 lg:mb-0 pl-16">
+                <div className="lg:max-w-[600px] mb-6 lg:mb-0 lg:pl-16">
                   <h1 className="text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-2 uppercase">
                     {slide.title}
                   </h1>

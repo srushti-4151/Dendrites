@@ -19,7 +19,7 @@ const Hero = () => {
             <img
               src={landingpageImage}
               alt="landingpageImage"
-              className="lg:w-full lg:h-auto object-cover h-72"
+              className="lg:w-full lg:h-auto object-cover"
             />
             <div className="glow star-1"></div>
             <div className="glow star-2"></div>
@@ -144,11 +144,11 @@ const Hero = () => {
 
 
       <div className="absolute inset-0 flex lg:items-end justify-start gap-5 z-10  top-[140px] lg:bottom-[170px] left-[20px] lg:left-[50px]">
-        <div className="w-[100px] h-[100px] lg:w-[190px] lg:h-[190px] border border-[#80acd3a1] flex justify-center items-center rounded-full">
-          <div className="w-[80px] h-[80px] lg:w-[170px] lg:h-[170px] bg-[#E9E9F880] flex justify-center items-center rounded-full">
+        <div className="w-[120px] h-[120px] lg:w-[190px] lg:h-[190px] border border-[#80acd3a1] flex justify-center items-center rounded-full">
+          <div className="w-[105px] h-[105px] lg:w-[170px] lg:h-[170px] bg-[#E9E9F880] flex justify-center items-center rounded-full">
             <div className="border border-[#00223e] w-[142px] h-[142px] rounded-full flex justify-center items-center">
               <div className="text-center">
-                <p className="text-[20px] text-white lg:text-[40px] font-bold">
+                <p className="text-[25px] text-white lg:text-[40px] font-bold">
                   72
                 </p>
                 <p className="text-[#00223e] font-bold text-[12px] lg:text-[13px]">

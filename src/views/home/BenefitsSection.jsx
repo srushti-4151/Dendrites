@@ -64,29 +64,29 @@ const BenefitsSection = () => {
 
   return (
     <div className="bg-[#00223e] py-8">
-      <div className="max-w-[1410px] mx-auto px-6">
-        <h2 className="text-center text-white font-bold text-4xl lg:text-6xl text-shadow-glow py-14 pb-24 uppercase">
+      <div className="max-w-[1410px] mx-auto lg:px-6 px-4">
+        <h2 className="text-center text-white font-bold text-4xl lg:text-6xl text-shadow-glow lg:py-14 lg:pb-24 pb-5 uppercase">
           Benefits
         </h2>
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefitsData.map((benefit, index) => (
             <Link
               key={index}
-              className="group rounded-lg px-6 pb-5 text-center text-white transition flex flex-col justify-center items-center mb-6"
+              className="group rounded-lg lg:px-6 pb-5 text-center text-white transition flex flex-col justify-center items-center mb-6"
             >
               <div className="w-[170px] h-[170px] border border-[#80acd3a1] flex justify-center items-center rounded-full mb-8">
                 <div className="w-[150px] h-[150px] group-hover:bg-[#80acd3a1] duration-300 rounded-full flex justify-center items-center">
                   {benefit.image}
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold mb-3 text-center tracking-normal h-[50px] w-[65%]">
+              <h3 className="lg:text-2xl text-[17px] leading-5 lg:leading-6 font-semibold mb-3 text-center tracking-normal h-[50px] lg:w-[65%] w-[75%]">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-white text-center pt-7 font-light h-[90px] w-[92%]">
+              <p className="text-sm text-white text-center lg:pt-7 pt-2 font-light h-[90px] lg:w-[92%]">
                 {benefit.description}
               </p>
-              <div className="text-lg flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold pt-3 cursor-pointer tracking-tight h-[40px]">
+              <div className="lg:text-lg text-sm flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold lg:pt-3 cursor-pointer tracking-tight h-[40px]">
                 <FaArrowRightLong size={20} />
                 Learn more
               </div>

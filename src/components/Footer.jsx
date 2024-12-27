@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
           <Link className="group flex gap-2 items-center pt-3 font-medium">
             <div className="border border-[#80acd3] p-2 rounded-full group-hover:bg-[#80acd3] duration-300">
-              <IoCallOutline className="text-white group-hover:text-white transition duration-300" />
+              <IoCallOutline className="text-white group-hover:text-white transition duration-300 text-xl" />
             </div>
             <div className="text-white group relative">
               <span className="group-hover:text-[#80acd3]">
@@ -34,7 +34,7 @@ const Footer = () => {
           </Link>
           <Link className="group flex gap-2 items-center pt-3 font-medium">
             <div className="border border-[#80acd3] p-2 rounded-full group-hover:bg-[#80acd3] duration-300">
-              <AiOutlineMail className="text-white group-hover:text-white transition duration-300" />
+              <AiOutlineMail className="text-white group-hover:text-white transition duration-300 text-xl" />
             </div>
             <div className="text-white group relative">
               <span className="group-hover:text-[#80acd3]">
@@ -119,12 +119,12 @@ const Footer = () => {
               alt="Zeta Logo"
             />
           </div>
-          <div className="flex flex-wrap gap-4 justify-center sm:justify-end w-full">
-            <button className="flex items-center gap-3 bg-[#005aa9] px-8 py-2 font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#005aa9] w-full sm:w-auto">
+          <div className="flex flex-wrap gap-4 justify-center sm:justify-end w-full lg:text-base text-sm">
+            <button className="flex items-center justify-center gap-3 bg-[#005aa9] px-8 py-2 font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#005aa9] w-full sm:w-auto">
               <FaArrowRightLong size={22}/>
               Next Webinar
             </button>
-            <button className="flex items-center gap-3 bg-[#80acd3] px-8 py-2 font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#80acd3] w-full sm:w-auto">
+            <button className="flex items-center justify-center gap-3 bg-[#80acd3] px-8 py-2 font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#80acd3] w-full sm:w-auto">
               <FaArrowRightLong size={22}/>
               Subscribe to the newsletter
             </button>
@@ -158,7 +158,8 @@ const Footer = () => {
             >
 
               <AccordionSummary
-                expandIcon={<FaAngleDown sx={{ color: "white" }} />}
+                // expandIcon={<FaAngleDown sx={{ color: "white" }} />}
+                expandIcon={<FaAngleDown className="text-white text-2xl transform duration-700" />}
                 aria-controls={`panel${index}-content`}
                 id={`panel${index}-header`}
                 sx={{
@@ -172,10 +173,11 @@ const Footer = () => {
                   },
                 }}
               >
-                <p className="text-white font-bold text-xs">{section.title}</p>
+                <p className="text-white font-bold text-[13px]">{section.title}</p>
               </AccordionSummary>
               <AccordionDetails>
-                <div className="text-white txt-xs">{section.content}</div>
+               <hr className="border-t border-[#507292] scale-y-[0.45] mt-2" />
+                <div className="text-white text-[13px]">{section.content}</div>
               </AccordionDetails>
 
             </Accordion>

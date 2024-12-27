@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-2 py-8 pt-28">
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 py-9 pt-28">
           {sections.map((section, index) => (
             <div key={index} className={index === 1 ? "pl-20" : ""}>
               <p className="uppercase font-bold w-[60%] text-white text-lg pb-4">

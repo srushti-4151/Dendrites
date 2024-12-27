@@ -98,16 +98,16 @@ const HomeSliderSection = () => {
             ></div>
             {/*Text Overlay */}
             <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
-              <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start text-right">
-                <div className="w-full lg:max-w-[600px] mb-8 lg:mb-0 text-left">
-                  <h1 className="text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pt- uppercase">
+              <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
+                <div className="lg:max-w-[600px] mb-6 lg:mb-0 pl-16">
+                  <h1 className="text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-2 uppercase">
                     {slide.title}
                   </h1>
-                  <p className="text-[20px] font-normal lg:text-[30px] text-[#00223e]">
+                  <p className="text-[20px] font-normal lg:text-[32px] text-[#00223e] lg:pb-2">
                     {slide?.description}
                   </p>
-                  <div className="pt-6 lg:pt-8">
-                    <button className="flex items-center gap-3 bg-[#95e8ca] px-4 py-2 lg:px-9 lg:py-[10px] font-bold text-[#00223e] rounded-md transition duration-300 hover:bg-[#00223e] hover:text-white text-lg">
+                  <div className="pt-6 lg:pt-20">
+                    <button className="flex items-center gap-3 bg-[#95e8ca] px-4 py-2 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white text-lg">
                       <FaArrowRight size={20}/>
                       Learn more!
                     </button>
@@ -115,6 +115,7 @@ const HomeSliderSection = () => {
                 </div>
               </div>
             </div> 
+             
           </div>
         ))}
       </Slider>

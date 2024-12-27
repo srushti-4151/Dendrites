@@ -74,7 +74,7 @@ const Navbar = () => {
           opacity: topValue / 40,
         }}
       >
-        <div className="hidden mx-auto max-w-[1410px] lg:flex justify-end items-center py-2 lg:px-0">
+        <div className="hidden mx-auto max-w-[1410px] lg:flex justify-end items-center gap-2 py-2 lg:px-5">
           <div className="flex justify-between">
             <div className="flex gap-5">
               <div>

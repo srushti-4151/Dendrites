@@ -1526,3 +1526,51 @@
   background-color: transparent;
   color: #fff;
 }
+
+
+/* mobile home animation */
+
+.waypoint-box1 .settingsglyph1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.waypoint-box1 .settingsglyph1 .settingsglyph-first1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -moz-transform: translate(50%, 30px);
+  -webkit-transform: translate(50%, 30px);
+  -o-transform: translate(50%, 30px);
+  -ms-transform: translate(50%, 30px);
+  transform: translate(50%, 30px);
+}
+
+.waypoint-box1 .settingsglyph1 .settingsglyph-middle1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.waypoint-box1 .settingsglyph1 .settingsglyph-last1 {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  -moz-transform: translate(50%, -80%);
+  -webkit-transform: translate(50%, -80%);
+  -o-transform: translate(50%, -80%);
+  -ms-transform: translate(50%, -80%);
+  transform: translate(50%, -80%);
+}
+

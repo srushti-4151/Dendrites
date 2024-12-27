@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-// import MobileHomeAnimation from "./MobileHomeAnimation";
+import MobileHomeAnimation from "./MobileHomeAnimation";
 
 // const useCountUp = (end, duration) => {
 //   const [count, setCount] = useState(0);
@@ -226,7 +226,7 @@ const HomeAnimatedSection = () => {
   return (
     <div className="">
       <div
-        className="waypoint-box meta_waypoint-box block overflow-hidden"
+        className="waypoint-box meta_waypoint-box lg:block hidden overflow-hidden"
         id="solutionpath"
       >
         <div className="corezone">
@@ -1563,7 +1563,7 @@ c-32.8-39.7-53-88.3-57.9-139.5H191C196.7,701.6,231.2,784.9,289.1,850.8L289.1,850
         </div>
       </div>
 
-      {/* <MobileHomeAnimation /> */}
+      <MobileHomeAnimation />
     </div>
   );
 };

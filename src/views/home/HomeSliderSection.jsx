@@ -40,7 +40,7 @@ const HomeSliderSection = () => {
       image: image4,
       title: "Automation",
       description:
-        "Pioneering technologies for sustainable nutrition. From scale-up to process and food safety.",
+        "Single-user­control, DCS system or MTP? We have the right automation­solution for you!",
     },
   ];
 

@@ -156,16 +156,28 @@ const Footer = () => {
               expanded={openSection === index}
               onChange={() => toggleSection(index)}
             >
+
               <AccordionSummary
                 expandIcon={<FaAngleDown sx={{ color: "white" }} />}
                 aria-controls={`panel${index}-content`}
                 id={`panel${index}-header`}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  textAlign: "center",
+                  "& .MuiAccordionSummary-content": {
+                    margin: 0,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  },
+                }}
               >
-                <p className="text-white font-bold">{section.title}</p>
+                <p className="text-white font-bold text-xs">{section.title}</p>
               </AccordionSummary>
               <AccordionDetails>
-                <div className="text-white">{section.content}</div>
+                <div className="text-white txt-xs">{section.content}</div>
               </AccordionDetails>
+
             </Accordion>
           ))}
         </div>

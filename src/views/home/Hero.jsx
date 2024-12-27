@@ -19,7 +19,7 @@ const Hero = () => {
             <img
               src={landingpageImage}
               alt="landingpageImage"
-              className="w-full h-auto object-cover"
+              className="lg:w-full lg:h-auto object-cover h-72"
             />
             <div className="glow star-1"></div>
             <div className="glow star-2"></div>
@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end top-1/2 -translate-y-1/2 h-fit lg:items-start justify-center z-10 px-4">
+        <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-8 lg:-translate-y-1/2 h-fit lg:items-start justify-center z-10 px-4">
           <div className="max-w-[1410px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
@@ -38,17 +38,17 @@ const Hero = () => {
 
             {/* Right Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
-              <p className="text-white pb-1 text-2xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
+              <p className="text-white pb-1 text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
                 Evolution
               </p>
-              <p className="text-white font-bold text-2xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
+              <p className="text-white font-bold text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
                of Technology
               </p>
 
-              <p className="text-lg sm:text-xl lg:text-3xl text-white pt-9">
+              <p className="text-lg sm:text-xl lg:text-3xl text-white lg:pt-9 pt-4">
                 From Concept to Realization:
               </p>
-              <p className="text-lg sm:text-xl lg:text-3xl font-semibold text-[#90adc7] pt-1 tracking-wide">
+              <p className="text-lg sm:text-xl lg:text-3xl font-semibold text-[#90adc7] lg:pt-1 tracking-wide">
                 ZETA – Your Partner for the Pharmaceutical and Biotech Industry!
               </p>
               <div className="flex justify-center lg:hidden gap-5 py-10">
@@ -89,11 +89,11 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
-
-        <div className="absolute inset-0 hidden lg:flex items-end justify-center z-10 px-4 bottom-[35px]">
+        <div className="absolute inset-0 hidden lg:flex items-end lg:left-[273px] lg:justify-start justify-center z-10">
           <div className="pb-20">
             <img src={mainline} alt="" srcset="" />
           </div>
@@ -137,6 +137,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+
+
+
+
 
       <div className="absolute inset-0 flex lg:items-end justify-start gap-5 z-10  top-[140px] lg:bottom-[170px] left-[20px] lg:left-[50px]">
         <div className="w-[100px] h-[100px] lg:w-[190px] lg:h-[190px] border border-[#80acd3a1] flex justify-center items-center rounded-full">

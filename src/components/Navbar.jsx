@@ -74,8 +74,8 @@ const Navbar = () => {
           opacity: topValue / 40,
         }}
       >
-        <div className="mx-auto max-w-[1410px] flex justify-end items-center gap-2 py-2 px-6 lg:px-5">
-          <div className="flex justify-between gap-16">
+        <div className="hidden mx-auto max-w-[1410px] lg:flex justify-end items-center py-2 lg:px-0">
+          <div className="flex justify-between">
             <div className="flex gap-5">
               <div>
                 <Link className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">
@@ -88,18 +88,6 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            {/* <div className="flex gap-5">
-              <div>
-                <Link className="text-[#a7b8b8] font-bold text-[13px] hover:text-white duration-300 br-[20px]">
-                  DE
-                </Link>
-              </div>
-              <div>
-                <Link className="text-white font-bold text-[13px] hover:text-white duration-300">
-                  EN
-                </Link>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -113,7 +101,9 @@ const Navbar = () => {
           width: "100%",
         }}
       >
-        <div className="m-auto max-w-[1410px] lg:px-4 overflow-hidden" style={{ height: "63.7px" }}>
+        <div className="m-auto max-w-[1410px] lg:px-4 overflow-hidden h-16" 
+        // style={{ height: "63.7px" }}
+        >
           <div className="flex justify-between gap-20 items-center p-2 lg:p-0 px-6">
             {/* Logo Section */}
             <Link to="/" className="">

@@ -60,7 +60,7 @@ const CeoSection = () => {
                 {ceo?.text2}
               </p>
               <div className="flex justify-center items-center pt-6">
-                <button className="flex items-center gap-3 bg-[#80acd3] px-8 py-[9px] font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#80acd3]">
+                <button className="flex items-center gap-3 bg-[#80acd3] px-8 py-[9px] font-bold text-white rounded-md transition duration-500 hover:bg-white hover:text-[#80acd3]">
                   <FaArrowRightLong size={22}/>
                   {ceo?.btn}
                 </button>

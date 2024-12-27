@@ -170,8 +170,8 @@ export const genralPlannerSVG = (
 export const ultarfastPrjectSVG = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="90.056"
-    height="90.544"
+    width="90.103"
+    height="90.431"
     viewBox="0 0 34.056 31.544"
   >
     <path
@@ -185,8 +185,8 @@ export const ultarfastPrjectSVG = (
 export const processSolutionsSVG = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="90.567"
-    height="90.638"
+    width="90.103"
+    height="90.431"
     viewBox="0 0 32.567 35.638"
   >
     <path
@@ -200,8 +200,8 @@ export const processSolutionsSVG = (
 export const customizedSolSVG = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="90.773"
-    height="90.768"
+    width="90.431"
+    height="90.431"
     viewBox="0 0 34.773 34.768"
   >
     <path
@@ -215,8 +215,8 @@ export const customizedSolSVG = (
 export const automationSolutionSVG = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="90.841"
-    height="90.698"
+    width="90.431"
+    height="90.431"
     viewBox="0 0 33.841 29.698"
   >
     <path
@@ -230,8 +230,8 @@ export const automationSolutionSVG = (
 export const globalPlayerSVG = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="90.629"
-    height="90.447"
+    width="90.431"
+    height="90.431"
     viewBox="0 0 33.629 34.447"
   >
     <path
@@ -246,7 +246,7 @@ export const managementOfComplexity = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="90.74"
-    height="90.897"
+    height="90.431"
     viewBox="0 0 33.74 33.897"
   >
     <path
@@ -261,7 +261,7 @@ export const innolabZetaTechCenter = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="90.743"
-    height="90.177"
+    height="90.431"
     viewBox="0 0 21.743 33.177"
   >
     <path

@@ -73,20 +73,20 @@ const BenefitsSection = () => {
           {benefitsData.map((benefit, index) => (
             <Link
               key={index}
-              className="group rounded-lg px-6 pb-5 text-center text-white transition flex flex-col justify-center items-center"
+              className="group rounded-lg px-6 pb-5 text-center text-white transition flex flex-col justify-center items-center mb-6"
             >
-              <div className="w-[170px] h-[170px] border border-[#80acd3a1] flex justify-center items-center rounded-full">
+              <div className="w-[170px] h-[170px] border border-[#80acd3a1] flex justify-center items-center rounded-full mb-8">
                 <div className="w-[150px] h-[150px] group-hover:bg-[#80acd3a1] duration-300 rounded-full flex justify-center items-center">
                   {benefit.image}
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold mb-2 w-full sm:w-[50%] lg:w-[60%] text-center pt-8 tracking-normal">
+              <h3 className="text-2xl font-semibold mb-3 text-center tracking-normal h-[50px] w-[65%]">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-white text-center pt-7 w-[93%] font-light">
+              <p className="text-sm text-white text-center pt-7 font-light h-[90px] w-[92%]">
                 {benefit.description}
               </p>
-              <div className="text-lg flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold pt-7 cursor-pointer tracking-tight">
+              <div className="text-lg flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold pt-3 cursor-pointer tracking-tight h-[40px]">
                 <FaArrowRightLong size={20} />
                 Learn more
               </div>

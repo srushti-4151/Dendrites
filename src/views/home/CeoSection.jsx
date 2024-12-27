@@ -41,8 +41,8 @@ const CeoSection = () => {
                 </div>
                 <div className="mt-4 text-sm">
                   <p className="font-medium text-white">
-                    Contacts:{" "}
-                    <span className="text-[#80acd3a1]">{ceo?.name}</span>
+                    Contact:{" "}
+                    <span className="text-[#93bbdda1] mr-1">{ceo?.name}</span>
                   </p>
                   <p className="font-medium text-[#80acd3a1]">
                     {ceo?.profession}
@@ -60,7 +60,7 @@ const CeoSection = () => {
                 {ceo?.text2}
               </p>
               <div className="flex justify-center items-center pt-6">
-                <button className="flex items-center gap-3 bg-[#80acd3] px-8 py-2 font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#80acd3]">
+                <button className="flex items-center gap-3 bg-[#80acd3] px-8 py-[9px] font-bold text-white rounded-md transition duration-300 hover:bg-white hover:text-[#80acd3]">
                   <FaArrowRightLong size={22}/>
                   {ceo?.btn}
                 </button>

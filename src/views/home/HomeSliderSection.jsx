@@ -49,6 +49,8 @@ const HomeSliderSection = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true, // Enables auto-slide
+    autoplaySpeed: 3000,
     // dots: true,
     dots: windowWidth >= 600, // Show dots only for screens 600px or wider
     prevArrow: (
@@ -92,7 +94,6 @@ const HomeSliderSection = () => {
             bg-gradient-to-t 
             from-white 
             via-white/50 to-transparent
-            sm:via-white/80 sm:from-white/95
             "></div>
 
             {/* Oval Shape on Right Side */}

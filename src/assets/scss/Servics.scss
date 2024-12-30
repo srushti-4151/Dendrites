@@ -90,13 +90,14 @@
 @media (max-width: 768px) {
   // The entire provided SCSS code
   .sub-outer {
-    padding-top: 8rem;
+    padding-top: 5rem;
     background: rgba(0, 34, 62, 0.99);
-    width: 100%;
+    width: 100wv;
     color: white;
     height: 100vh;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
+    overflow-y: scroll;
 
     .sub-service-container {
       height: 50%;
@@ -105,21 +106,27 @@
       .sub-scrollbar-modal {
         margin-top: 1rem;
         max-height: calc(100vh - 10rem);
-        backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
-        -webkit-backdrop-filter: blur(10px); /* For better browser support */
-        background-color: rgba(0, 34, 62, 0.89); 
+        overflow-y: auto;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(0, 34, 62, 0.89);
       }
-      .scrollbar-modal::-webkit-scrollbar {
+      
+      .sub-scrollbar-modal::-webkit-scrollbar {
         width: 4px;
         background-color: #79a8d8a1;
+        border: 2px solid red;
       }
-      .scrollbar-modal::-webkit-scrollbar-thumb {
+      
+      .sub-scrollbar-modal::-webkit-scrollbar-thumb {
         background-color: #79a8d8a1;
         border-radius: 15px;
       }
-      .scrollbar-modal::-webkit-scrollbar-track {
+      
+      .sub-scrollbar-modal::-webkit-scrollbar-track {
         background-color: transparent;
       }
+         
     }
 
     .sub-sideshapesvg {

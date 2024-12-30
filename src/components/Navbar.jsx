@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { closeModal, openModal } from "../redux/ModalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "../assets/scss/Navbar.scss";
-import { mobileSideshape, SearchIcon, CloseSearchIcon } from "../assets/svg";
+import { mobileSideshape, MobileSearchIcon, CloseSearchIcon } from "../assets/svg";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -209,7 +209,7 @@ const Navbar = () => {
                 <ul>
                   {links.map((link, index) => (
                     <div
-                      key={index.name}
+                      key={link.name}
                       className="border-t border-gray-500 py-4 flex items-center"
                     >
                       <li className="tracking-wider text-[30px] uppercase font-bold pl-3 text-white">
@@ -246,7 +246,7 @@ const Navbar = () => {
 
                   <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
                     <span className="text-[#ffffff] px-2">
-                        {SearchIcon}
+                        {MobileSearchIcon}
                     </span>
                     <div 
                     // className="input-container1 w-full"

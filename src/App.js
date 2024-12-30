@@ -13,7 +13,6 @@ import { closeModal } from "./redux/ModalSlice";
 function App() {
   const dispatch = useDispatch();
   const modalContent = useSelector((state) => state.modal.modalContent);
- 
 
   // Disable body scroll when modal is open
   useEffect(() => {
@@ -48,13 +47,22 @@ function App() {
           <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
-       {/* Render Modal */}
-       {modalContent && (
+      {/* Render Modal */}
+      {modalContent && (
         <div className="fixed inset-0 z-50">
           {renderModal()}
         </div>
+        // <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+        //   <div
+        //     className={`transform transition-transform duration-3000 ${
+        //       modalContent ? "scale-100 opacity-100" : "scale-95 opacity-0"
+        //     }`}
+        //   >
+        //     {renderModal()}
+        //   </div>
+        // </div>
       )}
-      <LeftButtom/>
+      <LeftButtom />
     </>
   );
 }

@@ -103,7 +103,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 hidden lg:flex items-end lg:left-[273px] lg:justify-start z-10 lg:bottom-[35px]">
+        <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%]">
           <div className="pb-20">
             <img src={mainline} alt="" srcset="" />
           </div>

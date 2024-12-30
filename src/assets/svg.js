@@ -12,7 +12,7 @@ export const zahnradSVG = (
     // height="1000.3"
     viewBox="0 0 1176.3 1176.3"
     style={{ enableBackground: "new 0 0 1176.3 1176.3" }}
-    xmlspace="preserve"
+    xmlSpace="preserve"
   >
     <path
       style={{
@@ -277,14 +277,13 @@ export const homeBackgroundSVG = (
     version="1.1"
     id="solution-bg"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsxlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
     viewBox="0 0 480 2898.1"
     width="480"
     height="2898.1"
     style={{ background: "new 0 0 480 2898.1" }}
-    xmlspace="preserve"
+    xmlSpace="preserve"
   >
     <path
       id="motionPath"
@@ -750,7 +749,7 @@ export const sideshape = (
 
 export const mobileSideshape = (
   <svg
-    class="mobile"
+    className="mobile"
     xmlns="http://www.w3.org/2000/svg"
     width="375"
     height="200"
@@ -764,11 +763,11 @@ export const mobileSideshape = (
           transform="translate(4417 2345)"
           fill="#fff"
           stroke="#707070"
-          stroke-width="1"
+          strokeWidth="1"
         ></rect>
       </clipPath>
     </defs>
-    <g transform="translate(-4417 -2345)" clip-path="url(#a)">
+    <g transform="translate(-4417 -2345)" clipPath="url(#a)">
       <path
         d="M737.148,0C1144.264,0,1474.3,330.033,1474.3,737.148S1144.264,1474.3,737.148,1474.3,0,1144.264,0,737.148,330.033,0,737.148,0Z"
         transform="translate(3701.352 2345.352)"
@@ -800,6 +799,36 @@ export const SearchIcon = (
         transform="translate(-11.819 -11.818)"
         fill="none"
         stroke="#00223E"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      ></path>
+    </g>
+  </svg>
+);
+
+export const MobileSearchIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="17.763"
+    height="17.764"
+    viewBox="0 0 19.763 19.764"
+  >
+    <g transform="translate(1 1)">
+      <path
+        d="M19.921,12.211A7.711,7.711,0,1,1,12.211,4.5,7.711,7.711,0,0,1,19.921,12.211Z"
+        transform="translate(-4.5 -4.5)"
+        fill="none"
+        stroke="#ffff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      ></path>
+      <path
+        d="M29.168,29.168l-4.193-4.193"
+        transform="translate(-11.819 -11.818)"
+        fill="none"
+        stroke="#ffff"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -887,7 +916,7 @@ export const DecarbonizationIcon = (
             fill: none;
             stroke: #fff;
             stroke-miterlimit: 10;
-            stroke-width: 2.5px;
+            strokeWidth: 2.5px;
           }`}
       </style>
     </defs>
@@ -981,7 +1010,7 @@ export const ExecutiveQualityIcon = (
             fill: none;
             stroke: #fff;
             stroke-miterlimit: 10;
-            stroke-width: 2.5px;
+            strokeWidth: 2.5px;
           }`}
       </style>
     </defs>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import "../../assets/scss/Servics.scss";
 import {
@@ -11,6 +11,7 @@ import {
   sideshape,
   mobileSideshape,
   SearchIcon,
+  MobileSearchIcon,
   CloseSearchIcon,
   CloseModalIcon,
 } from "../../assets/svg";
@@ -61,6 +62,12 @@ const Services = () => {
 
   const handleCloseModal = () => {
     dispatch(closeModal()); //close the modal
+  };
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpand = () => {
+    setIsExpanded(!isExpanded);  // Toggle the expanded state
   };
 
   return (
@@ -165,7 +172,10 @@ const Services = () => {
         </div>
       </div>
       <nav className="lg:hidden flex flex-col h-screen sub-outer">
-        <div className="flex-grow w-full h-[60%] sub-service-container mx-auto">
+        {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
+        <div
+        className={`w-full ${isExpanded ? "h-0" : "h-[60%]"} flex-grow w-full sub-service-container mx-auto`}
+        >
           {/* <div className="absolute w-full h-full bg-gradient-to-t from-[#272c55] via-[#272c55]/80 to-transparent"></div> */}
           <div className="sub-scrollbar-modal">
             <div className="pl-3 uppercase tracking-wide py-4 flex items-center gap-4 headline text-[29px] font-bold border-b border-t border-gray-500">
@@ -176,8 +186,8 @@ const Services = () => {
             </div>
             <ul className="">
               {services.map((service, index) => (
-                <div className="border-b border-gray-500 py-4">
-                  <li key={index} className="flex items-center">
+                <div key={index} className="border-b border-gray-500 py-4">
+                  <li className="flex items-center">
                     <div className="text-[23px] font-bold pl-3">
                       {service.title}
                     </div>
@@ -187,7 +197,10 @@ const Services = () => {
             </ul>
           </div>
         </div>
-        <div className="w-full h-[40%]">
+        {/* <div className="w-full h-[40%]"> */}
+        <div
+        className={`w-full ${isExpanded ? "h-[100%] bg-blue-400" : "h-[40%]"} transition-all duration-500 ease-in-out`}
+        >
           <div className="sub-sideshapesvg transition-colors text-[#77a7d1]">
             {mobileSideshape}
           </div>
@@ -199,9 +212,11 @@ const Services = () => {
                 </h3>
               </div>
 
-              <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
+              <div 
+              onClick={handleExpand}
+              className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
                 {/* Search Icon */}
-                <span className="text-[#ffffff] px-2">{SearchIcon}</span>
+                <span className="text-[#ffffff] px-2">{MobileSearchIcon}</span>
 
                 {/* input container */}
                 <div className="input-container w-full">

@@ -16,7 +16,7 @@ const CeoSection = () => {
     {
       img: Ceo2,
       name: "Sushaant Bakhru",
-      profession: "CEO ZETA Singapore",
+      profession: "CEO DENDRITES Singapore",
       text1: "We are happy to",
       text2: "advise you personally!",
       btn: "Get in touch!",

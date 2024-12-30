@@ -1,5 +1,5 @@
 import React from "react";
-import careerZeta from "../../assets/karriere-opt1_final-33526b1f.webp";
+import careerDENDRITES from "../../assets/karriere-opt1_final-33526b1f.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -7,8 +7,8 @@ const CareerZeta = () => (
   <div className="relative w-full h-[550px] lg:h-[700px]">
     {/* Background Image */}
     <img
-      src={careerZeta}
-      alt="careerZeta"
+      src={careerDENDRITES}
+      alt="careerDENDRITES"
       className="w-full h-full object-cover filter white-[2.5]"
 
     />
@@ -30,11 +30,11 @@ const CareerZeta = () => (
         {/* Left Content */}
         <div className="w-full lg:w-1/2  lg:text-left mb-8 lg:mb-0">
           <p className="text-[18px] lg:text-[30px] lg:text-[#80acd3] text-[#192c49] tracking-wide">
-            <span className="font-bold">Career</span> at <span>ZETA</span>
+            <span className="font-bold">Career</span> at <span>DENDRITES</span>
           </p>
           <h1 className="lg:leading-[60px] leading-[40px] text-[32px] lg:text-[57px] text-[#03213b] pt-7 lg:pt-9 uppercase tracking-wide">
             Welcome to 
-            <span className="block font-bold">the ZETA team</span>
+            <span className="block font-bold">the DENDRITES team</span>
           </h1>
           <div className="pt-12 lg:pt-14">
             <button className="flex lg:text-base text-sm items-center gap-3 bg-[#95e8ca] px-7 py-3 lg:px-[34px] lg:py-[10px] font-bold text-[#03213b] rounded-md transition duration-300 hover:bg-[#00223e] hover:text-white">

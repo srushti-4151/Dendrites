@@ -23,31 +23,31 @@ const Solutions = () => {
   const services = [
     {
       image: Automation1,
-      title: "Engineering",
+      title: "Automation",
       description:
-        "ZETA implements highly complex projects in the shortest possible time.",
+        "Multi-brand PLC and SCADA based solutions",
     },
     {
       image: Digitalization,
-      title: "EPCMV",
+      title: "Digitalization",
       description:
-        "We take over the planning and coordination of your projects.",
+        "IoT hardware and Centralized software-based solution",
     },
     {
       image: ProcessSolutions,
-      title: "Building Services",
+      title: "ProcessSolutions",
       description:
         "We combine HVAC, cleanroom and the entire process technology under one roof.",
     },
     {
       image: Biotech,
-      title: "Decarbonization",
+      title: "Biotech",
       description:
         "Sustainable production of buildings becoming increasingly important.ZETA supports you in decarbonizing your process!",
     },
     {
       image: FoodEng,
-      title: "Executive Quality",
+      title: "Food Engineering",
       description: "You can rely on us-we are by your side 14/7!",
     },
   ];

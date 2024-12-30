@@ -56,9 +56,9 @@ const BenefitsSection = () => {
     },
     {
       image: innolabZetaTechCenter,
-      title: "Innolab ZETA TechCenter",
+      title: "Innolab DENDRITES TechCenter",
       description:
-        "ZETA TechCenter – where the spirit of research and problem-solving skills come together!",
+        "DENDRITES TechCenter – where the spirit of research and problem-solving skills come together!",
     },
   ];
 

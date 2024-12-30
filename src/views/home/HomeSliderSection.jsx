@@ -34,7 +34,7 @@ const HomeSliderSection = () => {
       image: image3,
       title: "Process Engineering",
       description:
-        "ZETA implements highly complex projects in the shortest possible time.",
+        "DENDRITES implements highly complex projects in the shortest possible time.",
     },
     {
       image: image4,
@@ -85,7 +85,7 @@ const HomeSliderSection = () => {
             {/* Background Image */}
             <img
               src={slide?.image}
-              alt="careerZeta"
+              alt="careerDENDRITES"
               className="w-full h-full object-cover"
             />
 

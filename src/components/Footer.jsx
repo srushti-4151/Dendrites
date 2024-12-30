@@ -15,11 +15,11 @@ const Footer = () => {
 
   const sections = [
     {
-      title: "ZETA Holding Headquarter",
+      title: "DENDRITES Holding Headquarter",
       content: (
         <>
           <p className="text-white pt-3">
-            Zetaplatz 1, 8501 Graz/Lieboch <br /> Austria
+            DENDRITES 1, 8501 Graz/Lieboch <br /> Austria
           </p>
           <Link className="group flex gap-2 items-center pt-3 font-medium">
             <div className="border border-[#80acd3] p-2 rounded-full group-hover:bg-[#80acd3] duration-300">
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
             <div className="text-white group relative">
               <span className="group-hover:text-[#80acd3]">
-                office@zeta.com
+                office@DENDRITES.com
               </span>
               <div className="absolute bottom-[-4px] left-1/2 w-0 h-[1px] bg-[#80acd3] group-hover:w-[calc(100%)] transition-all duration-300 transform -translate-x-1/2"></div>
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
         <>
           {[
             "Success Stories",
-            "ZETA Videos",
+            "DENDRITES Videos",
             "Events",
             "Media Relations",
             "Downloads",
@@ -116,7 +116,7 @@ const Footer = () => {
             <img
               src={logo}
               className="w-64 h-6 cursor-pointer"
-              alt="Zeta Logo"
+              alt="DENDRITES Logo"
             />
           </div>
           <div className="flex flex-wrap gap-4 justify-center sm:justify-end w-full lg:text-base text-sm">

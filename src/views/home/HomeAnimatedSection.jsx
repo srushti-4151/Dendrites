@@ -232,7 +232,7 @@ const HomeAnimatedSection = () => {
         <div className="corezone">
           <div className="roofdock">
             <h2 className="metatext">
-              <strong>Zeta Solution Path</strong>
+              <strong>DENDRITES Solution Path</strong>
             </h2>
             <div className="basemeta-text">
               We have developed <strong> a unique solution </strong> for
@@ -1221,11 +1221,11 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               </figure>
             </div>
             <h3 className="metatext">
-              Are you already <strong>convinced of ZETA?</strong>
+              Are you already <strong>convinced of DENDRITES?</strong>
             </h3>
             <div className="arraowbtnholder">
               <a
-                href="https://www.zeta.com/en/inquiry.html"
+                href="https://www.DENDRITES.com/en/inquiry.html"
                 target="_SELF"
                 className="button readybutton"
               >

@@ -393,6 +393,22 @@
   }
 }
 
+.hero_section .glowmain{
+    position: absolute;
+    width: 55px;
+    /* Size of the "star" */
+    height: 55px;
+    background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
+    border-radius: 50%;
+    opacity: 1;
+    pointer-events: none;
+  }
+  /* Different Positions for Each Star */
+  .big-star {
+    top: 3%;
+    left: 64%;
+    animation-delay: 0s;
+  }
 
 
 /* --------------------------------- amimation section ------------------------------------ */

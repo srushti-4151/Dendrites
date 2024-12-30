@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-8 lg:-translate-y-1/2 h-fit lg:items-start justify-center z-10 px-4">
+        <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-0 lg:-translate-y-1/2 h-fit lg:items-start justify-center z-10 px-4">
           <div className="max-w-[1410px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">

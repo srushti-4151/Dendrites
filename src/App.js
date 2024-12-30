@@ -52,15 +52,6 @@ function App() {
         <div className="fixed inset-0 z-50">
           {renderModal()}
         </div>
-        // <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
-        //   <div
-        //     className={`transform transition-transform duration-3000 ${
-        //       modalContent ? "scale-100 opacity-100" : "scale-95 opacity-0"
-        //     }`}
-        //   >
-        //     {renderModal()}
-        //   </div>
-        // </div>
       )}
       <LeftButtom />
     </>

@@ -41,27 +41,21 @@ const Hero = () => {
         </div>
 
         <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-0 lg:-translate-y-1/2 h-fit lg:items-start justify-center z-10 px-4">
-          <div className="max-w-[1410px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
+          <div className="w-full flex flex-col lg:flex-row lg:justify-end lg:pr-32 justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
               Add left content if needed
             </div> */}
 
             {/* Right Content */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
-              <p className="text-white pb-1 text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
-                Evolution
+            <div className="w-full lg:w-1/2 text-center lg:text-right bg-transparent">
+              <p className="text-white pb-1 text-3xl lg:text-5xl uppercase tracking-wide">
+                Dendrites Technology
               </p>
-              <p className="text-white font-bold text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
-                of Technology
+              <p className="text-center text-white opacity-60 pb-1 text-xs lg:text-xs uppercase tracking-wide">
+                Think Different
               </p>
 
-              <p className="text-lg sm:text-xl lg:text-3xl text-white lg:pt-9 pt-4">
-                From Concept to Realization:
-              </p>
-              <p className="text-lg sm:text-xl lg:text-3xl font-semibold text-[#90adc7] lg:pt-1 tracking-wide">
-                ZETA – Your Partner for the Pharmaceutical and Biotech Industry!
-              </p>
               <div className="flex justify-center lg:hidden gap-5 py-10">
                 <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
                   <div className="hover:bg-[#80acd3] duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
@@ -176,3 +170,20 @@ const Hero = () => {
 };
 
 export default Hero;
+{
+  /* <p className="text-white pb-1 text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
+                Evolution
+              </p>
+              <p className="text-white font-bold text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
+                of Technology
+              </p> */
+}
+
+{
+  /* <p className="text-lg sm:text-xl lg:text-3xl text-white lg:pt-9 pt-4">
+                From Concept to Realization:
+              </p>
+              <p className="text-lg sm:text-xl lg:text-3xl font-semibold text-[#90adc7] lg:pt-1 tracking-wide">
+                ZETA – Your Partner for the Pharmaceutical and Biotech Industry!
+              </p> */
+}

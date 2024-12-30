@@ -74,17 +74,18 @@ const Navbar = () => {
 
   const links = [
     {
+      isShow:true,
       name: "Services",
       onClick: () => {
-        console.log("handlinggggggggggggg");
+        console.log("handlingg");
         handleModalOpen("Services");
       },
     },
-    { name: "Solutions", onClick: () => handleModalOpen("Solutions") },
-    { name: "Products", path: "/products" },
-    { name: "Innovation", onClick: () => handleModalOpen("Services") },
-    { name: "Company", onClick: () => handleModalOpen("Services") },
-    { name: "Jobs", onClick: () => handleModalOpen("Services") },
+    { isShow:true, name: "Solutions", onClick: () => handleModalOpen("Solutions") },
+    { isShow:false, name: "Products", path: "/products" },
+    { isShow:true, name: "Innovation", onClick: () => handleModalOpen("Services") },
+    { isShow:true, name: "Company", onClick: () => handleModalOpen("Services") },
+    { isShow:true, name: "Jobs", onClick: () => handleModalOpen("Services") },
   ];
   const [isInputFocused, setIsInputFocused] = useState(false);
 
@@ -143,7 +144,7 @@ const Navbar = () => {
                 link.path ? (
                   <Link
                     key={link.name}
-                    to={link.path}
+                    to={link.isShow ? "" : link.path}
                     className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 ${
                       activeLink === link
                         ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"

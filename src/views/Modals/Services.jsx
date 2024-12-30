@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import "../../assets/scss/Servics.scss";
 import {
@@ -67,8 +67,19 @@ const Services = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleExpand = () => {
-    setIsExpanded(!isExpanded);  // Toggle the expanded state
+    setIsExpanded(!isExpanded);
   };
+  const handleCollapse = () => {
+    // console.log("Closing..."); 
+    // console.log("isExpanded:", isExpanded);
+    setIsExpanded(false);
+    // console.log("isExpanded after:", isExpanded);
+  };
+
+  useEffect(() => {
+    console.log("isExpanded onchange:", isExpanded);
+  }, [isExpanded])
+  
 
   return (
     <>
@@ -171,15 +182,21 @@ const Services = () => {
           </div>
         </div>
       </div>
+
       <nav className="lg:hidden flex flex-col h-screen sub-outer">
         {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
         <div
-        className={`w-full ${isExpanded ? "h-0" : "h-[60%]"} flex-grow w-full sub-service-container mx-auto`}
+          className={`w-full ${
+            isExpanded ? "" : "h-[60%]"
+          } flex-grow w-full sub-service-container mx-auto`}
         >
           {/* <div className="absolute w-full h-full bg-gradient-to-t from-[#272c55] via-[#272c55]/80 to-transparent"></div> */}
           <div className="sub-scrollbar-modal">
             <div className="pl-3 uppercase tracking-wide py-4 flex items-center gap-4 headline text-[29px] font-bold border-b border-t border-gray-500">
-              <button onClick={handleCloseModal} className="cursor-pointer focus:outline-none p-0 m-0">
+              <button
+                onClick={handleCloseModal}
+                className="cursor-pointer focus:outline-none p-0 m-0"
+              >
                 <FaArrowLeftLong />
               </button>{" "}
               Services
@@ -199,9 +216,15 @@ const Services = () => {
         </div>
         {/* <div className="w-full h-[40%]"> */}
         <div
-        className={`w-full ${isExpanded ? "h-[100%] bg-blue-400" : "h-[40%]"} transition-all duration-500 ease-in-out`}
+          className={`w-full 
+          ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
+        transition-all duration-700 ease-in-out`}
         >
-          <div className="sub-sideshapesvg transition-colors text-[#77a7d1]">
+          <div
+            className={`sub-sideshapesvg text-[#77a7d1] 
+            ${isExpanded ? "top-0 bg-[#7eabd5]" : "bottom-0"} 
+          transition-all duration-700 ease-in-out`}
+          >
             {mobileSideshape}
           </div>
           <div className="relative z-20 pt-8 pl-4">
@@ -212,9 +235,10 @@ const Services = () => {
                 </h3>
               </div>
 
-              <div 
-              onClick={handleExpand}
-              className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
+              <div
+                onClick={handleExpand}
+                className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+              >
                 {/* Search Icon */}
                 <span className="text-[#ffffff] px-2">{MobileSearchIcon}</span>
 
@@ -235,7 +259,15 @@ const Services = () => {
                     Your <strong>search terms</strong>
                   </label>
 
-                  <Link className="mr-2 close-button">{CloseSearchIcon}</Link>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault(); 
+                      handleCollapse();
+                    }}
+                    className="mr-2 close-button"
+                  >
+                    {CloseSearchIcon}
+                  </button>
                 </div>
               </div>
             </form>

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Bar from "./Bar";
+import HeroProduct from "./HeroProduct";
 
 
 const Products = () => {
@@ -8,6 +9,7 @@ const Products = () => {
     <>
     <Navbar />
     <Bar/>
+    <HeroProduct/>
     </>
   );
 };

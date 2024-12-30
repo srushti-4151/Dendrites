@@ -13,7 +13,7 @@ import { closeModal } from "./redux/ModalSlice";
 function App() {
   const dispatch = useDispatch();
   const modalContent = useSelector((state) => state.modal.modalContent);
-  console.log("Current Modal Content:", modalContent);
+ 
 
   // Disable body scroll when modal is open
   useEffect(() => {

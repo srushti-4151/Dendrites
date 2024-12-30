@@ -139,12 +139,7 @@ const Hero = () => {
         </div>
       </div>
 
-
-
-
-
-
-      <div className="absolute inset-0 flex lg:items-end justify-start gap-5 z-10  top-[140px] lg:bottom-[170px] left-[20px] lg:left-[50px]">
+      <div className="absolute inset-0 flex lg:items-end justify-start gap-5 z-10 top-[100px] lg:top-[140px] lg:bottom-[170px] left-[15px] lg:left-[50px]">
         <div className="w-[120px] h-[120px] lg:w-[190px] lg:h-[190px] border border-[#80acd3a1] flex justify-center items-center rounded-full">
           <div className="w-[105px] h-[105px] lg:w-[170px] lg:h-[170px] bg-[#E9E9F880] flex justify-center items-center rounded-full">
             <div className="border border-[#00223e] w-[142px] h-[142px] rounded-full flex justify-center items-center">

@@ -748,6 +748,36 @@ export const sideshape = (
   </svg>
 );
 
+export const mobileSideshape = (
+  <svg
+    class="mobile"
+    xmlns="http://www.w3.org/2000/svg"
+    width="375"
+    height="200"
+    viewBox="0 0 375 200"
+  >
+    <defs>
+      <clipPath id="a">
+        <rect
+          width="375"
+          height="200"
+          transform="translate(4417 2345)"
+          fill="#fff"
+          stroke="#707070"
+          stroke-width="1"
+        ></rect>
+      </clipPath>
+    </defs>
+    <g transform="translate(-4417 -2345)" clip-path="url(#a)">
+      <path
+        d="M737.148,0C1144.264,0,1474.3,330.033,1474.3,737.148S1144.264,1474.3,737.148,1474.3,0,1144.264,0,737.148,330.033,0,737.148,0Z"
+        transform="translate(3701.352 2345.352)"
+        fill="#7eabd5"
+      ></path>
+    </g>
+  </svg>
+);
+
 export const SearchIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"

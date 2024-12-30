@@ -9,6 +9,7 @@ import {
   ExecutiveQualityIcon,
   LifecycleManagement,
   sideshape,
+  mobileSideshape,
   SearchIcon,
   CloseSearchIcon,
   CloseModalIcon,
@@ -16,6 +17,7 @@ import {
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../../redux/ModalSlice";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Services = () => {
   const services = [
@@ -55,7 +57,6 @@ const Services = () => {
         "You can rely on us-ervices along the entire product life cycle.",
     },
   ];
-
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
@@ -65,7 +66,7 @@ const Services = () => {
   return (
     <>
       <Navbar />
-      <div className="outer bg-blue-900 text-white">
+      <div className="lg:flex hidden outer bg-blue-900 text-white">
         <div className="w-1/2 service-container mx-auto">
           <div className="scrollbar-modal">
             <div className="py-20 w-[75%]">
@@ -126,7 +127,7 @@ const Services = () => {
                   {/* Search Input */}
                   <input
                     id="search"
-                    placeholder=" " //do not remove this 
+                    placeholder=" " //do not remove this
                     autoComplete="off"
                     className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
                   />
@@ -138,9 +139,7 @@ const Services = () => {
                     Your <strong>search terms</strong>
                   </label>
 
-                  <Link className="mr-2 close-button">
-                    {CloseSearchIcon}
-                  </Link>
+                  <Link className="mr-2 close-button">{CloseSearchIcon}</Link>
                 </div>
               </div>
               <div className="pt-10 group flex flex-wrap gap-4">
@@ -165,6 +164,69 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <nav className="lg:hidden flex flex-col h-screen sub-outer">
+        <div className="flex-grow w-full h-[60%] sub-service-container mx-auto">
+          {/* <div className="absolute w-full h-full bg-gradient-to-t from-[#272c55] via-[#272c55]/80 to-transparent"></div> */}
+          <div className="sub-scrollbar-modal">
+            <div className="pl-3 uppercase tracking-wide py-4 flex items-center gap-4 headline text-[29px] font-bold border-b border-t border-gray-500">
+              <button onClick={handleCloseModal} className="cursor-pointer focus:outline-none p-0 m-0">
+                <FaArrowLeftLong />
+              </button>{" "}
+              Services
+            </div>
+            <ul className="">
+              {services.map((service, index) => (
+                <div className="border-b border-gray-500 py-4">
+                  <li key={index} className="flex items-center">
+                    <div className="text-[23px] font-bold pl-3">
+                      {service.title}
+                    </div>
+                  </li>
+                </div>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="w-full h-[40%]">
+          <div className="sub-sideshapesvg transition-colors text-[#77a7d1]">
+            {mobileSideshape}
+          </div>
+          <div className="relative z-20 pt-8 pl-4">
+            <form className="w-full">
+              <div className="mb-5 mt-12">
+                <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
+                  Easy Search
+                </h3>
+              </div>
+
+              <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
+                {/* Search Icon */}
+                <span className="text-[#ffffff] px-2">{SearchIcon}</span>
+
+                {/* input container */}
+                <div className="input-container w-full">
+                  {/* Search Input */}
+                  <input
+                    id="search"
+                    placeholder=" " //do not remove this
+                    autoComplete="off"
+                    className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                  />
+                  {/* Label */}
+                  <label
+                    htmlFor="search"
+                    className="text-white opacity-900 tracking-wide"
+                  >
+                    Your <strong>search terms</strong>
+                  </label>
+
+                  <Link className="mr-2 close-button">{CloseSearchIcon}</Link>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
     </>
   );
 };

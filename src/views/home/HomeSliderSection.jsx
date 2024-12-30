@@ -79,7 +79,7 @@ const HomeSliderSection = () => {
     <div className="slider-container">
       <Slider {...sliderSettings}>
         {homeSliderData.map((slide, index) => (
-          <div key={index} className="relative w-full h-[350px] lg:h-[770px]">
+          <div key={index} className="relative w-full h-[340px] lg:h-[770px]">
             {/* Background Image */}
             <img
               src={slide?.image}
@@ -88,7 +88,12 @@ const HomeSliderSection = () => {
             />
 
             {/* White Fade Over Entire Image */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
+            <div className="absolute inset-0 
+            bg-gradient-to-t 
+            from-white 
+            via-white/50 to-transparent
+            sm:via-white/80 sm:from-white/95
+            "></div>
 
             {/* Oval Shape on Right Side */}
             <div
@@ -100,15 +105,15 @@ const HomeSliderSection = () => {
             {/*Text Overlay */}
             <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
               <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
-                <div className="lg:max-w-[600px] mb-6 lg:mb-0 lg:pl-16">
-                  <h1 className="text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-2 uppercase">
+                <div className="lg:max-w-[600px] mb-4 lg:mb-0 lg:pl-16">
+                  <h1 className="text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-2 pb-3 uppercase">
                     {slide.title}
                   </h1>
-                  <p className="text-[20px] font-normal lg:text-[32px] text-[#00223e] lg:pb-2">
+                  <p className="text-[18px] font-normal lg:text-[32px] text-[#00223e] lg:pb-2">
                     {slide?.description}
                   </p>
-                  <div className="pt-6 lg:pt-20">
-                    <button className="flex items-center gap-3 bg-[#95e8ca] px-4 py-2 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white text-lg">
+                  <div className="pt-14 lg:pt-20">
+                    <button className="flex items-center gap-3 bg-[#95e8ca] px-6 py-3 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white lg:text-lg text-sm">
                       <FaArrowRight size={20}/>
                       Learn more!
                     </button>

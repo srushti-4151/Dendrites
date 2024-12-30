@@ -173,7 +173,7 @@ const Footer = () => {
                   },
                 }}
               >
-                <p className="text-white font-bold text-[13px]">{section.title}</p>
+                <p className="lg:text-white text-gray-400 font-bold text-[13px] w-[50%]">{section.title}</p>
               </AccordionSummary>
               <AccordionDetails>
                <hr className="border-t border-[#507292] scale-y-[0.45] mt-2" />

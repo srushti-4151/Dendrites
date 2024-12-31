@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/3 top-1/2 lg:pt-10 pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
+        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-1/2 top-1/2 lg:pt-10 pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
           <div className="w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
@@ -67,7 +67,7 @@ const Hero = () => {
 
               <div className="flex justify-center lg:hidden gap-5 py-10">
                 <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
-                  <div className="hover:bg-[#80acd3] duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
+                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
                     <div className="text-center ">
                       <div className="hidden lg:flex justify-center">
                         {timeMarketSVG}
@@ -79,7 +79,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
-                  <div className="hover:bg-[#80acd3] duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
+                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
                     <div className="text-center ">
                       <div className="hidden lg:flex justify-center">
                         {customizedSolutionsSVG}
@@ -91,7 +91,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
-                  <div className="hover:bg-[#80acd3] duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
+                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
                     <div className="text-center ">
                       <div className="hidden lg:flex justify-center">
                         {innovationDriverSVG}
@@ -111,8 +111,8 @@ const Hero = () => {
           <div className="pb-20 w-[222.5px]">
             <img className="w-[700px] h-99" src={mainline} alt="" srcset="" />
           </div>
-          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[186px] 2xl:h-[186px] rounded-full flex justify-center items-center cursor-pointer">
-            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[168px] 2xl:h-[168px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
+          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
+            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
                   <div className="hidden lg:flex justify-center">
@@ -127,8 +127,8 @@ const Hero = () => {
           </div>
           <div className="h-[1px] w-10 2xl:w-20 bg-[#80acd3] mb-20 2xl:mb-28"></div>
 
-          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[186px] 2xl:h-[186px] rounded-full flex justify-center items-center cursor-pointer">
-            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[168px] 2xl:h-[168px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
+          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
+            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
                   <div className="hidden lg:flex justify-center">
@@ -143,8 +143,8 @@ const Hero = () => {
           </div>
           <div className="h-[1px] 2xl:w-20 w-10 bg-[#80acd3] mb-20 2xl:mb-28"></div>
 
-          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[186px] 2xl:h-[186px] rounded-full flex justify-center items-center cursor-pointer">
-            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[168px] 2xl:h-[168px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
+          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
+            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
                   <div className="hidden lg:flex justify-center">

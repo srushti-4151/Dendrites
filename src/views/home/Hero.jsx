@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-1/2 top-1/2 lg:pt-10 pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
+        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-1/2 top-1/2 lg:pt-10 2xl:pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
           <div className="w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
@@ -51,13 +51,13 @@ const Hero = () => {
             {/* Right Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
                 
-                <p className="text-white pb-1 text-3xl lg:text-6xl 2xl:text-8xl uppercase text-shadow-glow tracking-wider">
+                <p className="text-white pb-1 text-3xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wider">
                   Dendrites
                 </p>
-                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-8xl uppercase text-shadow-glow tracking-wider font-bold">
+                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wider font-bold">
                   Technology
                 </p>
-                <p className="text-[#80acd3] text-lg lg:text-3xl 2xl:text-4xl lg:pt-9 pt-4 tracking-wide font-bold">
+                <p className="text-[#80acd3] text-lg lg:text-2xl 2xl:text-3xl lg:pt-9 pt-4 tracking-wide font-bold">
                   Think Different
                 </p>
 
@@ -107,7 +107,7 @@ const Hero = () => {
           </div>
         </div>
         {/* <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]"> */}
-        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 pl-0">
+        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 2xl:pl-10 pl-0">
           <div className="pb-20 w-[222.5px]">
             <img className="w-[700px] h-99" src={mainline} alt="" srcset="" />
           </div>

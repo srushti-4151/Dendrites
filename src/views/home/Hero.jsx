@@ -9,7 +9,7 @@ import {
   zahnradSVG,
 } from "../../assets/svg";
 import star from "../../assets/star.png";
-import mainline from "../../assets/mainline.png"
+import mainline from "../../assets/mainline.png";
 
 const Hero = () => {
   return (
@@ -41,26 +41,29 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
-          <div className="w-full lg:text-center flex flex-col lg:flex-row lg:items-start lg:justify-center justify-end items-center">
+        <div className="absolute inset-0 flex items-end lg:top-1/3 top-1/2 lg:pt-10 pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
+          <div className="w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
               Add left content if needed
             </div> */}
 
             {/* Right Content */}
-            <div className="w-full text-center lg:text-end bg-transparent lg:pr-[7%] 2xl:pr-[15%]">
-              <div className="flex items-center justify-end h-full w-full text-center">
-                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-7xl uppercase tracking-wide">
-                  Dendrites Technology
-                  <span className="text-white lg:pr-7 2xl:pr-10 block text-sm lg:text-base 2xl:text-lg opacity-60 uppercase tracking-wider pt-1">
-                    Think Different
-                  </span>
+            <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
+                
+                <p className="text-white pb-1 text-3xl lg:text-6xl 2xl:text-8xl uppercase text-shadow-glow tracking-wider">
+                  Dendrites
                 </p>
-              </div>
+                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-8xl uppercase text-shadow-glow tracking-wider font-bold">
+                  Technology
+                </p>
+                <p className="text-[#80acd3] text-lg lg:text-3xl 2xl:text-4xl lg:pt-9 pt-4 tracking-wide font-bold">
+                  Think Different
+                </p>
+
               <div className="glowmain big-star">
                 {/* <img className="w-24 h-24" src={light} alt="light" /> */}
-                </div>
+              </div>
 
               <div className="flex justify-center lg:hidden gap-5 py-10">
                 <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
@@ -114,7 +117,7 @@ const Hero = () => {
                   <div className="hidden lg:flex justify-center">
                     {timeMarketSVG}
                   </div>
-                  <p className="text-white font-medium text-[12px] lg:text-[16px] pt-2">
+                  <p className="text-white font-medium text-[12px] lg:text-[16px] 2xl:text-[25px] pt-2">
                     Time to <br /> Market
                   </p>
                 </div>
@@ -129,7 +132,7 @@ const Hero = () => {
                   <div className="hidden lg:flex justify-center">
                     {customizedSolutionsSVG}
                   </div>
-                  <p className="text-white font-medium text-[12px] lg:text-[16px] pt-2">
+                  <p className="text-white font-medium text-[12px] lg:text-[16px] 2xl:text-[25px] pt-2">
                     Customized Solutions
                   </p>
                 </div>
@@ -144,7 +147,7 @@ const Hero = () => {
                   <div className="hidden lg:flex justify-center">
                     {innovationDriverSVG}
                   </div>
-                  <p className="text-white font-medium text-[12px] lg:text-[16px] pt-2">
+                  <p className="text-white font-medium text-[12px] lg:text-[16px] 2xl:text-[25px] pt-2">
                     Innovation <br /> Driver
                   </p>
                 </div>
@@ -176,6 +179,17 @@ const Hero = () => {
 };
 
 export default Hero;
+
+{
+  /* <div className="flex items-center justify-end h-full w-full text-center">
+  <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-7xl uppercase tracking-wide">
+    Dendrites Technology
+    <span className="text-white lg:pr-7 2xl:pr-10 block text-sm lg:text-base 2xl:text-lg opacity-60 uppercase tracking-wider pt-1">
+      Think Different
+    </span>
+  </p>
+</div> */
+}
 {
   /* <p className="text-white pb-1 text-3xl sm:text-5xl uppercase text-shadow-glow tracking-wide">
                 Evolution

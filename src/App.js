@@ -1,4 +1,7 @@
 // import logo from "./logo.svg";
+import "@fontsource/abel"; // Defaults to weight 400
+import "@fontsource/abel/400.css"; // Specify weight
+// import "@fontsource/abel/400-italic.css"; // Specify weight and style
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { RouteData } from "./Routes/Routes";

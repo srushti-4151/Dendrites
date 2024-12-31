@@ -62,8 +62,8 @@ const Navbar = () => {
     { isShow:true, name: "Solutions", onClick: () => handleModalOpen("Solutions") },
     { isShow:false, name: "Products", path: "/products" },
     { isShow:true, name: "Innovation", onClick: () => handleModalOpen("Innovation") },
-    { isShow:true, name: "Company", onClick: () => handleModalOpen("Services") },
-    { isShow:true, name: "Jobs", onClick: () => handleModalOpen("Services") },
+    { isShow:true, name: "Company", onClick: () => handleModalOpen("Company") },
+    { isShow:true, name: "Jobs", onClick: () => handleModalOpen("Jobs") },
   ];
   const [isInputFocused, setIsInputFocused] = useState(false);
 
@@ -123,7 +123,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.isShow ? "" : link.path}
-                    className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 ${
+                    className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
                       activeLink === link
                         ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"
                         : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-white after:transition-all after:duration-700"
@@ -135,7 +135,7 @@ const Navbar = () => {
                   <button
                     key={link.name}
                     onClick={link.onClick}
-                    className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 ${
+                    className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
                       activeLink === link
                         ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"
                         : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-white after:transition-all after:duration-700"

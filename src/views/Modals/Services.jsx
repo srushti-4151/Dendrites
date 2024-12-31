@@ -26,7 +26,7 @@ const Services = () => {
       image: EngineeringIcon,
       title: "Engineering",
       description:
-        "ZETA implements highly complex projects in the shortest possible time.",
+        "Dendrites implements highly complex projects in the shortest possible time.",
     },
     {
       image: EpcmvIcon,
@@ -44,7 +44,7 @@ const Services = () => {
       image: DecarbonizationIcon,
       title: "Decarbonization",
       description:
-        "Sustainable production of buildings becoming increasingly important.ZETA supports you in decarbonizing your process!",
+        "Sustainable production of buildings becoming increasingly important.Dendrites supports you in decarbonizing your process!",
     },
     {
       image: ExecutiveQualityIcon,
@@ -104,7 +104,7 @@ const Services = () => {
                       </div>{" "}
                     </div>
                     <div className="p-2 pl-6 w-[75%]">
-                      <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wide">
+                      <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
                         {service.title}
                       </h3>
                       <p className="text-sm text-white pt-2 font-light opacity-60">
@@ -165,7 +165,7 @@ const Services = () => {
                   "Cultured Meat",
                   "Products",
                   "Building Equipment",
-                  "ZETA",
+                  "Dendrites",
                   "Digitalisation",
                 ].map((item, index) => (
                   <button

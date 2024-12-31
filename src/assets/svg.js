@@ -1627,12 +1627,12 @@ export const FeatureArticles = (
 );
 
 
-//Contact modal svg
+//Company modal svg
 export const ContactCall = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="101.25"
-    height="92.2"
+    width="50"
+    height="50"
     viewBox="0 0 101.25 92.2"
   >
     <g transform="translate(-1080.308 -45.039)">
@@ -1702,8 +1702,8 @@ export const ContactCall = (
 export const AboutDrop = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="22.567"
-    height="33.797"
+    width="50"
+    height="50"
     viewBox="0 0 22.567 33.797"
   >
     <path
@@ -1717,8 +1717,8 @@ export const AboutDrop = (
 export const LocationDrop = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="25.292"
-    height="27.791"
+    width="50"
+    height="50"
     viewBox="0 0 25.292 27.791"
   >
     <path
@@ -1734,8 +1734,8 @@ export const LocationDrop = (
 export const Whydet = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="35.146"
-    height="31.115"
+    width="50"
+    height="50"
     viewBox="0 0 35.146 31.115"
   >
     <path
@@ -1749,8 +1749,8 @@ export const Whydet = (
 export const careerAtDet = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="34.712"
-    height="33.201"
+    width="50"
+    height="50"
     viewBox="0 0 34.712 33.201"
   >
     <path
@@ -1764,8 +1764,8 @@ export const careerAtDet = (
 export const Vacancies = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="33.179"
-    height="34.052"
+    width="50"
+    height="50"
     viewBox="0 0 33.179 34.052"
   >
     <path

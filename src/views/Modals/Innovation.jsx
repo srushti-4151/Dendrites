@@ -18,7 +18,7 @@ import { closeModal } from "../../redux/ModalSlice";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Innovation = () => {
-  const services = [
+  const innovation = [
     {
       image: ResAndDev,
       title: "Research & Development",
@@ -69,7 +69,7 @@ const Innovation = () => {
                 Innovation
               </h3>
               <div className="grid grid-row-1 sm:grid-row-2 gap-2">
-                {services.map((service, index) => (
+                {innovation.map((service, index) => (
                   <Link
                     key={index}
                     className="group rounded-lg pb-5 text-white transition flex flex-row items-center"
@@ -81,7 +81,7 @@ const Innovation = () => {
                       </div>{" "}
                     </div>
                     <div className="p-2 pl-6 w-[75%]">
-                      <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wide">
+                      <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
                         {service.title}
                       </h3>
                       <p className="text-sm text-white pt-2 font-light opacity-60">
@@ -142,7 +142,7 @@ const Innovation = () => {
                   "Cultured Meat",
                   "Products",
                   "Building Equipment",
-                  "ZETA",
+                  "Dendrites",
                   "Digitalisation",
                 ].map((item, index) => (
                   <button
@@ -176,10 +176,10 @@ const Innovation = () => {
               >
                 <FaArrowLeftLong />
               </button>{" "}
-              Services
+              innovation
             </div>
             <ul className="">
-              {services.map((service, index) => (
+              {innovation.map((service, index) => (
                 <div key={index} className="border-b border-gray-500 py-4">
                   <li className="flex items-center">
                     <div className="text-[23px] font-bold pl-3">

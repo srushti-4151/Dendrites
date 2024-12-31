@@ -40,22 +40,24 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-0 lg:-translate-y-1/2 h-fit lg:items-start justify-center z-10 px-4">
-          <div className="w-full flex flex-col lg:flex-row lg:pr-32 sm:justify-end items-center lg:items-start">
+        <div className="absolute inset-0 flex items-end lg:top-1/2 top-1/2 lg:pt-0 pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
+          <div className="w-full lg:text-center flex flex-col lg:flex-row lg:items-start lg:justify-center justify-end items-center">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
               Add left content if needed
             </div> */}
 
             {/* Right Content */}
-            <div className="w-full lg:w-1/2 text-center lg:text-right bg-transparent">
-              <p className="text-white pb-1 text-3xl lg:text-5xl uppercase tracking-wide">
-                Dendrites Technology
-              </p>
+            <div className="w-full text-center lg:text-end bg-transparent lg:pr-[8%] 2xl:pr-[15%]">
+              <div className="flex items-center justify-end h-full w-full text-center">
+                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-7xl uppercase tracking-wide">
+                  Dendrites Technology
+                  <span className="text-white block text-sm lg:text-base 2xl:text-lg opacity-60 uppercase tracking-wide pt-1">
+                    Think Different
+                  </span>
+                </p>
+              </div>
               <div className="glowmain big-star"></div>
-              <p className="text-center text-white opacity-60 pb-1 text-xs lg:text-sm uppercase tracking-wide pt-1">
-                Think Different
-              </p>
 
               <div className="flex justify-center lg:hidden gap-5 py-10">
                 <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
@@ -98,11 +100,11 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] 2xl:left-[25%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]">
-          <div className="pb-20">
+        <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]">
+          <div className="pb-4 w-[222.5px] 2xl:w-[300px]">
             <img src={mainline} alt="" srcset="" />
           </div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-48 2xl:h-48 rounded-full flex justify-center items-center cursor-pointer">
+          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-60 2xl:h-60 rounded-full flex justify-center items-center cursor-pointer">
             <div className="w-36 h-36 hover:bg-[#dfdffa80] opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="w-[60px] h-[60px] lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
@@ -116,8 +118,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="h-[1px] w-10 bg-[#80acd3] mb-20"></div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-48 2xl:h-48 rounded-full flex justify-center items-center cursor-pointer">
+          <div className="h-[1px] w-10 2xl:w-20 bg-[#80acd3] mb-20 2xl:mb-28"></div>
+          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-60 2xl:h-60 rounded-full flex justify-center items-center cursor-pointer">
             <div className="w-36 h-36 hover:bg-[#dfdffa80] opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="w-[60px] h-[60px] lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
@@ -131,8 +133,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="h-[1px] w-10 bg-[#80acd3] mb-20"></div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-48 2xl:h-48 rounded-full flex justify-center items-center cursor-pointer">
+          <div className="h-[1px] 2xl:w-20 w-10 bg-[#80acd3] mb-20 2xl:mb-28"></div>
+          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-60 2xl:h-60 rounded-full flex justify-center items-center cursor-pointer">
             <div className="w-36 h-36 hover:bg-[#dfdffa80] opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">

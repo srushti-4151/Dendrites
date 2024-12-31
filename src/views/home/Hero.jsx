@@ -107,8 +107,8 @@ const Hero = () => {
           </div>
         </div>
         {/* <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]"> */}
-        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 2xl:pl-32 pl-0">
-          <div className="pb-20 lg:w-[222.5px] 2xl:w-[180px]">
+        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 2xl:pl-20 pl-0">
+          <div className="pb-20 lg:w-[222.5px] 2xl:w-[200px]">
             <img className="h-99" src={mainline} alt="" srcset="" />
           </div>
           <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">

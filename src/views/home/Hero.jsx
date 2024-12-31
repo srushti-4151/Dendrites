@@ -106,18 +106,19 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]">
-          <div className="pb-4 lg:pb-[75px] 2xl:pb-28 w-[222.5px] 2xl:w-[300px]">
+        {/* <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]"> */}
+        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 pl-0">
+          <div className="pb-20 w-[222.5px]">
             <img className="w-[700px] h-99" src={mainline} alt="" srcset="" />
           </div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-60 2xl:h-60 rounded-full flex justify-center items-center cursor-pointer">
-            <div className="w-40 h-40 hover:bg-[#dfdffa80] opacity-70 duration-300 rounded-full flex justify-center items-center">
-              <div className="w-[60px] h-[60px] lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
+          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[186px] 2xl:h-[186px] rounded-full flex justify-center items-center cursor-pointer">
+            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[168px] 2xl:h-[168px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
+              <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
                   <div className="hidden lg:flex justify-center">
                     {timeMarketSVG}
                   </div>
-                  <p className="text-white font-medium text-[12px] lg:text-[16px] 2xl:text-[25px] pt-2">
+                  <p className="text-[#FFFFFF] opacity-100 font-bold text-[12px] lg:text-[18px] 2xl:text-[25px] pt-2 tracking-wide">
                     Time to <br /> Market
                   </p>
                 </div>
@@ -125,14 +126,15 @@ const Hero = () => {
             </div>
           </div>
           <div className="h-[1px] w-10 2xl:w-20 bg-[#80acd3] mb-20 2xl:mb-28"></div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-60 2xl:h-60 rounded-full flex justify-center items-center cursor-pointer">
-            <div className="w-40 h-40 hover:bg-[#dfdffa80] opacity-70 duration-300 rounded-full flex justify-center items-center">
-              <div className="w-[60px] h-[60px] lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
+
+          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[186px] 2xl:h-[186px] rounded-full flex justify-center items-center cursor-pointer">
+            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[168px] 2xl:h-[168px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
+              <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
                   <div className="hidden lg:flex justify-center">
                     {customizedSolutionsSVG}
                   </div>
-                  <p className="text-white font-medium text-[12px] lg:text-[16px] 2xl:text-[25px] pt-2">
+                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[25px] pt-2 tracking-wide">
                     Customized Solutions
                   </p>
                 </div>
@@ -140,14 +142,15 @@ const Hero = () => {
             </div>
           </div>
           <div className="h-[1px] 2xl:w-20 w-10 bg-[#80acd3] mb-20 2xl:mb-28"></div>
-          <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-44 lg:h-44 2xl:w-60 2xl:h-60 rounded-full flex justify-center items-center cursor-pointer">
-            <div className="w-40 h-40 hover:bg-[#dfdffa80] opacity-70 duration-300 rounded-full flex justify-center items-center">
-              <div className="hover:bg-[#E9E9F880] duration-1000 w-[60px] h-[60px] lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
+
+          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[186px] 2xl:h-[186px] rounded-full flex justify-center items-center cursor-pointer">
+            <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[168px] 2xl:h-[168px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
+              <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
                   <div className="hidden lg:flex justify-center">
                     {innovationDriverSVG}
                   </div>
-                  <p className="text-white font-medium text-[12px] lg:text-[16px] 2xl:text-[25px] pt-2">
+                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[25px] pt-2 tracking-wide">
                     Innovation <br /> Driver
                   </p>
                 </div>

@@ -32,20 +32,6 @@ const Navbar = () => {
     }
   };
 
-  // useEffect(() => {
-  //   // Close modal when path changes
-  //   if (modalContent && location.pathname !== "/") {  // Only close if modalContent exists (it's open)
-  //     dispatch(closeModal());
-  //     console.log("Modal closed due to path change:", location.pathname);
-  //   }
-
-  // }, [location, dispatch, modalContent]);
-
-  // const handleModalOpen = (modalName) => {
-  //   if (modalContent !== modalName) {  // Open the modal only if it's not already open
-  //     dispatch(openModal(modalName));
-  //   }
-  // };
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     if (scrollPosition <= 40) {
@@ -63,15 +49,7 @@ const Navbar = () => {
     };
   }, []);
 
-  // const links = [
-  //   "Services",
-  //   "Solutions",
-  //   "Products",
-  //   "Innovation",
-  //   "Company",
-  //   "Jobs",
-  // ];
-
+  
   const links = [
     {
       isShow:true,
@@ -83,7 +61,7 @@ const Navbar = () => {
     },
     { isShow:true, name: "Solutions", onClick: () => handleModalOpen("Solutions") },
     { isShow:false, name: "Products", path: "/products" },
-    { isShow:true, name: "Innovation", onClick: () => handleModalOpen("Services") },
+    { isShow:true, name: "Innovation", onClick: () => handleModalOpen("Innovation") },
     { isShow:true, name: "Company", onClick: () => handleModalOpen("Services") },
     { isShow:true, name: "Jobs", onClick: () => handleModalOpen("Services") },
   ];

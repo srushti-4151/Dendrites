@@ -82,7 +82,7 @@ const Solutions = () => {
           <div className="scrollbar-modal">
             <div className="py-20 w-[75%]">
               <h3 className="text-white font-bold text-4xl lg:text-5xl text-shadow-glow pb-14 uppercase tracking-wide">
-                Services
+                Solutions
               </h3>
               <div className="grid grid-row-1 sm:grid-row-2 gap-2">
                 {services.map((service, index) => (

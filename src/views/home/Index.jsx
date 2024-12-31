@@ -13,7 +13,7 @@ function index() {
   return (
     <>
       {/* <TopBar /> */}
-      <Navbar />
+      <Navbar/>
       <Hero />
       <HomeSliderSection />
       <HomeAnimatedSection />

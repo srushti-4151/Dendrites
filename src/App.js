@@ -9,6 +9,7 @@ import Services from "./views/Modals/Services";
 import Solutions from "./views/Modals/Solutions";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "./redux/ModalSlice";
+import Innovation from "./views/Modals/Innovation";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,8 @@ function App() {
         return <Services onClose={() => dispatch(closeModal())} />;
       case "Solutions":
         return <Solutions onClose={() => dispatch(closeModal())} />;
+      case "Innovation":
+        return <Innovation onClose={() => dispatch(closeModal())} />;
       default:
         return null;
     }

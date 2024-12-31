@@ -47,14 +47,15 @@ const CareerZeta = () => (
         {/* Right Content */}
         <div className="w-full lg:w-1/2 flex justify-start lg:justify-end lg:-translate-y-12">
           <Link className="w-[170px] h-[170px] bg-[#80acd3a1] flex justify-center items-center rounded-full lg:mt-40">
-            <div className="border border-black w-[130px] h-[130px] rounded-full flex justify-center items-center">
+            <div className="border border-[#03213b] w-[140px] h-[140px] rounded-full flex justify-center items-center py-3 lg:py-4">
               <div className="text-center">
-                <p className="text-[20px] lg:text-[40px] text-white font-bold">
+                <p className="text-[27px] lg:text-[50px] text-white font-extrabold">
                   72
                 </p>
-                <p className="text-[#03213b]  font-medium text-[12px] lg:text-[16px]">
-                  Vacancies <span className="font-thin">available</span>
+                <p className="text-[#03213b] font-bold text-[12px] lg:text-[14px] leading-3 tracking-wider">
+                  Vacancies 
                 </p>
+                <p className="text-[#03213b] font-medium text-[12px] lg:text-[14px] tracking-wider">available</p>
               </div>
             </div>
           </Link>

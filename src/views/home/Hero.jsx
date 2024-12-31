@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-1/2 top-1/2 lg:pt-10 2xl:pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
+        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-[45%] top-1/2 lg:pt-10 2xl:pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
           <div className="w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
@@ -57,7 +57,7 @@ const Hero = () => {
                 <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wider font-bold">
                   Technology
                 </p>
-                <p className="text-[#80acd3] text-lg lg:text-2xl 2xl:text-3xl lg:pt-9 pt-4 tracking-wide font-bold">
+                <p className="text-[#80acd3] text-lg lg:text-2xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
                   Think Different
                 </p>
 
@@ -107,9 +107,9 @@ const Hero = () => {
           </div>
         </div>
         {/* <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]"> */}
-        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 2xl:pl-10 pl-0">
-          <div className="pb-20 w-[222.5px]">
-            <img className="w-[700px] h-99" src={mainline} alt="" srcset="" />
+        <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 2xl:pl-32 pl-0">
+          <div className="pb-20 lg:w-[222.5px] 2xl:w-[180px]">
+            <img className="h-99" src={mainline} alt="" srcset="" />
           </div>
           <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
@@ -118,14 +118,14 @@ const Hero = () => {
                   <div className="hidden lg:flex justify-center">
                     {timeMarketSVG}
                   </div>
-                  <p className="text-[#FFFFFF] opacity-100 font-bold text-[12px] lg:text-[18px] 2xl:text-[25px] pt-2 tracking-wide">
+                  <p className="text-[#FFFFFF] opacity-100 font-bold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 tracking-wide">
                     Time to <br /> Market
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="h-[1px] w-10 2xl:w-20 bg-[#80acd3] mb-20 2xl:mb-28"></div>
+          <div className="h-[1px] w-10 2xl:w-14 bg-[#80acd3] mb-20 2xl:mb-[84px]"></div>
 
           <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
@@ -134,14 +134,14 @@ const Hero = () => {
                   <div className="hidden lg:flex justify-center">
                     {customizedSolutionsSVG}
                   </div>
-                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[25px] pt-2 tracking-wide">
+                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 tracking-wide">
                     Customized Solutions
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="h-[1px] 2xl:w-20 w-10 bg-[#80acd3] mb-20 2xl:mb-28"></div>
+          <div className="h-[1px] 2xl:w-14 w-10 bg-[#80acd3] mb-20 2xl:mb-[84px]"></div>
 
           <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
@@ -150,7 +150,7 @@ const Hero = () => {
                   <div className="hidden lg:flex justify-center">
                     {innovationDriverSVG}
                   </div>
-                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[25px] pt-2 tracking-wide">
+                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 tracking-wide">
                     Innovation <br /> Driver
                   </p>
                 </div>

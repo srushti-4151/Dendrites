@@ -113,7 +113,7 @@ const HomeSliderSection = () => {
                   <p className="text-[18px] font-light lg:text-[30px] text-[#00223e] opacity-90 lg:pb-2">
                     {slide?.description}
                   </p>
-                  <div className="pt-14 lg:pt-5">
+                  <div className="pt-7 lg:pt-5">
                     <button className="flex items-center gap-3 bg-[#95e8ca] px-6 py-3 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white lg:text-lg text-sm">
                       <FaArrowRight size={20}/>
                       Learn more!

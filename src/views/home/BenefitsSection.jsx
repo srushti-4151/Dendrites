@@ -12,6 +12,7 @@ import {
 } from "../../assets/svg";
 import { Link } from "react-router-dom";
 
+
 const BenefitsSection = () => {
   const benefitsData = [
     {

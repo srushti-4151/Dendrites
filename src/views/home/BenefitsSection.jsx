@@ -16,32 +16,32 @@ const BenefitsSection = () => {
   const benefitsData = [
     {
       image: genralPlannerSVG,
-      title: "General Planner",
+      title: "Interdisciplinary Team",
       description:
-        "We take over the planning and coordination of your projects!",
+        "The DENDRITES team is made up of experts from a wide variety of areas.This guarantees expertise and know-how for every phase of your project.",
     },
     {
       image: ultarfastPrjectSVG,
-      title: "Ultra-fast-Projects",
+      title: "Fast Development",
       description: "Maximum quality with minimum project duration!",
     },
     {
-      image: processSolutionsSVG,
-      title: "Process Solutions",
+      image: customizedSolSVG,
+      title: "Service & Support",
       description:
-        "Your expert for large molecules, blood plasma, vaccines and parenterals!",
+        "Dedicated and professional service team helps customer for quick on-site/off-site response.",
     },
     {
-      image: customizedSolSVG,
+      image: processSolutionsSVG,
       title: "Customized Solutions",
       description:
-        "Challenge accepted – we will find the right solution for your requirement.",
+        "Customer specific hardware and software-based solution.",
     },
     {
       image: automationSolutionSVG,
-      title: "Automation Solutions",
+      title: "Quality",
       description:
-        "Single-user control, DCS system or MTP? We have the right automation solution for you!",
+        "Quality is not negotiable. it is the standard we set, the promise we keep, and the foundation upon which trust is built",
     },
     {
       image: globalPlayerSVG,
@@ -56,7 +56,7 @@ const BenefitsSection = () => {
     },
     {
       image: innolabZetaTechCenter,
-      title: "Innolab DENDRITES TechCenter",
+      title: "Innolab Dendrites TechCenter",
       description:
         "DENDRITES TechCenter – where the spirit of research and problem-solving skills come together!",
     },
@@ -83,10 +83,10 @@ const BenefitsSection = () => {
               <h3 className="lg:text-2xl text-[17px] leading-5 lg:leading-6 font-semibold mb-3 text-center tracking-normal h-[50px] lg:w-[65%] w-[75%]">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-white text-center lg:pt-7 pt-2 font-light h-[90px] lg:w-[92%]">
+              <p className="text-sm text-white text-center lg:pt-7 pt-2 font-light h-[150px] lg:w-[92%]">
                 {benefit.description}
               </p>
-              <div className="lg:text-lg text-sm flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold lg:pt-3 cursor-pointer tracking-tight h-[40px]">
+              <div className="lg:text-lg text-sm flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold lg:pt-5 cursor-pointer tracking-tight h-[40px]">
                 <FaArrowRightLong size={20} />
                 Learn more
               </div>

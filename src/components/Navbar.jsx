@@ -117,7 +117,7 @@ const Navbar = () => {
               />
             </Link>
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex justify-center items-center gap-14 py-4">
+            <div className="hidden lg:flex justify-center items-center gap-12 py-4">
               {links.map((link) =>
                 link.path ? (
                   <Link

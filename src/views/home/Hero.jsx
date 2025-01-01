@@ -51,13 +51,13 @@ const Hero = () => {
             {/* Right Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
                 
-                <p className="text-white pb-1 text-3xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wider">
+                <p className="text-white pb-1 text-3xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide">
                   Dendrites
                 </p>
-                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wider font-bold">
+                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide font-bold">
                   Technology
                 </p>
-                <p className="text-[#80acd3] text-lg lg:text-2xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
+                <p className="text-[#80acd3] text-lg lg:text-3xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
                   Think Different
                 </p>
 
@@ -72,7 +72,7 @@ const Hero = () => {
                       <div className="hidden lg:flex justify-center">
                         {timeMarketSVG}
                       </div>
-                      <p className="text-white font-bold text-[12px] lg:text-[16px] ">
+                      <p className="text-white font-bold text-[12px] lg:text-[16px] leading-[15px]">
                         Time to Market
                       </p>
                     </div>
@@ -84,7 +84,7 @@ const Hero = () => {
                       <div className="hidden lg:flex justify-center">
                         {customizedSolutionsSVG}
                       </div>
-                      <p className="text-white font-medium text-[12px] lg:text-[16px]">
+                      <p className="text-white font-medium text-[12px] lg:text-[16px] leading-[15px]">
                         Customized Solutions
                       </p>
                     </div>
@@ -96,7 +96,7 @@ const Hero = () => {
                       <div className="hidden lg:flex justify-center">
                         {innovationDriverSVG}
                       </div>
-                      <p className="text-white font-medium text-[12px] lg:text-[16px]">
+                      <p className="text-white font-medium text-[12px] lg:text-[16px] leading-[15px]">
                         Innovation Driver
                       </p>
                     </div>
@@ -114,11 +114,11 @@ const Hero = () => {
           <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
-                <div className="text-center ">
-                  <div className="hidden lg:flex justify-center">
+                <div className="text-center">
+                  <div className="hidden lg:flex justify-center pb-1">
                     {timeMarketSVG}
                   </div>
-                  <p className="text-[#FFFFFF] opacity-100 font-bold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 tracking-wide">
+                  <p className="text-white font-semibold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 leading-[20px]">
                     Time to <br /> Market
                   </p>
                 </div>
@@ -130,11 +130,11 @@ const Hero = () => {
           <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
-                <div className="text-center ">
+                <div className="text-center pb-1">
                   <div className="hidden lg:flex justify-center">
                     {customizedSolutionsSVG}
                   </div>
-                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 tracking-wide">
+                  <p className="text-white font-semibold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-3 leading-[20px]">
                     Customized Solutions
                   </p>
                 </div>
@@ -146,11 +146,11 @@ const Hero = () => {
           <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
-                <div className="text-center ">
+                <div className="text-center pb-1">
                   <div className="hidden lg:flex justify-center">
                     {innovationDriverSVG}
                   </div>
-                  <p className="text-white font-bold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-2 tracking-wide">
+                  <p className="text-white font-semibold text-[12px] lg:text-[18px] 2xl:text-[18px] pt-3 leading-[20px]">
                     Innovation <br /> Driver
                   </p>
                 </div>

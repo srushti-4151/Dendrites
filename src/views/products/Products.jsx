@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Bar from "./Bar";
 import HeroProduct from "./HeroProduct";
 import ProductOverview from "./ProductOverview";
+import CareerZeta from "../home/CareerZeta";
 
 
 const Products = () => {
@@ -13,6 +14,7 @@ const Products = () => {
     {/* <Bar/> */}
     <HeroProduct/>
     <ProductOverview/>
+    <CareerZeta/>
     <Footer/>
     </>
   );

@@ -22,7 +22,7 @@ const HomeSliderSection = () => {
     {
       image: image1,
       title: "Digitalization",
-      description: "Get to know the digital twin of your production plant!",
+      description: "IoT hardware and Centralized software-based solution.",
     },
     {
       image: image2,
@@ -40,7 +40,7 @@ const HomeSliderSection = () => {
       image: image4,
       title: "Automation",
       description:
-        "Single-user­control, DCS system or MTP? We have the right automation­solution for you!",
+        "Multi-brand PLC and SCADA based solutions.",
     },
   ];
 
@@ -98,19 +98,19 @@ const HomeSliderSection = () => {
 
             {/* Oval Shape on Right Side */}
             <div
-              className="absolute top-0 left-0 h-full w-[68%] lg:bg-[#6a929c] bg-[#175b9b] opacity-20"
+              className="absolute top-0 left-0 h-full w-[68%] lg:bg-[#6a929c] bg-[#13518b] opacity-20"
               style={{
                 clipPath: "ellipse(100% 100% at 0% 50%)",
               }}
             ></div>
             {/*Text Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+            <div className="absolute inset-0 flex items-center justify-center z-10 px-4 pt-9 lg:pt-32">
               <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
-                <div className="lg:max-w-[600px] mb-4 lg:mb-0 lg:pl-16">
-                  <h1 className="text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-2 pb-3 uppercase">
+                <div className="lg:max-w-[600px] mb-4 lg:mb-0 lg:pl-20">
+                  <h1 className="text-[28px] font-bold lg:text-[45px] text-[#00223e] pt-4 lg:pb-2 pb-3 uppercase">
                     {slide.title}
                   </h1>
-                  <p className="text-[18px] font-normal lg:text-[32px] text-[#00223e] lg:pb-2">
+                  <p className="text-[18px] font-light lg:text-[30px] text-[#00223e] opacity-90 lg:pb-2">
                     {slide?.description}
                   </p>
                   <div className="pt-14 lg:pt-20">

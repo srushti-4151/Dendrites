@@ -11,6 +11,7 @@ import {
   Magnetic,
 } from "../../assets/svg";
 import { FaArrowRightLong } from "react-icons/fa6";
+import bottomanimation from "../../assets/bottonanimation.png"
 
 const contentData = [
   {
@@ -73,7 +74,7 @@ const MobileHomeAnimation = () => {
       {/* Header */}
       <div className="text-center">
         <h2 className="text-center text-white font-bold text-4xl lg:text-6xl text-shadow-glow lg:py-14 lg:pb-24 pb-5 uppercase">
-          Zeta Solution Path
+          Dendrites Solution Path
         </h2>
         <p className="mt-2 text-[13px] text-[#80b2db]">
           We have developed
@@ -116,47 +117,7 @@ const MobileHomeAnimation = () => {
           }}
         >
           <figure className="symbolwrap">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              width="138.817"
-              height="128.989"
-              viewBox="0 0 138.817 128.989"
-            >
-              <defs>
-                <filter
-                  id="solutionpath-icon"
-                  x={0}
-                  y={0}
-                  width="138.817"
-                  height="128.989"
-                  filterUnits="userSpaceOnUse"
-                >
-                  <feOffset dy={3} input="SourceAlpha" />
-                  <feGaussianBlur stdDeviation={10} result="b" />
-                  <feFlood floodColor="#fff" floodOpacity="0.557" />
-                  <feComposite operator="in" in2="b" />
-                  <feComposite in="SourceGraphic" />
-                </filter>
-              </defs>
-              <rect
-                fill="transparent"
-                strokeWidth={0}
-                strokeLinecap="null"
-                stroke="none"
-                width="78.8167"
-                height="69.0167"
-                x={30}
-                y={26}
-              />
-              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="none">
-                <path
-                  d="M58.873,33.165C53.788,24.916,41.471,3.051,39.719,0,32.431,12.938,24.8,25.029,18.7,37.855,13.164,49.437,20.17,63.393,32.318,67.574a20.6,20.6,0,0,0,4.52,1.243,35.063,35.063,0,0,0,6.949,0C59.268,66.161,68.026,48.081,58.873,33.165ZM49.042,57.686a14.752,14.752,0,0,1-17.854.452C25.764,54.3,23,46.895,25.933,40.906,30,32.487,34.917,24.521,39.776,15.876c4.8,8.418,9.548,16.215,13.616,24.295C56.5,46.217,54.3,53.505,49.042,57.686ZM25.368,68.365H0C1.864,65.37,4.52,61.3,6.328,58.251c2.26-3.842,4.463-7.74,7.119-12.317C14.181,55.6,18.249,62.545,25.368,68.365Zm53.449-.452H53.675c7.627-5.311,11.7-12.2,12.486-21.978C70.625,53.675,74.636,60.624,78.817,67.913Z"
-                  transform="translate(30 27)"
-                  fill="#fff"
-                />
-              </g>
-            </svg>
+            <img src={bottomanimation} alt="" className="w-[90px] h-[90px] pt-12 mt-8 opacity-85" />
           </figure>
         </div>
         <div className="text-center pb-8">
@@ -164,12 +125,12 @@ const MobileHomeAnimation = () => {
           Are you already 
         </p>
         <p className="text-center font-bold text-[#fff] text-[25px] text-shadow-glow uppercase">
-          convinced of ZETA?
+          convinced of Dendrites?
         </p>
       </div>
         <div className="arraowbtnholder">
           <a
-            href="https://www.zeta.com/en/inquiry.html"
+            href="https://www.Dendrites.com/en/inquiry.html"
             target="_SELF"
             className="button readybutton"
           >
@@ -180,7 +141,7 @@ const MobileHomeAnimation = () => {
         <div className="text-[13px] text-center py-8">
           <a
             className="readmore"
-            href="https://www.zeta.com/en/company/about-zeta.html"
+            href="https://www.Dendrites.com/en/company/about-Dendrites.html"
           >
             No, I need more info!
           </a>

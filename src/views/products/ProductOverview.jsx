@@ -108,7 +108,7 @@ const ProductOverview = () => {
         {products.map((product, index) => (
           <div
             key={index}
-            className="bg-[#e8f1f8] h-[170px] lg:h-[330px] lg:w-[100%] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl transition overflow-hidden"
+            className="bg-[#e8f1f8] lg:w-[100%] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl transition overflow-hidden"
           >
             {/* Image Section */}
             <div className="relative flex-shrink-0 lg:w-[35%] w-full lg:flex hidden items-center justify-center bg-[#d9e9f8]">
@@ -122,7 +122,7 @@ const ProductOverview = () => {
             </div>
 
             {/* Text Section */}
-            <div className="relative h-full w-full lg:w-[65%] p-6 lg:py-8 lg:pr-32 text-[#00223e]">
+            <div className="relative w-full lg:w-[65%] p-6 lg:py-8 lg:pr-32 text-[#00223e]">
               <h2 className="text-[24px] leading-[25px] lg:leading-[45px] lg:text-[42px] font-extrabold mb-5 lg:mb-10 uppercase tracking-wider">
                 {product.title}
               </h2>

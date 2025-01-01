@@ -3,15 +3,24 @@ import imag1 from "../../assets/produkte_banner_gradient.webp";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const HeroProduct = () => {
+  const advantages = [
+    "Customized magnetic mixers",
+    "Freeze & Thaw solutions",
+    "In-house electropolishing",
+    "Competence in CFD simulation",
+    "Quality by design",
+  ];
   return (
     <>
-      <div className="relative w-full h-[340px] lg:h-[770px]">
+      <div className="relative w-full h-[640px] lg:h-[910px]">
         {/* Background Image */}
-        <img
-          src={imag1}
-          alt="careerZeta"
-          className="w-full h-full object-cover"
-        />
+        <div className="absolute w-full h-full">
+          <img
+            src={imag1}
+            alt="careerZeta"
+            className="w-full h-full object-cover "
+          />
+        </div>
 
         {/* White Fade Over Entire Image */}
         <div
@@ -28,6 +37,7 @@ const HeroProduct = () => {
             clipPath: "ellipse(100% 100% at 0% 50%)",
           }}
         ></div>
+
         {/*Text Overlay */}
         <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
           <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
@@ -47,13 +57,14 @@ const HeroProduct = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 w-full z-20">
-          <div className="block vorteile max-w-full w-[1410px] mx-auto px-4 box-border z-10">
-            <div className="mb-[47px]">
-              <div className="inline-block relative">
-                <h3 className="headline inline-block align-middle text-[23px] font-light leading-[1.13] text-[#00223e]">
-                  <strong>Your</strong> Advantages
-                </h3>
+
+        <div className="absolute bottom-0 w-full z-20 px-5">
+          <div className="mb-[50px]">
+            <div className="relative flex items-center justify-between">
+              <h3 className="flex item-center text-[27px] font-light leading-[1.13] text-[#00223e]">
+                <span className="font-extrabold mr-2">Your</span> Advantages
+              </h3>
+              <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -79,42 +90,25 @@ const HeroProduct = () => {
                     ></path>
                   </g>
                 </svg>
+                <div className="h-[1px] 2xl:w-14 w-10 bg-[#0c253b]"></div>
               </div>
             </div>
-            <ul>
-              <li className="relative">
-                <span className="no absolute top-0 left-[40px]">1</span>
-                <div className="text relative block text-[#00223e] font-medium text-[18px] leading-[1.17]">
-                  Customized magnetic mixers
-                </div>
-              </li>
-              <li className="relative">
-                <span className="no absolute top-0 left-[40px]">2</span>
-                <div className="text relative block text-[#00223e] font-medium text-[18px] leading-[1.17]">
-                  Freeze & Thaw solutions
-                </div>
-              </li>
-              <li className="relative">
-                <span className="no absolute top-0 left-[40px]">3</span>
-                <div className="text relative block text-[#00223e] font-medium text-[18px] leading-[1.17]">
-                  In-house electropolishing
-                </div>
-              </li>
-              <li className="relative">
-                <span className="no absolute top-0 left-[40px]">4</span>
-                <div className="text relative block text-[#00223e] font-medium text-[18px] leading-[1.17]">
-                  Competence in CFD simulation
-                </div>
-              </li>
-              <li className="relative">
-                <span className="no absolute top-0 left-[40px]">5</span>
-                <div className="text relative block text-[#00223e] font-medium text-[18px] leading-[1.17]">
-                  Quality by design
-                </div>
-              </li>
-            </ul>
           </div>
-          </div>
+          <ul className="flex w-full flex-wrap justify-between">
+            {advantages.map((advantage, index) => (
+              <li key={index} className="flex items-start mb-4">
+                <span
+                  className={`z-1 transform -translate-x-1/2 -translate-y-1/2 font-bold relative text-[84px] leading-[1.16666667] text-[#407eb1]`}
+                >
+                  {index + 1}
+                </span>
+                <div className="absolute font-medium text-[18px] leading-[1.16666667] text-[#00223e]">
+                  {advantage}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

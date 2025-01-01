@@ -111,7 +111,7 @@ const Hero = () => {
           <div className="pb-20 lg:w-[222.5px] 2xl:w-[200px]">
             <img className="h-99" src={mainline} alt="" srcset="" />
           </div>
-          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
+          <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
@@ -127,7 +127,7 @@ const Hero = () => {
           </div>
           <div className="h-[1px] w-10 2xl:w-14 bg-[#80acd3] mb-20 2xl:mb-[84px]"></div>
 
-          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
+          <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">
@@ -143,7 +143,7 @@ const Hero = () => {
           </div>
           <div className="h-[1px] 2xl:w-14 w-10 bg-[#80acd3] mb-20 2xl:mb-[84px]"></div>
 
-          <div className="border opacity-60 border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
+          <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">
               <div className="lg:w-50 lg:h-50 2xl:w-56 2xl:h-56 rounded-full flex justify-center items-center">
                 <div className="text-center ">

@@ -122,13 +122,13 @@ const ProductOverview = () => {
             </div>
 
             {/* Text Section */}
-            <div className="relative w-full lg:w-[65%] p-6 lg:py-8 lg:pr-32 text-[#00223e]">
-              <h2 className="text-[24px] leading-[25px] lg:leading-[45px] lg:text-[42px] font-extrabold mb-4 uppercase tracking-wider">
+            <div className="relative h-full w-full lg:w-[65%] p-6 lg:py-8 lg:pr-32 text-[#00223e]">
+              <h2 className="text-[24px] leading-[25px] lg:leading-[45px] lg:text-[42px] font-extrabold mb-5 lg:mb-10 uppercase tracking-wider">
                 {product.title}
               </h2>
                 <a
                   href="#"
-                  className="text-sm lg:text-lg lg:text-start font-semibold hover:underline transition mt-5"
+                  className="text-sm lg:text-lg lg:text-start font-semibold hover:underline transition border-b border-[#00223e]"
                 >
                   {product.description}
                 </a>

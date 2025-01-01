@@ -271,7 +271,7 @@ body {
   height: 55px;
   /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
   border-radius: 50%; */
-  opacity: 1;
+  opacity: 80 !important;
   /* Initially hidden */
   animation: twinkle 4s infinite ease-in-out;
   pointer-events: none;

@@ -5,6 +5,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import MobileHomeAnimation from "./MobileHomeAnimation";
+import dotanimation from "../../assets/dotanimation2.png";
+import bottomanimation from "../../assets/bottonanimation.png"
 
 // const useCountUp = (end, duration) => {
 //   const [count, setCount] = useState(0);
@@ -554,7 +556,7 @@ M474.5,2211.6c7.4,0,13.5,6,13.5,13.5s-6,13.5-13.5,13.5s-13.5-6-13.5-13.5S467,221
                     />
                   </g>
                 </g>
-                <g id="actioncursor">
+                {/* <g id="actioncursor">
                   <g>
                     <path
                       style={{ fill: "#80ACD3" }}
@@ -569,7 +571,18 @@ c0,2.7-0.5,5.3-1.6,7.8c-1,2.4-2.5,4.5-4.3,6.4c-1.8,1.8-4,3.3-6.4,4.3C29.3,57.2,2
 c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C0,30.2,14.8,0,24,0z"
                     />
                   </g>
-                </g>
+                </g> */}
+                 <g id="actioncursor">
+                    <g>
+                      <image
+                        href={dotanimation}
+                        x="-48"
+                        y="-58"
+                        width="150"
+                        height="150"
+                      />                 
+                    </g>
+                  </g>
               </svg>
               <div id="actioncursor2">
                 <svg
@@ -1178,7 +1191,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
               }}
             >
               <figure className="symbolwrap">
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
                   width="138.817"
@@ -1218,7 +1231,8 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                       fill="#fff"
                     />
                   </g>
-                </svg>
+                </svg> */}
+               <img src={bottomanimation} alt="" className="w-[90px] h-[90px] pt-12 mt-8 opacity-85 mb-10" />
               </figure>
             </div>
             <h3 className="metatext">

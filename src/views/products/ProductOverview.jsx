@@ -108,10 +108,10 @@ const ProductOverview = () => {
         {products.map((product, index) => (
           <div
             key={index}
-            className="bg-[#e8f1f8] lg:w-[100%] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl transition overflow-hidden"
+            className="bg-[#e8f1f8] h-[170px] lg:h-[330px] lg:w-[100%] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl transition overflow-hidden"
           >
             {/* Image Section */}
-            <div className="relative flex-shrink-0 lg:w-[35%] w-full h-[250px] lg:h-[330px] lg:flex hidden items-center justify-center bg-[#d9e9f8]">
+            <div className="relative flex-shrink-0 lg:w-[35%] w-full lg:flex hidden items-center justify-center bg-[#d9e9f8]">
               <img
                 src={product.image}
                 alt={product.title}
@@ -122,17 +122,17 @@ const ProductOverview = () => {
             </div>
 
             {/* Text Section */}
-            <div className="relative w-full lg:w-[65%] p-6 lg:py-8 lg:pr-32 inline-table align-middle text-[#00223e]">
+            <div className="relative w-full lg:w-[65%] p-6 lg:py-8 lg:pr-32 text-[#00223e]">
               <h2 className="text-[24px] leading-[25px] lg:leading-[45px] lg:text-[42px] font-extrabold mb-4 uppercase tracking-wider">
                 {product.title}
               </h2>
                 <a
                   href="#"
-                  className="text-sm lg:text-lg lg:text-start font-semibold hover:underline transition"
+                  className="text-sm lg:text-lg lg:text-start font-semibold hover:underline transition mt-5"
                 >
                   {product.description}
                 </a>
-                <div className="ml-auto absolute lg:top-1/2 right-[40px]">
+                <div className="ml-auto absolute top-1/2 right-[40px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g transform="translate(344 815) rotate(180)"><g transform="translate(296 767)" fill="none" stroke="#00223e" stroke-width="1"><circle cx="24" cy="24" r="24" stroke="none"></circle><circle cx="24" cy="24" r="23.5" fill="none"></circle></g><path d="M-6866.086-3964.343h15.916v15.917" transform="translate(-1728.329 -6856.076) rotate(-135)" fill="none" stroke="#00223e" stroke-width="3"></path></g></svg>
                 </div>
             </div>

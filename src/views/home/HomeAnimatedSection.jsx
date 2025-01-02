@@ -1251,7 +1251,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
             <div className="morezone">
               <a
                 className="readmore"
-                href="https://www.zeta.com/en/company/about-zeta.html"
+                href="#"
               >
                 No, I need more info!
               </a>

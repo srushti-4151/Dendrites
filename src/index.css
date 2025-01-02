@@ -267,7 +267,7 @@ body {
 @media (max-width: 2100px) {
   .glow {
     position: absolute;
-    width: 84px;
+    width: 97px;
     /* Size of the "star" */
     height: 104px;
     /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
@@ -279,35 +279,36 @@ body {
   }
   /* Different Positions for Each Star */
   .star-1 {
-    top: 40%;
+    top: 42%;
     left: 45%;
-    animation-delay: 0s;
+    animation-delay: 1s;
   }
 
   .star-2 {
     top: 45%;
-    left: 49%;
-    animation-delay: 1s;
-  }
-
-  .star-3 {
-    top: 34%;
-    left: 48%;
+    left: 51%;
     animation-delay: 2s;
   }
 
-  .star-4 {
-    top: 44%;
-    left: 42%;
-    animation-delay: 3s;
+  .star-3 {
+    top: 36%;
+    left: 49%;
+    animation-delay: 0s;
   }
 
-  .star-5 {
-    top: 35%;
+  .star-4 {
+    top: 46%;
     left: 41%;
     animation-delay: 4s;
   }
+
+  .star-5 {
+    top: 37%;
+    left: 42%;
+    animation-delay: 3s;
+  }
 }
+
 @media (max-width: 1600px) {
   .glow {
     position: absolute;

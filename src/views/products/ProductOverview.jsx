@@ -88,7 +88,7 @@ const ProductOverview = () => {
               </h2>
                 <a
                   href="#"
-                  className="text-sm md:text-lg lg:text-lg lg:text-start font-semibold readmore"
+                  className="text-sm md:text-lg lg:text-lg lg:text-start font-semibold border-b border-transparent group-hover:border-[#00223e] transition-colors duration-300"
                   style={{
                     animation: "fade-in-line 0.3s ease-out forwards",
                   }}

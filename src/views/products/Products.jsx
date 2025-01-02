@@ -5,6 +5,7 @@ import Bar from "./Bar";
 import HeroProduct from "./HeroProduct";
 import ProductOverview from "./ProductOverview";
 import CareerZeta from "../home/CareerZeta";
+import CeoPartProduct from "./CeoPartProduct";
 
 
 const Products = () => {
@@ -14,6 +15,7 @@ const Products = () => {
     {/* <Bar/> */}
     <HeroProduct/>
     <ProductOverview/>
+    <CeoPartProduct/>
     <CareerZeta/>
     <Footer/>
     </>

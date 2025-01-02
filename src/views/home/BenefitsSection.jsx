@@ -65,12 +65,12 @@ const BenefitsSection = () => {
 
   return (
     <div className="bg-[#00223e] py-8">
-      <div className="max-w-[1410px] mx-auto lg:px-6 px-4">
-        <h2 className="text-center text-white font-bold text-4xl lg:text-6xl text-shadow-glow lg:py-14 lg:pb-24 pb-5 uppercase">
+      <div className="max-w-[1410px] mx-auto lg:px-6 md:px-5 px-4">
+        <h2 className="text-center text-white font-bold text-4xl md:text-5xl lg:text-6xl text-shadow-glow lg:py-14 lg:pb-24 md:py-10 md:pb-20 pb-5 uppercase">
           Benefits
         </h2>
         {/* Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 gap-6 md:gap-8">
           {benefitsData.map((benefit, index) => (
             <Link
               key={index}
@@ -81,13 +81,13 @@ const BenefitsSection = () => {
                   {benefit.image}
                 </div>
               </div>
-              <h3 className="lg:text-2xl text-[17px] leading-5 lg:leading-6 font-semibold mb-3 text-center tracking-normal h-[50px] lg:w-[65%] w-[75%]">
+              <h3 className="lg:text-2xl md:text-xl text-[17px] leading-5 lg:leading-6 font-semibold mb-3 text-center tracking-normal h-[50px] lg:w-[65%] w-[75%] md:w-[80%]">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-white text-center lg:pt-7 pt-2 font-light h-[150px] lg:w-[92%]">
+              <p className="text-sm lg:text-sm md:text-lg text-white text-center lg:pt-7 pt-2 font-light h-[150px] md:h-[200px] lg:w-[92%]">
                 {benefit.description}
               </p>
-              <div className="lg:text-lg text-sm flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold lg:pt-5 cursor-pointer tracking-tight h-[40px]">
+              <div className="lg:text-lg md:text-lg text-sm flex justify-center items-center gap-3 text-[#80acd3] px-6 font-bold lg:pt-5 cursor-pointer tracking-tight h-[40px]">
                 <FaArrowRightLong size={20} />
                 Learn more
               </div>

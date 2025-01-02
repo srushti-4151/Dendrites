@@ -26,10 +26,10 @@ const Hero = () => {
             <div className="glow star-1">
               <img src={star} alt="star" />
             </div>
-            <div className="glow star-2">
+            <div className="glow star-3">
               <img src={star} alt="star" />
             </div>
-            <div className="glow star-3">
+            <div className="glow star-2">
               <img src={star} alt="star" />
             </div>
             <div className="glow star-4">

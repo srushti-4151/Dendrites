@@ -263,48 +263,47 @@ body {
   overflow: hidden;
 }
 
-/* Base Glow Styles for Stars */
 .glow {
   position: absolute;
-  width: 110px;
+  width: 80px;
   /* Size of the "star" */
-  height: 110px;
+  height: 100px;
   /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
   border-radius: 50%; */
-  opacity: 100 !important;
+  /* opacity: 100 ; */
   /* Initially hidden */
-  animation: twinkle 3s infinite ease-in-out;
+  animation: twinkle 5s infinite ease-in-out;
   pointer-events: none;
 }
 
 /* Different Positions for Each Star */
-.star-1 { 
-  top: 41%;
-  left: 45%;
+.star-1 {
+  top: 40%;
+  left: 44%;
   animation-delay: 0s;
 }
 
 .star-2 {
-  top: 47%;
-  left: 48%;
+  top: 46%;
+  left: 47%;
   animation-delay: 1s;
 }
 
 .star-3 {
-  top: 36%;
-  left: 49%;
+  top: 34%;
+  left: 48%;
   animation-delay: 2s;
 }
 
 .star-4 {
-  top: 47%;
-  left: 43%;
+  top: 45%;
+  left: 40%;
   animation-delay: 3s;
 }
 
 .star-5 {
-  top: 38%;
-  left: 42%;
+  top: 35%;
+  left: 38%;
   animation-delay: 4s;
 }
 
@@ -316,14 +315,13 @@ body {
     height: 40px;
     /* background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%); */
     /* border-radius: 50%; */
-    opacity: 90 !important;
     /* Initially hidden */
-    animation: twinkle 5s infinite ease-in-out;
+    animation: twinkle 3s infinite ease-in-out;
     pointer-events: none;
   }
 
   .star-1 {
-    top: 26%;
+    top: 24%;
     left: 47%;
     animation-delay: 0s;
   }
@@ -335,13 +333,13 @@ body {
   }
 
   .star-3 {
-    top: 30%;
+    top: 29%;
     left: 45%;
     animation-delay: 2s;
   }
 
   .star-4 {
-    top: 27%;
+    top: 26%;
     left: 39%;
     animation-delay: 3s;
   }
@@ -349,52 +347,6 @@ body {
   .star-5 {
     top: 32%;
     left: 39%;
-    animation-delay: 4s;
-  }
-}
-
-@media (max-width: 1900px) {
-  .glow {
-    position: absolute;
-    width: 62px;
-    /* Size of the "star" */
-    height: 62px;
-    /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
-    border-radius: 50%; */
-    opacity: 100 !important;
-    /* Initially hidden */
-    animation: twinkle 3s infinite ease-in-out;
-    pointer-events: none;
-  }
-  
-  /* Different Positions for Each Star */
-  .star-1 {
-    top: 42%;
-    left: 45%;
-    animation-delay: 0s;
-  }
-  
-  .star-2 {
-    top: 47%;
-    left: 50%;
-    animation-delay: 1s;
-  }
-  
-  .star-3 {
-    top: 36%;
-    left: 47%;
-    animation-delay: 2s;
-  }
-  
-  .star-4 {
-    top: 48%;
-    left: 42%;
-    animation-delay: 3s;
-  }
-  
-  .star-5 {
-    top: 38%;
-    left: 40%;
     animation-delay: 4s;
   }
 }
@@ -412,6 +364,19 @@ body {
     opacity: 1;
     transform: scale(3);
     /* Slight zoom effect while glowing */
+  }
+}
+@media (max-width: 1024px) {
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(2); 
+    }
   }
 }
 

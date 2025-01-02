@@ -274,7 +274,7 @@ body {
     border-radius: 50%; */
     /* opacity: 100 ; */
     /* Initially hidden */
-    animation: twinkle 4s infinite ease-in-out;
+    animation: twinkle 6s infinite ease-in-out;
     pointer-events: none;
   }
   /* Different Positions for Each Star */

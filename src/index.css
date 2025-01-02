@@ -263,50 +263,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 1600px) {
-  .glow {
-    position: absolute;
-    width: 80px;
-    /* Size of the "star" */
-    height: 100px;
-    /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
-    border-radius: 50%; */
-    /* opacity: 100 ; */
-    /* Initially hidden */
-    animation: twinkle 5s infinite ease-in-out;
-    pointer-events: none;
-  }
-  /* Different Positions for Each Star */
-  .star-1 {
-    top: 40%;
-    left: 44%;
-    animation-delay: 0s;
-  }
 
-  .star-2 {
-    top: 46%;
-    left: 47%;
-    animation-delay: 1s;
-  }
-
-  .star-3 {
-    top: 34%;
-    left: 48%;
-    animation-delay: 2s;
-  }
-
-  .star-4 {
-    top: 45%;
-    left: 40%;
-    animation-delay: 3s;
-  }
-
-  .star-5 {
-    top: 35%;
-    left: 38%;
-    animation-delay: 4s;
-  }
-}
 @media (max-width: 2000px) {
   .glow {
     position: absolute;
@@ -348,6 +305,50 @@ body {
   .star-5 {
     top: 35%;
     left: 41%;
+    animation-delay: 4s;
+  }
+}
+@media (max-width: 1600px) {
+  .glow {
+    position: absolute;
+    width: 80px;
+    /* Size of the "star" */
+    height: 80px;
+    /* background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
+    border-radius: 50%; */
+    /* opacity: 100 ; */
+    /* Initially hidden */
+    animation: twinkle 5s infinite ease-in-out;
+    pointer-events: none;
+  }
+  /* Different Positions for Each Star */
+  .star-1 {
+    top: 41%;
+    left: 44%;
+    animation-delay: 0s;
+  }
+
+  .star-2 {
+    top: 46%;
+    left: 48%;
+    animation-delay: 1s;
+  }
+
+  .star-3 {
+    top: 35%;
+    left: 48%;
+    animation-delay: 2s;
+  }
+
+  .star-4 {
+    top: 47%;
+    left: 40%;
+    animation-delay: 3s;
+  }
+
+  .star-5 {
+    top: 37%;
+    left: 39%;
     animation-delay: 4s;
   }
 }

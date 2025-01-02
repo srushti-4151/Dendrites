@@ -70,13 +70,13 @@ const contentData = [
 
 const MobileHomeAnimation = () => {
   return (
-    <div className="bg-[#022e55] waypoint-box1 relative lg:hidden text-white min-h-screen flex flex-col items-center py-8 px-4">
+    <div className="bg-[#022e55] waypoint-box1 relative lg:hidden text-white min-h-screen flex flex-col items-center md:py-14 md:px-14 py-8 px-4">
       {/* Header */}
       <div className="text-center">
         <h2 className="text-center text-white font-bold text-4xl lg:text-6xl text-shadow-glow lg:py-14 lg:pb-24 pb-5 uppercase">
           Dendrites Solution Path
         </h2>
-        <p className="mt-2 text-[13px] text-[#80b2db]">
+        <p className="mt-2 text-[13px] md:text-[20px] text-[#80b2db]">
           We have developed
           <span className="font-bold text-[#fff]"> a unique solution</span> for
           implementing your project efficiently and successfully!
@@ -88,20 +88,20 @@ const MobileHomeAnimation = () => {
         {contentData.map((item, index) => (
           <div
             key={index}
-            className="group flex items-start space-x-4 mb-4 bg-transparent"
+            className="group flex items-start space-x-4 mb-4 md:mb-5 bg-transparent"
           >
             {/* Icon */}
-            <div className="flex-shrink-0 w-[70px] h-[70px] border border-[#80acd3a1] flex justify-center items-center rounded-full mb-8">
-              <div className="w-[60px] h-[60px] group-hover:bg-[#80acd3a1] duration-500 rounded-full flex justify-center items-center">
+            <div className="flex-shrink-0 w-[70px] h-[70px] md:w-[90px] md:h-[90px] border border-[#80acd3a1] flex justify-center items-center rounded-full mb-8">
+              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] group-hover:bg-[#80acd3a1] duration-500 rounded-full flex justify-center items-center">
                 {item.icon}
               </div>
             </div>
 
             {/* Text */}
             <div>
-              <h2 className="text-[18px] font-bold">{item.title}</h2>
+              <h2 className="text-[18px] md:text-[22px] font-bold">{item.title}</h2>
               <div className="w-[120px] h-[1px] bg-[#7ca0c2] mt-1"></div>
-              <p className="text-[13px] mt-2 leading-[16px]">
+              <p className="text-[13px] md:text-[17px] mt-2 leading-[16px] md:leading-[19px] md:tracking-wider">
                 {item.description}
               </p>
             </div>
@@ -117,10 +117,10 @@ const MobileHomeAnimation = () => {
           }}
         >
           <figure className="symbolwrap">
-            <img src={bottomanimation} alt="" className="w-[90px] h-[90px] pt-12 mt-8 opacity-85" />
+            <img src={bottomanimation} alt="" className="w-[90px] h-[90px] md:w-[100px] md:h-[100px] pt-12 mt-8 opacity-85" />
           </figure>
         </div>
-        <div className="text-center pb-8">
+        <div className="text-center pb-8 md:pt-5">
         <p className="mt-2 text-[25px] text-[#fff] ">
           Are you already 
         </p>

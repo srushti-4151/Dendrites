@@ -9,7 +9,7 @@ const CopySection = () => {
     <div className="border-t border-[#2d4152] bg-[#00223e]">
       <div className="max-w-[1410px] mx-auto">
         <div className="flex justify-between items-center flex-wrap py-[17px] px-6">
-          <div className="w-full sm:w-auto text-center sm:text-left mb-4 sm:mb-0">
+          <div className="w-full sm:w-auto md:w-auto text-center sm:text-left md:text-left mb-4 sm:mb-0">
             <p className="text-[#80acd3]">© 2024 DENDRITES</p>
           </div>
 

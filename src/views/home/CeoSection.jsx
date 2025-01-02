@@ -52,7 +52,7 @@ const CeoSection = () => {
             </div>
 
             {/* Text and Button Section */}
-            <div className="text-center tracking-wider lg:leading-[40px] leading-[30px]">
+            <div className="text-center tracking-wider lg:leading-[40px] leading-[30px] md:leading-[40px]">
               <p className="text-[24px] md:text-[40px] text-white uppercase">
                 {ceo?.text1}
               </p>

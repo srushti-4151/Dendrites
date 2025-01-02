@@ -110,7 +110,7 @@ const Footer = () => {
 
   return (
     <div className="bg-[#00223e]">
-      <div className="max-w-[1410px] mx-auto px-4 py-10">
+      <div className="max-w-[1410px] mx-auto px-4 py-10 md:px-5">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <div>
             <img
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 py-9 pt-28">
+        <div className="hidden lg:grid lg:grid-cols-4 gap-4 py-9 pt-28">
           {sections.map((section, index) => (
             <div key={index} className={index === 1 ? "pl-20" : ""}>
               <p className="uppercase font-bold w-[60%] text-white text-lg pb-4">
@@ -144,7 +144,7 @@ const Footer = () => {
         </div>
 
         {/* Mobile Accordion using Material-UI */}
-        <div className="block sm:hidden mt-4">
+        <div className="block lg:hidden mt-4 md:mt-10 md:md:px-5">
           {sections.map((section, index) => (
             <Accordion
               key={index}
@@ -173,11 +173,11 @@ const Footer = () => {
                   },
                 }}
               >
-                <p className="lg:text-white text-gray-400 font-bold text-[13px] w-[50%]">{section.title}</p>
+                <p className="lg:text-white text-gray-400 font-bold text-[13px] md:text-[18px] w-[50%]">{section.title}</p>
               </AccordionSummary>
               <AccordionDetails>
                <hr className="border-t border-[#507292] scale-y-[0.45] mt-2" />
-                <div className="text-white text-[13px]">{section.content}</div>
+                <div className="text-white text-[13px] md:text-[17px]">{section.content}</div>
               </AccordionDetails>
 
             </Accordion>

@@ -106,7 +106,7 @@ const HomeSliderSection = () => {
             {/*Text Overlay */}
             <div className="absolute inset-0 flex items-center justify-center z-10 px-4 pt-9 lg:pt-32">
               <div className="max-w-[1200px] w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
-                <div className="lg:max-w-[600px] mb-4 lg:mb-0 lg:pl-20">
+                <div className="lg:max-w-[600px] md:max-w-[400px] mb-4 lg:mb-0 lg:pl-20">
                   <h1 className="text-[28px] font-bold lg:text-[45px] text-[#00223e] pt-4 lg:pb-2 pb-3 uppercase">
                     {slide.title}
                   </h1>

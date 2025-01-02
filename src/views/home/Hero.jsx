@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-[45%] top-1/2 lg:pt-10 2xl:pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
+        <div className="absolute inset-0 flex items-end lg:top-1/3 2xl:top-[45%] top-1/2 md:top-[60%] lg:pt-10 2xl:pt-0 lg:-translate-y-1/2 h-fit lg:items-center justify-center z-10">
           <div className="w-full flex flex-col lg:flex-row justify-end items-center lg:items-start">
             {/* Left Content */}
             {/* <div className="w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 h-[200px]">
@@ -51,13 +51,13 @@ const Hero = () => {
             {/* Right Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
                 
-                <p className="text-white pb-1 text-3xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide">
+                <p className="text-white pb-1 text-3xl lg:text-6xl md:text-5xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide">
                   Dendrites
                 </p>
-                <p className="text-white pb-1 text-4xl lg:text-6xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide font-bold">
+                <p className="text-white pb-1 text-4xl lg:text-6xl md:text-5xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide font-bold">
                   Technology
                 </p>
-                <p className="text-[#80acd3] text-lg lg:text-3xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
+                <p className="text-[#80acd3] text-lg lg:text-3xl md:text-3xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
                   Think Different
                 </p>
 
@@ -65,38 +65,38 @@ const Hero = () => {
                 {/* <img className="w-24 h-24" src={light} alt="light" /> */}
               </div>
 
-              <div className="flex justify-center lg:hidden gap-5 py-10">
-                <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
-                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
+              <div className="flex md:flex justify-center lg:hidden gap-5 py-10">
+                <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] md:w-[110px] md:h-[110px] rounded-full flex justify-center items-center cursor-pointer">
+                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[100px] md:w-[90px] md:h-[90px] rounded-full flex justify-center items-center">
                     <div className="text-center ">
                       <div className="hidden lg:flex justify-center">
                         {timeMarketSVG}
                       </div>
-                      <p className="text-white font-bold text-[12px] lg:text-[16px] leading-[15px]">
+                      <p className="text-white font-bold text-[12px] md:text-[16px] lg:text-[16px] leading-[15px] md:leading-[17px]">
                         Time to Market
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
-                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
+                <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] md:w-[110px] md:h-[110px] rounded-full flex justify-center items-center cursor-pointer">
+                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] md:w-[90px] md:h-[90px] rounded-full flex justify-center items-center">
                     <div className="text-center ">
                       <div className="hidden lg:flex justify-center">
                         {customizedSolutionsSVG}
                       </div>
-                      <p className="text-white font-medium text-[12px] lg:text-[16px] leading-[15px]">
+                      <p className="text-white font-medium text-[12px] lg:text-[16px] md:text-[16px] leading-[15px] md:leading-[17px]">
                         Customized Solutions
                       </p>
                     </div>
                   </div>
                 </div>
-                <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] rounded-full flex justify-center items-center cursor-pointer">
-                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] rounded-full flex justify-center items-center">
+                <div className="border border-[#80acd3] w-[80px] h-[80px] lg:w-[130px] lg:h-[130px] md:w-[110px] md:h-[110px] rounded-full flex justify-center items-center cursor-pointer">
+                  <div className="hover:bg-[#80acd3] hover:opacity-70 duration-1000 w-[60px] h-[60px] lg:w-[110px] lg:h-[110px] md:w-[90px] md:h-[90px] rounded-full flex justify-center items-center">
                     <div className="text-center ">
                       <div className="hidden lg:flex justify-center">
                         {innovationDriverSVG}
                       </div>
-                      <p className="text-white font-medium text-[12px] lg:text-[16px] leading-[15px]">
+                      <p className="text-white font-medium text-[12px] lg:text-[16px] md:text-[16px] leading-[15px] md:leading-[17px]">
                         Innovation Driver
                       </p>
                     </div>

@@ -111,11 +111,11 @@ const ProductOverview = () => {
             className="bg-[#e8f1f8] lg:w-[100%] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl transition overflow-hidden"
           >
             {/* Image Section */}
-            <div className="relative flex-shrink-0 lg:w-[35%] w-full lg:flex hidden items-center justify-center bg-[#d9e9f8]">
+            <div className="relative lg:w-[35%] w-full lg:flex hidden items-center justify-center bg-[#d9e9f8]">
               <img
                 src={product.image}
                 alt={product.title}
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-full flex items-end"
               />
               {/* Svg shape */}
               <div className="absolute bottom-0 right-[-1px]">{ProductSideshape}</div>

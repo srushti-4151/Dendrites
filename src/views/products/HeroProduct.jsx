@@ -19,7 +19,7 @@ const HeroProduct = () => {
           <img
             src={imag1}
             alt="careerZeta"
-            className="h-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
         {/* White Fade Over Entire Image */}
@@ -38,14 +38,14 @@ const HeroProduct = () => {
           }}
         ></div>
 
-        {/*Text Overlay */}
+        {/*Text Overlay */} 
         <div className="relative wrap inset-0 2xl:mx-72 lg:mx-0 px-5 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
           <div className="inline-block text-left max-w-[450px]">
               <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
                 Products
               </h1>
-              <p className="text-[18px] font-normal lg:text-[32px] text-[#00223e] lg:leading-[37px]">
-                Product solution for modern product plants
+              <p className="text-[18px] font-thin lg:text-[31px] text-[#0F3354] lg:leading-[37px]">
+                <strong className="font-bold text-[#80acd3]">Product solutions</strong> for modern production plants
               </p>
               <div className="pt-6 lg:pt-7">
                 <button className="flex items-center gap-3 bg-[#95e8ca] px-6 py-3 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white lg:text-lg text-sm">
@@ -107,7 +107,7 @@ const HeroProduct = () => {
             ))}
           </ul>
         </div> */}
-         <div className="relative mx-auto py-[15x] lg:mt-[150px] 2xl:mt-[150px] mt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 w-full z-20 px-3 overflow-hidden">
+         <div className="relative lg:mx-auto 2xl:mx-auto py-[15x] lg:mt-[150px] 2xl:mt-[150px] mt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 w-[1400px] z-20 px-3">
           <div className="mb-[48px]">
             <div className="relative inline-block">
               <h3 className="inline-block align-middle m-0 font-ubuntu font-light text-[#00223e] lg:text-[23px] 2xl:text-[24px] text-[14px] leading-[1.13043478]">

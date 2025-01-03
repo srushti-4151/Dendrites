@@ -6,6 +6,7 @@ import HeroProduct from "./HeroProduct";
 import ProductOverview from "./ProductOverview";
 import CareerZeta from "../home/CareerZeta";
 import CeoPartProduct from "./CeoPartProduct";
+import DiscMoreServ from "./DiscMoreServ";
 
 
 const Products = () => {
@@ -16,6 +17,7 @@ const Products = () => {
     <HeroProduct/>
     <ProductOverview/>
     <CeoPartProduct/>
+    <DiscMoreServ/>
     <CareerZeta/>
     <Footer/>
     </>

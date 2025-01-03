@@ -7,6 +7,8 @@ import ProductOverview from "./ProductOverview";
 import CareerZeta from "../home/CareerZeta";
 import CeoPartProduct from "./CeoPartProduct";
 import DiscMoreServ from "./DiscMoreServ";
+import ProductsSignup from "./ProductsSignup";
+import ProductBlog from "./ProductBlog";
 
 
 const Products = () => {
@@ -18,6 +20,8 @@ const Products = () => {
     <ProductOverview/>
     <CeoPartProduct/>
     <DiscMoreServ/>
+    <ProductsSignup/>
+    <ProductBlog/>
     <CareerZeta/>
     <Footer/>
     </>

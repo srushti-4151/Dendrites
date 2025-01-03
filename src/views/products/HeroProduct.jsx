@@ -30,6 +30,13 @@ const HeroProduct = () => {
                via-white/50 to-transparent
                z-10"
         ></div>
+        <div
+          className="absolute inset-0 
+               bg-gradient-to-l 
+               from-white/80 
+               via-white/0 to-transparent
+               z-10"
+        ></div>
         {/* Oval Shape on Right Side */}
         <div
           className="absolute top-0 left-0 h-full w-[68%] lg:bg-[#6a929c] 2xl:bg-[#6a929c] bg-[#81A1BE] lg:opacity-40 2xl:opacity-40 opacity-90"
@@ -39,7 +46,7 @@ const HeroProduct = () => {
         ></div>
 
         {/*Text Overlay */} 
-        <div className="relative wrap inset-0 2xl:mx-72 lg:mx-0 px-5 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
+        <div className="relative wrap inset-0 w-full 2xl:max-w-[1400px] 2xl:mx-auto lg:mx-auto px-5 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
           <div className="inline-block text-left max-w-[450px]">
               <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
                 Products

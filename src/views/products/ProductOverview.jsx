@@ -64,11 +64,11 @@ const ProductOverview = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mx-auto px-0 lg:px-44 pb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mx-auto px-0 pb-12">
         {products.map((product, index) => (
           <div
             key={index}
-            className="group bg-[#dfe9f8] lg:w-[100%] lg:h-[330px] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl overflow-hidden hover:bg-[#80acd3] transition duration-500"
+            className="mx-auto group max-w-[1000px] w-full bg-[#dfe9f8] lg:w-[100%] lg:h-[330px] relative flex flex-col lg:flex-row items-center rounded-md shadow-lg hover:shadow-xl overflow-hidden hover:bg-[#80acd3] transition duration-500"
           >
             {/* Image Section */}
             <div className="relative flex-shrink-0 lg:h-full lg:w-[37%] w-full lg:flex hidden md:hidden items-center justify-center bg-[#d9e9f8]">

@@ -52,20 +52,17 @@ const DiscMoreServ = () => {
                     alt=""
                     className="absolute w-full h-full object-cover"
                   />
-                  <h4 className="absolute z-4 top-[37px] left-[40px] uppercase">
-                    {data.heading}
-                  </h4>
                   <div
                     className="absolute inset-0 
                     bg-gradient-to-r
                     from-white/90 
-                    via-white/50 to-transparent
+                    via-white/40 to-transparent
                     z-10"
                   ></div>
                   <div
-                    className="absolute top-0 left-0 h-full w-[68%] lg:bg-[#6a929c] 2xl:bg-[#6a929c] bg-[#81A1BE] lg:opacity-40 2xl:opacity-40 opacity-90"
+                    className="absolute top-0 right-0 h-full w-[68%] lg:bg-[#6a929c] 2xl:bg-[#6a929c] bg-[#81A1BE] lg:opacity-60 2xl:opacity-60 opacity-90"
                     style={{
-                      clipPath: "ellipse(100% 100% at 0% 50%)",
+                      clipPath: "ellipse(100% 120% at 100% 50%)",
                     }}
                   ></div>
 
@@ -76,9 +73,12 @@ const DiscMoreServ = () => {
                         {data.icon}
                       </div>
                     </div>
+                    <h4 className="z-100 text-[#002a4d] text-lg absolute top-[37px] left-[40px] uppercase">
+                    {data.heading}
+                    </h4>
                     <div className="z-70 font-bold text-[30px] leading-[1.16666667] tracking-[0.025em] text-[#002a4d] mt-6">{data.title}</div>
                     <div className="font-light text-[13px] leading-[1.38461538] text-[#002a4d] mt-[9px]">{data.desc}</div>
-                    <div className="mt-[23px]">{data.buttonlink}</div>
+                    <div className="mt-[30px] text-lg font-bold text-[#002a4d]"> <span className="border-b border-[#002a4d]">Learn More</span></div>
                   </div>
 
                 </div>

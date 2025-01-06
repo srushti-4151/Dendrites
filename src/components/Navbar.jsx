@@ -64,6 +64,7 @@ const Navbar = () => {
     { isShow:true, name: "Innovation", onClick: () => handleModalOpen("Innovation") },
     { isShow:true, name: "Company", onClick: () => handleModalOpen("Company") },
     { isShow:true, name: "Jobs", onClick: () => handleModalOpen("Jobs") },
+    { isShow:true, name: <FiSearch size={24} />, onClick: () => handleModalOpen("Search") },
   ];
   const [isInputFocused, setIsInputFocused] = useState(false);
 
@@ -146,7 +147,7 @@ const Navbar = () => {
                 )
               )}
               {/* Search Icon */}
-              <Link
+              {/* <Link
                 to="/"
                 className={`relative transition-all duration-300 ${
                   activeLink === "Search"
@@ -156,7 +157,7 @@ const Navbar = () => {
                 onClick={() => setActiveLink("Search")}
               >
                 <FiSearch size={24} />
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile Hamburger Menu */}

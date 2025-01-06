@@ -15,6 +15,7 @@ import { closeModal } from "./redux/ModalSlice";
 import Innovation from "./views/Modals/Innovation";
 import Company from "./views/Modals/Company";
 import Jobs from "./views/Modals/Jobs";
+import Search from "./views/Modals/Search";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,6 +48,8 @@ function App() {
         return <Company onClose={() => dispatch(closeModal())} />;
       case "Jobs":
         return <Jobs onClose={() => dispatch(closeModal())} />;
+      case "Search":
+        return <Search onClose={() => dispatch(closeModal())} />;
       default:
         return null;
     }

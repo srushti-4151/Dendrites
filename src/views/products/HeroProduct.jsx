@@ -13,7 +13,6 @@ const HeroProduct = () => {
   return (
     <>
       <div className="relative w-full h-[670px] lg:h-[1000px] overflow-hidden">
-
         {/* Background Image */}
         <div className="absolute w-full h-full">
           <img
@@ -45,22 +44,25 @@ const HeroProduct = () => {
           }}
         ></div>
 
-        {/*Text Overlay */} 
+        {/*Text Overlay */}
         <div className="relative wrap inset-0 w-full 2xl:max-w-[1400px] 2xl:mx-auto lg:mx-auto px-5 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
           <div className="inline-block text-left max-w-[450px]">
-              <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
-                Products
-              </h1>
-              <p className="text-[18px] font-thin lg:text-[31px] text-[#0F3354] lg:leading-[37px]">
-                <strong className="font-bold text-[#80acd3]">Product solutions</strong> for modern production plants
-              </p>
-              <div className="pt-6 lg:pt-7">
-                <button className="flex items-center gap-3 bg-[#95e8ca] px-6 py-3 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white lg:text-lg text-sm">
-                  <FaArrowRight size={20} />
-                  Agitator Technology
-                </button>
-              </div>
+            <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
+              Products
+            </h1>
+            <p className="text-[18px] font-thin lg:text-[31px] text-[#0F3354] lg:leading-[37px]">
+              <strong className="font-bold text-[#80acd3]">
+                Product solutions
+              </strong>{" "}
+              for modern production plants
+            </p>
+            <div className="pt-6 lg:pt-7">
+              <button className="flex items-center gap-3 bg-[#95e8ca] px-6 py-3 lg:px-8 lg:py-[9px] font-bold text-[#00223e] rounded-md transition duration-500 hover:bg-[#00223e] hover:text-white lg:text-lg text-sm">
+                <FaArrowRight size={20} />
+                Agitator Technology
+              </button>
             </div>
+          </div>
         </div>
 
         {/* <div className="absolute bottom-0 w-full z-20 px-5">
@@ -114,7 +116,7 @@ const HeroProduct = () => {
             ))}
           </ul>
         </div> */}
-         <div className="relative lg:mx-auto 2xl:mx-auto py-[15x] lg:mt-[150px] 2xl:mt-[150px] mt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 w-[1400px] z-20 px-3">
+        <div className="relative lg:mx-auto 2xl:mx-auto py-[15x] lg:mt-[150px] 2xl:mt-[150px] mt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 w-[1400px] z-20 px-3">
           <div className="mb-[48px]">
             <div className="relative inline-block">
               <h3 className="inline-block align-middle m-0 font-ubuntu font-light text-[#00223e] lg:text-[23px] 2xl:text-[24px] text-[14px] leading-[1.13043478]">
@@ -146,17 +148,22 @@ const HeroProduct = () => {
                     ></path>
                   </g>
                 </svg>
-                <div className="top-1/2 left-0 absolute h-[1px] w-[100vw] overflow-hidden block bg-[#0c253b]"></div>
+                <div className="ml-[48px] top-1/2 left-0 absolute h-[1px] w-[100vw] overflow-hidden block bg-[#0c253b]"></div>
               </div>
             </div>
           </div>
           <ul className="hidden 2xl:table lg:table w-full table-fixed">
             {advantages.map((advantage, index) => (
-              <li key={index} 
-              className={`relative table-cell ${index === 0 ? 'pl-[0px]' : 'pl-[40px]'}`}
+              <li
+                key={index}
+                className={`relative table-cell ${
+                  index === 0 ? "pl-[0px]" : "pl-[40px]"
+                }`}
               >
                 <span
-                  className={`absolute top-0 transform -translate-x-1/2 -translate-y-1/2 font-bitter font-bold text-[84px] leading-[1.16666667] text-[rgba(128,172,211,0.5)] z-1 ${index === 0 ? 'left-[0px]' : 'left-[30px]'}`}
+                  className={`absolute top-0 transform -translate-x-1/2 -translate-y-1/2 font-bitter font-bold text-[84px] leading-[1.16666667] text-[rgba(128,172,211,0.5)] z-1 ${
+                    index === 0 ? "left-[0px]" : "left-[30px]"
+                  }`}
                 >
                   {index + 1}
                 </span>
@@ -166,11 +173,14 @@ const HeroProduct = () => {
               </li>
             ))}
           </ul>
-          
+
           <ul className="2xl:hidden lg:hidden block">
             {advantages.map((advantage, index) => (
-              <li key={index} 
-              className={`relavtive block align-top pl-[30px] ${index === 0 ? 'mt-[0px] ' : 'mt-[20px] '}`}
+              <li
+                key={index}
+                className={`relavtive block align-top pl-[30px] ${
+                  index === 0 ? "mt-[0px] " : "mt-[20px] "
+                }`}
               >
                 <span
                   className={`absolute left-4 -translate-y-[7px] font-bold text-[30px] text-[#4a7497] leading-none`}
@@ -184,7 +194,6 @@ const HeroProduct = () => {
             ))}
           </ul>
         </div>
-
       </div>
     </>
   );

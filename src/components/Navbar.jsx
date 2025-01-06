@@ -77,7 +77,7 @@ const Navbar = () => {
           opacity: topValue / 40,
         }}
       >
-        <div className="mx-auto max-w-[1410px] flex justify-end items-center gap-2 py-2 lg:pr-24">
+        <div className="mx-auto max-w-[1410px] flex justify-end items-center gap-2 py-2 lg:pr-24 border-none">
           <div className="flex gap-5">
             <div>
               <Link className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">

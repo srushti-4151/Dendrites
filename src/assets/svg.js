@@ -1812,7 +1812,7 @@ export const SolutionSvg = (
     xmlns="http://www.w3.org/2000/svg"
     width="21.743"
     height="33.177"
-    viewBox="0 0 21.743 33.177"
+    viewBox="0 0 30 41"
     className="w-full h-full"
   >
     <path
@@ -1828,7 +1828,7 @@ export const AutomSvg = (
     xmlns="http://www.w3.org/2000/svg"
     width="33.841"
     height="29.698"
-    viewBox="0 0 21.743 33.177"
+    viewBox="0 0 30 41"
     className="w-full h-full"
   >
     <path

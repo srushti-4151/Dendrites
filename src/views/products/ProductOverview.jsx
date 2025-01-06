@@ -64,7 +64,7 @@ const ProductOverview = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mx-auto px-0 pb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mx-auto px-0 pb-20">
         {products.map((product, index) => (
           <div
             key={index}

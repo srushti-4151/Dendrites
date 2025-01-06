@@ -10,7 +10,7 @@ const CeoSection = () => {
       name: "Alexander Lausecker",
       profession: "Head of Sales",
       text1: "Gerne beraten",
-      text2: "wir Sie auch persönlich!",
+      text2: "wir Sie auch personlich!",
       btn: "Zur Anfrage!",
     },
     {

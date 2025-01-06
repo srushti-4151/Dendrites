@@ -6,11 +6,11 @@ const CeoPartProduct = () => {
   const ceoData = [
     {
       img: Ceo1,
-      name: "Alexander Lausecker",
-      profession: "Head of Sales",
-      text1: "Gerne beraten",
-      text2: "wir Sie auch persönlich!",
-      btn: "Zur Anfrage!",
+      name: "Kurt Knauder",
+      profession: "Dir. Business Line Products & Components",
+      text1: "We are happy to",
+      text2: "advise you personally!",
+      btn: "Get in touch!",
     },
   ];
 

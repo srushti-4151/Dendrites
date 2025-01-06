@@ -69,7 +69,7 @@ const DiscMoreServ = () => {
                   {/* text container */}
                   <div className="w-full h-full relative z-50 p-10 lg:pt-48 2xl:pt-48 pt-[120px]">
                     <div className="relative flex justify-center items-center w-[100px] h-[100px] border border-[#002a4d] rounded-full overflow-hidden">
-                      <div className="flex justify-center items-center w-[60px] h-[60px]">
+                      <div className="flex justify-center items-center text-center w-[60px] h-[60px]">
                         {data.icon}
                       </div>
                     </div>

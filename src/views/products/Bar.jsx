@@ -31,7 +31,7 @@ const Bar = () => {
     
     <div className="text-sm w-full bg-gray-200 shadow-md py-3 fixed z-50"
     style={{
-      top: window.innerWidth >= 1024 ? topValue : 0,
+      top: window.innerWidth >= 1024 ? topValue : 70,
     }}
     >
       <div className="relative text-base text-left w-full mx-auto px-4 flex space-x-3 text-gray-600 items-center">

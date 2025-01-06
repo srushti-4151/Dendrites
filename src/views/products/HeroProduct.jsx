@@ -26,32 +26,32 @@ const HeroProduct = () => {
           className="absolute inset-0 
                bg-gradient-to-t 
                from-white 
-               via-white/50 to-transparent
+               via-white/10 to-transparent
                z-10"
         ></div>
         <div
           className="absolute inset-0 
                bg-gradient-to-l 
-               from-white/80 
-               via-white/0 to-transparent
+               from-white
+               via-white/10 to-transparent
                z-10"
         ></div>
-        {/* Oval Shape on Right Side */}
+        {/* Oval Shape on left Side */}
         <div
-          className="absolute top-0 left-0 h-full w-[68%] lg:bg-[#6a929c] 2xl:bg-[#6a929c] bg-[#81A1BE] lg:opacity-40 2xl:opacity-40 opacity-90"
+          className="z-9 absolute top-0 left-0 h-full w-[68%] lg:bg-[#80acd3] 2xl:bg-[#80acd3] bg-[#80acd3] lg:opacity-60 2xl:opacity-60 opacity-90"
           style={{
             clipPath: "ellipse(100% 100% at 0% 50%)",
           }}
         ></div>
 
         {/*Text Overlay */}
-        <div className="relative wrap inset-0 w-full 2xl:max-w-[1400px] 2xl:mx-auto lg:mx-auto px-5 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
+        <div className="relative wrap inset-0 w-full 2xl:max-w-[1400px] 2xl:mx-auto lg:mx-auto lg:px-5 2xl:px-5 px-3 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
           <div className="inline-block text-left max-w-[450px]">
             <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
               Products
             </h1>
             <p className="text-[18px] font-thin lg:text-[31px] text-[#0F3354] lg:leading-[37px]">
-              <strong className="font-bold text-[#80acd3]">
+              <strong className="font-bold lg:text-[#80acd3] 2xl:text-[#80acd3] text-[#0F3354]">
                 Product solutions
               </strong>{" "}
               for modern production plants
@@ -117,12 +117,15 @@ const HeroProduct = () => {
           </ul>
         </div> */}
         <div className="relative lg:mx-auto 2xl:mx-auto py-[15x] lg:mt-[150px] 2xl:mt-[150px] mt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 w-[1400px] z-20 px-3">
-          <div className="mb-[48px]">
+          <div className="lg:mb-[48px] 2xl:mb-[48px] mb-[20px]">
             <div className="relative inline-block">
               <h3 className="inline-block align-middle m-0 font-ubuntu font-light text-[#00223e] lg:text-[23px] 2xl:text-[24px] text-[14px] leading-[1.13043478]">
-                <span className="font-extrabold mr-2">Your</span> Advantages
+                <span className="font-extrabold lg:mr-2 2xl:mr-2 mr-1">
+                  Your
+                </span>{" "}
+                Advantages
               </h3>
-              <div className="relative inline-block align-middle ml-[10px]">
+              <div className="relative inline-block align-middle ml-[15px] lg:ml-[10px] 2xl:ml-[10px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -167,7 +170,7 @@ const HeroProduct = () => {
                 >
                   {index + 1}
                 </span>
-                <div className="relative block m-0 font-medium text-[18px] leading-[1.16666667] text-[#00223e] z-2">
+                <div className="relative block m-0 font-medium lg:text-[18px] 2xl:text-[18px] text-[15px] leading-[1.16666667] text-[#00223e] z-2">
                   {advantage}
                 </div>
               </li>

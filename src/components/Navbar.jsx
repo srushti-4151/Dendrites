@@ -72,7 +72,7 @@ const Navbar = () => {
       <div
         className="z-50 fixed lg:block hidden"
         style={{
-          background: "rgba(0, 34, 62 , .85)",
+          background: "rgba(0, 34, 62 , 0.75)",
           width: "100%",
           opacity: topValue / 40,
         }}
@@ -97,7 +97,7 @@ const Navbar = () => {
       <div
         className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] fixed z-50 lg:pt-0 pt-3"
         style={{
-          background: "rgba(0,34,62,0.85)",
+          background: "rgba(0,34,62,0.75)",
           // top: topValue,
           top: window.innerWidth >= 1024 ? topValue : 0,
           width: "100%",

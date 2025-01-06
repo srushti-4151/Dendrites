@@ -15,7 +15,7 @@ const Products = () => {
   return (
     <>
     <Navbar />
-    {/* <Bar/> */}
+    <Bar/>
     <HeroProduct/>
     <ProductOverview/>
     <CeoPartProduct/>

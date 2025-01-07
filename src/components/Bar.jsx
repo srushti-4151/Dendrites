@@ -29,12 +29,12 @@ const Bar = () => {
 
   return (
     
-    <div className="text-sm w-full bg-gray-200 shadow-md py-3 fixed z-50"
+    <div className="text-sm w-full bg-gray-200 shadow-md py-3 lg:pl-0 pl-2 fixed z-50"
     style={{
       top: window.innerWidth >= 1024 ? topValue : 70,
     }}
     >
-      <div className="relative text-base text-left w-full mx-auto px-4 flex space-x-3 text-gray-600 items-center">
+      <div className="relative lg:text-base text-sm text-left w-full flex space-x-3 text-gray-600 items-center mx-auto max-w-[1410px] lg:pr-24 border-none">
         <a href="/" className="text-gray-600">
           Home
         </a>

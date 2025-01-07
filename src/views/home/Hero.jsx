@@ -109,7 +109,7 @@ const Hero = () => {
         {/* <div className="absolute inset-0 hidden lg:flex items-end lg:left-[20%] lg:justify-start z-10 lg:bottom-[5%] 2xl:bottom-[8%]"> */}
         <div className="absolute inset-0 hidden lg:flex items-end lg:justify-center z-10 lg:bottom-[5%] lg:pl-5 2xl:pl-20 pl-0">
           <div className="pb-20 lg:w-[222.5px] 2xl:w-[200px]">
-            <img className="h-99" src={mainline} alt="" srcset="" />
+            <img className="h-99" src={mainline} alt="" srcSet="" />
           </div>
           <div className="border border-[#80acd3] lg:w-[166px] lg:h-[166px] 2xl:w-[176px] 2xl:h-[176px] rounded-full flex justify-center items-center cursor-pointer">
             <div className="lg:w-[145px] lg:h-[145px] 2xl:w-[157px] 2xl:h-[157px] hover:bg-[#dfdffa80] hover:opacity-70 duration-300 rounded-full flex justify-center items-center">

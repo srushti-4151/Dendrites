@@ -19,24 +19,17 @@ import { closeModal } from "../../redux/ModalSlice";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Search = () => {
-  const company = [
-    {
-      image: ContactCall,
-      title: "Research & Development",
-      description: "Multi-brand PLC and SCADA based solutions",
-    },
-    {
-      image: AboutDrop,
-      title: "Success Stories",
-      description: "IoT hardware and Centralized software-based solution",
-    },
-    {
-      image: LocationDrop,
-      title: "Feature Articles",
-      description:
-        "We combine HVAC, cleanroom and the entire process technology under one roof.",
-    },
-  ];
+  const jobs = [
+      {
+        title: "Why Dendrites",
+      },
+      {
+        title: "Career at Dendrites",
+      },
+      {
+        title: "Vacancies",
+      },
+    ];
   const dispatch = useDispatch();
 
   const handleCloseModal = () => {
@@ -55,14 +48,14 @@ const Search = () => {
     // console.log("isExpanded after:", isExpanded);
   };
 
-  useEffect(() => {
-    console.log("isExpanded onchange:", isExpanded);
-  }, [isExpanded]);
+  // useEffect(() => {
+  //   console.log("isExpanded onchange:", isExpanded);
+  // }, [isExpanded]);
 
   return (
     <>
       <Navbar />
-      <div className="lg:flex hidden outer bg-blue-900 text-white">
+      <div className="w-auto lg:flex hidden outer bg-blue-900 text-white">
         <div className="w-1/2 service-container mx-auto">
           <div className="pt-40 w-[75%] h-[513px]">
             <div className="mt-10 pb-12">
@@ -95,15 +88,17 @@ const Search = () => {
                       experts!
                     </span>
                   </span>
-                  <div className="relative inline-block w-[110px] h-[110px] rounded-full overflow-hidden">
-                    <img
-                      src={imgg}
-                      className="w-full h-full object-cover"
-                      width="500"
-                      height="500"
-                      alt="Contact Alexander Lausecker - Head of Sales Area Eastern Europe"
-                      title="Contact Alexander Lausecker - Head of Sales Area Eastern Europe"
-                    />
+                  <div className="relative border border-white flex items-center justify-center w-[110px] h-[110px] rounded-full overflow-hidden">
+                    <div className="flex items-center justify-center w-[100px] h-[100px] rounded-full overflow-hidden">
+                      <img
+                        src={imgg}
+                        className="w-full h-full object-cover"
+                        width="500"
+                        height="500"
+                        alt="Contact Alexander Lausecker - Head of Sales Area Eastern Europe"
+                        title="Contact Alexander Lausecker - Head of Sales Area Eastern Europe"
+                      />
+                    </div>
                   </div>
                 </Link>
               </div>
@@ -175,6 +170,98 @@ const Search = () => {
           </div>
         </div>
       </div>
+
+       <nav className="lg:hidden flex flex-col h-screen sub-outer">
+              {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
+              <div
+                className={`w-full ${
+                  isExpanded ? "" : "h-[60%]"
+                } flex-grow w-full sub-service-container mx-auto`}
+              >
+                {/* <div className="absolute w-full h-full bg-gradient-to-t from-[#272c55] via-[#272c55]/80 to-transparent"></div> */}
+                <div className="sub-scrollbar-modal">
+                  <div className="pl-3 uppercase tracking-wide py-4 flex items-center gap-4 headline text-[29px] font-bold border-b border-t border-gray-500">
+                    <button
+                      onClick={handleCloseModal}
+                      className="cursor-pointer focus:outline-none p-0 m-0"
+                    >
+                      <FaArrowLeftLong />
+                    </button>{" "}
+                    Search 
+                  </div>
+                  <ul className="">
+                    {jobs.map((service, index) => (
+                      <div key={index} className="border-b border-gray-500 py-4">
+                        <li className="flex items-center">
+                          <div className="text-[23px] font-bold pl-3">
+                            {service.title}
+                          </div>
+                        </li>
+                      </div>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              {/* <div className="w-full h-[40%]"> */}
+              <div
+                className={`w-full 
+                 ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
+               transition-all duration-700 ease-in-out`}
+              >
+                <div
+                  className={`sub-sideshapesvg text-[#77a7d1] 
+                   ${isExpanded ? "top-0 bg-[#7eabd5]" : "bottom-0"} 
+                 transition-all duration-700 ease-in-out`}
+                >
+                  {mobileSideshape}
+                </div>
+                <div className="relative z-20 pt-8 pl-4">
+                  <form className="w-full">
+                    <div className="mb-5 mt-12">
+                      <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
+                        Easy Search
+                      </h3>
+                    </div>
+      
+                    <div
+                      onClick={handleExpand}
+                      className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+                    >
+                      {/* Search Icon */}
+                      <span className="text-[#ffffff] px-2">{MobileSearchIcon}</span>
+      
+                      {/* input container */}
+                      <div className="input-container w-full">
+                        {/* Search Input */}
+                        <input
+                          id="search"
+                          placeholder=" " //do not remove this
+                          autoComplete="off"
+                          className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                        />
+                        {/* Label */}
+                        <label
+                          htmlFor="search"
+                          className="text-white opacity-900 tracking-wide"
+                        >
+                          Your <strong>search terms</strong>
+                        </label>
+      
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleCollapse();
+                          }}
+                          className="mr-2 close-button"
+                        >
+                          {CloseSearchIcon}
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+       </nav>
     </>
   );
 };

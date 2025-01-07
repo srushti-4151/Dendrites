@@ -1,6 +1,5 @@
+import ContactPage from "../views/contact/ContactPage";
 import Index from "../views/home/Index";
-import Services from "../views/Modals/Services";
-import Solutions from "../views/Modals/Solutions";
 import Products from "../views/products/Products";
 
 export const RouteData = [
@@ -11,5 +10,9 @@ export const RouteData = [
     {
       path: `/products`,
       element: <Products />,
+    },
+    {
+      path: `/contact`,
+      element: <ContactPage />,
     },
   ];

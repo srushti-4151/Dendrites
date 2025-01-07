@@ -69,9 +69,9 @@ const Solutions = () => {
     // console.log("isExpanded after:", isExpanded);
   };
 
-  useEffect(() => {
-    console.log("isExpanded onchange:", isExpanded);
-  }, [isExpanded])
+  // useEffect(() => {
+  //   console.log("isExpanded onchange:", isExpanded);
+  // }, [isExpanded])
   
 
   return (

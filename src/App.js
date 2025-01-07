@@ -9,13 +9,14 @@ import LeftButtom from "./views/home/LeftButtom";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import Services from "./views/Modals/Services";
-import Solutions from "./views/Modals/Solutions";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "./redux/ModalSlice";
+import Solutions from "./views/Modals/Solutions";
 import Innovation from "./views/Modals/Innovation";
 import Company from "./views/Modals/Company";
 import Jobs from "./views/Modals/Jobs";
 import Search from "./views/Modals/Search";
+import NewsRoom from "./views/Modals/NewsRoom";
 
 function App() {
   const dispatch = useDispatch();
@@ -50,6 +51,8 @@ function App() {
         return <Jobs onClose={() => dispatch(closeModal())} />;
       case "Search":
         return <Search onClose={() => dispatch(closeModal())} />;
+      case "NewsRoom":
+        return <NewsRoom onClose={() => dispatch(closeModal())} />;
       default:
         return null;
     }
@@ -64,9 +67,7 @@ function App() {
       </Routes>
       {/* Render Modal */}
       {modalContent && (
-        <div className="fixed inset-0 z-50">
-          {renderModal()}
-        </div>
+        <div className="fixed inset-0 z-50">{renderModal()}</div>
       )}
       <LeftButtom />
     </>

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-// import logo from "../assets/zeta-logo.svg";
 import logo from "../assets/dendrites-Trimmed-removebg-preview.png";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import { closeModal, openModal } from "../redux/ModalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "../assets/scss/Navbar.scss";
-import { mobileSideshape, MobileSearchIcon, CloseSearchIcon } from "../assets/svg";
+import {
+  mobileSideshape,
+  MobileSearchIcon,
+  CloseSearchIcon,
+} from "../assets/svg";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -15,20 +18,20 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const modalContent = useSelector((state) => state.modal.modalContent);
-  console.log("Current Modal Content:", modalContent);
+  // console.log("Current Modal Content:", modalContent);
 
   useEffect(() => {
     // Close modal on route change if modal is open
     if (modalContent && location.pathname !== "/") {
       dispatch(closeModal());
-      console.log("Modal closed due to route change:", location.pathname);
+      // console.log("Modal closed due to route change:", location.pathname);
     }
   }, [location.pathname, modalContent]);
 
   const handleModalOpen = (modalName) => {
     if (modalContent !== modalName) {
       dispatch(openModal(modalName));
-      console.log(`Modal opened: ${modalName}`);
+      // console.log(`Modal opened: ${modalName}`);
     }
   };
 
@@ -49,24 +52,81 @@ const Navbar = () => {
     };
   }, []);
 
-  
   const links = [
     {
-      isShow:true,
+      isShow: true,
       name: "Services",
       onClick: () => {
         console.log("handlingg");
         handleModalOpen("Services");
       },
     },
-    { isShow:true, name: "Solutions", onClick: () => handleModalOpen("Solutions") },
-    { isShow:false, name: "Products", path: "/products" },
-    { isShow:true, name: "Innovation", onClick: () => handleModalOpen("Innovation") },
-    { isShow:true, name: "Company", onClick: () => handleModalOpen("Company") },
-    { isShow:true, name: "Jobs", onClick: () => handleModalOpen("Jobs") },
-    { isShow:true, name: <FiSearch size={24} />, onClick: () => handleModalOpen("Search") },
+    {
+      isShow: true,
+      name: "Solutions",
+      onClick: () => handleModalOpen("Solutions"),
+    },
+    { isShow: false, name: "Products", path: "/products" },
+    {
+      isShow: true,
+      name: "Innovation",
+      onClick: () => handleModalOpen("Innovation"),
+    },
+    {
+      isShow: true,
+      name: "Company",
+      onClick: () => handleModalOpen("Company"),
+    },
+    { isShow: true, name: "Jobs", onClick: () => handleModalOpen("Jobs") },
+    {
+      isShow: true,
+      name: <FiSearch size={24} />,
+      onClick: () => handleModalOpen("Search"),
+    },
+  ];
+
+  const mobileLinks = [
+    {
+      isShow: true,
+      name: "Services",
+      onClick: () => {
+        console.log("handlingg");
+        handleModalOpen("Services");
+      },
+    },
+    {
+      isShow: true,
+      name: "Solutions",
+      onClick: () => handleModalOpen("Solutions"),
+    },
+    { isShow: false, name: "Products", path: "/products" },
+    {
+      isShow: true,
+      name: "Innovation",
+      onClick: () => handleModalOpen("Innovation"),
+    },
+    {
+      isShow: true,
+      name: "Company",
+      onClick: () => handleModalOpen("Company"),
+    },
+    { isShow: true, name: "Jobs", onClick: () => handleModalOpen("Jobs") },
+    {
+      isShow: true,
+      name: "NewsRoom",
+      onClick: () => handleModalOpen("NewsRoom"),
+    },
   ];
   const [isInputFocused, setIsInputFocused] = useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+  const handleCollapse = () => {
+    setIsExpanded(false);
+  };
 
   return (
     <>
@@ -81,14 +141,22 @@ const Navbar = () => {
         <div className="mx-auto max-w-[1410px] flex justify-end items-center gap-2 py-2 lg:pr-24 border-none">
           <div className="flex gap-5">
             <div>
-              <Link className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">
+              <Link 
+              to="/contact"
+              className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">
                 Contact
               </Link>
             </div>
             <div>
-              <Link className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">
+              {/* <Link className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">
                 Newsroom
-              </Link>
+              </Link> */}
+              <button
+                onClick={() => handleModalOpen("NewsRoom")}
+                className="text-[#a7b8b8] text-[13px] hover:text-white duration-300"
+              >
+                Newsroom
+              </button>
             </div>
           </div>
         </div>
@@ -175,19 +243,19 @@ const Navbar = () => {
         {/* Mobile Drawer */}
         {isDrawerOpen && (
           <nav className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-40 transition-transform duration-300 flex flex-col sub-outer1">
-              <div className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] flex justify-between items-center p-3 mb-3">
-                <img src={logo} className="w-52 h-8" alt="Logo" />
-                <button
-                  onClick={() => setIsDrawerOpen(false)}
-                  className="text-white"
-                >
-                  <FiX size={45}/>
-                </button>
-              </div>
-            <div className="flex-grow w-full h-[50%] mx-auto">
+            <div className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] flex justify-between items-center p-3 mb-3">
+              <img src={logo} className="w-52 h-8" alt="Logo" />
+              <button
+                onClick={() => setIsDrawerOpen(false)}
+                className="text-white"
+              >
+                <FiX size={45} />
+              </button>
+            </div>
+            <div className="flex-grow w-full h-[60%] mx-auto sub-service-container1">
               <div className="sub-scrollbar-modal1">
                 <ul>
-                  {links.map((link, index) => (
+                  {mobileLinks.map((link, index) => (
                     <div
                       key={link.name}
                       className="border-t border-gray-500 py-4 flex items-center"
@@ -212,42 +280,61 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="w-full h-[50%] secondnav-partcontainer">
-              <div className="sub-sideshapesvg1 transition-colors text-[#77a7d1]">
+            <div
+              className={`w-full 
+                      ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
+                    transition-all duration-700 ease-in-out`}
+            >
+              <div
+                className={`sub-sideshapesvg1 text-[#77a7d1]
+                        ${isExpanded ? "top-0 bg-[#7eabd5]" : "bottom-0"} 
+                      transition-all duration-700 ease-in-out`}
+              >
                 {mobileSideshape}
               </div>
-              <div className="relative z-20 pt-16 pl-4">
+              <div className="relative z-20 pt-8 pl-4">
                 <form className="w-full">
                   <div className="mb-5 mt-12">
-                    <h3 className="uppercase text-4xl font-semibold text-[#00223E]">
+                    <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
                       Easy Search
                     </h3>
                   </div>
 
-                  <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
+                  <div
+                    onClick={handleExpand}
+                    className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+                  >
+                    {/* Search Icon */}
                     <span className="text-[#ffffff] px-2">
-                        {MobileSearchIcon}
+                      {MobileSearchIcon}
                     </span>
-                    <div 
-                    // className="input-container1 w-full"
-                    className={`input-container1 w-full ${
-                      isInputFocused ? "focused" : ""
-                    } transition-all duration-300`}
-                    >
+
+                    {/* input container */}
+                    <div className="input-container1 w-full">
+                      {/* Search Input */}
                       <input
                         id="search"
-                        placeholder=" "
+                        placeholder=" " //do not remove this
                         autoComplete="off"
                         className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
-                        onFocus={() => setIsInputFocused(true)}
-                        onBlur={() => setIsInputFocused(false)}
                       />
+                      {/* Label */}
                       <label
                         htmlFor="search"
                         className="text-white opacity-900 tracking-wide"
                       >
                         Your <strong>search terms</strong>
                       </label>
+
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleCollapse();
+                        }}
+                        className="mr-2 close-button"
+                      >
+                        {CloseSearchIcon}
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -261,6 +348,32 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{
+  /* <ul>
+                  {mobileLinks.map((link, index) => (
+                    <div
+                      key={link.name}
+                      className="border-t border-gray-500 py-4 flex items-center"
+                    >
+                      <li className="tracking-wider text-[30px] uppercase font-bold pl-3 text-white">
+                        {link.path ? (
+                          <a href={link.path} onClick={link.onClick}>
+                            {link.name}
+                          </a>
+                        ) : (
+                          <button
+                            onClick={link.onClick}
+                            className="teacking-wider text-white text-[30px] uppercase font-bold focus:outline-none"
+                          >
+                            {link.name}
+                          </button>
+                        )}
+                      </li>
+                    </div>
+                  ))}
+                </ul> */
+}
 {
   /* {links.map((link) => (
                 <Link

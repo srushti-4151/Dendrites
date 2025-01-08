@@ -91,11 +91,9 @@ const ProductOverview = () => {
                 <a
                   href="#"
                   className="text-sm md:text-lg lg:text-lg lg:text-start font-semibold border-b border-transparent group-hover:border-[#00223e] transition-colors duration-300"
-                  style={{
-                    animation: "fade-in-line 0.3s ease-out forwards",
-                  }}
                 >
                   {product.description}
+                  {/* <span className="block h-[1px] bg-[#102538] w-0 group-hover:w-full transition-all duration-300"></span> */}
                 </a>
                 <div className="ml-auto absolute inset-y-0 right-[40px] flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g transform="translate(344 815) rotate(180)"><g transform="translate(296 767)" fill="none" stroke="#00223e" stroke-width="1"><circle cx="24" cy="24" r="24" stroke="none"></circle><circle cx="24" cy="24" r="23.5" fill="none"></circle></g><path d="M-6866.086-3964.343h15.916v15.917" transform="translate(-1728.329 -6856.076) rotate(-135)" fill="none" stroke="#00223e" stroke-width="3"></path></g></svg>

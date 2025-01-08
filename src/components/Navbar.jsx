@@ -117,6 +117,7 @@ const Navbar = () => {
       onClick: () => handleModalOpen("NewsRoom"),
     },
   ];
+  
   const [isInputFocused, setIsInputFocused] = useState(false);
 
   const [isExpanded, setIsExpanded] = useState(false);

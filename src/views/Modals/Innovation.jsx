@@ -61,8 +61,8 @@ const Innovation = () => {
   return (
     <>
       <Navbar />
-      <div className="lg:flex hidden outer bg-blue-900 text-white">
-        <div className="w-1/2 service-container mx-auto">
+      <div className="lg:flex w-full hidden outer bg-blue-900 text-white">
+        <div className="w-1/2 max-w-[700px] service-container mx-auto">
           <div className="scrollbar-modal">
             <div className="py-20 w-[75%]">
               <h3 className="text-white font-bold text-4xl lg:text-5xl text-shadow-glow pb-14 uppercase tracking-wide">
@@ -80,8 +80,8 @@ const Innovation = () => {
                         {service.image}
                       </div>{" "}
                     </div>
-                    <div className="p-2 pl-6 w-[75%]">
-                      <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
+                    <div className="p-2 pl-6 w-[83%]">
+                      <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wide">
                         {service.title}
                       </h3>
                       <p className="text-sm text-white pt-2 font-light opacity-60">
@@ -95,8 +95,8 @@ const Innovation = () => {
           </div>
         </div>
 
-        <div className="w-1/2 py-10 group transition">
-          <div className="sideshapesvg transition-colors duration-500 text-[#77a7d1] group-hover:text-[#acd6fc]">
+        <div className="w-1/2 max-w-[650px] py-10 group transition h-screen">
+          <div className="sideshapesvg text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
             {sideshape}
           </div>
           <div className="relative px-16 pl-32 py-36 z-20">
@@ -204,10 +204,10 @@ const Innovation = () => {
           >
             {mobileSideshape}
           </div>
-          <div className="relative z-20 pt-8 pl-4">
+          <div className="relative z-20 pt-10 pl-4 tracking-wider">
             <form className="w-full">
               <div className="mb-5 mt-12">
-                <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
+                <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
                   Easy Search
                 </h3>
               </div>

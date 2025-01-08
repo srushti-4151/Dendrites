@@ -44,6 +44,31 @@ const HomeSliderSection = () => {
     },
   ];
 
+  const prevArrow = (
+    <button className="prev-arrow">
+      <IoIosArrowBack
+        className={`${
+          windowWidth < 600
+            ? "hidden"
+            : "text-[#00223e] text-3xl lg:text-[22px] h-[50px] p-2 w-[50px] border border-[#00223e] rounded-full"
+        }`}
+      />
+    </button>
+  );
+  
+  const nextArrow = (
+    <button className="next-arrow">
+      <IoIosArrowForward
+        className={`${
+          windowWidth < 600
+            ? "hidden"
+            : "text-[#00223e] text-3xl lg:text-[22px] h-[50px] p-2 w-[50px] border border-[#00223e] rounded-full"
+        }`}
+      />
+    </button>
+  );
+  
+
   const sliderSettings = {
     infinite: true,
     speed: 500,
@@ -53,28 +78,30 @@ const HomeSliderSection = () => {
     autoplaySpeed: 3000,
     // dots: true,
     dots: windowWidth >= 600, // Show dots only for screens 600px or wider
-    prevArrow: (
-      <button className="">
-        <IoIosArrowBack
-          className={` ${
-            windowWidth < 600
-              ? "hidden"
-              : "text-[#00223e] text-3xl lg:text-[22px] h-[50px] p-2 w-[50px] border border-[#00223e] rounded-full"
-          }`}
-        />
-      </button>
-    ),
-    nextArrow: (
-      <button className="">
-        <IoIosArrowForward
-          className={` ${
-            windowWidth < 600
-              ? "hidden"
-              : "text-[#00223e] text-3xl lg:text-[22px] h-[50px] p-2 w-[50px] border border-[#00223e] rounded-full"
-          }`}
-        />
-      </button>
-    ),
+    prevArrow: prevArrow, 
+    nextArrow: nextArrow,
+    // prevArrow: (
+    //   <button className="">
+    //     <IoIosArrowBack
+    //       className={` ${
+    //         windowWidth < 600
+    //           ? "hidden"
+    //           : "text-[#00223e] text-3xl lg:text-[22px] h-[50px] p-2 w-[50px] border border-[#00223e] rounded-full"
+    //       }`}
+    //     />
+    //   </button>
+    // ),
+    // nextArrow: (
+    //   <button className="">
+    //     <IoIosArrowForward
+    //       className={` ${
+    //         windowWidth < 600
+    //           ? "hidden"
+    //           : "text-[#00223e] text-3xl lg:text-[22px] h-[50px] p-2 w-[50px] border border-[#00223e] rounded-full"
+    //       }`}
+    //     />
+    //   </button>
+    // ),
   };
 
   return (

@@ -55,8 +55,8 @@ const Search = () => {
   return (
     <>
       <Navbar />
-      <div className="w-auto lg:flex hidden outer bg-blue-900 text-white">
-        <div className="w-1/2 service-container mx-auto">
+      <div className="w-full lg:flex hidden outer bg-blue-900 text-white">
+        <div className="w-1/2 max-w-[700px] service-container mx-auto">
           <div className="pt-40 w-[75%] h-[513px]">
             <div className="mt-10 pb-12">
               <div class="font-medium text-[30px] leading-[1.333] text-white m-0">
@@ -106,8 +106,8 @@ const Search = () => {
           </div>
         </div>
 
-        <div className="w-1/2 py-10 group transition">
-          <div className="sideshapesvg transition-colors duration-500 text-[#77a7d1] group-hover:text-[#acd6fc]">
+        <div className="w-1/2  max-w-[650px] py-10 group transition">
+          <div className="sideshapesvg text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
             {sideshape}
           </div>
           <div className="relative px-16 pl-32 py-36 z-20">

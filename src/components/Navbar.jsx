@@ -117,7 +117,7 @@ const Navbar = () => {
       onClick: () => handleModalOpen("NewsRoom"),
     },
   ];
-  
+
   const [isInputFocused, setIsInputFocused] = useState(false);
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -142,9 +142,10 @@ const Navbar = () => {
         <div className="mx-auto max-w-[1410px] flex justify-end items-center gap-2 py-2 lg:pr-24 border-none">
           <div className="flex gap-5">
             <div>
-              <Link 
-              to="/contact"
-              className="text-[#a7b8b8] text-[13px] hover:text-white duration-300">
+              <Link
+                to="/contact"
+                className="text-[#a7b8b8] text-[13px] hover:text-white duration-300"
+              >
                 Contact
               </Link>
             </div>
@@ -293,14 +294,13 @@ const Navbar = () => {
               >
                 {mobileSideshape}
               </div>
-              <div className="relative z-20 pt-8 pl-4">
+              <div className="relative z-20 pt-10 pl-4 tracking-wider">
                 <form className="w-full">
                   <div className="mb-5 mt-12">
-                    <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
+                    <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
                       Easy Search
                     </h3>
                   </div>
-
                   <div
                     onClick={handleExpand}
                     className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"

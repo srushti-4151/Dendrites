@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Starter = () => {
   const steps = [
@@ -79,20 +80,75 @@ const Starter = () => {
             </p>
           </div>
 
-          <ul className="w-full mt-[50px]">
+          <ul className="w-full mt-[85px]">
             {steps.map((step) => (
-              <li key={step.number} className="mb-8 relative text-left align-top inline-block w-[33.33%]">
-                <span className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 font-bold text-[120px] leading-[1.29166667] text-[#93B8D9] z-1">{step.number}</span>
+              <li
+                key={step.number}
+                className={`mb-8 relative text-left align-top inline-block w-[33.33%] ${
+                  step.number === 1
+                    ? "pr-[30px]"
+                    : step.number === 2
+                    ? "px-[15px]"
+                    : step.number === 3
+                    ? "pl-[30px]"
+                    : step.number === 4
+                    ? "pr-[30px] mt-[40px]"
+                    : step.number === 5
+                    ? "px-[15px] mt-[40px]"
+                    : "px-[15px] mt-0"
+                }`}
+              >
+                <span
+                  className={`absolute font-bitter top-0 transform -translate-x-1/2 -translate-y-1/2 font-bold text-[120px] leading-[1.29166667] text-[#fff] text-opacity-[0.15] z-1 ${
+                    step.number === 1
+                      ? "left-0"
+                      : step.number === 2
+                      ? "left-[15px]"
+                      : step.number === 3
+                      ? "left-[30px]"
+                      : step.number === 4
+                      ? "left-0"
+                      : step.number === 5
+                      ? "left-[15px]"
+                      : "left-0"
+                  }`}
+                >
+                  {step.number}
+                </span>
                 <h4
                   className="font-bold text-[30px] leading-[1.2] text-[#00223e] mb-[18.5px] relative z-2"
                   style={{ minHeight: "72px" }}
                 >
                   {step.title}
                 </h4>
-                <div className="font-light text-[18px] leading-[1.38888889] text-[#00223e] relative z-20">{step.description}</div>
+                <div className="font-light text-[18px] leading-[1.38888889] text-[#00223e] relative z-20">
+                  {step.description}
+                </div>
               </li>
             ))}
           </ul>
+
+          {/* button  */}
+          <div className="w-full h-full mt-[50px] flex justify-center">
+            <Link
+              to="#"
+              className="group btn px-6 py-2 border-2 bg-[#96E8CA] border-[#96E8CA] text-[#00223E] rounded-md hover:bg-transparent hover:text-[#96E8CA] transition duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21.571"
+                height="14.387"
+                viewBox="0 0 21.571 14.387"
+                className="group-hover:fill-[#96E8CA] fill-[#00223e] transition duration-300"
+              >
+                <path
+                  d="M21.632,11.527a.979.979,0,0,0-.007,1.379l4.556,4.563H8.842a.974.974,0,0,0,0,1.948H26.172L21.617,23.98a.986.986,0,0,0,.007,1.379A.97.97,0,0,0,23,25.351l6.174-6.219h0a1.094,1.094,0,0,0,.2-.307.93.93,0,0,0,.075-.375.977.977,0,0,0-.277-.682L23,11.55A.954.954,0,0,0,21.632,11.527Z"
+                  transform="translate(-7.875 -11.252)"
+                ></path>
+              </svg>
+              <span>Further questions?</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import HeroEng from './HeroEng'
 import ProjectRec from './ProjectRec'
 import EnSolApp from './EnSolApp'
 import Starter from './Starter'
+import CeopartEng from './CeopartEng'
 
 const Engineering = () => {
   return (
@@ -13,6 +14,7 @@ const Engineering = () => {
         <ProjectRec/>
         <EnSolApp />
         <Starter />
+        <CeopartEng />
     </div>
   )
 }

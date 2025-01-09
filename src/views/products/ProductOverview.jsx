@@ -1,15 +1,14 @@
 import React from "react";
 import { ProductSideshape } from "../../assets/svg";
 import img1 from "../../assets/magnetic_mixing_technology.webp";
-import img2 from "../../assets/solution_smartmaintenance-8b5eea96.webp"
-import img3 from "../../assets/produkte_freeze&thaw_systeme_option_2-ba578626.webp"
-import img4 from "../../assets/ZETA_Filterhousings_3-c06cc35a.webp"
-import img5 from "../../assets/produkte_elektropolieren-5f5e38dc.webp"
-import img6 from "../../assets/staubabsaugring_opt1_final-8d9c826b.webp"
-import img7 from "../../assets/produkte_sterilkonnektoren-af5ece0e.webp"
-import img8 from "../../assets/produkte-mouseholes-9530eb54.webp" 
+import img2 from "../../assets/solution_smartmaintenance-8b5eea96.webp";
+import img3 from "../../assets/produkte_freeze&thaw_systeme_option_2-ba578626.webp";
+import img4 from "../../assets/ZETA_Filterhousings_3-c06cc35a.webp";
+import img5 from "../../assets/produkte_elektropolieren-5f5e38dc.webp";
+import img6 from "../../assets/staubabsaugring_opt1_final-8d9c826b.webp";
+import img7 from "../../assets/produkte_sterilkonnektoren-af5ece0e.webp";
+import img8 from "../../assets/produkte-mouseholes-9530eb54.webp";
 import { Link } from "react-router-dom";
-
 
 const ProductOverview = () => {
   const products = [
@@ -80,7 +79,9 @@ const ProductOverview = () => {
                 className="object-cover w-full h-full"
               />
               {/* Svg shape */}
-              <div className="absolute bottom-0 right-[-1px] h-full flex items-center justify-center group-hover:fill-[#80acd3] fill-[#dfe9f8] transition duration-500">{ProductSideshape}</div>
+              <div className="absolute bottom-0 right-[-1px] h-full flex items-center justify-center group-hover:fill-[#80acd3] fill-[#dfe9f8] transition duration-500">
+                {ProductSideshape}
+              </div>
             </div>
 
             {/* Text Section */}
@@ -88,16 +89,40 @@ const ProductOverview = () => {
               <h2 className="text-[24px] leading-[25px] md:text-[35px] md:leading-[25px] lg:leading-[45px] lg:text-[40px] font-extrabold mb-5 md:mb-10 lg:mb-10 uppercase tracking-wide">
                 {product.title}
               </h2>
-                <a
-                  href="#"
-                  className="text-sm md:text-lg lg:text-lg lg:text-start font-semibold border-b border-transparent group-hover:border-[#00223e] transition-colors duration-300"
+              <a
+                href="#"
+                className="relative inline-block text-sm md:text-lg lg:text-lg lg:text-start font-semibold"
+              >
+                {product.description}
+                <span className="absolute left-0 bottom-0 w-full h-[1px] bg-[#00223e] origin-center scale-x-100 group-hover:scale-x-0 transition-transform duration-500 ease-in-out"></span>
+              </a>
+              <div className="ml-auto absolute inset-y-0 right-[40px] flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
                 >
-                  {product.description}
-                  {/* <span className="block h-[1px] bg-[#102538] w-0 group-hover:w-full transition-all duration-300"></span> */}
-                </a>
-                <div className="ml-auto absolute inset-y-0 right-[40px] flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><g transform="translate(344 815) rotate(180)"><g transform="translate(296 767)" fill="none" stroke="#00223e" stroke-width="1"><circle cx="24" cy="24" r="24" stroke="none"></circle><circle cx="24" cy="24" r="23.5" fill="none"></circle></g><path d="M-6866.086-3964.343h15.916v15.917" transform="translate(-1728.329 -6856.076) rotate(-135)" fill="none" stroke="#00223e" stroke-width="3"></path></g></svg>
-                </div>
+                  <g transform="translate(344 815) rotate(180)">
+                    <g
+                      transform="translate(296 767)"
+                      fill="none"
+                      stroke="#00223e"
+                      stroke-width="1"
+                    >
+                      <circle cx="24" cy="24" r="24" stroke="none"></circle>
+                      <circle cx="24" cy="24" r="23.5" fill="none"></circle>
+                    </g>
+                    <path
+                      d="M-6866.086-3964.343h15.916v15.917"
+                      transform="translate(-1728.329 -6856.076) rotate(-135)"
+                      fill="none"
+                      stroke="#00223e"
+                      stroke-width="3"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
             </div>
           </Link>
         ))}

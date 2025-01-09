@@ -148,8 +148,10 @@ const Innovation = () => {
                   <button
                     key={index}
                     className={`text-lg px-3 py-2 bg-transparent border border-[#0f2550] text-[#153063] rounded-lg transition-colors duration-500
-                    group-hover:border-white group-hover:text-white hover:text-[#1c2b47] hover:bg-white  
-                     `}
+                    group-hover:border-white group-hover:text-white 
+                    group-hover:hover:text-[#1c2b47]
+                    hover:bg-white !hover:text-[#1c2b47]
+                    `}
                   >
                     {item}
                   </button>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/dendrites-Trimmed-removebg-preview.png";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
@@ -18,20 +18,39 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const modalContent = useSelector((state) => state.modal.modalContent);
-  // console.log("Current Modal Content:", modalContent);
+  console.log("Current Modal Content:", modalContent);
 
+  // useEffect(() => {
+  //   // Close modal on route change if modal is open
+  //   if (modalContent && location.pathname !== "/") {
+  //     dispatch(closeModal());
+  //    console.log("Modal closed due to route change:", location.pathname);
+  //   }
+  // }, [location.pathname, modalContent]);
+
+  // const handleModalOpen = (modalName) => {
+  //   if (modalContent !== modalName) {
+  //     dispatch(openModal(modalName));
+  //     console.log(`Modal opened: ${modalName}`);
+  //   }
+  // };
+  
+  const prevLocation = useRef(location.pathname);
+  // Close modal on route change if modal is open
   useEffect(() => {
-    // Close modal on route change if modal is open
-    if (modalContent && location.pathname !== "/") {
+    // Check if modal is open and the route has changed (not the first route)
+    if (modalContent && prevLocation.current !== location.pathname) {
       dispatch(closeModal());
-      // console.log("Modal closed due to route change:", location.pathname);
+      console.log("Modal closed due to route change:", location.pathname);
     }
-  }, [location.pathname, modalContent]);
+    // Update the previous location
+    prevLocation.current = location.pathname;
+  }, [modalContent, location.pathname, dispatch]);
 
   const handleModalOpen = (modalName) => {
     if (modalContent !== modalName) {
       dispatch(openModal(modalName));
-      // console.log(`Modal opened: ${modalName}`);
+      console.log(`Modal opened: ${modalName}`);
     }
   };
 

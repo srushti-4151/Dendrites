@@ -113,7 +113,7 @@ const Header = () => {
       <Navbar />
 
       {/* Breadcrumb */}
-      <div
+      {/* <div
         className="text-sm w-full bg-gray-200 shadow-md py-3 lg:pl-0 pl-2 fixed z-50"
         style={{
           top: window.innerWidth >= 1024 ? topValue : 70,
@@ -121,19 +121,15 @@ const Header = () => {
       >
         <div className="container mx-auto">
           <span className="text-sm">
-            {/* Static Home Link */}
             <Link to="/" className="text-blue-600 hover:underline">
               Home
             </Link>
 
-            {/* Dynamic Breadcrumb Links */}
             {breadcrumbParts.map((part, index) => {
-              // Generate dynamic path
               const dynamicPath = `/${breadcrumbParts
                 .slice(0, index + 1)
                 .join("/")}`;
 
-              // Check if the part needs to open a modal or be a regular link
               const link = links.find(
                 (link) => link.name === part
               );
@@ -141,22 +137,18 @@ const Header = () => {
                 <span key={index}>
                   {" > "}
                   {link ? (
-                    // Handle modal trigger with onClick for modal items
                     <button
                       onClick={link.onClick}
                       className="text-black capitalize hover:text-blue-600"
                     >
                       {part.replace(/-/g, " ")}{" "}
-                      {/* Replace dashes with spaces */}
                     </button>
                   ) : (
-                    // Regular link for navigation
                     <Link
                       to={dynamicPath}
                       className="text-black capitalize hover:text-blue-600"
                     >
                       {part.replace(/-/g, " ")}{" "}
-                      {/* Replace dashes with spaces */}
                     </Link>
                   )}
                 </span>
@@ -164,7 +156,7 @@ const Header = () => {
             })}
           </span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

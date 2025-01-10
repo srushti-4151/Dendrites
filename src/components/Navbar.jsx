@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/dendrites-Trimmed-removebg-preview.png";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { closeModal, openModal } from "../redux/ModalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "../assets/scss/Navbar.scss";
@@ -20,21 +20,7 @@ const Navbar = () => {
   const modalContent = useSelector((state) => state.modal.modalContent);
   console.log("Current Modal Content:", modalContent);
 
-  // useEffect(() => {
-  //   // Close modal on route change if modal is open
-  //   if (modalContent && location.pathname !== "/") {
-  //     dispatch(closeModal());
-  //    console.log("Modal closed due to route change:", location.pathname);
-  //   }
-  // }, [location.pathname, modalContent]);
 
-  // const handleModalOpen = (modalName) => {
-  //   if (modalContent !== modalName) {
-  //     dispatch(openModal(modalName));
-  //     console.log(`Modal opened: ${modalName}`);
-  //   }
-  // };
-  
   const prevLocation = useRef(location.pathname);
   // Close modal on route change if modal is open
   useEffect(() => {
@@ -73,7 +59,6 @@ const Navbar = () => {
 
   const links = [
     {
-      isShow: true,
       name: "Services",
       onClick: () => {
         console.log("handlingg");
@@ -81,24 +66,20 @@ const Navbar = () => {
       },
     },
     {
-      isShow: true,
       name: "Solutions",
       onClick: () => handleModalOpen("Solutions"),
     },
-    { isShow: false, name: "Products", path: "/products" },
+    { name: "Products", path: "/products" },
     {
-      isShow: true,
       name: "Innovation",
       onClick: () => handleModalOpen("Innovation"),
     },
     {
-      isShow: true,
       name: "Company",
       onClick: () => handleModalOpen("Company"),
     },
-    { isShow: true, name: "Jobs", onClick: () => handleModalOpen("Jobs") },
+    { name: "Jobs", onClick: () => handleModalOpen("Jobs") },
     {
-      isShow: true,
       name: <FiSearch size={24} />,
       onClick: () => handleModalOpen("Search"),
     },
@@ -208,11 +189,11 @@ const Navbar = () => {
             </Link>
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex justify-center items-center gap-12 py-4">
-              {links.map((link) =>
+              {/* {links.map((link) =>
                 link.path ? (
                   <Link
                     key={link.name}
-                    to={link.isShow ? "" : link.path}
+                    to={link.path}
                     className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
                       activeLink === link
                         ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"
@@ -234,7 +215,57 @@ const Navbar = () => {
                     {link.name}
                   </button>
                 )
-              )}
+              )} */}
+              {links.map((link) =>
+              link.path ? (
+                <NavLink
+                  key={link.name}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `relative font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider 
+                    ${
+                      isActive //for text
+                        ? "text-[#80acd3]"
+                        : "text-[#fff]" 
+                    } 
+                    after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:transition-all after:duration-700 
+                    ${
+                      isActive // for underline
+                        ? "hover:after:bg-[#80acd3]"
+                        : "after:bg-transparent hover:after:bg-[#ffffff]" 
+                    }`
+                  }
+                  
+                  // className={({ isActive }) =>
+                  //   `relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
+                  //     isActive
+                  //       ? "text-[#80acd3]" // Active state: text color changes
+                  //       : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-[#ffff] after:transition-all after:duration-700" // Hover state: text color changes on hover
+                  //   }
+                  //   after:transition-all after:duration-700 after:h-[3px] after:w-full after:left-0 after:bottom-[-18px] 
+                  //   ${
+                  //     isActive
+                  //       ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-[#80acd3] after:transition-all after:duration-700 after:text-[#80acd3]" // Active state: hide underline
+                  //       : "" // Hover state: underline appears with color
+                  //   }`
+                  // }                           
+                >
+                  {link.name}
+                </NavLink>
+              ) : (
+                <button
+                  key={link.name}
+                  onClick={link.onClick}
+                  className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
+                    modalContent === link.name
+                      ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"
+                      : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-white after:transition-all after:duration-700"
+                  }`}
+                >
+                  {link.name}
+                </button>
+              )
+            )}
               {/* Search Icon */}
               {/* <Link
                 to="/"

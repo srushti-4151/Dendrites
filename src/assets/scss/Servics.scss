@@ -43,14 +43,127 @@
 //   }
 // }
 
+
+
+// @keyframes nav-outer-in {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// .nav-outer-animation {
+//   animation: nav-outer-in 1s ease 2s forwards;
+// }
+
+// @keyframes nav-circle-in {
+//   0% {
+//     /* Define starting styles here */
+//     transform: scale(0);
+//     opacity: 0;
+//   }
+//   50% {
+//     /* Define starting styles here */
+//     transform: scale(20);
+//     opacity: 1;
+//   }
+//   100% {
+//     /* Define ending styles here */
+//     transform: scale(100);
+//     opacity: 1;
+//   }
+// }
+
+// .nav-circle-animation {
+//   animation: nav-circle-in 2s ease 0s 1 normal forwards running;
+// }
+
+// .modal-overlay {
+//   z-index: 5;
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   width: 100px; /* Initial size of the circle */
+//   height: 100px; /* Initial size of the circle */
+//   background: rgba(1, 27, 51, 0.8);
+//   border-radius: 50%;
+//   // transform: translate(-50%, -50%) scale(0);
+//   animation: nav-circle-in 2s ease forwards;
+// }
+
+
+// .outer {
+//   position: relative;
+//   z-index: 10;
+//   animation: nav-outer-in 1s ease 2s forwards;
+//   background: rgba(1, 27, 51, 0.8);
+//   width: 100%;
+//   color: white;
+//   height: 100vh;
+//   // display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+
+@media (min-width: 769px) {
+@keyframes nav-circle-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(20);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100);
+    opacity: 1;
+  }
+}
+
+.nav-circle-animation {
+  animation: nav-circle-in 2s ease 0s 1 normal forwards running;
+}
+
+@keyframes nav-outer-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-outer-animation {
+  animation: nav-outer-in 2s ease forwards;
+}
+
+.modal-overlay {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px; /* Initial size of the circle */
+  height: 100px; /* Initial size of the circle */
+  background: rgba(1, 33, 63, 0.8);
+  border-radius: 50%;
+  animation: nav-circle-in 2s ease 0s 1 normal forwards running;
+}
+
 .outer {
-  background: rgba(0, 34, 62, 0.99);
+  position: relative;
+  z-index: 10;
+  animation: nav-outer-in 2s ease forwards; 
+  // background: rgba(1, 33, 63, 0.8);
+  background: transparent;
   width: 100%;
   color: white;
   height: 100vh;
-  // display: flex;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
+
 
   .service-container {
     padding: 3.5rem 0.5rem 0 1rem;
@@ -132,8 +245,9 @@
     }
   }
 }
-
+}
 @media (max-width: 768px) {
+
   // The entire provided SCSS code
   .sub-outer {
     padding-top: 5rem;

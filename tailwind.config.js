@@ -27,6 +27,7 @@ module.exports = {
       animation: {
         hideAfter: 'hideAfter 0.3s ease-out',
       },
+      
     },
   },
   plugins: [

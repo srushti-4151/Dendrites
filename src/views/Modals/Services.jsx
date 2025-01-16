@@ -87,7 +87,8 @@ const Services = () => {
   return (
     <>
       <Navbar />
-      <div className="lg:flex w-full hidden outer bg-blue-900 text-white">
+      <div className="lg:block hidden modal-overlay z-5"></div>
+      <div className="lg:flex w-full hidden outer text-white z-10">
         <div className="w-1/2 max-w-[700px] service-container mx-auto">
           <div className="scrollbar-modal">
             <div className="py-20 w-[75%]">
@@ -226,16 +227,19 @@ const Services = () => {
         <div
           className={`w-full 
           ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
-        transition-all duration-700 ease-in-out`}
+          transition-height transition-colors duration-500 ease-in-out`}
         >
           <div
             className={`sub-sideshapesvg text-[#77a7d1]
             ${isExpanded ? "top-0 bg-[#7eabd5]" : "bottom-0"} 
-          transition-all duration-700 ease-in-out`}
+          transition-transform duration-500 ease-in-out`}
           >
             {mobileSideshape}
           </div>
-          <div className="relative z-20 pt-10 pl-4 tracking-wider">
+          <div 
+          // className="relative z-20 pt-10 pl-4 tracking-wider"
+          className={`relative z-20 pl-4 tracking-wider ${isExpanded ? "pt-0" : "pt-10"}`}
+          >
             <form className="w-full">
               <div className="mb-5 mt-12">
                 <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">

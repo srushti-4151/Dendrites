@@ -216,12 +216,59 @@ const HomeAnimatedSection = () => {
     rsceSolutionnumboxsToggle();
     positionSolutionnumboxs();
 
+
+
+    //newwww
+    const actionCursor = document.querySelector("#actioncursor");
+    const symbolWrap = document.querySelector(".symbolwrap");
+    const dotImage = document.querySelector("#actioncursor image"); // Dotanimation image inside actioncursor
+
+    if (!actionCursor || !symbolWrap || !dotImage) {
+      console.error("Required elements not found in DOM.");
+      return;
+    }
+
+    const handleScroll = () => {
+      const cursorRect = actionCursor.getBoundingClientRect();
+      const symbolRect = symbolWrap.getBoundingClientRect();
+
+      // Debug positions (remove in production)
+      console.log("Cursor Position:", cursorRect);
+      console.log("Symbol Position:", symbolRect);
+
+      // Check if the cursor overlaps the symbolwrap area
+      const isOverlapping =
+        cursorRect.bottom > symbolRect.top &&
+        cursorRect.top < symbolRect.bottom &&
+        cursorRect.left < symbolRect.right &&
+        cursorRect.right > symbolRect.left;
+
+      // Show or hide the dotImage based on overlap
+      if (isOverlapping) {
+        dotImage.style.opacity = "0";
+        setTimeout(() => {
+          dotImage.style.display = "none";
+        }, 700); // Hide dot animation
+      } else {
+        dotImage.style.display = "block"; // Show dot animation
+        dotImage.style.opacity = "1";
+      }
+    };
+
+    // Attach scroll event listener
+    document.addEventListener("scroll", handleScroll);
+
+    // Initial check in case the page loads with overlap
+    handleScroll();
+
+
     // Cleanup on component unmount
     return () => {
       document.removeEventListener("scroll", rsceSolutionPathMove);
       window.removeEventListener("resize", rsceSolutionPathMove);
       document.removeEventListener("scroll", rsceSolutionnumboxsToggle);
       window.removeEventListener("resize", positionSolutionnumboxs);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -580,6 +627,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                         y="-58"
                         width="150"
                         height="150"
+                        className="dotanimation"
                       />                 
                     </g>
                   </g>
@@ -1232,7 +1280,7 @@ c2.3,0,4.4,1,6,2.7l0,0c0.2,0.2,18,22.7,18,35.1c0,13.2-10.8,24-24,24S0,51,0,37.8C
                     />
                   </g>
                 </svg> */}
-               <img src={bottomanimation} alt="" className="w-[90px] h-[90px] pt-12 mt-8 opacity-85 mb-10" />
+               <img src={bottomanimation} alt="" className="w-[90px] h-[90px] pt-12 mt-8 mb-8 opacity-85" />
               </figure>
             </div>
             <h3 className="metatext">

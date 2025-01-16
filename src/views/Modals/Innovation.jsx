@@ -61,6 +61,7 @@ const Innovation = () => {
   return (
     <>
       <Navbar />
+      <div className="lg:block hidden modal-overlay z-5"></div>
       <div className="lg:flex w-full hidden outer bg-blue-900 text-white">
         <div className="w-1/2 max-w-[700px] service-container mx-auto">
           <div className="scrollbar-modal">

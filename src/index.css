@@ -515,6 +515,11 @@ body {
 
 
 /* --------------------------------- amimation section ------------------------------------ */
+#actioncursor image {
+  transition: opacity 0.9s ease-in-out, visibility 0s linear 0.9s; 
+  opacity: 1;
+  visibility: visible;
+}
 
 .waypoint-box {
   position: relative;

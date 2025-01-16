@@ -60,16 +60,24 @@ function App() {
 
   return (
     <>
+      <div
+        className={`transition-all duration-100 bg-[#0f3353] ${
+          modalContent ? "blur-md bg-opacity-50 bg-[#0f3353]" : "blur-none opacity-100"
+        }`}
+      >
       <Routes>
         {RouteData?.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
         ))}
       </Routes>
+      <LeftButtom />
+      </div>
+
       {/* Render Modal */}
       {modalContent && (
         <div className="fixed inset-0 z-50">{renderModal()}</div>
       )}
-      <LeftButtom />
+      
     </>
   );
 }

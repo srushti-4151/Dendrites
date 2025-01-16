@@ -34,7 +34,7 @@ const Bar = () => {
       top: window.innerWidth >= 1024 ? topValue : 70,
     }}
     >
-      <div className="relative lg:text-base text-sm text-left w-full flex space-x-3 text-gray-600 items-center mx-auto max-w-[1410px] lg:pr-24 border-none">
+      <div className="relative lg:text-base text-sm text-left w-full flex space-x-3 text-gray-600 items-center mx-auto max-w-[1410px] px-4 border-none">
         <a href="/" className="text-gray-600">
           Home
         </a>

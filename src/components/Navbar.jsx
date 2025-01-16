@@ -39,25 +39,9 @@ const Navbar = () => {
       // console.log(`Modal opened: ${modalName}`);
     }
   };
-
-   // Retrieve the drawer state from localStorage when the component mounts
-   useEffect(() => {
-    const savedState = localStorage.getItem('isDrawerOpen');
-    if (savedState !== null) {
-      setIsDrawerOpen(JSON.parse(savedState));
-    }
-  }, []);
-  // Save the drawer state to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('isDrawerOpen', JSON.stringify(isDrawerOpen));
-  }, [isDrawerOpen]);
   const toggleDrawer = () => {
     setIsDrawerOpen((prevState) => !prevState);
   };
-
-  useEffect(() => {
-    console.log("Drawer state changed:", isDrawerOpen);
-  }, [isDrawerOpen]);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -148,7 +132,9 @@ const Navbar = () => {
     setIsExpanded(false);
   };
 
-  
+  useEffect(() => {
+    console.log("Drawer state changed:", isDrawerOpen);
+  }, [isDrawerOpen]);
 
   return (
     <>

@@ -171,23 +171,45 @@
   }
 
   /* Scrollbar modal content */
+  // .scrollbar-modal {
+  //   // max-height: 100vh;
+  //   margin-top: 49px;
+  //   max-height: calc(100vh - 3rem);
+  //   overflow-y: auto;
+  // }
+  // .scrollbar-modal::-webkit-scrollbar {
+  //   width: 3px;
+  //   background-color: #79a8d8a1;
+  // }
+  // .scrollbar-modal::-webkit-scrollbar-thumb {
+  //   background-color: #79a8d8a1;
+  //   border-radius: 15px;
+  //   border: 12px solid #79a8d8a1; 
+  // }
+  // .scrollbar-modal::-webkit-scrollbar-track {
+  //   background-color: transparent;
+  // }
   .scrollbar-modal {
-    // max-height: 100vh;
     margin-top: 49px;
     max-height: calc(100vh - 3rem);
     overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      background-color: #345A7C;
+      width: 1px; 
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #345A7C; 
+      border-radius: 200px; 
+      box-shadow: 0 0 0 3px #345A7C; 
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent; 
+    }
   }
-  .scrollbar-modal::-webkit-scrollbar {
-    width: 3px;
-    background-color: #79a8d8a1;
-  }
-  .scrollbar-modal::-webkit-scrollbar-thumb {
-    background-color: #79a8d8a1;
-    border-radius: 15px;
-  }
-  .scrollbar-modal::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
+  
 
   .sideshapesvg {
     position: absolute;

@@ -17,10 +17,11 @@ import Company from "./views/Modals/Company";
 import Jobs from "./views/Modals/Jobs";
 import Search from "./views/Modals/Search";
 import NewsRoom from "./views/Modals/NewsRoom";
+import ModalOf from "./views/Modals/ModalOf";
 
 function App() {
   const dispatch = useDispatch();
-  const modalContent = useSelector((state) => state.modal.modalContent);
+  const {modalContent, isModalOpen, modalData} = useSelector((state) => state.modal);
 
   // Disable body scroll when modal is open
   useEffect(() => {
@@ -37,26 +38,29 @@ function App() {
   }, [modalContent]);
 
   // Render the correct modal based on `modalContent`
-  const renderModal = () => {
-    switch (modalContent) {
-      case "Services":
-        return <Services onClose={() => dispatch(closeModal())} />;
-      case "Solutions":
-        return <Solutions onClose={() => dispatch(closeModal())} />;
-      case "Innovation":
-        return <Innovation onClose={() => dispatch(closeModal())} />;
-      case "Company":
-        return <Company onClose={() => dispatch(closeModal())} />;
-      case "Jobs":
-        return <Jobs onClose={() => dispatch(closeModal())} />;
-      case "Search":
-        return <Search onClose={() => dispatch(closeModal())} />;
-      case "NewsRoom":
-        return <NewsRoom onClose={() => dispatch(closeModal())} />;
-      default:
-        return null;
-    }
-  };
+  // const renderModal = () => {
+  //   switch (modalContent) {
+  //     case "Services":
+  //       return <Services onClose={() => dispatch(closeModal())} />; 
+  //     case "Solutions":
+  //       return <Solutions onClose={() => dispatch(closeModal())} />;
+  //     case "Innovation":
+  //       return <Innovation onClose={() => dispatch(closeModal())} />;
+  //     case "Company":
+  //       return <Company onClose={() => dispatch(closeModal())} />;
+  //     case "Jobs":
+  //       return <Jobs onClose={() => dispatch(closeModal())} />;
+  //     case "Search":
+  //       return <Search onClose={() => dispatch(closeModal())} />;
+  //     case "NewsRoom":
+  //       return <NewsRoom onClose={() => dispatch(closeModal())} />;
+  //     default:
+  //       return null;
+  //   }
+  // };
+
+   // Extract the data for the currently active modal
+   const currentModalData = modalData[modalContent] || {};
 
   return (
     <>
@@ -74,8 +78,17 @@ function App() {
       </div>
 
       {/* Render Modal */}
-      {modalContent && (
+      {/* {modalContent && (
         <div className="fixed inset-0 z-50">{renderModal()}</div>
+      )} */}
+      {isModalOpen  && (
+        <div className="fixed inset-0 z-50">
+          <ModalOf 
+            title={currentModalData.title}
+            modalData={currentModalData.data}
+            onClose={() => dispatch(closeModal())}
+          />
+        </div>
       )}
       
     </>

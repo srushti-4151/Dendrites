@@ -3,9 +3,6 @@ import Navbar from "../../components/Navbar";
 import "../../assets/scss/Servics.scss";
 import imgg from "../../assets/ansprechperson_alexander_lausecker.webp";
 import {
-  ContactCall,
-  AboutDrop,
-  LocationDrop,
   sideshape,
   mobileSideshape,
   SearchIcon,

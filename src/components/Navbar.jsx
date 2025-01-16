@@ -18,7 +18,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const modalContent = useSelector((state) => state.modal.modalContent);
-  console.log("Current Modal Content:", modalContent);
+  // console.log("Current Modal Content:", modalContent);
 
 
   const prevLocation = useRef(location.pathname);
@@ -27,7 +27,7 @@ const Navbar = () => {
     // Check if modal is open and the route has changed (not the first route)
     if (modalContent && prevLocation.current !== location.pathname) {
       dispatch(closeModal());
-      console.log("Modal closed due to route change:", location.pathname);
+      // console.log("Modal closed due to route change:", location.pathname);
     }
     // Update the previous location
     prevLocation.current = location.pathname;
@@ -36,9 +36,28 @@ const Navbar = () => {
   const handleModalOpen = (modalName) => {
     if (modalContent !== modalName) {
       dispatch(openModal(modalName));
-      console.log(`Modal opened: ${modalName}`);
+      // console.log(`Modal opened: ${modalName}`);
     }
   };
+
+   // Retrieve the drawer state from localStorage when the component mounts
+   useEffect(() => {
+    const savedState = localStorage.getItem('isDrawerOpen');
+    if (savedState !== null) {
+      setIsDrawerOpen(JSON.parse(savedState));
+    }
+  }, []);
+  // Save the drawer state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('isDrawerOpen', JSON.stringify(isDrawerOpen));
+  }, [isDrawerOpen]);
+  const toggleDrawer = () => {
+    setIsDrawerOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    console.log("Drawer state changed:", isDrawerOpen);
+  }, [isDrawerOpen]);
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -61,7 +80,7 @@ const Navbar = () => {
     {
       name: "Services",
       onClick: () => {
-        console.log("handlingg");
+        // console.log("handlingg");
         handleModalOpen("Services");
       },
     },
@@ -128,6 +147,8 @@ const Navbar = () => {
   const handleCollapse = () => {
     setIsExpanded(false);
   };
+
+  
 
   return (
     <>
@@ -298,7 +319,7 @@ const Navbar = () => {
             <div className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] flex justify-between items-center p-3 mb-3">
               <img src={logo} className="w-52 h-8" alt="Logo" />
               <button
-                onClick={() => setIsDrawerOpen(false)}
+                onClick={toggleDrawer}
                 className="text-white"
               >
                 <FiX size={45} />

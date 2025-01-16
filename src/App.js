@@ -11,12 +11,6 @@ import { useEffect, useState } from "react";
 import Services from "./views/Modals/Services";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "./redux/ModalSlice";
-import Solutions from "./views/Modals/Solutions";
-import Innovation from "./views/Modals/Innovation";
-import Company from "./views/Modals/Company";
-import Jobs from "./views/Modals/Jobs";
-import Search from "./views/Modals/Search";
-import NewsRoom from "./views/Modals/NewsRoom";
 import ModalOf from "./views/Modals/ModalOf";
 
 function App() {

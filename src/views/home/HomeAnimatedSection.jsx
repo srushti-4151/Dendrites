@@ -233,8 +233,8 @@ const HomeAnimatedSection = () => {
       const symbolRect = symbolWrap.getBoundingClientRect();
 
       // Debug positions (remove in production)
-      console.log("Cursor Position:", cursorRect);
-      console.log("Symbol Position:", symbolRect);
+      // console.log("Cursor Position:", cursorRect);
+      // console.log("Symbol Position:", symbolRect);
 
       // Check if the cursor overlaps the symbolwrap area
       const isOverlapping =

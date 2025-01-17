@@ -59,7 +59,7 @@ function App() {
   return (
     <>
       <div
-        className={`transition-all duration-100 bg-[#0f3353] ${
+        className={`transition-all duration-2000 bg-[#0f3353] ${
           modalContent ? "blur-md bg-opacity-50 bg-[#0f3353]" : "blur-none opacity-100"
         }`}
       >

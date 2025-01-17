@@ -20,7 +20,6 @@ const Navbar = () => {
   const modalContent = useSelector((state) => state.modal.modalContent);
   // console.log("Current Modal Content:", modalContent);
 
-
   const prevLocation = useRef(location.pathname);
   // Close modal on route change if modal is open
   useEffect(() => {
@@ -93,7 +92,6 @@ const Navbar = () => {
       isShow: true,
       name: "Services",
       onClick: () => {
-        console.log("handlingg");
         handleModalOpen("Services");
       },
     },
@@ -173,7 +171,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <div
-        className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] fixed z-50 lg:pt-0 pt-3"
+        className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] fixed z-50 lg:p-0 p-5"
         style={{
           background: "rgba(0,34,62,0.75)",
           // top: topValue,
@@ -182,18 +180,19 @@ const Navbar = () => {
         }}
       >
         <div
-          className="m-auto max-w-[1410px] lg:px-4 overflow-hidden h-[70px]"
+          className="m-auto max-w-[1410px] lg:px-4 overflow-hidden lg:h-[70px]"
           // style={{ height: "63.7px" }}
         >
-          <div className="flex justify-between gap-20 items-center p-2 lg:p-0 px-6">
+          <div className="flex justify-between gap-20 items-center p-0">
             {/* Logo Section */}
             <Link to="/" className="">
               <img
                 src={logo}
-                className="w-72 h-8 bg-transparent"
-                alt="Zeta Logo"
+                className="w-72 h-8 bg-transparent lg:block hidden"
+                alt="Logo"
               />
             </Link>
+
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex justify-center items-center gap-12 py-4">
               {/* {links.map((link) =>
@@ -224,55 +223,55 @@ const Navbar = () => {
                 )
               )} */}
               {links.map((link) =>
-              link.path ? (
-                <NavLink
-                  key={link.name}
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `relative font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider 
+                link.path ? (
+                  <NavLink
+                    key={link.name}
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `relative font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider 
                     ${
                       isActive //for text
                         ? "text-[#80acd3]"
-                        : "text-[#fff]" 
+                        : "text-[#fff]"
                     } 
                     after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:transition-all after:duration-700 
                     ${
                       isActive // for underline
                         ? "hover:after:bg-[#80acd3]"
-                        : "after:bg-transparent hover:after:bg-[#ffffff]" 
+                        : "after:bg-transparent hover:after:bg-[#ffffff]"
                     }`
-                  }
-                  
-                  // className={({ isActive }) =>
-                  //   `relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
-                  //     isActive
-                  //       ? "text-[#80acd3]" // Active state: text color changes
-                  //       : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-[#ffff] after:transition-all after:duration-700" // Hover state: text color changes on hover
-                  //   }
-                  //   after:transition-all after:duration-700 after:h-[3px] after:w-full after:left-0 after:bottom-[-18px] 
-                  //   ${
-                  //     isActive
-                  //       ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-[#80acd3] after:transition-all after:duration-700 after:text-[#80acd3]" // Active state: hide underline
-                  //       : "" // Hover state: underline appears with color
-                  //   }`
-                  // }                           
-                >
-                  {link.name}
-                </NavLink>
-              ) : (
-                <button
-                  key={link.name}
-                  onClick={link.onClick}
-                  className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
-                    modalContent === link.name
-                      ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"
-                      : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-white after:transition-all after:duration-700"
-                  }`}
-                >
-                  {link.name}
-                </button>
-              )
-            )}
+                    }
+
+                    // className={({ isActive }) =>
+                    //   `relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
+                    //     isActive
+                    //       ? "text-[#80acd3]" // Active state: text color changes
+                    //       : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-[#ffff] after:transition-all after:duration-700" // Hover state: text color changes on hover
+                    //   }
+                    //   after:transition-all after:duration-700 after:h-[3px] after:w-full after:left-0 after:bottom-[-18px]
+                    //   ${
+                    //     isActive
+                    //       ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-[#80acd3] after:transition-all after:duration-700 after:text-[#80acd3]" // Active state: hide underline
+                    //       : "" // Hover state: underline appears with color
+                    //   }`
+                    // }
+                  >
+                    {link.name}
+                  </NavLink>
+                ) : (
+                  <button
+                    key={link.name}
+                    onClick={link.onClick}
+                    className={`relative text-white font-[10px] text-[18px] uppercase transition-all duration-300 tracking-wider ${
+                      modalContent === link.name
+                        ? "after:absolute after:left-0 after:bottom-[-18px] after:w-full after:h-[3px] after:bg-white after:transition-all after:duration-700"
+                        : "hover:after:absolute hover:after:left-0 hover:after:bottom-[-18px] hover:after:w-full hover:after:h-[3px] hover:after:bg-white after:transition-all after:duration-700"
+                    }`}
+                  >
+                    {link.name}
+                  </button>
+                )
+              )}
               {/* Search Icon */}
               {/* <Link
                 to="/"
@@ -286,29 +285,82 @@ const Navbar = () => {
                 <FiSearch size={24} />
               </Link> */}
             </div>
+          </div>
 
-            {/* Mobile Hamburger Menu */}
-            <div className="lg:hidden flex items-center">
-              <button
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-                className="text-white text-2xl"
-              >
-                {isDrawerOpen ? <FiX /> : <FiMenu />}
-              </button>
-            </div>
+          {/* Mobile Hamburger Menu */}
+          <div className="lg:hidden w-full top-0 relative flex items-center justify-between">
+            <img src={logo} className="w-52 h-8" alt="Logo" />
+            {/* <button
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              className="text-white absolute right-0"
+            >
+              {isDrawerOpen ? <FiX /> : <FiMenu />}
+            </button> */}
+            {/* Animated Hamburger Button */}
+            <button
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              className="text-white absolute right-0 w-9 h-6 flex flex-col gap-2"
+            >
+              {/* Top Line */}
+              <span
+                className={`w-[60%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
+                  isDrawerOpen ? "" : ""
+                }`}
+              ></span>
+
+              {/* Middle Line */}
+              <span
+                className={`w-[80%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
+                  isDrawerOpen ? "" : ""
+                }`}
+              ></span>
+
+              {/* Bottom Line */}
+              <span
+                className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
+                  isDrawerOpen ? "opacity-0" : ""
+                }`}
+              ></span>
+            </button>
           </div>
         </div>
 
         {/* Mobile Drawer */}
         {isDrawerOpen && (
           <nav className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-40 transition-transform duration-300 flex flex-col sub-outer1">
-            <div className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] flex justify-between items-center p-3 mb-3">
+            <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] flex justify-between items-center p-5">
               <img src={logo} className="w-52 h-8" alt="Logo" />
-              <button
+              {/* <button
                 onClick={toggleDrawer}
-                className="text-white"
+                className="text-white absolute right-5"
               >
-                <FiX size={45} />
+                <FiX />
+              </button> */}
+              {/* Animated Close Button (Same Hamburger Logic) */}
+              <button
+                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                className="text-white absolute right-5 w-9 h-6 flex flex-col gap-2"
+              >
+                {/* Top Line */}
+                <span
+                  className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
+                    isDrawerOpen ? "" : ""
+                  }`}
+                ></span>
+
+                {/* Middle Line */}
+                <span
+                  className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
+                    isDrawerOpen ? "" : ""
+                  }`}
+                ></span>
+
+                {/* Bottom Line */}
+                <span
+                  className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
+                    isDrawerOpen ? "opacity-0" : ""
+                  }`}
+                ></span>
               </button>
             </div>
             <div className="flex-grow w-full h-[60%] mx-auto sub-service-container1">

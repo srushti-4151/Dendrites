@@ -1,3 +1,237 @@
+@media (min-width: 769px) {
+@keyframes nav-circle-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(20);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(40);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(100);
+    opacity: 1;
+  }
+}
+
+@keyframes nav-outer-in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1%{
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+.modal-overlay {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px; 
+  height: 100px; 
+  background: rgba(1, 33, 63, 0.8);
+  border-radius: 50%;
+  animation: nav-circle-in 2s forwards;
+}
+
+.outer {
+  visibility: hidden;
+  position: relative;
+  z-index: 10;
+  animation: nav-outer-in 1s forwards 0.5s; 
+  // background: rgba(1, 33, 63, 0.8);
+  background: transparent;
+  width: 100%;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+
+  .service-container {
+    padding: 3.5rem 0.5rem 0 1rem;
+    height: 100%;
+  }
+
+  /* Scrollbar modal content */
+  .scrollbar-modal {
+    margin-top: 49px;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      background-color: #345A7C;
+      width: 1px; 
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #345A7C; 
+      border-radius: 200px; 
+      box-shadow: 0 0 0 3px #345A7C; 
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent; 
+    }
+  }
+  
+  .sideshapesvg {
+    position: absolute;
+    width: 50vw;
+    // width: 100%;
+    height: 800px;
+    top: 0;
+    // top: 50%;
+    z-index: 10;
+  }
+
+  .input-container {
+    position: relative;
+    height: 34px;
+
+    /* Style for the input field */
+    input {
+      height: 100%;
+      display: block;
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      color: #ffffff;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    /* Style for the label */
+    label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      font-size: 17px;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      pointer-events: none; /* Ensure input is clickable */
+    }
+    .close-button {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    input:not(:placeholder-shown) ~ .close-button {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Move label up on focus or if input has value */
+    input:focus ~ label,
+    input:not(:placeholder-shown) ~ label {
+      top: 2px; /* Move label upward */
+      font-size: 10px; /* Shrink the font size */
+      color: #ffffff; /* Change label color */
+    }
+  }
+}
+
+
+}
+@media (max-width: 768px) {
+
+  // The entire provided SCSS code
+  .sub-outer {
+    padding-top: 5rem;
+    background: rgba(0, 34, 62, 0.99);
+    width: 100wv;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    overflow-y: scroll;
+
+    .sub-service-container {
+      height: 50%;
+      overflow-y: scroll;
+
+      .sub-scrollbar-modal {
+        margin-top: 1rem;
+        max-height: calc(100vh - 10rem);
+        overflow-y: auto;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(0, 34, 62, 0.89);
+      }
+      
+      .sub-scrollbar-modal::-webkit-scrollbar {
+        width: 4px;
+        background-color: #79a8d8a1;
+        border: 2px solid red;
+      }
+      
+      .sub-scrollbar-modal::-webkit-scrollbar-thumb {
+        background-color: #79a8d8a1;
+        border-radius: 15px;
+      }
+      
+      .sub-scrollbar-modal::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+         
+    }
+
+    .sub-sideshapesvg {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+      background-color: transparent;
+      width: 100%;
+
+      &:hover {
+        border-color: #ffffff;
+      }
+      /* Style for the input field */
+      input {
+        height: 100%;
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        color: #ffffff;
+        font-size: 16px;
+      }
+
+      /* Style for the label */
+      label {
+        position: absolute;
+        left: 0;
+        font-size: 17px;
+        color: #ffffff;
+        pointer-events: none; /* Ensure input is clickable */
+      }
+    }
+  }
+}
+
+
+
 // @keyframes nav-circle-in {
 //   0% {
 //     transform: scale(0);  /* Start from 0 size */
@@ -105,248 +339,3 @@
 //   // display: flex;
 //   justify-content: center;
 //   align-items: flex-start;
-
-@media (min-width: 769px) {
-@keyframes nav-circle-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(20);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(100);
-    opacity: 1;
-  }
-}
-
-.nav-circle-animation {
-  animation: nav-circle-in 2s ease 0s 1 normal forwards running;
-}
-
-@keyframes nav-outer-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.nav-outer-animation {
-  animation: nav-outer-in 2s ease forwards;
-}
-
-.modal-overlay {
-  z-index: 5;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100px; /* Initial size of the circle */
-  height: 100px; /* Initial size of the circle */
-  background: rgba(1, 33, 63, 0.8);
-  border-radius: 50%;
-  animation: nav-circle-in 2s ease 0s 1 normal forwards running;
-}
-
-.outer {
-  position: relative;
-  z-index: 10;
-  animation: nav-outer-in 2s ease forwards; 
-  // background: rgba(1, 33, 63, 0.8);
-  background: transparent;
-  width: 100%;
-  color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-
-
-  .service-container {
-    padding: 3.5rem 0.5rem 0 1rem;
-    height: 100%;
-  }
-
-  /* Scrollbar modal content */
-  // .scrollbar-modal {
-  //   // max-height: 100vh;
-  //   margin-top: 49px;
-  //   max-height: calc(100vh - 3rem);
-  //   overflow-y: auto;
-  // }
-  // .scrollbar-modal::-webkit-scrollbar {
-  //   width: 3px;
-  //   background-color: #79a8d8a1;
-  // }
-  // .scrollbar-modal::-webkit-scrollbar-thumb {
-  //   background-color: #79a8d8a1;
-  //   border-radius: 15px;
-  //   border: 12px solid #79a8d8a1; 
-  // }
-  // .scrollbar-modal::-webkit-scrollbar-track {
-  //   background-color: transparent;
-  // }
-  .scrollbar-modal {
-    margin-top: 49px;
-    max-height: calc(100vh - 3rem);
-    overflow-y: auto;
-  
-    &::-webkit-scrollbar {
-      background-color: #345A7C;
-      width: 1px; 
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      background-color: #345A7C; 
-      border-radius: 200px; 
-      box-shadow: 0 0 0 3px #345A7C; 
-    }
-  
-    &::-webkit-scrollbar-track {
-      background-color: transparent; 
-    }
-  }
-  
-
-  .sideshapesvg {
-    position: absolute;
-    width: 50vw;
-    // width: 100%;
-    height: 800px;
-    top: 0;
-    // top: 50%;
-    z-index: 10;
-  }
-
-  .input-container {
-    position: relative;
-    height: 34px;
-
-    /* Style for the input field */
-    input {
-      height: 100%;
-      display: block;
-      width: 100%;
-      background-color: transparent;
-      outline: none;
-      color: #ffffff;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    /* Style for the label */
-    label {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      font-size: 17px;
-      color: #ffffff;
-      transition: all 0.3s ease;
-      pointer-events: none; /* Ensure input is clickable */
-    }
-    .close-button {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-    input:not(:placeholder-shown) ~ .close-button {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Move label up on focus or if input has value */
-    input:focus ~ label,
-    input:not(:placeholder-shown) ~ label {
-      top: 2px; /* Move label upward */
-      font-size: 10px; /* Shrink the font size */
-      color: #ffffff; /* Change label color */
-    }
-  }
-}
-}
-@media (max-width: 768px) {
-
-  // The entire provided SCSS code
-  .sub-outer {
-    padding-top: 5rem;
-    background: rgba(0, 34, 62, 0.99);
-    width: 100wv;
-    color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    overflow-y: scroll;
-
-    .sub-service-container {
-      height: 50%;
-      overflow-y: scroll;
-
-      .sub-scrollbar-modal {
-        margin-top: 1rem;
-        max-height: calc(100vh - 10rem);
-        overflow-y: auto;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        background-color: rgba(0, 34, 62, 0.89);
-      }
-      
-      .sub-scrollbar-modal::-webkit-scrollbar {
-        width: 4px;
-        background-color: #79a8d8a1;
-        border: 2px solid red;
-      }
-      
-      .sub-scrollbar-modal::-webkit-scrollbar-thumb {
-        background-color: #79a8d8a1;
-        border-radius: 15px;
-      }
-      
-      .sub-scrollbar-modal::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-         
-    }
-
-    .sub-sideshapesvg {
-      position: absolute;
-      z-index: 1;
-    }
-
-    .input-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5rem;
-      position: relative;
-      background-color: transparent;
-      width: 100%;
-
-      &:hover {
-        border-color: #ffffff;
-      }
-      /* Style for the input field */
-      input {
-        height: 100%;
-        display: block;
-        width: 100%;
-        background-color: transparent;
-        outline: none;
-        color: #ffffff;
-        font-size: 16px;
-      }
-
-      /* Style for the label */
-      label {
-        position: absolute;
-        left: 0;
-        font-size: 17px;
-        color: #ffffff;
-        pointer-events: none; /* Ensure input is clickable */
-      }
-    }
-  }
-}

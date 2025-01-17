@@ -116,7 +116,7 @@ const ModalOf = ({ modalData, title }) => {
 
                   <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
                     {/* Search Icon */}
-                    <span className="text-[#00223E] px-2">{SearchIcon}</span>
+                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">{SearchIcon}</span>
 
                     {/* input container */}
                     <div className="input-container flex items-center relative w-full">
@@ -318,7 +318,7 @@ const ModalOf = ({ modalData, title }) => {
 
                   <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
                     {/* Search Icon */}
-                    <span className="text-[#00223E] px-2">{SearchIcon}</span>
+                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">{SearchIcon}</span>
 
                     {/* input container */}
                     <div className="input-container flex items-center relative w-full">

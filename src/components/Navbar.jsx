@@ -304,14 +304,14 @@ const Navbar = () => {
               {/* Top Line */}
               <span
                 className={`w-[60%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                  isDrawerOpen ? "rotate-45 -translate-x-1/2 -translate-y-1/2" : ""
+                  isDrawerOpen ? "" : ""
                 }`}
               ></span>
 
               {/* Middle Line -rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2*/} 
               <span
-                className={`w-[80%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
-                  isDrawerOpen ? "-rotate-45 -translate-x-1/2 -translate-y-1/2" : ""
+                className={`w-[80%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform${
+                  isDrawerOpen ? "" : ""
                 }`}
               ></span>
 
@@ -327,8 +327,8 @@ const Navbar = () => {
 
         {/* Mobile Drawer */}
         {isDrawerOpen && (
-          <nav className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-40 transition-transform duration-300 flex flex-col sub-outer1">
-            <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] flex justify-between items-center p-5">
+          <nav className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1">
+            <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] bg-[rgba(0,34,62,0.8)] flex justify-between items-center p-5 z-50">
               <img src={logo} className="w-52 h-8" alt="Logo" />
               {/* <button
                 onClick={toggleDrawer}
@@ -350,7 +350,7 @@ const Navbar = () => {
 
                 {/* Middle Line */}
                 <span
-                  className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
+                  className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
                     isDrawerOpen ? "-rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" : ""
                   }`}
                 ></span>
@@ -363,6 +363,7 @@ const Navbar = () => {
                 ></span>
               </button>
             </div>
+
             <div className="flex-grow w-full h-[60%] mx-auto sub-service-container1">
               <div className="sub-scrollbar-modal1">
                 <ul>
@@ -392,7 +393,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className={`w-full 
+              className={`w-full  z-30
                       ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
                     transition-all duration-700 ease-in-out`}
             >
@@ -403,7 +404,9 @@ const Navbar = () => {
               >
                 {mobileSideshape}
               </div>
-              <div className="relative z-20 pt-10 pl-4 tracking-wider">
+              <div 
+              className={`relative z-20 pl-4 tracking-wider
+                ${isExpanded ? "pt-0" : "pt-10"} `}>
                 <form className="w-full">
                   <div className="mb-5 mt-12">
                     <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">

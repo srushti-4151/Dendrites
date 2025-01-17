@@ -28,11 +28,11 @@ const ProductCareer = () => (
     <div className="absolute inset-0 flex items-end lg:bottom-32 bottom-16 justify-center z-10 px-4">
       <div className="max-w-[1410px] w-full flex flex-col lg:flex-row justify-between items-center lg:items-start">
         {/* Left Content */}
-        <div className="w-full lg:w-1/3 lg:text-left mb-8 lg:mb-0">
+        <div className="w-full lg:max-w-[440px] lg:text-left mb-8 lg:mb-0">
           <p className="text-[18px] lg:text-[30px] lg:text-[#80acd3] text-[#192c49] tracking-wide">
             <span className="font-bold">Career</span> at <span>DENDRITES</span>
           </p>
-          <h1 className="lg:leading-[60px] font-light leading-[40px] text-[32px] lg:text-[57px] text-[#03213b] pt-7 lg:pt-9 lg:pr-5 pr-24 uppercase tracking-wide">
+          <h1 className="lg:leading-[60px] font-light leading-[40px] text-[32px] lg:text-[57px] text-[#03213b] pt-7 lg:pt-9 lg:pr-0 pr-24 uppercase tracking-wide">
             Your career in the filed of
             <span className="block font-bold">PRODUCTS!</span>
           </h1>

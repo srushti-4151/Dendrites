@@ -212,14 +212,14 @@ const ProductsSignup = () => {
                   )}
                 </div>
 
-                <div className="flex items-start gap-3 text-left text-sm mb-8">
+                <div className="flex items-start gap-3 text-left text-[13px] mb-8">
                   <input
                     type="checkbox"
                     id="consent"
-                    className="w-[63px] h-[23px] appearance-none border border-[#fff] bg-transparent checked:bg-[#fff] checked:border-[#fff] focus:outline-none"
+                    className="w-[63px] lg:h-[23px] h-[18px] appearance-none border border-[#fff] bg-transparent checked:bg-[#fff] checked:border-[#fff] focus:outline-none"
                     required
                   />
-                  <label htmlFor="consent">
+                  <label htmlFor="consent" className="lg:pl-[6px] text-[#FFFFFF99]">
                     We use your data in accordance with our{" "}
                     <a href="#" className="underline text-[#96e8ca]">
                       data protection guidelines

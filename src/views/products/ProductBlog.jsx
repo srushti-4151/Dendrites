@@ -42,9 +42,9 @@ const ProductBlog = () => {
                 </div>
               </div>
               <div className="relative bg-[#80acd3] rounded-lg shadow-lg h-[150px] overflow-hidden mb-4 mt-5">
-                <div className="p-4">
-                  <p className="text-[#00223E] text-sm mb-2">15.02.2024</p>
-                  <h3 className="text-[#00223E] text-lg font-medium mb-2">
+                <div className="p-5">
+                  <p className="text-[#00223E] text-sm">15.02.2024</p>
+                  <h3 className="text-[#00223E] leading-5 text-lg font-medium mb-5">
                     Feature Article: How Dendrites Drives Innovation
                   </h3>
                   <a href="#" className="text-[#00223E] text-sm underline">
@@ -116,9 +116,9 @@ const ProductBlog = () => {
             {/* Column 3 - Two Rows */}
             <div className="grid gap-0 max-h-[428px] h-full overflow-hidden">
               <div className="relative bg-[#80acd3] rounded-lg shadow-lg h-[150px] overflow-hidden">
-                <div className="p-4">
-                  <p className="text-[#00223E] text-sm mb-2">06.07.2023</p>
-                  <h3 className="text-[#00223E] text-lg font-medium mb-2">
+                <div className="p-5">
+                  <p className="text-[#00223E] text-sm">06.07.2023</p>
+                  <h3 className="text-[#00223E] leading-5 text-lg font-medium mb-5">
                     Interview: Georg Pöschl - Product Development
                   </h3>
                   <a href="#" className="text-[#00223E] text-sm underline">

@@ -124,10 +124,11 @@ const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleExpand = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded(true);
+    setIsInputFocused(true);
   };
   const handleCollapse = () => {
-    setIsExpanded(false);
+    setIsExpanded(!isExpanded);
   };
 
   useEffect(() => {
@@ -308,7 +309,7 @@ const Navbar = () => {
                 }`}
               ></span>
 
-              {/* Middle Line -rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2*/} 
+              {/* Middle Line -rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2*/}
               <span
                 className={`w-[80%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform${
                   isDrawerOpen ? "" : ""
@@ -344,14 +345,18 @@ const Navbar = () => {
                 {/* Top Line */}
                 <span
                   className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                    isDrawerOpen ? "rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" : ""
+                    isDrawerOpen
+                      ? "rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                      : ""
                   }`}
                 ></span>
 
                 {/* Middle Line */}
                 <span
                   className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                    isDrawerOpen ? "-rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" : ""
+                    isDrawerOpen
+                      ? "-rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                      : ""
                   }`}
                 ></span>
 
@@ -395,32 +400,36 @@ const Navbar = () => {
             <div
               className={`w-full  z-30
                       ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
-                    transition-all duration-700 ease-in-out`}
+                    transition-all ease-linear duration-300`}
             >
               <div
                 className={`sub-sideshapesvg1 text-[#77a7d1]
                         ${isExpanded ? "top-0 bg-[#7eabd5]" : "bottom-0"} 
-                      transition-all duration-700 ease-in-out`}
+                      transition-all ease-linear duration-300`}
               >
                 {mobileSideshape}
               </div>
-              <div 
-              className={`relative z-20 pl-4 tracking-wider
-                ${isExpanded ? "pt-0" : "pt-10"} `}>
-                <form className="w-full">
-                  <div className="mb-5 mt-12">
-                    <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
+              <div
+                className={`relative z-20 px-4 tracking-wider
+                ${isExpanded ? "pt-0" : "pt-10"} `}
+              >
+                <form
+                  className={`w-full transition-all ease-linear duration-700${
+                    isExpanded ? "top-0" : "bottom-0"
+                  }`}
+                >
+                  <div className={`${isExpanded ? "mb-5 mt-7" : "mb-3 mt-14"}`}>
+                    <h3 className="uppercase text-[32px] font-medium text-[#00223E]">
                       Easy Search
                     </h3>
                   </div>
                   <div
-                    onClick={handleExpand}
-                    className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+                    className="h-[50px] relative p-2 z-20 flex items-center gap-2 w-full focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                   >
                     {/* Search Icon */}
-                    <span className="text-[#ffffff] px-2">
+                    <button onClick={handleExpand} className="inline-block text-[#ffffff] px-2">
                       {MobileSearchIcon}
-                    </span>
+                    </button>
 
                     {/* input container */}
                     <div className="input-container1 w-full">
@@ -430,24 +439,28 @@ const Navbar = () => {
                         placeholder=" " //do not remove this
                         autoComplete="off"
                         className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
-                      />
+                        onFocus={handleExpand} // Focus triggers input state
+                        />
                       {/* Label */}
                       <label
                         htmlFor="search"
-                        className="text-white opacity-900 tracking-wide"
+                        // className="text-white opacity-900 tracking-wide"
+                        className={`absolute left-0 top-1/2 transform -translate-y-1/2 text-white opacity-90 tracking-wide transition-all duration-300 peer-focus:opacity-0 peer-focus:-translate-y-4`}
                       >
                         Your <strong>search terms</strong>
                       </label>
 
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleCollapse();
-                        }}
-                        className="mr-2 close-button"
-                      >
-                        {CloseSearchIcon}
-                      </button>
+                      {isInputFocused && ( // Show only on input focus
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleCollapse();
+                          }}
+                          className="mr-2 close-button"
+                        >
+                          {CloseSearchIcon}
+                        </button>
+                      )}
                     </div>
                   </div>
                 </form>

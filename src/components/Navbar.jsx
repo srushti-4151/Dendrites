@@ -304,14 +304,14 @@ const Navbar = () => {
               {/* Top Line */}
               <span
                 className={`w-[60%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                  isDrawerOpen ? "" : ""
+                  isDrawerOpen ? "rotate-45 -translate-x-1/2 -translate-y-1/2" : ""
                 }`}
               ></span>
 
-              {/* Middle Line */}
+              {/* Middle Line -rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2*/} 
               <span
                 className={`w-[80%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
-                  isDrawerOpen ? "" : ""
+                  isDrawerOpen ? "-rotate-45 -translate-x-1/2 -translate-y-1/2" : ""
                 }`}
               ></span>
 
@@ -343,15 +343,15 @@ const Navbar = () => {
               >
                 {/* Top Line */}
                 <span
-                  className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                    isDrawerOpen ? "" : ""
+                  className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
+                    isDrawerOpen ? "rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" : ""
                   }`}
                 ></span>
 
                 {/* Middle Line */}
                 <span
-                  className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
-                    isDrawerOpen ? "" : ""
+                  className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out ${
+                    isDrawerOpen ? "-rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" : ""
                   }`}
                 ></span>
 

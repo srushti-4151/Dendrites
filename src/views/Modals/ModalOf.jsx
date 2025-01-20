@@ -264,7 +264,7 @@ const ModalOf = ({ modalData, title }) => {
       ) : (
         <>
           <div className="lg:block hidden modal-overlay z-5"></div>
-          <div className="lg:flex w-full hidden outer text-white z-10">
+          <div className="lg:flex hidden w-full outer text-white z-10">
             <div className="w-1/2 max-w-[700px] service-container mx-auto">
               <div className="scrollbar-modal">
                 <div className="py-20 w-[75%]">
@@ -376,8 +376,8 @@ const ModalOf = ({ modalData, title }) => {
             {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
             <div
               className={`w-full ${
-                isExpanded ? "" : "h-[60%]"
-              } flex-grow w-full sub-service-container mx-auto`}
+                isExpanded ? "" : "h-[60vh]"
+              } flex-grow w-full sub-service-container mx-auto z-20`}
             >
               {/* <div className="absolute w-full h-full bg-gradient-to-t from-[#272c55] via-[#272c55]/80 to-transparent"></div> */}
               <div className="sub-scrollbar-modal">
@@ -406,12 +406,12 @@ const ModalOf = ({ modalData, title }) => {
 
             {/* <div className="w-full h-[40%]"> */}
             <div
-              className={`w-full relative overflow-hidden bg-transparent 
-          ${isExpanded ? "min-h-screen top-0" : "h-[40%] top-[40px]"} 
+              className={`w-full overflow-hidden bg-transparent 
+          ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"} 
           transition-top duration-700 ease-in-out`}
             >
               <div
-                className={`sub-sideshapesvg text-[#77a7d1] h-auto w-full overflow-hidden
+                className={`sub-sideshapesvg h-full w-full overflow-hidden
             ${isExpanded ? "top-0" : "bottom-0"} 
           transition-top duration-700 ease-in-out`}
               >
@@ -420,8 +420,8 @@ const ModalOf = ({ modalData, title }) => {
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
                   width="375"
-                  height="282"
-                  viewBox="0 0 375 282"
+                  height="262"
+                  viewBox="0 0 375 262"
                 >
                   <defs>
                     <clipPath id="clip-path">
@@ -448,10 +448,10 @@ const ModalOf = ({ modalData, title }) => {
                 </svg>
               </div>
 
+
               <form
-                // className="relative z-20 pt-10 pl-4 tracking-wider"
-                className={`relative z-20 pl-4 tracking-wider ${
-                  isExpanded ? "pt-0" : "pt-10"
+                className={`relative z-20 pl-4 tracking-wider h-full ${
+                  isExpanded ? "pt-0" : "pt-7"
                 }`}
               >
                 <div className="mb-5 mt-12">
@@ -459,26 +459,22 @@ const ModalOf = ({ modalData, title }) => {
                     Easy Search
                   </h3>
                 </div>
-
                 <div
                   onClick={handleExpand}
-                  className="relative p-2 z-20 flex items-center gap-2 w-[95%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+                  className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                 >
-                  {/* Search Icon */}
                   <span className="text-[#ffffff] px-2">
                     {MobileSearchIcon}
                   </span>
 
-                  {/* input container */}
                   <div className="input-container w-full">
-                    {/* Search Input */}
+                  
                     <input
                       id="search"
                       placeholder=" " //do not remove this
                       autoComplete="off"
                       className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
                     />
-                    {/* Label */}
                     <label
                       htmlFor="search"
                       className="text-white opacity-900 tracking-wide"
@@ -501,10 +497,11 @@ const ModalOf = ({ modalData, title }) => {
 
               <div
                 className={`absolute z-2 bg-[#7eabd5] ${
-                  isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"
+                  isExpanded ? "w-full min-h-screen top-0" : "pt-10 w-full bottom-0"
                 }
                 transition-top duration-700 ease-in-out`}
               ></div>
+
             </div>
           </nav>
         </>

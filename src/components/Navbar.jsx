@@ -125,11 +125,10 @@ const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleExpand = () => {
-    setIsExpanded(true);
-    setIsInputFocused(true);
+    setIsExpanded(!isExpanded);
   };
   const handleCollapse = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded(false);
   };
 
   useEffect(() => {
@@ -190,13 +189,13 @@ const Navbar = () => {
             <Link to="/" className="">
               <img
                 src={logo}
-                className="lg:w-48 w-72  h-8 bg-transparent lg:block hidden"
+                className="lg:w-48 w-72 h-8 bg-transparent lg:block hidden"
                 alt="Logo"
               />
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex justify-center items-center lg:gap-8 2xl:gap-12 py-4">
+            <div className="hidden lg:flex justify-center items-center lg:gap-10 2xl:gap-12 py-4">
               {/* {links.map((link) =>
                 link.path ? (
                   <Link
@@ -312,7 +311,7 @@ const Navbar = () => {
               />
             </div>
 
-            <div className="flex-grow w-full h-[60%] mx-auto sub-service-container1">
+            <div className="flex-grow w-full h-[60vh] mx-auto sub-service-container1">
               <div className="sub-scrollbar-modal1">
                 <ul>
                   {mobileLinks.map((link, index) => (
@@ -342,14 +341,14 @@ const Navbar = () => {
 
             {/* <div className="w-full h-[40%]"> */}
             <div
-              className={`w-full relative overflow-hidden bg-transparent 
+              className={`w-full overflow-hidden bg-transparent 
                       ${
-                        isExpanded ? "min-h-screen top-0" : "h-[40%] top-[40px]"
+                        isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"
                       } 
                       transition-top duration-700 ease-in-out`}
             >
               <div
-                className={`sub-sideshapesvg1 text-[#77a7d1] h-auto w-full overflow-hidden
+                className={`sub-sideshapesvg1 text-[#77a7d1] h-full w-full overflow-hidden
                         ${isExpanded ? "top-0" : "bottom-0"} 
                       transition-top duration-700 ease-in-out`}
               >
@@ -389,7 +388,7 @@ const Navbar = () => {
               <form
                 // className="relative z-20 pt-10 pl-4 tracking-wider"
                 className={`relative z-20 pl-4 tracking-wider ${
-                  isExpanded ? "pt-0" : "pt-10"
+                  isExpanded ? "pt-0" : "pt-7"
                 }`}
               >
                 <div className="mb-5 mt-12">
@@ -400,7 +399,7 @@ const Navbar = () => {
 
                 <div
                   onClick={handleExpand}
-                  className="relative p-2 z-20 flex items-center gap-2 w-[95%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+                  className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                 >
                   {/* Search Icon */}
                   <span className="text-[#ffffff] px-2">

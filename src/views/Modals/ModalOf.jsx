@@ -116,7 +116,9 @@ const ModalOf = ({ modalData, title }) => {
 
                   <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
                     {/* Search Icon */}
-                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">{SearchIcon}</span>
+                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">
+                      {SearchIcon}
+                    </span>
 
                     {/* input container */}
                     <div className="input-container flex items-center relative w-full">
@@ -318,7 +320,9 @@ const ModalOf = ({ modalData, title }) => {
 
                   <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
                     {/* Search Icon */}
-                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">{SearchIcon}</span>
+                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">
+                      {SearchIcon}
+                    </span>
 
                     {/* input container */}
                     <div className="input-container flex items-center relative w-full">
@@ -368,7 +372,7 @@ const ModalOf = ({ modalData, title }) => {
             </div>
           </div>
 
-          <nav className="lg:hidden flex flex-col h-screen sub-outer">
+          <nav className="lg:hidden flex flex-col h-screen sub-outer relative">
             {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
             <div
               className={`w-full ${
@@ -401,69 +405,105 @@ const ModalOf = ({ modalData, title }) => {
             </div>
             {/* <div className="w-full h-[40%]"> */}
             <div
-              className={`w-full 
-          ${isExpanded ? "min-h-screen bg-[#7eabd5]" : "h-[40%]"} 
-          transition-height transition-colors duration-500 ease-in-out`}
+              className={`w-full relative overflow-hidden bg-transparent 
+          ${isExpanded ? "min-h-screen top-0" : "h-[40%] top-[40px]"} 
+          transition-top duration-700 ease-in-out`}
             >
               <div
-                className={`sub-sideshapesvg text-[#77a7d1]
-            ${isExpanded ? "top-0 bg-[#7eabd5]" : "bottom-0"} 
-          transition-transform duration-500 ease-in-out`}
+                className={`sub-sideshapesvg text-[#77a7d1] h-auto w-full overflow-hidden
+            ${isExpanded ? "top-0" : "bottom-0"} 
+          transition-top duration-700 ease-in-out`}
               >
-                {mobileSideshape}
+                <svg
+                  className="w-full h-auto"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  width="375"
+                  height="282"
+                  viewBox="0 0 375 282"
+                >
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect
+                        width="375"
+                        height="282"
+                        transform="translate(4417 2345)"
+                        fill="#fff"
+                        stroke="#707070"
+                        strokeWidth="1"
+                      />
+                    </clipPath>
+                  </defs>
+                  <g
+                    transform="translate(-4417 -2345)"
+                    clipPath="url(#clip-path)"
+                  >
+                    <path
+                      d="M737.148,0C1144.264,0,1474.3,330.033,1474.3,737.148S1144.264,1474.3,737.148,1474.3,0,1144.264,0,737.148,330.033,0,737.148,0Z"
+                      transform="translate(3701.352 2345.352)"
+                      fill="#7eabd5"
+                    />
+                  </g>
+                </svg>
               </div>
-              <div
+
+              <form
                 // className="relative z-20 pt-10 pl-4 tracking-wider"
                 className={`relative z-20 pl-4 tracking-wider ${
                   isExpanded ? "pt-0" : "pt-10"
                 }`}
               >
-                <form className="w-full">
-                  <div className="mb-5 mt-12">
-                    <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
-                      Easy Search
-                    </h3>
+                <div className="mb-5 mt-12">
+                  <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
+                    Easy Search
+                  </h3>
+                </div>
+
+                <div
+                  onClick={handleExpand}
+                  className="relative p-2 z-20 flex items-center gap-2 w-[95%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
+                >
+                  {/* Search Icon */}
+                  <span className="text-[#ffffff] px-2">
+                    {MobileSearchIcon}
+                  </span>
+
+                  {/* input container */}
+                  <div className="input-container w-full">
+                    {/* Search Input */}
+                    <input
+                      id="search"
+                      placeholder=" " //do not remove this
+                      autoComplete="off"
+                      className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                    />
+                    {/* Label */}
+                    <label
+                      htmlFor="search"
+                      className="text-white opacity-900 tracking-wide"
+                    >
+                      Your <strong>search terms</strong>
+                    </label>
+
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleCollapse();
+                      }}
+                      className="mr-2 close-button"
+                    >
+                      {CloseSearchIcon}
+                    </button>
                   </div>
+                </div>
+              </form>
 
-                  <div
-                    onClick={handleExpand}
-                    className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
-                  >
-                    {/* Search Icon */}
-                    <span className="text-[#ffffff] px-2">
-                      {MobileSearchIcon}
-                    </span>
-
-                    {/* input container */}
-                    <div className="input-container w-full">
-                      {/* Search Input */}
-                      <input
-                        id="search"
-                        placeholder=" " //do not remove this
-                        autoComplete="off"
-                        className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
-                      />
-                      {/* Label */}
-                      <label
-                        htmlFor="search"
-                        className="text-white opacity-900 tracking-wide"
-                      >
-                        Your <strong>search terms</strong>
-                      </label>
-
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleCollapse();
-                        }}
-                        className="mr-2 close-button"
-                      >
-                        {CloseSearchIcon}
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
+              <div
+                className={`absolute z-2 bg-[#7eabd5] ${
+                  isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"
+                }
+                transition-top duration-700 ease-in-out`}
+              ></div>
             </div>
           </nav>
         </>

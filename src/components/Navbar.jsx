@@ -10,6 +10,7 @@ import {
   MobileSearchIcon,
   CloseSearchIcon,
 } from "../assets/svg";
+import HamburgerButton from "./HamburgerButton";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -291,38 +292,11 @@ const Navbar = () => {
           {/* Mobile Hamburger Menu */}
           <div className="lg:hidden w-full top-0 relative flex items-center justify-between">
             <img src={logo} className="w-52 h-8" alt="Logo" />
-            {/* <button
-              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              className="text-white absolute right-0"
-            >
-              {isDrawerOpen ? <FiX /> : <FiMenu />}
-            </button> */}
             {/* Animated Hamburger Button */}
-            <button
-              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              className="text-white absolute right-0 w-9 h-6 flex flex-col gap-2"
-            >
-              {/* Top Line */}
-              <span
-                className={`w-[60%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                  isDrawerOpen ? "" : ""
-                }`}
-              ></span>
-
-              {/* Middle Line -rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2*/}
-              <span
-                className={`w-[80%] block h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform${
-                  isDrawerOpen ? "" : ""
-                }`}
-              ></span>
-
-              {/* Bottom Line */}
-              <span
-                className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                  isDrawerOpen ? "opacity-0" : ""
-                }`}
-              ></span>
-            </button>
+            <HamburgerButton
+              isDrawerOpen={isDrawerOpen}
+              toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}
+            />
           </div>
         </div>
 
@@ -331,42 +305,11 @@ const Navbar = () => {
           <nav className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1">
             <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] bg-[rgba(0,34,62,0.8)] flex justify-between items-center p-5 z-50">
               <img src={logo} className="w-52 h-8" alt="Logo" />
-              {/* <button
-                onClick={toggleDrawer}
-                className="text-white absolute right-5"
-              >
-                <FiX />
-              </button> */}
               {/* Animated Close Button (Same Hamburger Logic) */}
-              <button
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-                className="text-white absolute right-5 w-9 h-6 flex flex-col gap-2"
-              >
-                {/* Top Line */}
-                <span
-                  className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                    isDrawerOpen
-                      ? "rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                      : ""
-                  }`}
-                ></span>
-
-                {/* Middle Line */}
-                <span
-                  className={`absolute block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                    isDrawerOpen
-                      ? "-rotate-45 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                      : ""
-                  }`}
-                ></span>
-
-                {/* Bottom Line */}
-                <span
-                  className={`block w-full h-[3px] bg-white rounded transition-all duration-300 ease-in-out transform ${
-                    isDrawerOpen ? "opacity-0" : ""
-                  }`}
-                ></span>
-              </button>
+              <HamburgerButton
+                isDrawerOpen={isDrawerOpen}
+                toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}
+              />
             </div>
 
             <div className="flex-grow w-full h-[60%] mx-auto sub-service-container1">
@@ -423,11 +366,12 @@ const Navbar = () => {
                       Easy Search
                     </h3>
                   </div>
-                  <div
-                    className="h-[50px] relative p-2 z-20 flex items-center gap-2 w-full focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
-                  >
+                  <div className="h-[50px] relative p-2 z-20 flex items-center gap-2 w-full focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white">
                     {/* Search Icon */}
-                    <button onClick={handleExpand} className="inline-block text-[#ffffff] px-2">
+                    <button
+                      onClick={handleExpand}
+                      className="inline-block text-[#ffffff] px-2"
+                    >
                       {MobileSearchIcon}
                     </button>
 
@@ -440,7 +384,7 @@ const Navbar = () => {
                         autoComplete="off"
                         className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
                         onFocus={handleExpand} // Focus triggers input state
-                        />
+                      />
                       {/* Label */}
                       <label
                         htmlFor="search"

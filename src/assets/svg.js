@@ -770,11 +770,11 @@ export const sideshape = (
 
 export const mobileSideshape = (
   <svg
-    className="mobile"
     xmlns="http://www.w3.org/2000/svg"
     width="375"
     height="200"
     viewBox="0 0 375 200"
+    className= "h-full w-full mobile"
   >
     <defs>
       <clipPath id="a">

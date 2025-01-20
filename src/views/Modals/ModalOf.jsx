@@ -403,6 +403,7 @@ const ModalOf = ({ modalData, title }) => {
                 </ul>
               </div>
             </div>
+
             {/* <div className="w-full h-[40%]"> */}
             <div
               className={`w-full relative overflow-hidden bg-transparent 

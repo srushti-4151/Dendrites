@@ -185,18 +185,18 @@ const Navbar = () => {
           className="m-auto max-w-[1410px] lg:px-4 overflow-hidden lg:h-[70px]"
           // style={{ height: "63.7px" }}
         >
-          <div className="flex justify-between gap-20 items-center p-0">
+          <div className="flex justify-between gap-10 items-center p-0">
             {/* Logo Section */}
             <Link to="/" className="">
               <img
                 src={logo}
-                className="w-72 h-8 bg-transparent lg:block hidden"
+                className="lg:w-48 w-72  h-8 bg-transparent lg:block hidden"
                 alt="Logo"
               />
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex justify-center items-center gap-12 py-4">
+            <div className="hidden lg:flex justify-center items-center lg:gap-8 2xl:gap-12 py-4">
               {/* {links.map((link) =>
                 link.path ? (
                   <Link

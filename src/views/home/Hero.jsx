@@ -170,7 +170,7 @@ const Hero = () => {
                 </p>
                 <p className="text-[#00223e] font-bold text-[12px] lg:text-[13px]">
                   vacancies
-                  <div className="font-normal">available!</div>
+                  <span className="font-normal block">available!</span>
                 </p>
               </div>
             </div>

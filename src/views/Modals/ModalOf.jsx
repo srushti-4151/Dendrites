@@ -275,6 +275,7 @@ const ModalOf = ({ modalData, title }) => {
                     {modalData.map((service, index) => (
                       <Link
                         key={index}
+                        to={service.path}
                         className="group rounded-lg pb-5 text-white transition flex flex-row items-center"
                       >
                         {" "}
@@ -284,11 +285,11 @@ const ModalOf = ({ modalData, title }) => {
                           </div>{" "}
                         </div>
                         <div className="p-2 pl-6 w-[75%]">
-                          <Link to={service.path} className="inline-block">
+                          {/* <Link to={service.path} className="inline-block"> */}
                             <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
                               {service.title}
                             </h3>
-                          </Link>
+                          {/* </Link> */}
                           <p className="text-sm text-white pt-2 font-light opacity-60">
                             {service.description}
                           </p>
@@ -451,11 +452,11 @@ const ModalOf = ({ modalData, title }) => {
 
               <form
                 className={`relative z-20 pl-4 tracking-wider h-full ${
-                  isExpanded ? "pt-0" : "pt-7"
+                  isExpanded ? "pt-0" : "pt-4"
                 }`}
               >
                 <div className="mb-5 mt-12">
-                  <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
+                  <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
                     Easy Search
                   </h3>
                 </div>

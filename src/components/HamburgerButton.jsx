@@ -10,7 +10,8 @@ const HamburgerButton = ({ isDrawerOpen, toggleDrawer }) => {
         <span
           className={`absolute w-full h-[3px] bg-white rounded transition-transform duration-500 ease-in-out  ${
             // isDrawerOpen ? "rotate-45 translate-y-1/2 top-1/2" : ""
-             isDrawerOpen ? "rotate-45 -translate-y-1/2 top-1/2" : "rotate-0 -translate-y-0 -translate-x-0 top-0"
+            //  isDrawerOpen ? "rotate-45 -translate-y-1/2 top-1/2" : "rotate-0 -translate-y-0 -translate-x-0 top-0"
+            isDrawerOpen ? "rotate-45 top-1/2 translate-y-[-50%]" : "rotate-0 top-0"
           }`}
         ></span>
   
@@ -18,7 +19,8 @@ const HamburgerButton = ({ isDrawerOpen, toggleDrawer }) => {
         <span
           className={`absolute w-full h-[3px] bg-white rounded transition-opacity duration-500 ease-in-out ${
             // isDrawerOpen ? "-rotate-45 -translate-y-1/2 top-1/2" : ""
-             isDrawerOpen ? "-rotate-45 -translate-y-1/2 top-1/2" : "-rotate-0 -translate-y-1/2 -translate-x-0 top-1/2 "
+            //  isDrawerOpen ? "-rotate-45 -translate-y-1/2 top-1/2" : "-rotate-0 -translate-y-1/2 -translate-x-0 top-1/2 "
+            isDrawerOpen ? "-rotate-45 top-1/2 translate-y-[-50%]" : "rotate-0 top-1/2 -translate-y-1/2"
           }`}
         ></span>
   

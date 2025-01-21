@@ -11,17 +11,16 @@ import {
   CloseSearchIcon,
 } from "../assets/svg";
 import HamburgerButton from "./HamburgerButton";
+import { closeDrawer, toggleDrawer } from "../redux/NavSlice";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("");
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [topValue, setTopValue] = useState(40);
   const dispatch = useDispatch();
   const location = useLocation();
   const modalContent = useSelector((state) => state.modal.modalContent);
   // console.log("Current Modal Content:", modalContent);
-
   const prevLocation = useRef(location.pathname);
+
   // Close modal on route change if modal is open
   useEffect(() => {
     // Check if modal is open and the route has changed (not the first route)
@@ -32,15 +31,11 @@ const Navbar = () => {
     // Update the previous location
     prevLocation.current = location.pathname;
   }, [modalContent, location.pathname, dispatch]);
-
   const handleModalOpen = (modalName) => {
     if (modalContent !== modalName) {
       dispatch(openModal(modalName));
       // console.log(`Modal opened: ${modalName}`);
     }
-  };
-  const toggleDrawer = () => {
-    setIsDrawerOpen((prevState) => !prevState);
   };
 
   const handleScroll = () => {
@@ -121,9 +116,7 @@ const Navbar = () => {
   ];
 
   const [isInputFocused, setIsInputFocused] = useState(false);
-
   const [isExpanded, setIsExpanded] = useState(false);
-
   const handleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -131,6 +124,11 @@ const Navbar = () => {
     setIsExpanded(false);
   };
 
+  // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  // const toggleDrawer = () => {
+  //   setIsDrawerOpen((prevState) => !prevState);
+  // };
+  const isDrawerOpen = useSelector((state) => state.nav.isDrawerOpen);
   useEffect(() => {
     console.log("Drawer state changed:", isDrawerOpen);
   }, [isDrawerOpen]);
@@ -294,20 +292,24 @@ const Navbar = () => {
             {/* Animated Hamburger Button */}
             <HamburgerButton
               isDrawerOpen={isDrawerOpen}
-              toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}
+              toggleDrawer={() => dispatch(toggleDrawer())}
             />
           </div>
         </div>
 
         {/* Mobile Drawer */}
         {isDrawerOpen && (
-          <nav className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1">
+          <nav
+            // className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1"
+            className={`fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1 
+            ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"}`}
+          >
             <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] bg-[rgba(0,34,62,0.8)] flex justify-between items-center p-5 z-50">
               <img src={logo} className="w-52 h-8" alt="Logo" />
               {/* Animated Close Button (Same Hamburger Logic) */}
               <HamburgerButton
                 isDrawerOpen={isDrawerOpen}
-                toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}
+                toggleDrawer={() => dispatch(closeDrawer())}
               />
             </div>
 
@@ -321,9 +323,12 @@ const Navbar = () => {
                     >
                       <li className="tracking-wider text-[30px] uppercase font-bold pl-3 text-white">
                         {link.path ? (
-                          <a href={link.path} onClick={link.onClick}>
+                          // <a href={link.path} onClick={link.onClick}>
+                          //   {link.name}
+                          // </a>
+                          <Link to={link.path} onClick={link.onClick}>
                             {link.name}
-                          </a>
+                          </Link>
                         ) : (
                           <button
                             onClick={link.onClick}
@@ -343,7 +348,9 @@ const Navbar = () => {
             <div
               className={`w-full overflow-hidden bg-transparent 
                       ${
-                        isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"
+                        isExpanded
+                          ? "min-h-screen top-0"
+                          : "relative h-[32vh] bottom-0"
                       } 
                       transition-top duration-700 ease-in-out`}
             >
@@ -388,11 +395,11 @@ const Navbar = () => {
               <form
                 // className="relative z-20 pt-10 pl-4 tracking-wider"
                 className={`relative z-20 pl-4 tracking-wider ${
-                  isExpanded ? "pt-0" : "pt-7"
+                  isExpanded ? "pt-0" : "pt-4"
                 }`}
               >
                 <div className="mb-5 mt-12">
-                  <h3 className="uppercase text-3xl font-semibold text-[#00223E] ">
+                  <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
                     Easy Search
                   </h3>
                 </div>

@@ -12,6 +12,7 @@ import {
 } from "../assets/svg";
 import HamburgerButton from "./HamburgerButton";
 import { closeDrawer, toggleDrawer } from "../redux/NavSlice";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Navbar = () => {
   const [topValue, setTopValue] = useState(40);
@@ -115,13 +116,16 @@ const Navbar = () => {
     },
   ];
 
-  const [isInputFocused, setIsInputFocused] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isInputFocused, setIsInputFocused] = useState(false);
+
   const handleExpand = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded(true);
   };
-  const handleCollapse = () => {
+  const handleCollapse = (e) => {
+    e.preventDefault();
     setIsExpanded(false);
+    setIsInputFocused(false);
   };
 
   // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -319,7 +323,7 @@ const Navbar = () => {
                   {mobileLinks.map((link, index) => (
                     <div
                       key={link.name}
-                      className="border-t border-gray-500 py-4 flex items-center"
+                      className="border-t border-gray-500 py-3 flex items-center"
                     >
                       <li className="tracking-wider text-[30px] uppercase font-bold pl-3 text-white">
                         {link.path ? (
@@ -411,17 +415,25 @@ const Navbar = () => {
                 }`}
               >
                 <div className="mb-5 mt-12">
-                  <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
+                  {isInputFocused && (
+                    <button
+                      onClick={handleCollapse}
+                      className="mr-2 text-[#00223E]"
+                    >
+                      <FaArrowLeftLong size={29} />
+                    </button>
+                  )}
+                  <span className="uppercase text-4xl font-semibold text-[#00223E] ">
                     Easy Search
-                  </h3>
+                  </span>
                 </div>
 
                 <div
-                  onClick={handleExpand}
+                  // onClick={handleExpand}
                   className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                 >
                   {/* Search Icon */}
-                  <span className="text-[#ffffff] px-2">
+                  <span onClick={handleExpand} className="text-[#ffffff] px-2">
                     {MobileSearchIcon}
                   </span>
 
@@ -433,24 +445,27 @@ const Navbar = () => {
                       placeholder=" " //do not remove this
                       autoComplete="off"
                       className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                      onFocus={() => setIsInputFocused(true)}
+                      onClick={handleExpand}
                     />
                     {/* Label */}
-                    <label
-                      htmlFor="search"
-                      className="text-white opacity-900 tracking-wide"
-                    >
-                      Your <strong>search terms</strong>
-                    </label>
+                    {!isInputFocused && (
+                      <label
+                        htmlFor="search"
+                        className="text-white opacity-900 tracking-wide"
+                      >
+                        Your <strong>search terms</strong>
+                      </label>
+                    )}
 
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleCollapse();
-                      }}
-                      className="mr-2 close-button"
-                    >
-                      {CloseSearchIcon}
-                    </button>
+                    {isInputFocused && (
+                      <button
+                        onClick={handleCollapse}
+                        className="mr-2 close-button"
+                      >
+                        {CloseSearchIcon}
+                      </button>
+                    )}
                   </div>
                 </div>
               </form>

@@ -26,33 +26,20 @@ const ModalOf = ({ modalData, title }) => {
   };
 
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isInputFocused, setIsInputFocused] = useState(false);
 
   const handleExpand = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded(true);
   };
-  const handleCollapse = () => {
-    // console.log("Closing...");
-    // console.log("isExpanded:", isExpanded);
+  const handleCollapse = (e) => {
+    e.preventDefault();
     setIsExpanded(false);
-    // console.log("isExpanded after:", isExpanded);
+    setIsInputFocused(false);
   };
   const isDrawerOpen = useSelector((state) => state.nav.isDrawerOpen);
 
   return (
     <>
-      {/* <nav
-        // className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1"
-        className={`fixed top-0 left-0 w-full bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1 
-            ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"}`}
-      >
-        <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] bg-[rgba(0,34,62,0.8)] flex justify-between items-center p-5 z-50">
-          <img src={logo} className="w-52 h-8" alt="Logo" />
-          <HamburgerButton
-            isDrawerOpen={isDrawerOpen}
-            toggleDrawer={() => dispatch(closeDrawer())}
-          />
-        </div>
-      </nav> */}
       <Navbar />
       {title === "Search" ? (
         <>
@@ -390,7 +377,7 @@ const ModalOf = ({ modalData, title }) => {
             </div>
           </div>
 
-          <nav className="lg:hidden flex flex-col h-screen sub-outer relative">
+          <nav className="lg:hidden md:flex flex flex-col h-screen sub-outer relative">
             {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
             <div
               className={`w-full ${
@@ -476,41 +463,56 @@ const ModalOf = ({ modalData, title }) => {
                 }`}
               >
                 <div className="mb-5 mt-12">
-                  <h3 className="uppercase text-4xl font-semibold text-[#00223E] ">
+                  {isInputFocused && (
+                      <button
+                        onClick={handleCollapse}
+                        className="mr-2 text-[#00223E]"
+                      >
+                        <FaArrowLeftLong size={29} />
+                      </button>
+                    )}
+                  <span className="uppercase text-4xl font-semibold text-[#00223E] ">
                     Easy Search
-                  </h3>
+                  </span>
                 </div>
                 <div
-                  onClick={handleExpand}
+                  // onClick={handleExpand}
                   className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                 >
-                  <span className="text-[#ffffff] px-2">
+                  <span 
+                  onClick={handleExpand}
+                  className="text-[#ffffff] px-2">
                     {MobileSearchIcon}
                   </span>
 
-                  <div className="input-container w-full">
+                  <div 
+                  className="input-container w-full">
                     <input
                       id="search"
                       placeholder=" " //do not remove this
                       autoComplete="off"
-                      className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                      className="focus:outline-none rounded-lg bg-transparent text-white"
+                      onFocus={() => setIsInputFocused(true)}
+                      onClick={handleExpand}
                     />
-                    <label
+                    {!isInputFocused && (
+                      <label
                       htmlFor="search"
                       className="text-white opacity-900 tracking-wide"
                     >
                       Your <strong>search terms</strong>
                     </label>
+                    )}
 
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleCollapse();
-                      }}
-                      className="mr-2 close-button"
-                    >
-                      {CloseSearchIcon}
-                    </button>
+                    
+                    {isInputFocused && (
+                      <button
+                        onClick={handleCollapse}
+                        className="mr-2 close-button"
+                      >
+                        {CloseSearchIcon}
+                      </button>
+                    )}
                   </div>
                 </div>
               </form>

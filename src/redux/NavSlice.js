@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  isDrawerOpen: false, // Initial state of the drawer
+  isDrawerOpen: false, 
 };
 
 const NavSlice = createSlice({
@@ -9,13 +9,13 @@ const NavSlice = createSlice({
   initialState,
   reducers: {
     toggleDrawer: (state) => {
-      state.isDrawerOpen = !state.isDrawerOpen; // Toggles the drawer state
+      state.isDrawerOpen = !state.isDrawerOpen; 
     },
     closeDrawer: (state) => {
-      state.isDrawerOpen = false; // Explicitly close the drawer
+      state.isDrawerOpen = false; 
     },
     openDrawer: (state) => {
-      state.isDrawerOpen = true; // Explicitly open the drawer
+      state.isDrawerOpen = true;
     },
   },
 });

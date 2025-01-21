@@ -326,12 +326,24 @@ const Navbar = () => {
                           // <a href={link.path} onClick={link.onClick}>
                           //   {link.name}
                           // </a>
-                          <Link to={link.path} onClick={link.onClick}>
+                          <Link
+                            to={link.path}
+                            onClick={() => {
+                              // console.log("Temp::", link);
+                              // dispatch(toggleDrawer());
+                              link.onClick();
+                            }}
+                          >
                             {link.name}
                           </Link>
                         ) : (
                           <button
-                            onClick={link.onClick}
+                            onClick={() => {
+                              console.log("Temp::", link);
+                              dispatch(toggleDrawer());
+                              link.onClick();
+                            }}
+                            // onClick={link.onClick}
                             className="teacking-wider text-white text-[30px] uppercase font-bold focus:outline-none"
                           >
                             {link.name}

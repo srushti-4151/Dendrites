@@ -11,9 +11,12 @@ import {
   CloseModalIcon,
 } from "../../assets/svg";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../../redux/ModalSlice";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import { closeDrawer, toggleDrawer } from "../../redux/NavSlice";
+import logo from "../../assets/dendrites-Trimmed-removebg-preview.png";
+import HamburgerButton from "../../components/HamburgerButton";
 
 const ModalOf = ({ modalData, title }) => {
   const dispatch = useDispatch();
@@ -33,9 +36,23 @@ const ModalOf = ({ modalData, title }) => {
     setIsExpanded(false);
     // console.log("isExpanded after:", isExpanded);
   };
+  const isDrawerOpen = useSelector((state) => state.nav.isDrawerOpen);
 
   return (
     <>
+      {/* <nav
+        // className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1"
+        className={`fixed top-0 left-0 w-full bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1 
+            ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"}`}
+      >
+        <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] bg-[rgba(0,34,62,0.8)] flex justify-between items-center p-5 z-50">
+          <img src={logo} className="w-52 h-8" alt="Logo" />
+          <HamburgerButton
+            isDrawerOpen={isDrawerOpen}
+            toggleDrawer={() => dispatch(closeDrawer())}
+          />
+        </div>
+      </nav> */}
       <Navbar />
       {title === "Search" ? (
         <>
@@ -286,9 +303,9 @@ const ModalOf = ({ modalData, title }) => {
                         </div>
                         <div className="p-2 pl-6 w-[75%]">
                           {/* <Link to={service.path} className="inline-block"> */}
-                            <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
-                              {service.title}
-                            </h3>
+                          <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
+                            {service.title}
+                          </h3>
                           {/* </Link> */}
                           <p className="text-sm text-white pt-2 font-light opacity-60">
                             {service.description}
@@ -384,7 +401,11 @@ const ModalOf = ({ modalData, title }) => {
               <div className="sub-scrollbar-modal">
                 <div className="pl-3 uppercase tracking-wide py-4 flex items-center gap-4 headline text-[29px] font-bold border-b border-t border-gray-500">
                   <button
-                    onClick={handleCloseModal}
+                    // onClick={handleCloseModal}
+                    onClick={() => {
+                      dispatch(toggleDrawer());
+                      handleCloseModal();
+                    }}
                     className="cursor-pointer focus:outline-none p-0 m-0"
                   >
                     <FaArrowLeftLong />
@@ -449,7 +470,6 @@ const ModalOf = ({ modalData, title }) => {
                 </svg>
               </div>
 
-
               <form
                 className={`relative z-20 pl-4 tracking-wider h-full ${
                   isExpanded ? "pt-0" : "pt-4"
@@ -469,7 +489,6 @@ const ModalOf = ({ modalData, title }) => {
                   </span>
 
                   <div className="input-container w-full">
-                  
                     <input
                       id="search"
                       placeholder=" " //do not remove this
@@ -498,11 +517,12 @@ const ModalOf = ({ modalData, title }) => {
 
               <div
                 className={`absolute z-2 bg-[#7eabd5] ${
-                  isExpanded ? "w-full min-h-screen top-0" : "pt-10 w-full bottom-0"
+                  isExpanded
+                    ? "w-full min-h-screen top-0"
+                    : "pt-10 w-full bottom-0"
                 }
                 transition-top duration-700 ease-in-out`}
               ></div>
-
             </div>
           </nav>
         </>

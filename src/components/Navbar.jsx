@@ -368,12 +368,12 @@ const Navbar = () => {
                           ? "min-h-screen top-0"
                           : "relative h-[32vh] bottom-0"
                       } 
-                      transition-top duration-700 ease-in-out`}
+                      transition-top duration-500 ease-in-out`}
             >
               <div
                 className={`sub-sideshapesvg1 text-[#77a7d1] h-full w-full overflow-hidden
                         ${isExpanded ? "top-0" : "bottom-0"} 
-                      transition-top duration-700 ease-in-out`}
+                      transition-top duration-500 ease-in-out`}
               >
                 <svg
                   className="w-full h-auto"

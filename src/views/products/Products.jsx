@@ -9,13 +9,17 @@ import ProductsSignup from "./ProductsSignup";
 import ProductBlog from "./ProductBlog";
 import ProductCareer from "./ProductCareer";
 import Bar from "../../components/Bar";
+import { useSelector } from "react-redux";
 
 
 const Products = () => {
+
+  const isDrawerOpen = useSelector((state) => state.nav.isDrawerOpen);
+  
   return (
     <>
     <Navbar />
-    <Bar/>
+    {!isDrawerOpen && ( <Bar/> )} 
     <HeroProduct/>
     <ProductOverview/>
     <CeoPartProduct/>

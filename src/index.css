@@ -116,7 +116,7 @@ body {
   /* Optional styling */
   border-radius: 8px;
   /* Optional styling */
-  z-index: 10;
+  z-index: 80;
   /* Ensure it is above other elements */
   /* box-shadow: 0 0 20px #9abdde; */
   border-radius: 50%;
@@ -142,7 +142,7 @@ body {
     /* Optional styling */
     border-radius: 8px;
     /* Optional styling */
-    z-index: 10;
+    z-index: 80;
     /* Ensure it is above other elements */
     /* box-shadow: 0 0 20px #9abdde; */
     border-radius: 50%;

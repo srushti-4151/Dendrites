@@ -43,7 +43,7 @@ const ModalOf = ({ modalData, title }) => {
       <Navbar />
       {title === "Search" ? (
         <>
-          <div className="lg:block hidden modal-overlay z-5"></div>
+          <div className="lg:block hidden md:hidden modal-overlay z-5"></div>
           <div className="w-full lg:flex hidden outer bg-blue-900 text-white">
             <div className="w-1/2 max-w-[700px] service-container mx-auto">
               <div className="pt-40 w-[75%] h-[513px]">
@@ -324,7 +324,7 @@ const ModalOf = ({ modalData, title }) => {
         </>
       ) : (
         <>
-          <div className="lg:block hidden modal-overlay z-5"></div>
+          <div className="lg:block hidden md:hidden modal-overlay z-5"></div>
           <div className="lg:flex hidden w-full outer text-white z-10">
             <div className="w-1/2 max-w-[700px] service-container mx-auto">
               <div className="scrollbar-modal">
@@ -434,7 +434,7 @@ const ModalOf = ({ modalData, title }) => {
             </div>
           </div>
 
-          <nav className="lg:hidden md:flex flex flex-col h-screen sub-outer relative">
+          <nav className="lg:hidden flex md:flex md:flex-col flex-col h-screen sub-outer relative">
             {/* <div className="flex-grow w-full h-[60%] sub-service-container mx-auto"> */}
             <div
               className={`w-full ${

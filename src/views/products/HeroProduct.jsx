@@ -82,12 +82,12 @@ const HeroProduct = () => {
         </svg>
 
         {/*Text Overlay */}
-        <div className="relative wrap inset-0 w-full 2xl:max-w-[1400px] 2xl:mx-auto lg:mx-auto lg:px-5 2xl:px-5 px-3 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] text-right overflow-hidden">
+        <div className="relative wrap inset-0 w-full 2xl:max-w-[1400px] 2xl:mx-auto lg:mx-auto lg:px-5 2xl:px-5 px-3 z-10 lg:pt-[340px] 2xl:pt-[340px] pt-[110px] lg:text-right 2xl:text-right text-left overflow-hidden">
           <div className="inline-block text-left max-w-[450px]">
-            <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
+            <h1 className="tracking-wide text-[30px] font-bold lg:text-[47px] md:text-[37px] text-[#00223e] pt-4 lg:pb-3 pb-3 uppercase">
               Products
             </h1>
-            <p className="text-[18px] font-thin lg:text-[31px] text-[#0F3354] lg:leading-[37px]">
+            <p className="text-[18px] font-thin lg:text-[31px] md:text-[25px] text-[#0F3354] lg:leading-[37px]">
               <strong className="font-bold lg:text-[#80acd3] 2xl:text-[#80acd3] text-[#0F3354]">
                 Product solutions
               </strong>{" "}
@@ -201,13 +201,13 @@ const HeroProduct = () => {
                 }`}
               >
                 <span
-                  className={`absolute top-0 transform -translate-x-1/2 -translate-y-1/2 font-bitter font-bold text-[84px] leading-[1.16666667] text-[rgba(128,172,211,0.5)] z-1 ${
+                  className={`absolute top-0 transform -translate-x-1/2 -translate-y-1/2 font-bitter font-bold text-[84px] leading-[1.16666667] text-[rgba(128,172,211,0.5)] z-10 ${
                     index === 0 ? "left-[0px]" : "left-[30px]"
                   }`}
                 >
                   {index + 1}
                 </span>
-                <div className="relative block m-0 font-medium lg:text-[18px] 2xl:text-[18px] text-[15px] leading-[1.16666667] text-[#00223e] z-2">
+                <div className="relative block m-0 font-medium lg:text-[18px] 2xl:text-[18px] text-[15px] leading-[1.16666667] text-[#00223e] z-20">
                   {advantage}
                 </div>
               </li>
@@ -223,11 +223,11 @@ const HeroProduct = () => {
                 }`}
               >
                 <span
-                  className={`absolute left-4 -translate-y-[7px] font-bold text-[30px] text-[#4a7497] leading-none`}
+                  className={`absolute left-4 -translate-y-[7px] font-bold text-[30px] text-[#4a7497] leading-none z-10`}
                 >
                   {index + 1}
                 </span>
-                <div className="relative block m-0 font-ubuntu font-medium text-[18px] leading-[1.16666667] text-[#00223e] z-2">
+                <div className="relative block m-0 font-ubuntu font-medium text-[18px] leading-[1.16666667] text-[#00223e] z-20">
                   {advantage}
                 </div>
               </li>

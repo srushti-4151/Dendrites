@@ -1,4 +1,4 @@
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
 @keyframes nav-circle-in {
   0% {
     transform: scale(0);
@@ -147,7 +147,7 @@
 
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   // The entire provided SCSS code
   .sub-outer {
@@ -163,31 +163,6 @@
     .sub-service-container {
       height: 50%;
       overflow-y: scroll;
-
-      .sub-scrollbar-modal {
-        margin-top: 1rem;
-        max-height: calc(100vh - 10rem);
-        overflow-y: auto;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        background-color: rgba(0, 34, 62, 0.89);
-      }
-      
-      .sub-scrollbar-modal::-webkit-scrollbar {
-        width: 4px;
-        background-color: #79a8d8a1;
-        border: 2px solid red;
-      }
-      
-      .sub-scrollbar-modal::-webkit-scrollbar-thumb {
-        background-color: #79a8d8a1;
-        border-radius: 15px;
-      }
-      
-      .sub-scrollbar-modal::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-         
     }
 
     .sub-sideshapesvg {

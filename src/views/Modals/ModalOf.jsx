@@ -44,7 +44,7 @@ const ModalOf = ({ modalData, title }) => {
       {title === "Search" ? (
         <>
           <div className="lg:block hidden md:hidden modal-overlay z-5"></div>
-          <div className="w-full lg:flex hidden outer bg-blue-900 text-white">
+          <div className="w-full lg:flex hidden outer bg-blue-900 z-10 text-white">
             <div className="w-1/2 max-w-[700px] service-container mx-auto">
               <div className="pt-40 w-[75%] h-[513px]">
                 <div className="mt-10 pb-12">

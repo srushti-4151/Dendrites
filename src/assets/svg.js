@@ -748,11 +748,12 @@ export const CloseModalIcon = (
 // );
 export const sideshape = (
   <svg
+  className="w-full h-screen"
   xmlns="http://www.w3.org/2000/svg"
   xmlnsXlink="http://www.w3.org/1999/xlink"
   width="724"
-  height="900"
-  viewBox="0 0 724 900"
+  height="1000"
+  viewBox="0 0 724 1000"
   preserveAspectRatio="none"
   fill="currentColor"
 >

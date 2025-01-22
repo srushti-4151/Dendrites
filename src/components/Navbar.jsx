@@ -365,17 +365,14 @@ const Navbar = () => {
 
               <div
                 className={`w-full overflow-hidden bg-transparent 
-                        ${
-                          isExpanded
-                            ? "min-h-screen top-0"
-                            : "relative h-[32vh] bottom-0"
-                        } 
-                        transition-top duration-500 ease-in-out`}
+                        ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"} 
+                        transition-all duration-700 ease-in-out`}
+                        
               >
                 <div
                   className={`sub-sideshapesvg1 text-[#77a7d1] h-full w-full overflow-hidden
                           ${isExpanded ? "top-0" : "bottom-0"} 
-                        transition-top duration-500 ease-in-out`}
+                        transition-all duration-700 ease-in-out`}
                 >
                   <svg
                     className="w-full h-auto"
@@ -467,12 +464,11 @@ const Navbar = () => {
                     </div>
                   </div>
                 </form>
-
+                {/* ${isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"} */}
                 <div
-                  className={`absolute z-2 bg-[#7eabd5] ${
-                    isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"
-                  }
-                              transition-all duration-700 ease-in-out`}
+                  className={`absolute z-2 bg-[#7eabd5] 
+                      ${isExpanded ? "translate-y-0 h-full w-full top-0" : "translate-y-full"}
+                              transition-transform duration-700 ease-in-out`}
                 ></div>
               </div>
             </nav>

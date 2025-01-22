@@ -18,7 +18,7 @@ const ProductBlog = () => {
           </h2>
 
           {/* Grid Layout */}
-          <div className="lg:grid 2xl:grid hidden 2xl:rid-cols-4 lg:grid-cols-4 gap-4">
+          <div className="lg:grid 2xl:grid hidden 2xl:grid-cols-4 lg:grid-cols-4 gap-4">
             {/* Column 1 - Two Rows */}
             <div className="grid grid-rows-2 gap-0 max-h-[428px] h-full overflow-hidden">
               <div className="relative row-span-2 w-full h-full">

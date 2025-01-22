@@ -325,7 +325,7 @@ const ModalOf = ({ modalData, title }) => {
       ) : (
         <>
           <div className="lg:block hidden md:hidden modal-overlay z-5"></div>
-          <div className="lg:flex hidden w-full outer text-white z-10">
+          <div className="lg:flex hidden w-full h-full outer text-white z-10">
             <div className="w-1/2 max-w-[700px] service-container mx-auto">
               <div className="scrollbar-modal">
                 <div className="py-20 w-[75%]">
@@ -362,11 +362,11 @@ const ModalOf = ({ modalData, title }) => {
               </div>
             </div>
 
-            <div className="w-1/2 max-w-[650px] py-10 group transition h-screen">
-              <div className="sideshapesvg text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
+            <div className="w-1/2 max-w-[650px] h-full py-10 group transition">
+              <div className="sideshapesvg w-full h-full text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
                 {sideshape}
               </div>
-              <div className="relative px-16 pl-32 py-36 z-20">
+              <div className="relative px-12 pl-24 py-36 z-20">
                 <form>
                   <div className="flex justify-between mb-10">
                     <h3 className="uppercase text-3xl font-bold text-[#00223E]">
@@ -380,7 +380,7 @@ const ModalOf = ({ modalData, title }) => {
                     </button>
                   </div>
 
-                  <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
+                  <div className="relative p-2 z-20 flex items-center gap-2 w-full focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
                     {/* Search Icon */}
                     <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">
                       {SearchIcon}

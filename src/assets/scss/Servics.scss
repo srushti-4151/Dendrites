@@ -70,7 +70,8 @@
   .scrollbar-modal {
     margin-top: 49px;
     max-height: calc(100vh - 3rem);
-    overflow-y: auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   
     &::-webkit-scrollbar {
       background-color: #345A7C;

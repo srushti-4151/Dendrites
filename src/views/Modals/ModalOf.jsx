@@ -259,13 +259,13 @@ const ModalOf = ({ modalData, title }) => {
               >
                 <div className="mb-5 mt-12">
                   {isInputFocused && (
-                      <button
-                        onClick={handleCollapse}
-                        className="mr-2 text-[#00223E]"
-                      >
-                        <FaArrowLeftLong size={29} />
-                      </button>
-                    )}
+                    <button
+                      onClick={handleCollapse}
+                      className="mr-2 text-[#00223E]"
+                    >
+                      <FaArrowLeftLong size={29} />
+                    </button>
+                  )}
                   <span className="uppercase text-4xl font-semibold text-[#00223E] ">
                     Easy Search
                   </span>
@@ -274,14 +274,11 @@ const ModalOf = ({ modalData, title }) => {
                   // onClick={handleExpand}
                   className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                 >
-                  <span 
-                  onClick={handleExpand}
-                  className="text-[#ffffff] px-2">
+                  <span onClick={handleExpand} className="text-[#ffffff] px-2">
                     {MobileSearchIcon}
                   </span>
 
-                  <div 
-                  className="input-container w-full">
+                  <div className="input-container w-full">
                     <input
                       id="search"
                       placeholder=" " //do not remove this
@@ -292,14 +289,13 @@ const ModalOf = ({ modalData, title }) => {
                     />
                     {!isInputFocused && (
                       <label
-                      htmlFor="search"
-                      className="text-white opacity-900 tracking-wide"
-                    >
-                      Your <strong>search terms</strong>
-                    </label>
+                        htmlFor="search"
+                        className="text-white opacity-900 tracking-wide"
+                      >
+                        Your <strong>search terms</strong>
+                      </label>
                     )}
 
-                    
                     {isInputFocused && (
                       <button
                         onClick={handleCollapse}
@@ -474,13 +470,21 @@ const ModalOf = ({ modalData, title }) => {
             {/* <div className="w-full h-[40%]"> */}
             <div
               className={`w-full overflow-hidden bg-transparent 
-          ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"} 
-          transition-top duration-700 ease-in-out`}
+                        ${
+                          isExpanded
+                            ? "min-h-screen top-0"
+                            : "relative h-[32vh] translate-y-[calc(100%-32vh)]"
+                        } 
+                        transition-transform duration-500 ease-in-out`}
             >
               <div
-                className={`sub-sideshapesvg h-full w-full overflow-hidden
-            ${isExpanded ? "top-0" : "bottom-0"} 
-          transition-top duration-700 ease-in-out`}
+                className={`sub-sideshapesvg text-[#77a7d1] h-full w-full overflow-hidden
+                          ${
+                            isExpanded
+                              ? "translate-y-0"
+                              : "translate-y-[calc(100%-32vh)]"
+                          } 
+                        transition-transform duration-500 ease-in-out`}
               >
                 <svg
                   className="w-full h-auto"
@@ -522,13 +526,13 @@ const ModalOf = ({ modalData, title }) => {
               >
                 <div className="mb-5 mt-12">
                   {isInputFocused && (
-                      <button
-                        onClick={handleCollapse}
-                        className="mr-2 text-[#00223E]"
-                      >
-                        <FaArrowLeftLong size={29} />
-                      </button>
-                    )}
+                    <button
+                      onClick={handleCollapse}
+                      className="mr-2 text-[#00223E]"
+                    >
+                      <FaArrowLeftLong size={29} />
+                    </button>
+                  )}
                   <span className="uppercase text-4xl font-semibold text-[#00223E] ">
                     Easy Search
                   </span>
@@ -537,14 +541,11 @@ const ModalOf = ({ modalData, title }) => {
                   // onClick={handleExpand}
                   className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                 >
-                  <span 
-                  onClick={handleExpand}
-                  className="text-[#ffffff] px-2">
+                  <span onClick={handleExpand} className="text-[#ffffff] px-2">
                     {MobileSearchIcon}
                   </span>
 
-                  <div 
-                  className="input-container w-full">
+                  <div className="input-container w-full">
                     <input
                       id="search"
                       placeholder=" " //do not remove this
@@ -555,14 +556,13 @@ const ModalOf = ({ modalData, title }) => {
                     />
                     {!isInputFocused && (
                       <label
-                      htmlFor="search"
-                      className="text-white opacity-900 tracking-wide"
-                    >
-                      Your <strong>search terms</strong>
-                    </label>
+                        htmlFor="search"
+                        className="text-white opacity-900 tracking-wide"
+                      >
+                        Your <strong>search terms</strong>
+                      </label>
                     )}
 
-                    
                     {isInputFocused && (
                       <button
                         onClick={handleCollapse}
@@ -576,12 +576,9 @@ const ModalOf = ({ modalData, title }) => {
               </form>
 
               <div
-                className={`absolute z-2 bg-[#7eabd5] ${
-                  isExpanded
-                    ? "w-full min-h-screen top-0"
-                    : "pt-10 w-full bottom-0"
-                }
-                transition-top duration-700 ease-in-out`}
+                className={`absolute z-2 bg-[#7eabd5] 
+                      ${isExpanded ? "top-0 min-h-screen w-full h-full" : "bottom-0"}
+                              transition-transform duration-200 ease-in-out`}
               ></div>
             </div>
           </nav>

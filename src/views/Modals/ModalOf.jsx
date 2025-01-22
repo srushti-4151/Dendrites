@@ -369,7 +369,7 @@ const ModalOf = ({ modalData, title }) => {
               <div className="relative px-16 pl-32 py-36 z-20">
                 <form>
                   <div className="flex justify-between mb-10">
-                    <h3 className="uppercase text-3xl font-bold text-[#00223E] ">
+                    <h3 className="uppercase text-3xl font-bold text-[#00223E]">
                       Easy Search
                     </h3>
                     <button

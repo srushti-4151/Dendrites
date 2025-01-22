@@ -179,7 +179,7 @@ const Navbar = () => {
         style={{
           background: "rgba(0,34,62,0.75)",
           // top: topValue,
-          top: window.innerWidth >= 1024 ? topValue : 0,
+          top: window.innerWidth >= 1025 ? topValue : 0,
           width: "100%",
         }}
       >

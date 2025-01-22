@@ -130,12 +130,13 @@ const Navbar = () => {
 
   // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   // const toggleDrawer = () => {
-  //   setIsDrawerOpen((prevState) => !prevState);
+  //   setIsDrawerOpen((prevState) => !prevState); 
   // };
+  const isModalOpen = useSelector((state) => state.modal.isModalOpen);
   const isDrawerOpen = useSelector((state) => state.nav.isDrawerOpen);
   useEffect(() => {
     console.log("Drawer state changed:", isDrawerOpen);
-  }, [isDrawerOpen]);
+  }, [isDrawerOpen]); 
 
   return (
     <>
@@ -184,7 +185,7 @@ const Navbar = () => {
       >
         <div
           className="m-auto max-w-[1410px] lg:px-4 overflow-hidden lg:h-[70px]"
-          // style={{ height: "63.7px" }}
+          // style={{ height: "63.7px" }} 
         >
           <div className="flex justify-between gap-10 items-center p-0">
             {/* Logo Section */}
@@ -298,11 +299,11 @@ const Navbar = () => {
               isDrawerOpen={isDrawerOpen}
               toggleDrawer={() => dispatch(toggleDrawer())}
             />
-          </div>
+          </div> 
         </div>
 
         {/* Mobile Drawer */}
-        {isDrawerOpen && (
+        {isDrawerOpen && !isModalOpen && (
           <>
             <div className="lg:hidden block md:block nav-overlay"></div>
             <nav
@@ -316,7 +317,7 @@ const Navbar = () => {
                 </Link>
                 <HamburgerButton
                   isDrawerOpen={isDrawerOpen}
-                  toggleDrawer={() => dispatch(closeDrawer())}
+                  toggleDrawer={() => dispatch(toggleDrawer())}
                 />
               </div>
 
@@ -346,7 +347,7 @@ const Navbar = () => {
                             <button
                               onClick={() => {
                                 console.log("Temp::", link);
-                                dispatch(toggleDrawer());
+                                // dispatch(toggleDrawer());
                                 link.onClick();
                               }}
                               // onClick={link.onClick}
@@ -471,7 +472,7 @@ const Navbar = () => {
                   className={`absolute z-2 bg-[#7eabd5] ${
                     isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"
                   }
-                              transition-top duration-700 ease-in-out`}
+                              transition-all duration-700 ease-in-out`}
                 ></div>
               </div>
             </nav>

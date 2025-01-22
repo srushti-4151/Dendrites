@@ -447,7 +447,7 @@ const ModalOf = ({ modalData, title }) => {
                   <button
                     // onClick={handleCloseModal}
                     onClick={() => {
-                      dispatch(toggleDrawer());
+                      // dispatch(toggleDrawer());
                       handleCloseModal();
                     }}
                     className="cursor-pointer focus:outline-none p-0 m-0"

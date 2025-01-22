@@ -1,9 +1,20 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { closeModal } from "../redux/ModalSlice";
 
 const HamburgerButton = ({ isDrawerOpen, toggleDrawer }) => {
+  const dispatch = useDispatch();
+  const isModalOpen = useSelector((state) => state.modal.isModalOpen);
+
+  const handleClick = () => {
+    if(isModalOpen) {
+      dispatch(closeModal());
+    } 
+    toggleDrawer();
+  }
   return (
     <button
-      onClick={toggleDrawer}
+      onClick={handleClick}
       className="text-white relative w-10 h-6 flex flex-col items-start right-15px gap-2"
     >
       {/* Top Line */}

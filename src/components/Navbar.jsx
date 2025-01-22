@@ -175,7 +175,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <div
-        className="shadow-[0px_10px_10px_rgba(0,0,0,0.2)] fixed z-50 lg:p-0 p-5"
+        className="lg:shadow-[0px_10px_10px_rgba(0,0,0,0.2)] fixed lg:p-0 p-5 z-50"
         style={{
           background: "rgba(0,34,62,0.75)",
           // top: topValue,
@@ -184,7 +184,7 @@ const Navbar = () => {
         }}
       >
         <div
-          className="m-auto max-w-[1410px] lg:px-4 overflow-hidden lg:h-[70px]"
+          className="m-auto max-w-[1410px] lg:px-4 overflow-hidden lg:h-[70px] z-50"
           // style={{ height: "63.7px" }} 
         >
           <div className="flex justify-between gap-10 items-center p-0">
@@ -293,7 +293,7 @@ const Navbar = () => {
 
           {/* Mobile Hamburger Menu */}
           <div className="lg:hidden w-full top-0 relative flex items-center justify-between z-50">
-            <img src={logo} className="w-52 h-8" alt="Logo" />
+          <Link to="/" className=""><img src={logo} className="w-52 h-8" alt="Logo" /></Link>
             {/* Animated Hamburger Button */}
             <HamburgerButton
               isDrawerOpen={isDrawerOpen}

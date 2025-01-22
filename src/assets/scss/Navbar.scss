@@ -32,7 +32,7 @@
   }
 }
 .nav-overlay {
-  z-index: 0;
+  z-index: -1;
   position: fixed;
   top: 50%;
   left: 35%;
@@ -44,7 +44,6 @@
 }
 .sub-outer1 {
     visibility: hidden;
-    z-index: 10;
     animation: nav1-outer-in 1s forwards 0.5s; 
     // background: rgba(1, 33, 63, 0.8);
     // background: transparent;

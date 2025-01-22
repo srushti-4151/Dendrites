@@ -101,7 +101,7 @@ const ModalOf = ({ modalData, title }) => {
             </div>
 
             <div className="w-1/2 max-w-[650px] py-10 group transition">
-              <div className="sideshapesvg text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
+              <div className="sideshapesvg h-full text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
                 {sideshape}
               </div>
               <div className="relative px-12 pl-24 py-36 z-20">

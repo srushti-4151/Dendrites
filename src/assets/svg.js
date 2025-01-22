@@ -747,32 +747,11 @@ export const CloseModalIcon = (
 //   </svg>
 // );
 export const sideshape = (
-  //   <svg
-  //   className="h-full"
-  //   xmlns="http://www.w3.org/2000/svg"
-  //   xmlnsXlink="http://www.w3.org/1999/xlink"
-  //   width="690"
-  //   height="900"
-  //   viewBox="0 0 690 900"
-  //   preserveAspectRatio="none"
-  //   fill="currentColor"
-  // >
-  //   <g transform="translate(-37)">
-  //     <path
-  //       d="M830.82-16.012c10.969,12.472,830.82,1084.706,830.82,1543.556,0,362.488-232.143,670.756-556.3,784.4a828.9,828.9,0,0,1-274.521,46.425C371.971,2358.364,0,1986.393,0,1527.543S819.851-28.484,830.82-16.012Z"
-  //       transform="translate(36.541 -1217.519)"
-  //       // fill="#80acd3"
-  //       fill="currentColor"
-  //       style={{ mixBlendMode: "multiply", isolation: "isolate" }}
-  //     />
-  //   </g>
-  // </svg>
   <svg
-    className="h-full"
     xmlns="http://www.w3.org/2000/svg"
     width="724"
-    height="900"
-    viewBox="0 0 724 900"
+    height="1200"
+    viewBox="0 0 724 1200"
     preserveAspectRatio="none"
     fill="currentColor"
     style={{ mixBlendMode: "multiply", isolation: "isolate" }}

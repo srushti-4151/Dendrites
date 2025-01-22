@@ -367,32 +367,32 @@ body {
   }
 
   .star-1 {
-    top: 19%;
+    top: 24%;
     left: 47%;
     animation-delay: 0s;
   }
 
   .star-2 {
-    top: 31%;
-    left: 51%;
+    top: 32%;
+    left: 49%;
     animation-delay: 1s;
   }
 
   .star-3 {
-    top: 27%;
+    top: 28%;
     left: 45%;
     animation-delay: 2s;
   }
 
   .star-4 {
-    top: 22%;
+    top: 25%;
     left: 39%;
     animation-delay: 3s;
   }
 
   .star-5 {
     top: 32%;
-    left: 40%;
+    left: 39%;
     animation-delay: 4s;
   }
 }

@@ -30,7 +30,7 @@ const Navbar = () => {
       // console.log("Modal closed due to route change:", location.pathname);
     }
     // Update the previous location
-    prevLocation.current = location.pathname; 
+    prevLocation.current = location.pathname;
   }, [modalContent, location.pathname, dispatch]);
 
   const handleModalOpen = (modalName) => {
@@ -131,13 +131,13 @@ const Navbar = () => {
 
   // const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   // const toggleDrawer = () => {
-  //   setIsDrawerOpen((prevState) => !prevState); 
+  //   setIsDrawerOpen((prevState) => !prevState);
   // };
   const isModalOpen = useSelector((state) => state.modal.isModalOpen);
   const isDrawerOpen = useSelector((state) => state.nav.isDrawerOpen);
   useEffect(() => {
     console.log("Drawer state changed:", isDrawerOpen);
-  }, [isDrawerOpen]); 
+  }, [isDrawerOpen]);
 
   return (
     <>
@@ -186,7 +186,7 @@ const Navbar = () => {
       >
         <div
           className="m-auto max-w-[1410px] lg:px-4 overflow-hidden lg:h-[70px] z-50"
-          // style={{ height: "63.7px" }} 
+          // style={{ height: "63.7px" }}
         >
           <div className="flex justify-between gap-10 items-center p-0">
             {/* Logo Section */}
@@ -294,13 +294,15 @@ const Navbar = () => {
 
           {/* Mobile Hamburger Menu */}
           <div className="lg:hidden w-full top-0 relative flex items-center justify-between z-50">
-          <Link to="/" className=""><img src={logo} className="w-52 h-8" alt="Logo" /></Link>
+            <Link to="/" className="">
+              <img src={logo} className="w-52 h-8" alt="Logo" />
+            </Link>
             {/* Animated Hamburger Button */}
             <HamburgerButton
               isDrawerOpen={isDrawerOpen}
               toggleDrawer={() => dispatch(toggleDrawer())}
             />
-          </div> 
+          </div>
         </div>
 
         {/* Mobile Drawer */}
@@ -309,7 +311,7 @@ const Navbar = () => {
             <div className="lg:hidden block md:block nav-overlay"></div>
             <nav
               className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1"
-              // className={`fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1 
+              // className={`fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1
               // ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
               <div className="relative shadow-[0px_10px_10px_rgba(0,0,0,0.2)] bg-[rgba(0,34,62,0.8)] flex justify-between items-center p-5 z-50">
@@ -364,16 +366,27 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 className={`w-full overflow-hidden bg-transparent
                         ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"} 
                         transition-all duration-700 ease-in-out`}
                         
-              >
-                <div
+              > */}
+              {/* <div
                   className={`sub-sideshapesvg1 text-[#77a7d1] h-full w-full overflow-hidden
                           ${isExpanded ? "top-0" : "bottom-0"} 
                           transition-all duration-700 ease-in-out`}
+                > */}
+              <div
+                className={`w-full overflow-hidden bg-transparent transition-container1
+                        ${
+                          isExpanded
+                            ? "h-[3000vh] top-0"
+                            : "relative h-[32vh] bottom-0"
+                        }`}
+              >
+                <div
+                  className={`sub-sideshapesvg1 text-[#77a7d1] h-full w-full overflow-hidden botoom-0`}
                 >
                   <svg
                     className="w-full h-auto"
@@ -409,8 +422,8 @@ const Navbar = () => {
                 </div>
 
                 <form
-                  // className="relative z-20 pt-10 pl-4 tracking-wider"
-                  className={`relative z-20 pl-4 tracking-wider ${
+                  // className="relative z-30 pt-10 pl-4 tracking-wider"
+                  className={`relative z-30 pl-4 tracking-wider ${
                     isExpanded ? "pt-0" : "pt-4"
                   }`}
                 >
@@ -432,7 +445,10 @@ const Navbar = () => {
                     // onClick={handleExpand}
                     className="relative p-3 z-20 flex items-center gap-2 w-[95%] md:w-[60%] focus:outline-none rounded-lg bg-transparent border border-[#ffffff] group-hover:border-white group-hover:text-white duration-500 text-white"
                   >
-                    <span onClick={handleExpand} className="text-[#ffffff] px-2">
+                    <span
+                      onClick={handleExpand}
+                      className="text-[#ffffff] px-2"
+                    >
                       {MobileSearchIcon}
                     </span>
 
@@ -464,14 +480,23 @@ const Navbar = () => {
                       )}
                     </div>
                   </div>
-                </form> 
-                {/* ${isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"} */}
+                </form>
                 <div
+                  className={`absolute z-20 bg-[#7eabd5] w-full h-full 
+                    ${
+                      isExpanded
+                        ? "translate-y-0 top-0"
+                        : "pt-10 translate-y-[45%] bottom-0"
+                    }
+                              transition-transform duration-700 ease-in-out`}
+                ></div>
+                {/* ${isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"} */}
+                {/* <div
                   className={`absolute z-2 bg-[#7eabd5] ${
                     isExpanded ? "w-full h-full translate-y-0 top-0" : "pt-10 w-full translate-y-full bottom-0"
                   }
                               transition-transform duration-500 ease-in-out`}
-                ></div> 
+                ></div>  */}
                 {/* <div className={`your-div ${isExpanded ? 'expanded' : 'collapsed'}`}></div>  */}
               </div>
             </nav>

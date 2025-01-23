@@ -59,7 +59,7 @@
     /* Scrollbar modal content */
     .scrollbar-modal {
       margin-top: 50px;
-      max-height: calc(100vh - 3rem);
+      max-height: calc(100vh - 4rem);
       overflow-y: scroll;
     }
     
@@ -140,6 +140,15 @@
 }
 
 @media (max-width: 1024px) {
+  @keyframes expandHeight {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
   // The entire provided SCSS code
   .sub-outer {
     padding-top: 5rem;
@@ -156,11 +165,16 @@
       overflow-y: scroll;
     }
 
+    .transition-container {
+      // overflow: hidden;
+      background: transparent;
+      transition: height 0.5s ease-in-out;
+  }
+  
     .sub-sideshapesvg {
       position: absolute;
-      z-index: 1;
     }
-
+    
     .input-container {
       display: flex;
       flex-direction: row;

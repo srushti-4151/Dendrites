@@ -437,7 +437,7 @@ const ModalOf = ({ modalData, title }) => {
             <div
               className={`w-full ${
                 isExpanded ? "" : "h-[60vh]"
-              } flex-grow w-full sub-service-container mx-auto z-20`}
+              } flex-grow w-full sub-service-container mx-auto z-10`}
             >
               {/* <div className="absolute w-full h-full bg-gradient-to-t from-[#272c55] via-[#272c55]/80 to-transparent"></div> */}
               <div className="sub-scrollbar-modal">
@@ -469,17 +469,28 @@ const ModalOf = ({ modalData, title }) => {
             </div>
 
             {/* <div className="w-full h-[40%]"> */}
-            <div
-                className={`w-full overflow-hidden bg-transparent 
-                        ${isExpanded ? "min-h-screen" : "relative h-[32vh]"} 
+            {/* <div
+                className={`w-full overflow-hidden bg-transparent
+                        ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"} 
                         transition-all duration-700 ease-in-out`}
                         
-              >
-                <div
+              > */}
+            <div
+              className={`w-full overflow-hidden bg-transparent transition-container
+                        ${
+                          isExpanded
+                            ? "h-[3000vh] top-0"
+                            : "relative h-[32vh] bottom-0"
+                        }`}
+            >
+              {/* <div
                   className={`sub-sideshapesvg text-[#77a7d1] h-full w-full overflow-hidden
-                          ${isExpanded ? "top-0" : "bottom-0"} 
-                        transition-all duration-700 ease-in-out`}
-                >
+                          ${isExpanded ? "top-0" : "botoom-0"} 
+                         transition-transform duration-700 ease-in-out`}
+                > */}
+              <div
+                className={`sub-sideshapesvg text-[#77a7d1] h-full w-full overflow-hidden botoom-0`}
+              >
                 <svg
                   className="w-full h-auto"
                   xmlns="http://www.w3.org/2000/svg"
@@ -514,7 +525,7 @@ const ModalOf = ({ modalData, title }) => {
               </div>
 
               <form
-                className={`relative z-20 pl-4 tracking-wider h-full ${
+                className={`relative z-30 pl-4 tracking-wider h-full ${
                   isExpanded ? "pt-0" : "pt-4"
                 }`}
               >
@@ -570,11 +581,10 @@ const ModalOf = ({ modalData, title }) => {
               </form>
 
               <div
-                  className={`absolute z-2 bg-[#7eabd5] ${
-                    isExpanded ? "w-full h-full translate-y-0 top-0" : "pt-10 w-full translate-y-full bottom-0"
-                  }
-                              transition-transform duration-500 ease-in-out`}
-                ></div> 
+                  className={`absolute z-20 bg-[#7eabd5] w-full h-full 
+                    ${isExpanded ? "translate-y-0 top-0" : "pt-10 translate-y-[45%] bottom-0"}
+                              transition-transform duration-700 ease-in-out`}
+                ></div>
             </div>
           </nav>
         </>

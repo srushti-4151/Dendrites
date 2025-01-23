@@ -322,6 +322,7 @@ const ModalOf = ({ modalData, title }) => {
       ) : (
         <>
           <div className="lg:block hidden md:hidden modal-overlay z-5"></div>
+
           <div className="lg:flex hidden w-full h-full outer text-white z-10">
             <div className="w-1/2 max-w-[700px] service-container mx-auto">
               <div className="scrollbar-modal">
@@ -469,23 +470,16 @@ const ModalOf = ({ modalData, title }) => {
 
             {/* <div className="w-full h-[40%]"> */}
             <div
-              className={`w-full overflow-hidden bg-transparent 
-                        ${
-                          isExpanded
-                            ? "min-h-screen top-0"
-                            : "relative h-[32vh] translate-y-[calc(100%-32vh)]"
-                        } 
-                        transition-transform duration-500 ease-in-out`}
-            >
-              <div
-                className={`sub-sideshapesvg text-[#77a7d1] h-full w-full overflow-hidden
-                          ${
-                            isExpanded
-                              ? "translate-y-0"
-                              : "translate-y-[calc(100%-32vh)]"
-                          } 
-                        transition-transform duration-500 ease-in-out`}
+                className={`w-full overflow-hidden bg-transparent 
+                        ${isExpanded ? "min-h-screen" : "relative h-[32vh]"} 
+                        transition-all duration-700 ease-in-out`}
+                        
               >
+                <div
+                  className={`sub-sideshapesvg text-[#77a7d1] h-full w-full overflow-hidden
+                          ${isExpanded ? "top-0" : "bottom-0"} 
+                        transition-all duration-700 ease-in-out`}
+                >
                 <svg
                   className="w-full h-auto"
                   xmlns="http://www.w3.org/2000/svg"
@@ -576,10 +570,11 @@ const ModalOf = ({ modalData, title }) => {
               </form>
 
               <div
-                className={`absolute z-2 bg-[#7eabd5] 
-                      ${isExpanded ? "top-0 min-h-screen w-full h-full" : "bottom-0"}
-                              transition-transform duration-200 ease-in-out`}
-              ></div>
+                  className={`absolute z-2 bg-[#7eabd5] ${
+                    isExpanded ? "w-full h-full translate-y-0 top-0" : "pt-10 w-full translate-y-full bottom-0"
+                  }
+                              transition-transform duration-500 ease-in-out`}
+                ></div> 
             </div>
           </nav>
         </>

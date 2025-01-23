@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/dendrites-Trimmed-removebg-preview.png";
-import { FiSearch, FiMenu, FiX } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { closeModal, openModal } from "../redux/ModalSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,8 +30,9 @@ const Navbar = () => {
       // console.log("Modal closed due to route change:", location.pathname);
     }
     // Update the previous location
-    prevLocation.current = location.pathname;
+    prevLocation.current = location.pathname; 
   }, [modalContent, location.pathname, dispatch]);
+
   const handleModalOpen = (modalName) => {
     if (modalContent !== modalName) {
       dispatch(openModal(modalName));
@@ -364,15 +365,15 @@ const Navbar = () => {
               </div>
 
               <div
-                className={`w-full overflow-hidden bg-transparent 
-                        ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] translate-y-[calc(100%-32vh)]"} 
-                        transition-transform duration-500 ease-in-out`}
+                className={`w-full overflow-hidden bg-transparent
+                        ${isExpanded ? "min-h-screen top-0" : "relative h-[32vh] bottom-0"} 
+                        transition-all duration-700 ease-in-out`}
                         
               >
                 <div
                   className={`sub-sideshapesvg1 text-[#77a7d1] h-full w-full overflow-hidden
-                          ${isExpanded ? "translate-y-0" : "translate-y-[calc(100%-32vh)]"} 
-                        transition-transform duration-500 ease-in-out`}
+                          ${isExpanded ? "top-0" : "bottom-0"} 
+                          transition-all duration-700 ease-in-out`}
                 >
                   <svg
                     className="w-full h-auto"
@@ -463,13 +464,15 @@ const Navbar = () => {
                       )}
                     </div>
                   </div>
-                </form>
+                </form> 
                 {/* ${isExpanded ? "w-full h-full top-0" : "pt-10 w-full bottom-0"} */}
                 <div
-                  className={`absolute z-2 bg-[#7eabd5] 
-                    ${isExpanded ? "top-0 min-h-screen w-full h-full" : "bottom-0"}
-                              transition-transform duration-300 ease-in-out`}
-                ></div>
+                  className={`absolute z-2 bg-[#7eabd5] ${
+                    isExpanded ? "w-full h-full translate-y-0 top-0" : "pt-10 w-full translate-y-full bottom-0"
+                  }
+                              transition-transform duration-500 ease-in-out`}
+                ></div> 
+                {/* <div className={`your-div ${isExpanded ? 'expanded' : 'collapsed'}`}></div>  */}
               </div>
             </nav>
           </>

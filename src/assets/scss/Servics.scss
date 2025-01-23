@@ -64,12 +64,15 @@
     }
     
     .scrollbar-modal::-webkit-scrollbar {
-      width: 7px; 
+      width: 8px; 
       background-color: transparent;
     }
     
     .scrollbar-modal::-webkit-scrollbar-track {
-      background-color: transparent;
+      background-color: #345a7c;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      background-clip: padding-box;
     }
 
     .scrollbar-modal::-webkit-scrollbar-thumb {

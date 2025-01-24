@@ -748,10 +748,11 @@ export const CloseModalIcon = (
 // );
 export const sideshape = (
   <svg
+  className="w-full h-full"
     xmlns="http://www.w3.org/2000/svg"
     width="724"
-    height="1200"
-    viewBox="0 0 724 1200"
+    height="900"
+    viewBox="0 0 724 900"
     preserveAspectRatio="none"
     fill="currentColor"
     style={{ mixBlendMode: "multiply", isolation: "isolate" }}

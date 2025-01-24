@@ -323,10 +323,11 @@ const ModalOf = ({ modalData, title }) => {
         <>
           <div className="lg:block hidden md:hidden modal-overlay z-5"></div>
 
-          <div className="lg:flex hidden w-full h-full outer text-white z-10">
-            <div className="w-1/2 max-w-[700px] service-container mx-auto">
-              <div className="scrollbar-modal">
-                <div className="py-20 w-[75%]">
+          <div className="lg:flex hidden outer z-10">
+
+            <div className="absolute max-w-[1410px] w-full mx-auto left-1/2 -translate-x-1/2 service-container">
+              <div className="py-16 pl-[15px] scrollmodal-countwidth scrollbar-modal absolute left-0 w-full h-full">
+                <div className="">
                   <h3 className="text-white font-bold text-4xl lg:text-5xl text-shadow-glow pb-14 uppercase tracking-wide">
                     {title}
                   </h3>
@@ -335,15 +336,15 @@ const ModalOf = ({ modalData, title }) => {
                       <Link
                         key={index}
                         to={service.path}
-                        className="group rounded-lg pb-5 text-white transition flex flex-row items-center"
+                        className="group w-full rounded-lg pb-5 text-white transition flex flex-row items-center"
                       >
                         {" "}
-                        <div className="w-[100px] h-[100px] border border-[#80acd3a1] flex justify-center items-center rounded-full">
-                          <div className="w-[86px] h-[86px] rounded-full flex justify-center items-center group-hover:bg-[#80acd3a1] duration-300">
+                        <div className="relative w-[100px] h-[100px] border border-[#80acd3a1] align-middle rounded-full">
+                          <div className="absolute top-1/2 left-1/2 w-1/2 h-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full group-hover:bg-[#80acd3a1] duration-300">
                             {service.image}
                           </div>{" "}
                         </div>
-                        <div className="p-2 pl-6 w-[75%]">
+                        <div className="pl-5 w-[75%] align-middle">
                           {/* <Link to={service.path} className="inline-block"> */}
                           <h3 className="text-white font-bold text-2xl lg:text-3xl text-shadow-glow tracking-wider">
                             {service.title}
@@ -360,76 +361,73 @@ const ModalOf = ({ modalData, title }) => {
               </div>
             </div>
 
-            <div className="w-1/2 max-w-[650px] h-full py-10 group transition">
-              <div className="sideshapesvg w-full h-full text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
+            <div className="absolute right-0 w-1/2 max-w-[650px] top-0 h-full group transition">
+              <div className="sideshapesvg text-[#80acd3] opacity-50 transition-opacity duration-500 group-hover:opacity-100">
                 {sideshape}
               </div>
-              <div className="relative px-12 pl-24 py-36 z-20">
-                <form>
-                  <div className="flex justify-between mb-10">
-                    <h3 className="uppercase text-3xl font-bold text-[#00223E]">
-                      Easy Search
-                    </h3>
-                    <button
-                      onClick={handleCloseModal}
-                      className="text-3xl font-bold text-[#00223E]"
+              <form className="relative top-[100px] pr-[50px] left-0 w-full py-[64px] pl-[100px] z-20">
+                <div className="flex justify-between mb-10">
+                  <h3 className="uppercase text-3xl font-bold text-[#00223E]">
+                    Easy Search
+                  </h3>
+                  <button
+                    onClick={handleCloseModal}
+                    className="text-3xl font-bold text-[#00223E]"
+                  >
+                    {CloseModalIcon}
+                  </button>
+                </div>
+
+                <div className="relative p-2 z-20 flex items-center gap-2 w-[90%] focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
+                  {/* Search Icon */}
+                  <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">
+                    {SearchIcon}
+                  </span>
+
+                  {/* input container */}
+                  <div className="input-container flex items-center relative">
+                    {/* Search Input */}
+                    <input
+                      id="search"
+                      placeholder=" " //do not remove this
+                      autoComplete="off"
+                      className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
+                    />
+                    {/* Label */}
+                    <label
+                      htmlFor="search"
+                      className="text-white opacity-50 group-hover:opacity-100 duration-500 tracking-wide"
                     >
-                      {CloseModalIcon}
-                    </button>
+                      Your <strong>search terms</strong>
+                    </label>
+
+                    <Link className="mr-2 close-button">{CloseSearchIcon}</Link>
                   </div>
-
-                  <div className="relative p-2 z-20 flex items-center gap-2 w-full focus:outline-none mb-6 rounded-lg bg-transparent border border-[#153063] group-hover:border-white group-hover:text-white duration-500 text-white">
-                    {/* Search Icon */}
-                    <span className="text-[#00223E] px-2 group-hover:text-[#fff] duration-500">
-                      {SearchIcon}
-                    </span>
-
-                    {/* input container */}
-                    <div className="input-container flex items-center relative w-full">
-                      {/* Search Input */}
-                      <input
-                        id="search"
-                        placeholder=" " //do not remove this
-                        autoComplete="off"
-                        className="focus:outline-none mt-2 rounded-lg bg-transparent text-white"
-                      />
-                      {/* Label */}
-                      <label
-                        htmlFor="search"
-                        className="text-white opacity-50 group-hover:opacity-100 duration-500 tracking-wide"
-                      >
-                        Your <strong>search terms</strong>
-                      </label>
-
-                      <Link className="mr-2 close-button">
-                        {CloseSearchIcon}
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="pt-10 flex flex-wrap gap-4">
-                    {[
-                      "Cultured Meat",
-                      "Products",
-                      "Building Equipment",
-                      "Dendrites",
-                      "Digitalisation",
-                    ].map((item, index) => (
-                      <button
-                        key={index}
-                        className={`text-lg px-3 py-2 bg-transparent border border-[#0f2550] text-[#153063] rounded-lg 
+                </div>
+                <div className="pt-10 flex flex-wrap gap-4">
+                  {[
+                    "Cultured Meat",
+                    "Products",
+                    "Building Equipment",
+                    "Dendrites",
+                    "Digitalisation",
+                  ].map((item, index) => (
+                    <button
+                      key={index}
+                      className={`text-lg px-3 py-2 bg-transparent border border-[#0f2550] text-[#153063] rounded-lg 
                     transition-colors duration-500 
                     group-hover:border-white group-hover:text-white 
                     group-hover:hover:text-[#1c2b47]
                     hover:bg-white !hover:text-[#1c2b47] 
                    `}
-                      >
-                        {item}
-                      </button>
-                    ))}
-                  </div>
-                </form>
-              </div>
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </form>
             </div>
+
           </div>
 
           <nav className="lg:hidden flex md:flex md:flex-col flex-col h-screen sub-outer relative">
@@ -581,10 +579,14 @@ const ModalOf = ({ modalData, title }) => {
               </form>
 
               <div
-                  className={`absolute z-20 bg-[#7eabd5] w-full h-full 
-                    ${isExpanded ? "translate-y-0 top-0" : "pt-10 translate-y-[45%] bottom-0"}
+                className={`absolute z-20 bg-[#7eabd5] w-full h-full 
+                    ${
+                      isExpanded
+                        ? "translate-y-0 top-0"
+                        : "pt-10 translate-y-[45%] bottom-0"
+                    }
                               transition-transform duration-700 ease-in-out`}
-                ></div>
+              ></div>
             </div>
           </nav>
         </>

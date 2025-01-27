@@ -735,7 +735,7 @@ const ModalOf = ({ modalData, title }) => {
                     ${
                       isExpanded
                         ? "translate-y-0 top-0"
-                        : "pt-10 translate-y-[45%] bottom-0"
+                        : "pt-10  md:translate-y-[55%] translate-y-[45%] bottom-0"
                     }
                               transition-transform duration-700 ease-in-out`}
               ></div>

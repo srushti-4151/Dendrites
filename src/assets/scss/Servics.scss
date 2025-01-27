@@ -264,6 +264,11 @@
     .sub-service-container {
       height: 50%;
       overflow-y: scroll;
+      scrollbar-width: none;  /* For Firefox */
+      -ms-overflow-style: none;
+    }
+    .sub-service-container::-webkit-scrollbar {
+      display: none;  /* For Chrome, Safari, and Opera */
     }
 
     .transition-container {

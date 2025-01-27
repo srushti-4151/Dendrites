@@ -61,21 +61,16 @@
 
   .sub-service-container1 {
     overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
 
     .sub-scrollbar-modal1 {
       margin-top: 1rem;
-      max-height: calc(100vh - 10rem);
+      scrollbar-width: none; /* For Firefox */
+      -ms-overflow-style: none;
     }
     .scrollbar-modal1::-webkit-scrollbar {
-      width: 4px;
-      background-color: #79a8d8a1;
-    }
-    .scrollbar-modal1::-webkit-scrollbar-thumb {
-      background-color: #79a8d8a1;
-      border-radius: 15px;
-    }
-    .scrollbar-modal1::-webkit-scrollbar-track {
-      background-color: transparent;
+      display: none; /* For Chrome, Safari, and Opera */
     }
   }
   .transition-container1 {

@@ -925,6 +925,9 @@ export const DecarbonizationIcon = (
     width="50"
     height="50"
     viewBox="0 0 128.27 128.27"
+    stroke="#fff"
+    strokeWidth="2.5"
+    fill="none"
   >
     <defs>
       <style>
@@ -1023,6 +1026,9 @@ export const ExecutiveQualityIcon = (
     width="50"
     height="50"
     viewBox="0 0 78.86 104.89"
+    stroke="#fff"
+    strokeWidth="2.5"
+    fill="none"
   >
     <defs>
       <style>

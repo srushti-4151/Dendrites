@@ -48,14 +48,13 @@ const ProductsSignup = () => {
         <div className="relative block h-full w-full bg-[rgb(128,172,211)] py-[60px] lg:py[80px] 2xl:py-[80px] overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full z-1">
             <svg
-              class="kreis-links-responsive"
               xmlns="http://www.w3.org/2000/svg"
               data-width="1440"
               data-height="900"
               width="1440"
               height="900"
               viewBox="0 0 1440 900"
-              className="w-full h-full"
+              className="w-full h-full kreis-links-responsive"
               preserveAspectRatio="none"
             >
               <rect
@@ -65,7 +64,7 @@ const ProductsSignup = () => {
                 height="900"
                 fill="#80acd3"
               ></rect>
-              <g class="circle" transform="translate(0.386)">
+              <g className="circle" transform="translate(0.386)">
                 <path
                   d="M830.82-16.012C819.851-3.54,0,1068.694,0,1527.543c0,362.488,232.143,670.756,556.3,784.4a828.9,828.9,0,0,0,274.521,46.425c458.849,0,830.82-371.971,830.82-830.82S841.789-28.484,830.82-16.012Z"
                   transform="translate(-673.181 -1217.519)"
@@ -75,10 +74,10 @@ const ProductsSignup = () => {
             </svg>
           </div>
           <div className="relative z-3 bg-transparent text-center overflow-hidden">
-            <div class="text-[15px] md:text-[18px] lg:text-[23px] 2xl:text-[23px] font-medium text-[#00223E] mb-10">
+            <div className="text-[15px] md:text-[18px] lg:text-[23px] 2xl:text-[23px] font-medium text-[#00223E] mb-10">
               Products - Quality by design
             </div>
-            <h2 class="font-light md:text-[50px] lg:text-[57px] 2xl:text-[57px] text-[30px] lg:px-0 px-4 leading-[1.15789474] tracking-[0.025em] uppercase text-white m-0">
+            <h2 className="font-light md:text-[50px] lg:text-[57px] 2xl:text-[57px] text-[30px] lg:px-0 px-4 leading-[1.15789474] tracking-[0.025em] uppercase text-white m-0">
               Sign up
               <br />
               for the

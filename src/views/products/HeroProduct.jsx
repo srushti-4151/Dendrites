@@ -120,7 +120,7 @@ const HeroProduct = () => {
                       transform="translate(296 767)"
                       fill="none"
                       stroke="#00223e"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <circle cx="24" cy="24" r="24" stroke="none"></circle>
                       <circle cx="24" cy="24" r="23.5" fill="none"></circle>
@@ -130,7 +130,7 @@ const HeroProduct = () => {
                       transform="translate(-1728.329 -6856.076) rotate(-135)"
                       fill="none"
                       stroke="#00223e"
-                      stroke-width="3"
+                      strokeWidth="3"
                     ></path>
                   </g>
                 </svg>
@@ -174,7 +174,7 @@ const HeroProduct = () => {
                       transform="translate(296 767)"
                       fill="none"
                       stroke="#00223e"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <circle cx="24" cy="24" r="24" stroke="none"></circle>
                       <circle cx="24" cy="24" r="23.5" fill="none"></circle>
@@ -184,7 +184,7 @@ const HeroProduct = () => {
                       transform="translate(-1728.329 -6856.076) rotate(-135)"
                       fill="none"
                       stroke="#00223e"
-                      stroke-width="3"
+                      strokeWidth="3"
                     ></path>
                   </g>
                 </svg>

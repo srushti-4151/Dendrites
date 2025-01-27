@@ -286,7 +286,6 @@ const ProductBlog = () => {
             </div>
           </div>
 
-
           {/* button */}
           <div className="mt-12 flex justify-center">
             <Link

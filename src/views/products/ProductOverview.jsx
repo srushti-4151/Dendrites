@@ -89,13 +89,12 @@ const ProductOverview = () => {
               <h2 className="text-[24px] leading-[25px] md:text-[35px] md:leading-[25px] lg:leading-[45px] lg:text-[40px] font-extrabold mb-5 md:mb-10 lg:mb-10 uppercase tracking-wide">
                 {product.title}
               </h2>
-              <a
-                href="#"
+              <div
                 className="relative inline-block text-sm md:text-lg lg:text-lg lg:text-start font-semibold"
               >
                 {product.description}
                 <span className="absolute left-0 bottom-0 w-full h-[1px] bg-[#00223e] origin-center scale-x-100 group-hover:scale-x-0 transition-transform duration-500 ease-in-out"></span>
-              </a>
+              </div>
               <div className="ml-auto absolute inset-y-0 right-[40px] flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +107,7 @@ const ProductOverview = () => {
                       transform="translate(296 767)"
                       fill="none"
                       stroke="#00223e"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <circle cx="24" cy="24" r="24" stroke="none"></circle>
                       <circle cx="24" cy="24" r="23.5" fill="none"></circle>
@@ -118,7 +117,7 @@ const ProductOverview = () => {
                       transform="translate(-1728.329 -6856.076) rotate(-135)"
                       fill="none"
                       stroke="#00223e"
-                      stroke-width="3"
+                      strokeWidth="3"
                     ></path>
                   </g>
                 </svg>

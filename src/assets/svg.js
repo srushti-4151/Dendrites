@@ -1250,7 +1250,7 @@ export const ProcessSolutions = (
         transform="translate(733.977 3426.77)"
         fill="none"
         stroke="#fff"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M103,463h7l.029-4.531a16.988,16.988,0,0,0,5.244-2.229l3.087,2.835,5.043-5.164-2.6-3.336A19.1,19.1,0,0,0,123,445l4,.02V437h-4a16.779,16.779,0,0,0-2.194-5.176l2.6-3-5.043-5.165-3.087,2.5a16.974,16.974,0,0,0-5.244-2.228L110,420h-7"
@@ -1258,7 +1258,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <line
         y2="51"
@@ -1266,14 +1266,14 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></line>
       <path
         d="M104,446h1.712a5.008,5.008,0,1,0,0-10H104"
         transform="translate(733.977 3426.77)"
         fill="none"
         stroke="#fff"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M104,446h1.712a5.008,5.008,0,1,0,0-10H104"
@@ -1281,7 +1281,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <line
         y1="2"
@@ -1289,7 +1289,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></line>
       <line
         y1="2"
@@ -1297,7 +1297,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></line>
       <path
         d="M97,420c-3.105-.2-6.569,1.607-7.407,4.2a7,7,0,0,0-7.13,7.3,8.332,8.332,0,0,0,.062.965c-2.88,1.048-4.952,4.313-4.952,8.323a10.95,10.95,0,0,0,2.185,6.653,8.025,8.025,0,0,0-.181,2.953c.524,4.292,4.2,7.633,8.21,7.478a8.1,8.1,0,0,0,7.389,5.1C100.5,462.981,103,460,103,460V423A9.015,9.015,0,0,0,97,420Z"
@@ -1305,7 +1305,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M96.154,432.853A7.186,7.186,0,0,1,89.309,426a5.865,5.865,0,0,1,.283-1.812"
@@ -1313,7 +1313,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M87.353,441.117c2.141,1.336,4.627.45,6.413-1.412,2.258-2.354,5.977-3.087,8.235-.439a7,7,0,0,1,1,1.547"
@@ -1321,7 +1321,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M102.911,429.056a6.327,6.327,0,0,1-6.757-4.234"
@@ -1329,7 +1329,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M102.911,453.1a5.5,5.5,0,0,0-6.757,3.354"
@@ -1337,7 +1337,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M89.115,451.424c-1.719-.514-3.436-1.8-3.436-3.437"
@@ -1345,7 +1345,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M88.331,459a6.517,6.517,0,0,1-.978-3.389,6.589,6.589,0,0,1,6.856-6.41.785.785,0,0,0,.791-.85v-.007c0-2.621,2.446-3.507,4-3.4"
@@ -1353,7 +1353,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M83.441,437.515a3.593,3.593,0,0,1,3.423,3.425,3.072,3.072,0,0,1-3.423,2.979"
@@ -1361,7 +1361,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M88.019,434.761a3.623,3.623,0,0,1,4.037-3.515"
@@ -1369,7 +1369,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
       <path
         d="M106.2,429.2a11.8,11.8,0,1,1,0,23.6"
@@ -1377,7 +1377,7 @@ export const ProcessSolutions = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="1"
+        strokeWidth="1"
       ></path>
     </g>
   </svg>
@@ -1499,7 +1499,7 @@ export const FoodEng = (
   >
     <defs>
       <style>
-        {`.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2.5px}`}
+        {`.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;strokeWidth:2.5px}`}
       </style>
     </defs>
     <g id="Ebene_1-2">
@@ -1573,7 +1573,7 @@ export const ResAndDev = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
       <line
         x2="34.121"
@@ -1581,7 +1581,7 @@ export const ResAndDev = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></line>
       <line
         x2="34.121"
@@ -1589,28 +1589,28 @@ export const ResAndDev = (
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></line>
       <path
         d="M90.46,48.339a6.312,6.312,0,0,1-9.24,5.59v15.48H69.68a6.239,6.239,0,0,0,.96-3.34,6.31,6.31,0,1,0-12.62,0,6.239,6.239,0,0,0,.96,3.34H49.1a33.747,33.747,0,0,1,32.12-42.25v15.59a6.312,6.312,0,0,1,9.24,5.59Z"
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
       <path
         d="M131.99,76.609a33.172,33.172,0,0,1-1.57,10.12c-2.01,6.28-5.38,8.02-11.6,18.61s-4.62,23.98-4.62,23.98H83.32s-.92-13.34-4.6-23.98-9.55-12.39-11.54-18.61h10a5.885,5.885,0,1,1,9.11,0H98.8V70.789a5.825,5.825,0,0,0,2.84.73,5.885,5.885,0,1,0,0-11.77,5.825,5.825,0,0,0-2.84.73V43.419A33.19,33.19,0,0,1,131.99,76.609Z"
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
       <path
         d="M118.82,105.339c-6.23,10.59-4.62,23.98-4.62,23.98H98.8v-22.04a5.825,5.825,0,0,0,2.84.73,5.889,5.889,0,0,0,5.8-4.88,5.58,5.58,0,0,0,.09-1.01,5.894,5.894,0,0,0-5.89-5.89,5.825,5.825,0,0,0-2.84.73V86.729h12.5a5.9,5.9,0,1,1,9.11,0h10.01C128.41,93.009,125.04,94.749,118.82,105.339Z"
         fill="none"
         stroke="#fff"
         stroke-miterlimit="10"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
     </g>
   </svg>
@@ -1661,7 +1661,7 @@ export const ContactCall = (
         stroke="#fff"
         stroke-linecap="round"
         stroke-linejoin="round"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
       <path
         d="M1111.628,61.438h67.14a.9.9,0,0,1,.23.02"
@@ -1669,14 +1669,14 @@ export const ContactCall = (
         stroke="#fff"
         stroke-linecap="round"
         stroke-linejoin="round"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
       <path
         d="M1180.307,112.709l-.528-.383L1145.6,87.542"
         fill="none"
         stroke="#fff"
         stroke-linejoin="round"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></path>
       <line
         x1="15.93"
@@ -1685,14 +1685,14 @@ export const ContactCall = (
         fill="none"
         stroke="#fff"
         stroke-linejoin="round"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       ></line>
       <path
         d="M1179.218,61.508l-33.62,26.03-6.46,5-6.19-4.9-24.7-19.56a11.369,11.369,0,0,0,3.33-6.34l67.42-.28A.586.586,0,0,1,1179.218,61.508Z"
         fill="none"
         stroke="#fff"
         stroke-linejoin="round"
-        stroke-width="2.5"
+        strokeWidth="2.5"
         fill-rule="evenodd"
       ></path>
       <path
@@ -1700,7 +1700,7 @@ export const ContactCall = (
         fill="none"
         stroke="#fff"
         stroke-linejoin="round"
-        stroke-width="2.5"
+        strokeWidth="2.5"
         fill-rule="evenodd"
       ></path>
       <g fill="none" stroke-miterlimit="10">
@@ -1959,7 +1959,7 @@ export const mailicon = (
         transform="translate(1033 7682.39)"
         fill="none"
         stroke="#80acd3"
-        stroke-width="1"
+        strokeWidth="1"
       >
         <circle cx="18" cy="18" r="18" stroke="none"></circle>
         <circle cx="18" cy="18" r="17.5" fill="none"></circle>
@@ -1972,13 +1972,13 @@ export const mailicon = (
           stroke="#fdfdfd"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="1"
+          strokeWidth="1"
         ></path>
         <g
           transform="translate(0 0)"
           fill="none"
           stroke="#fdfdfd"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <rect width="17.384" height="12.495" stroke="none"></rect>
           <rect

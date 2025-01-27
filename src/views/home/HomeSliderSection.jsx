@@ -18,6 +18,7 @@ const HomeSliderSection = () => {
     // Clean up the event listener
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  
   const homeSliderData = [
     {
       image: image1,

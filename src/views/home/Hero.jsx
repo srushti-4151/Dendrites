@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="relative bg-[#00223e] hero_section">
         <div className="background">
           <div className="SettingIconSvg absolute">{zahnradSVG}</div>
-          <div className="image-carrier">
+          {/* <div className="image-carrier">
             <img
               src={landingpageImage}
               alt="landingpageImage"
@@ -38,6 +38,77 @@ const Hero = () => {
             <div className="glow star-5">
               <img src={star} alt="star" />
             </div>
+          </div> */}
+          <div className="image-carrier">
+            <svg
+              // className="absolute left-0 top-0 w-full h-full object-cover object-center"
+              className="bulbsvg"
+              id="animation-intro"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 2958 3070"
+              style={{ enableBackground: "new 0 0 2958 3070" }}
+            >
+              <image
+                href={landingpageImage}
+                alt="landingpageImage"
+                className="w-[2958px] h-[3070px] object-cover"
+              />
+              <image
+                className="glow star-1"
+                width="746"
+                height="744"
+                href={star}
+                alt="star"
+                style={{
+                  transform: "matrix(1.5358, 0, 0, 1.5358, 733.058, 736.7222)",
+                }}
+              />
+              <image
+                className="glow star-2"
+                width="746"
+                height="744"
+                href={star}
+                alt="star"
+                style={{
+                  transform:
+                    "matrix(1.5358, 0, 0, 1.5358, 1064.2594, 1006.736)",
+                }}
+              />
+              <image
+                className="glow star-3"
+                width="746"
+                height="744"
+                href={star}
+                alt="star"
+                style={{
+                  transform:
+                    "matrix(0.9379, 0, 0, 0.9379, 1182.8544, 879.9828)",
+                }}
+              />
+              <image
+                className="glow star-4"
+                width="746"
+                height="744"
+                href={star}
+                alt="star"
+                style={{
+                  transform:
+                    "matrix(0.9379, 0, 0, 0.9379, 1126.1669, 1099.1298)",
+                }}
+              />
+              <image
+                className="glow star-5"
+                width="746"
+                height="744"
+                href={star}
+                alt="star"
+                style={{
+                  transform:
+                    "matrix(0.9379, 0, 0, 0.9379, 961.1885, 1210.1462)",
+                }}
+              />
+            </svg>
           </div>
         </div>
 
@@ -50,16 +121,15 @@ const Hero = () => {
 
             {/* Right Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left bg-transparent">
-                
-                <p className="text-white pb-1 text-3xl lg:text-6xl md:text-5xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide">
-                  Dendrites
-                </p>
-                <p className="text-white pb-1 text-4xl lg:text-6xl md:text-5xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide font-bold">
-                  Technology
-                </p>
-                <p className="text-[#80acd3] text-lg lg:text-3xl md:text-3xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
-                  Think Different
-                </p>
+              <p className="text-white pb-1 text-3xl lg:text-6xl md:text-5xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide">
+                Dendrites
+              </p>
+              <p className="text-white pb-1 text-4xl lg:text-6xl md:text-5xl 2xl:text-6xl uppercase text-shadow-glow tracking-wide font-bold">
+                Technology
+              </p>
+              <p className="text-[#80acd3] text-lg lg:text-3xl md:text-3xl 2xl:text-3xl lg:pt-9 2xl:pt-3 pt-4 tracking-wide font-bold">
+                Think Different
+              </p>
 
               <div className="glowmain big-star">
                 {/* <img className="w-24 h-24" src={light} alt="light" /> */}

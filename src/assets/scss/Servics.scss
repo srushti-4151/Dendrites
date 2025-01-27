@@ -36,7 +36,7 @@
     animation: nav-circle-in 2s forwards;
     transform: translate(-50%, -50%);
   }
-
+    
   .outer {
     opacity: 0;
     position: relative;
@@ -58,7 +58,7 @@
       padding-right: 15px;
       height: 100%;
 
-      .search-scrollmodal-countwidth{
+      .search-scrollmodal-countwidth {
         width: 700px;
 
         @media (min-width: 1200px) {
@@ -96,7 +96,7 @@
       //     @media (width: #{$i}px) {
       //       max-width: #{610 + ($i - 1300) * 1}px;
       //     }
-      //   }        
+      //   }
 
       //   @for $i from 1025 through 1299 {
       //     @media (width: #{$i}px) {
@@ -107,35 +107,34 @@
       .scrollmodal-countwidth {
         padding-right: 15px;
         width: 700px;
-      
+
         @media (min-width: 1400px) {
           padding-right: 200px;
           max-width: 700px;
         }
-      
+
         @for $i from 1300 through 1399 {
           @media (width: #{$i}px) {
             padding-right: 180px;
             max-width: #{610 + ($i - 1300) * 1}px;
           }
         }
-      
+
         @for $i from 1201 through 1299 {
           @media (width: #{$i}px) {
             padding-right: 180px;
             max-width: #{472.5 + ($i - 1025) * 0.5}px;
           }
         }
-      
+
         @for $i from 1025 through 1200 {
           @media (width: #{$i}px) {
             padding-right: 15px;
             max-width: #{472.5 + ($i - 1025) * 0.5}px;
           }
         }
-      }      
-      
-      
+      }
+
       /* Scrollbar modal content */
       .scrollbar-modal {
         top: 113px;
@@ -188,7 +187,6 @@
         top: 50%;
         transform: translate(0, -50%);
       }
-      
     }
 
     .input-container {
@@ -264,11 +262,11 @@
     .sub-service-container {
       height: 50%;
       overflow-y: scroll;
-      scrollbar-width: none;  /* For Firefox */
+      scrollbar-width: none; /* For Firefox */
       -ms-overflow-style: none;
     }
     .sub-service-container::-webkit-scrollbar {
-      display: none;  /* For Chrome, Safari, and Opera */
+      display: none; /* For Chrome, Safari, and Opera */
     }
 
     .transition-container {

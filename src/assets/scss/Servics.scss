@@ -115,14 +115,14 @@
       
         @for $i from 1300 through 1399 {
           @media (width: #{$i}px) {
-            padding-right: 200px;
+            padding-right: 180px;
             max-width: #{610 + ($i - 1300) * 1}px;
           }
         }
       
         @for $i from 1201 through 1299 {
           @media (width: #{$i}px) {
-            padding-right: 200px;
+            padding-right: 180px;
             max-width: #{472.5 + ($i - 1025) * 0.5}px;
           }
         }

@@ -184,27 +184,6 @@ body {
   text-align: center;
 }
 
-/* .hero_section .background .image-carrier img {
-  position: absolute;
-  left: 25%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
-
-/* @media (max-width: 1024px) {
-  .hero_section .background .image-carrier img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    object-position: center;
-  }
-} */
 .hero_section .background .image-carrier .bulbsvg {
   position: absolute;
   left: 0;
@@ -314,124 +293,6 @@ body {
   animation-delay: -1.3s;
 }
 
-/* 
-@media (max-width: 1600px) {
-  .glow {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    animation: twinkle 5s infinite ease-in-out;
-    pointer-events: none;
-  }
-  .star-1 {
-    top: 41%;
-    left: 44%;
-    animation-delay: 0s;
-  }
-
-  .star-2 {
-    top: 46%;
-    left: 48%;
-    animation-delay: 1s;
-  }
-
-  .star-3 {
-    top: 35%;
-    left: 48%;
-    animation-delay: 2s;
-  }
-
-  .star-4 {
-    top: 47%;
-    left: 40%;
-    animation-delay: 3s;
-  }
-
-  .star-5 {
-    top: 37%;
-    left: 39%;
-    animation-delay: 4s;
-  }
-}
-@media (max-width: 1000px) {
-  .glow {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    animation: twinkle 4s infinite ease-in-out;
-    pointer-events: none;
-  }
-
-  .star-1 {
-    top: 24%;
-    left: 47%;
-    animation-delay: 0s;
-  }
-
-  .star-2 {
-    top: 32%;
-    left: 49%;
-    animation-delay: 1s;
-  }
-
-  .star-3 {
-    top: 28%;
-    left: 45%;
-    animation-delay: 2s;
-  }
-
-  .star-4 {
-    top: 25%;
-    left: 39%;
-    animation-delay: 3s;
-  }
-
-  .star-5 {
-    top: 32%;
-    left: 39%;
-    animation-delay: 4s;
-  }
-}
-@media (max-width: 500px) {
-  .glow {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    animation: twinkle 4s infinite ease-in-out;
-    pointer-events: none;
-  }
-
-  .star-1 {
-    top: 25%;
-    left: 47%;
-    animation-delay: 0s;
-  }
-
-  .star-2 {
-    top: 34%;
-    left: 48%;
-    animation-delay: 1s;
-  }
-
-  .star-3 {
-    top: 29%;
-    left: 43%;
-    animation-delay: 2s;
-  }
-
-  .star-4 {
-    top: 25%;
-    left: 40%;
-    animation-delay: 3s;
-  }
-
-  .star-5 {
-    top: 34%;
-    left: 40%;
-    animation-delay: 4s;
-  }
-} */
-
 /* animation for Twinkling Effect */
 @keyframes twinkle {
   0%,
@@ -446,55 +307,6 @@ body {
     /* Slight zoom effect while glowing */
   }
 }
-
-/* For Mobile view (Additional adjustments for very small screens) */
-/* @media (max-width: 768px) {
-  .hero_section {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 110vh;
-    z-index: 1;
-  }
-  .hero_section .background {
-    padding-top: 80px;
-    width: 100%;
-    height: 100vh;
-  }
-  .hero_section .background .image-carrier .bulbsvg {
-    position: absolute;
-    left: auto;
-    top: auto;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-  }
-  .hero_section .background .SettingIconSvg {
-    position: absolute;
-    width: 60vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    pointer-events: none;
-  }
-} */
-
-/* .hero_section .glowmain{
-    position: absolute;
-    width: 55px;
-    height: 55px;
-    background: radial-gradient(circle, rgba(255, 255, 255, .55) 1%, transparent 55%);
-    border-radius: 50%;
-    opacity: 1;
-    pointer-events: none;
-  }
-  .big-star {
-    top: 3%;
-    left: 64%;
-    animation-delay: 0s;
-  } */
 
 /* --------------------------------- amimation section ------------------------------------ */
 #actioncursor image {

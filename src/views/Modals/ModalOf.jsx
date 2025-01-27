@@ -492,10 +492,19 @@ const ModalOf = ({ modalData, title }) => {
                         className="group w-full rounded-lg pb-5 text-white transition flex flex-row items-center"
                       >
                         {" "}
-                        <div className="relative w-[100px] h-[100px] border border-[#80acd3a1] align-middle rounded-full">
-                          <div className="absolute top-1/2 left-1/2 w-1/2 h-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full group-hover:bg-[#80acd3a1] duration-300">
-                            {service.image}
+                        {/* <div className="relative w-[100px] h-[100px] border border-[#80acd3a1] align-middle rounded-full">
+                          <div className="absolute top-1/2 left-1/2 w-[90px] h-[90px] -translate-x-1/2 -translate-y-1/2 align-middle group-hover:bg-[#80acd3a1] duration-300 rounded-full">
+                            <div className="absolute top-1/2 left-1/2 w-1/2 h-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full">
+                              {service.image}
+                            </div>
                           </div>{" "}
+                        </div> */}
+                        <div className="relative w-[100px] h-[100px] border border-[#80acd3a1] rounded-full flex items-center justify-center">
+                          <div className="relative w-[85px] h-[85px] rounded-full group-hover:bg-[#80acd3a1] duration-300 flex items-center justify-center">
+                            <div className="w-1/2 h-1/2 flex items-center justify-center">
+                              {service.image}
+                            </div>
+                          </div>
                         </div>
                         <div className="pl-5 w-[75%] align-middle">
                           {/* <Link to={service.path} className="inline-block"> */}

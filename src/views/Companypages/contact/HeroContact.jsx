@@ -1,5 +1,5 @@
 import React from "react";
-import imag1 from "../../assets/contactAbout-Banner-Bild_Neu.webp";
+import imag1 from "../../../assets/contactAbout-Banner-Bild_Neu.webp";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const HeroContact = () => {

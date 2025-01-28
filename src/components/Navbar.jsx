@@ -42,15 +42,22 @@ const Navbar = () => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    if (scrollPosition <= 40) {
-      setTopValue(40 - scrollPosition);
+    const isLargeScreen = window.innerWidth >= 1024; // Check if screen is large
+
+    if (isLargeScreen) {
+      if (scrollPosition <= 40) {
+        setTopValue(40 - scrollPosition);
+      } else {
+        setTopValue(0);
+      }
     } else {
-      setTopValue(0);
+      setTopValue(0); // No extra top offset on small screens
     }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call initially to set correct position on load
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -139,6 +146,14 @@ const Navbar = () => {
     console.log("Drawer state changed:", isDrawerOpen);
   }, [isDrawerOpen]);
 
+  //Greenline
+  // Define color based on path
+  const getLineColor = () => {
+    if (location.pathname.includes("/services")) return "bg-[#93D050]";
+    if (location.pathname.includes("/solutions")) return "bg-blue-500";
+    return ""; 
+  };
+
   return (
     <>
       <div
@@ -153,7 +168,7 @@ const Navbar = () => {
           <div className="flex gap-5">
             <div>
               <Link
-                to="/contact"
+                to="/company/contact"
                 className="text-[#a7b8b8] text-[13px] hover:text-white duration-300"
               >
                 Contact
@@ -503,6 +518,11 @@ const Navbar = () => {
           </>
         )}
       </div>
+
+      {/* Persistent Line */}
+      <div 
+       style={{ top: `${topValue + 70}px` }}
+       className={`fixed left-0 h-[3px] ${getLineColor()} z-50 w-full`}></div>
     </>
   );
 };

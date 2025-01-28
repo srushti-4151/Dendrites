@@ -53,7 +53,9 @@ const Footer = () => {
           {["About", "Locations", "Contact", "Career", "Vacancies"].map(
             (item) => (
               <div className="pt-3" key={item}>
-                <Link className="text-white group hover:text-[#80acd3] relative">
+                <Link 
+                to="/company/about"
+                className="text-white group hover:text-[#80acd3] relative">
                   {item}
                   <div className="absolute bottom-[-4px] left-1/2 w-0 h-[1px] bg-[#80acd3] group-hover:w-[calc(100%)] transition-all duration-300 transform -translate-x-1/2"></div>
                 </Link>

@@ -1,0 +1,60 @@
+/* QuoteConatct.scss */
+.quote-blockquote {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 4rem;
+  font-weight: bold;
+  font-size: 57px;
+  line-height: 1.15;
+  color: white;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../quote.svg");
+    background-size: contain;
+    background-position: center;
+    width: 217px;
+    height: 169px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+}
+
+/* QuoteConatct.scss */
+.quote-text {
+  position: relative;
+  text-align: center;
+  .pquote {
+    &::before {
+      content: "“";
+    }
+
+    &::after {
+      content: "”";
+    }
+  }
+}
+
+.member-img {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 58.5px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: -58px; /* Adjusted to position it outside */
+    transform: translateY(-50%); /* Align vertically in the middle */
+    background-color: #41729c;
+  }
+  &.no-line::after {
+    content: none; /* Removes the pseudo-element for the last member */
+  }
+}

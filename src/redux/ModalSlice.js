@@ -134,12 +134,14 @@ const modalSlice = createSlice({
             title: "Contact",
             description:
               "Find your contact at Dendrites. ✓ Email: office@Den.com ✓ Phone: +43 3136 9010 1000.",
+            path: "/company/contact",
           },
           {
             image: AboutDrop,
             title: "About",
             description:
               "Evolution of Technology: Who we are and what drives us!",
+            path: "/company/about",
           },
           {
             image: LocationDrop,

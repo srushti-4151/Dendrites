@@ -1,0 +1,45 @@
+.abt-get {
+  .text-container {
+    position: relative;
+    padding-left: 53px;
+    box-sizing: border-box;
+    z-index: 1;
+    
+    .getin-blockquote {
+      position: relative;
+      display: block;
+      font-size: 23px;
+      line-height: 1.15;
+      color: white;
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url("../quote.svg");
+        background-size: contain;
+        background-position: center center;
+        width: 217px;
+        height: 169px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-20%, -40%);
+        z-index: 10;
+      }
+    }
+
+    .quote-text {
+        position: relative;
+        text-align: left;
+        .abtquote {
+          &::before {
+            content: "“";
+          }
+      
+          &::after {
+            content: "”";
+          }
+        }
+      }
+  }
+}

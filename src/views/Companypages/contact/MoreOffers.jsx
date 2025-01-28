@@ -1,8 +1,8 @@
 import React from "react";
-import img1 from "../../assets/generalplanung_opt1_final-ed4c89a9.webp";
-import img2 from "../../assets/digi_opt1_final-360665be.webp";
-import img3 from "../../assets/Prozesslooesung_Opt3_final-23564341.webp";
-import { genPlan, SolutionSvg, ProSolution } from "../../assets/svg";
+import img1 from "../../../assets/generalplanung_opt1_final-ed4c89a9.webp";
+import img2 from "../../../assets/digi_opt1_final-360665be.webp";
+import img3 from "../../../assets/Prozesslooesung_Opt3_final-23564341.webp";
+import { genPlan, SolutionSvg, ProSolution } from "../../../assets/svg";
 
 const MoreOffers = () => {
   const servdata = [

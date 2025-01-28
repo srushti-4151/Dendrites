@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import img1 from "../../assets/cimg1.webp";
-import img2 from "../../assets/pbloimg2.webp";
-import img3 from "../../assets/cimg3.webp";
-import img4 from "../../assets/cimg4.webp";
+import img1 from "../../../assets/cimg1.webp";
+import img2 from "../../../assets/pbloimg2.webp";
+import img3 from "../../../assets/cimg3.webp";
+import img4 from "../../../assets/cimg4.webp";
 
 const ContactBlog = () => {
   return (

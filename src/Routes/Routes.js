@@ -1,4 +1,5 @@
-import ContactPage from "../views/contact/ContactPage";
+import AboutUs from "../views/Companypages/about/AboutUs";
+import ContactPage from "../views/Companypages/contact/ContactPage";
 import Index from "../views/home/Index";
 import Products from "../views/products/Products";
 import Engineering from "../views/ServicesPages/Engineering/Engineering";
@@ -14,11 +15,13 @@ export const RouteData = [
       element: <Products />,
     },
     {
-      path: `/contact`,
+      path: `/company/contact`,
       element: <ContactPage />,
     },
-
-    
+    {
+      path: `/company/about`,
+      element: <AboutUs />,
+    },
     {
       path: "/services/engineering",  
       element: <Engineering />, 

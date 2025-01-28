@@ -10,6 +10,7 @@ import ProductBlog from "./ProductBlog";
 import ProductCareer from "./ProductCareer";
 import Bar from "../../components/Bar";
 import { useSelector } from "react-redux";
+import Breadcrumb from "../../components/Breadcrumb";
 
 
 const Products = () => {
@@ -19,7 +20,7 @@ const Products = () => {
   return (
     <>
     <Navbar />
-    {!isDrawerOpen && ( <Bar/> )} 
+    {!isDrawerOpen && ( <Breadcrumb/> )} 
     <HeroProduct/>
     <ProductOverview/>
     <CeoPartProduct/>

@@ -6,14 +6,14 @@ const AbtProcess = () => {
   return (
     <>
       <div className="bg-[#00223E] text-white overflow-hidden">
-        <div className="max-w-[1410px] w-full mx-auto lg:px-[15px] lg:py-[100px] py-[60px]">
+        <div className="max-w-[1410px] w-full mx-auto lg:px-[15px] lg:py-[100px] py-[60px] px-[15px]">
           {/* Header */}
           <div className="text-center py-2 px-1 md:px-2 md:py-2">
-            <h2 className="text-center text-white font-bold text-[24px] md:text-3xl lg:text-[40px] lg:py-5 lg:pb-5 uppercase">
+            <h2 className="text-center text-white font-bold text-[24px] md:text-3xl lg:text-[40px] lg:pb-5 uppercase">
               Projects in record time
             </h2>
             <div class="font-normal text-[18px] md:text-[22px] lg:text-[30px] text-center">
-              <p>
+              <p className="lg:pb-[45px] pb-[27px]">
                 Time to market: With ZETA's project management <br />
                 <strong>up to 50 % faster to market.</strong>
               </p>
@@ -21,7 +21,7 @@ const AbtProcess = () => {
           </div>
 
           {/* Project image */}
-          <div className="w-full h-full p-5">
+          <div className="w-full h-full">
             <img
               src={projimage}
               alt=""
@@ -30,7 +30,7 @@ const AbtProcess = () => {
           </div>
 
           {/* button  */}
-          <div className="w-full h-full mt-[20px] flex justify-center">
+          <div className="w-full h-full mt-[40px] flex justify-center">
             <Link
               to="#"
               className="group btn px-6 py-2 border-2 bg-[#96E8CA] border-[#96E8CA] text-[#00223E] rounded-md hover:bg-transparent hover:text-[#96E8CA] transition duration-300"
@@ -47,7 +47,7 @@ const AbtProcess = () => {
                   transform="translate(-7.875 -11.252)"
                 ></path>
               </svg>
-              <span>View all Phases!</span>
+              <span className="lg:text-[17px] text-[13px]">View all Phases!</span>
             </Link>
           </div>
         </div>

@@ -74,7 +74,6 @@ const OurExperts = () => {
       designation: "Associate Director Business Line Customized Systems",
     },
   ];
-
   const prevArrow = (
     <button className="prev-arrow">
       <IoIosArrowBack

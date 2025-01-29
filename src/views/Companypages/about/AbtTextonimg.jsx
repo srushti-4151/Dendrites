@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const AbtTextonimg = () => {
   return (
-    <div className="relative w-full h-full lg:pt-[250px] pt-[70px] py-0 lg:pb-[150px] pb-[50px] bg-[#00223E]">
+    <div className="relative w-full h-full lg:pt-[250px] pt-[70px] py-0 lg:pb-[150px] pb-[50px] bg-[#00223E] overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full z-1">
         <div>
           <img

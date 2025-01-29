@@ -3,7 +3,7 @@ import strategy from "../../../assets/about_purchasing_strategy-b9d82b1d.webp";
 
 const PhaseStrategy = () => {
   return (
-    <div className="bg-[rgb(2,46,85)]">
+    <div className="bg-[rgb(2,46,85)] overflow-hidden">
       <div className="max-w-[1410px] w-full mx-auto pt-[50px] bg-[rgb(2,46,85)]">
         <div className="max-w-[1310px] w-full mx-auto px-[15px] bg-[rgb(2,46,85)] flex lg:flex-row flex-col-reverse items-center justify-center">
           {/* text-container */}

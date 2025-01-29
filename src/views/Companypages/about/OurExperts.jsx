@@ -139,7 +139,7 @@ const OurExperts = () => {
 
   return (
     <>
-      <div className="bg-[rgb(2,46,85)] px-0 py-[70px] pb-[130px] w-full text-center">
+      <div className="bg-[rgb(2,46,85)] px-0 lg:py-[70px] py-[40px] w-full text-center overflow-hidden">
         <div className="max-w-[1410px] w-full mx-auto px-[15px] text-white">
           <h2 class="font-bold lg:text-[57px] text-[34px] leading-[1.15789474] tracking-[0.025em] uppercase text-white text-shadow-glow">
             Our experts
@@ -180,9 +180,9 @@ const OurExperts = () => {
                       aria-hidden={index !== currentSlide ? "true" : "false"} // Hide non-active slides
                       inert={index !== currentSlide ? "true" : undefined} // Prevent focus on hidden slides
                     >
-                      <div 
-                      className="video-wrapper"
-                      tabIndex={index === currentSlide ? "0" : "-1"} 
+                      <div
+                        className="video-wrapper"
+                        tabIndex={index === currentSlide ? "0" : "-1"}
                       >
                         <div
                           className={`thumbnail-container ${
@@ -236,11 +236,23 @@ const OurExperts = () => {
             {/* Circle with Name and Designation */}
             <div>
               {activeVideoIndex === null && (
-                <div 
-                className="name-circle lg:flex hidden">
+                <div className="name-circle lg:flex hidden">
                   <div className="inner-circle">
                     <h2 className="expert-name">{videos[currentSlide].name}</h2>
                     <div className="expert-designation">
+                      {videos[currentSlide].designation}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {activeVideoIndex === null && (
+                <div className="relative bg-transparent lg:hidden flex items-center justify-center text-center">
+                  <div className="bg-transparent flex flex-col justify-center items-center p-2">
+                    <h2 className="relative text-[20px] mb-4 pb-1 font-bold text-[#fff]">
+                      {videos[currentSlide].name}
+                    <span className="block w-[52px] h-[1px] bg-[#fff] absolute bottom-0 left-1/2 transform -translate-x-1/2"></span>
+                    </h2>
+                    <div className="text-[16px] text-[#80acd3]">
                       {videos[currentSlide].designation}
                     </div>
                   </div>

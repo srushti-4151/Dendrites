@@ -5,7 +5,7 @@ import img from "../../../assets/Thumbnail_who.webp"
 const AboutusTheory = () => {
   return (
     <>
-      <div className="bg-[#022E55] w-full px-[15px] lg:py-[73px] py-[53px]">
+      <div className="bg-[#022E55] w-full px-[15px] lg:py-[73px] py-[53px] overflow-hidden">
         <div className="max-w-[1016px] w-full mx-auto text-white">
           <h2 className="lg:text-[57px] md:text[45px] text-[34px] font-bold leading-[1.157] uppercase text-center text-shadow-glow mb-5">
             About Us

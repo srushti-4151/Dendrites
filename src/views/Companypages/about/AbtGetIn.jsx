@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const AbtGetIn = () => {
   return (
     <>
-      <div className="bg-[rgb(2,46,85)]">
+      <div className="bg-[rgb(2,46,85)] overflow-hidden">
         <div className="bg-[rgb(2,46,85)] lg:py-[70px] mdLpy-[70px] py-[43px] abt-get">
           <div className="lg:max-w-[1410px] w-full mx-auto px-[15px] box-border">
             <div className="flex lg:flex-row flex-col items-center lg:max-w-[1090px] w-full mt-[34px] mx-auto">

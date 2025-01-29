@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const AbtProcess = () => {
   return (
     <>
-      <div className="bg-[#00223E] text-white">
+      <div className="bg-[#00223E] text-white overflow-hidden">
         <div className="max-w-[1410px] w-full mx-auto lg:px-[15px] lg:py-[100px] py-[60px]">
           {/* Header */}
           <div className="text-center py-2 px-1 md:px-2 md:py-2">

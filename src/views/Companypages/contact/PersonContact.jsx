@@ -188,13 +188,13 @@ const PersonContact = () => {
 
   return (
     <>
-      <div className="bg-[#00223E]">
+      <div className="bg-[#00223E] overflow-hidden">
         <div className="lg:max-w-[1400px] 2xl:max-w-[1400px] w-full mx-0 overflow-hidden lg:mx-auto 2xl:mx-auto max-w-full h-full lg:py-24 2xl:py-24 py-16 lg:px-5 2xl:px-5 px-4 bg-[#00223E]">
           <h1 className="text-shadow-glow text-white font-light lg:text-4xl 2xl:text-4xl text-2xl leading-[1.15] tracking-[0.025em] text-center uppercase m-0">
             WE ARE <br />
             <strong className="font-bold">THERE FOR YOU AT ANY TIME</strong>
           </h1>
-          <div className="font-normal text-white text-[30px] leading-[1.333] mt-[35px] text-center">
+          <div className="font-normal text-white lg:text-[30px] text-[18px] leading-[1.333] mt-[35px] text-center">
             Contact persons in{" "}
             <strong className="font-bold text-[#80acd3]">
               Sales und Business Development

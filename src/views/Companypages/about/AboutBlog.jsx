@@ -8,7 +8,7 @@ import img4 from "../../../assets/images1/ScribbleVid Retrofit_2023_Blog_Cover_6
 const AboutBlog = () => {
   return (
     <>
-      <div className="bg-[#00223E]">
+      <div className="bg-[#00223E] overflow-hidden">
         <div className="lg:max-w-[1410px] lg:w-full 2xl:w-full 2xl:max-w-[1410px] lg:py-[100px] 2xl:py-[100px] py-[50px] w-full mx-0 overflow-hidden lg:mx-auto 2xl:mx-auto max-w-full h-full lg:px-4 2xl:px-0 px-4 bg-[#00223E]">
           <h2 className="mb-12 mx-auto w-full text-center lg:text-[40px] 2xl:text-[40px] text-[24px] leading-[1.15] tracking-[0.025em] uppercase text-white m-0">
             <strong className="font-bold text-shadow-glow">

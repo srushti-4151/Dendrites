@@ -31,7 +31,7 @@ const QuoteConatct = () => {
   ];
   return (
     <>
-      <div className="bg-[#00223E]">
+      <div className="bg-[#00223E] overflow-hidden">
         <div className="bg-transparent w-[1410px] max-w-full mx-auto px-4 py-20 text-center">
           <blockquote
             // className={`relative block bg-transparent max-w-[960px] w-full mx-auto pt-16 font-bold text-[57px] leading-[1.15] text-white before:content-[''] before:block before:bg-url:${quoteImage} before:bg-contain before:bg-center before:w-[217px] before:h-[169px] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:z-10`}

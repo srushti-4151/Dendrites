@@ -12,21 +12,28 @@ const HeroAbout = () => {
   ];
   return (
     <>
-      <div className="relative w-full min-h-screen pb-[100px] h-auto overflow-hidden">
+      <div className="relative w-full min-h-screen lg:pb-[100px] pb-[40px] overflow-hidden">
         {/* Background Image */}
         <div className="absolute w-full h-full">
           <img
             src={imag1}
             alt="career"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover lg:object-center object-[35%_center]"
           />
         </div>
         {/* White Fade Over Entire Image */}
         <div
-          className="absolute inset-0 
+          className="lg:block hidden absolute inset-0 
                bg-gradient-to-t 
                from-white 
                via-white/10 to-transparent
+               z-10"
+        ></div>
+        <div
+          className="lg:hidden block absolute inset-0 
+               bg-gradient-to-t 
+               from-white 
+               via-white/35 to-white/10
                z-10"
         ></div>
        
@@ -39,7 +46,7 @@ const HeroAbout = () => {
           height="900"
           viewBox="0 0 1440 900"
           preserveAspectRatio="none"
-          className="object-center absolute top-0 left-0 h-full w-full z-9 opacity-100"
+          className="object-center absolute top-0 left-0 h-full w-full z-10 opacity-100"
         >
           <defs>
             <linearGradient

@@ -52,9 +52,10 @@ const QuoteConatct = () => {
                 className={`lg:pl-[58.5px] pl-0 ${
                   teamMembers.length % 2 !== 0 && index === teamMembers.length - 1
                     // ? "col-span-2 lg:col-span-0"
-                    ? ""
+                    ? "col-span-2 lg:col-span-0 mx-auto"
                     : ""
-                }`}>
+                }`}
+                >
                   <div className="w-full h-full flex flex-col items-center">
                     <div
                      className={`relative member-img w-full md:max-w-[200px] sm:max-w-[200px] lg:max-w-none aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
@@ -76,6 +77,7 @@ const QuoteConatct = () => {
               ))}
             </ul>
           </div>
+         
 
           <div className="max-w-[888px] w-full mx-auto mt-[60px] text-[#80acd3] font-bold leading-[1.388]">
             <h2 className="text-white font-light lg:text-[30px] text-[18px] leading-[1.333] mx-auto mt-[25px] max-w-full">

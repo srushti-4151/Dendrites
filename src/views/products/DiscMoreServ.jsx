@@ -10,7 +10,7 @@ const DiscMoreServ = () => {
       image: img1,
       heading: "SERVICE",
       icon: ServiceSvg,
-      title: "R&D",
+      title: "General Planning",
       desc: "Innovative research and development are very important at Dendrites.",
       buttonlink: "Learn More",
     },
@@ -26,7 +26,7 @@ const DiscMoreServ = () => {
       image: img3,
       heading: "SOLUTIONS",
       icon: AutomSvg,
-      title: "Automation",
+      title: "Process Solutions",
       desc: "Innovative research and development are very important at Dendrites.",
       buttonlink: "Learn More",
     },
@@ -44,7 +44,7 @@ const DiscMoreServ = () => {
             {servdata.map((data, index) => (
               <div
                 key={index}
-                className="border-transparent border rounded-[5px] block w-full 2xl:max-w-[446px] 2xl:h-[498px] lg:max-w-[446px] lg:h-[498px] md:max-w-[570px] md:h-[440px] max-w-[570px] h-[420px] overflow-hidden"
+                className="border-transparent border rounded-[5px] block w-full 2xl:max-w-[446px] 2xl:h-[535px] lg:max-w-[446px] lg:h-[535px] md:max-w-[570px] md:h-[490px] max-w-[570px] h-[470px] overflow-hidden"
               >
                 <div className="relative w-full h-full top-0 left-0">
                   <img
@@ -53,10 +53,17 @@ const DiscMoreServ = () => {
                     className="absolute w-full h-full object-cover"
                   />
                   <div
-                    className="absolute inset-0 
+                    className="lg:block hidden absolute inset-0 
                     bg-gradient-to-r
                     from-white/15 
                     via-white/5 to-transparent
+                    z-10"
+                  ></div>
+                  <div
+                    className="lg:hidden block absolute inset-0 
+                    bg-gradient-to-r
+                    from-white/55 
+                    via-white/55 to-white/55
                     z-10"
                   ></div>
                   {/* <div
@@ -131,7 +138,7 @@ const DiscMoreServ = () => {
                     <h4 className="z-100 text-[#002a4d] text-lg absolute top-[37px] left-[40px] uppercase">
                       {data.heading}
                     </h4>
-                    <div className="z-70 font-bold text-[30px] leading-[1.16666667] tracking-[0.025em] text-[#002a4d] mt-6">
+                    <div className="z-70 font-bold min-h-[70px] text-[30px] leading-[1.16666667] tracking-[0.025em] text-[#002a4d] mt-6">
                       {data.title}
                     </div>
                     <div className="font-light text-[13px] leading-[1.38461538] text-[#002a4d] mt-[9px]">

@@ -6,13 +6,13 @@ const AbtProcess = () => {
   return (
     <>
       <div className="bg-[#00223E] text-white">
-        <div className="max-w-[1410px] w-full mx-auto lg:px-[15px] lg:py-[100px]">
+        <div className="max-w-[1410px] w-full mx-auto lg:px-[15px] lg:py-[100px] py-[60px]">
           {/* Header */}
-          <div className="text-center py-5 px-1 md:px-2 md:py-5">
-            <h2 className="text-center text-white font-bold text-[34px] md:text-3xl lg:text-[40px] lg:py-7 lg:pb-5 uppercase">
+          <div className="text-center py-2 px-1 md:px-2 md:py-2">
+            <h2 className="text-center text-white font-bold text-[24px] md:text-3xl lg:text-[40px] lg:py-5 lg:pb-5 uppercase">
               Projects in record time
             </h2>
-            <div class="font-normal text-[20px] md:text-[25px] lg:text-[30px] text-center">
+            <div class="font-normal text-[18px] md:text-[22px] lg:text-[30px] text-center">
               <p>
                 Time to market: With ZETA's project management <br />
                 <strong>up to 50 % faster to market.</strong>

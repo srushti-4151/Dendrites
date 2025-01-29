@@ -35,10 +35,10 @@ const QuoteConatct = () => {
         <div className="bg-transparent w-[1410px] max-w-full mx-auto px-4 py-20 text-center">
           <blockquote
             // className={`relative block bg-transparent max-w-[960px] w-full mx-auto pt-16 font-bold text-[57px] leading-[1.15] text-white before:content-[''] before:block before:bg-url:${quoteImage} before:bg-contain before:bg-center before:w-[217px] before:h-[169px] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:z-10`}
-            className="quote-blockquote"
+            className="quote-blockquote lg:text-[57px] md:text-[57px] text-[34px]"
           >
             <div className="quote-text">
-              <p className="pquote text-shadow-glow inline-block font-bold text-[57px] leading-[1.15789474] text-white text">
+              <p className="pquote lg:text-[57px] md:font-[57px] text-[34px] text-shadow-glow inline-block font-bold leading-[1.15789474] text-white text">
                 We accelerate the process of bringing drugs to market in order
                 to save lives
               </p>
@@ -46,12 +46,18 @@ const QuoteConatct = () => {
           </blockquote>
 
           <div className="mt-10">
-            <ul className="w-[1021px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="lg:w-[1021px] w-full mx-auto grid grid-cols-2 lg:grid-cols-3 lg:gap-0 gap-3">
               {teamMembers.map((member, index) => (
-                <li key={index} className="pl-[58.5px]">
+                <li key={index}
+                className={`lg:pl-[58.5px] pl-0 ${
+                  teamMembers.length % 2 !== 0 && index === teamMembers.length - 1
+                    // ? "col-span-2 lg:col-span-0"
+                    ? ""
+                    : ""
+                }`}>
                   <div className="w-full h-full flex flex-col items-center">
                     <div
-                     className={`relative member-img w-full aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
+                     className={`relative member-img w-full md:max-w-[200px] sm:max-w-[200px] lg:max-w-none aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
                         index === teamMembers.length - 1 ? "no-line" : ""
                       }`}
                     >
@@ -71,11 +77,11 @@ const QuoteConatct = () => {
             </ul>
           </div>
 
-          <div className="max-w-[888px] w-full mx-auto mt-[60px] text-[#80acd3] font-bold text-[18px] leading-[1.388]">
-            <h2 className="text-white font-light text-[30px] leading-[1.333] mx-auto mt-[25px] max-w-full">
+          <div className="max-w-[888px] w-full mx-auto mt-[60px] text-[#80acd3] font-bold leading-[1.388]">
+            <h2 className="text-white font-light lg:text-[30px] text-[18px] leading-[1.333] mx-auto mt-[25px] max-w-full">
               Managing Board Dendrites Holding
             </h2>
-            <p>
+            <p className="lg:text-[18px] text-[13px]">
               Together with our customers, we work to implement projects as
               quickly as possible. Our goal is to accelerate the market launch
               of vital active ingredients so that patients can benefit from them

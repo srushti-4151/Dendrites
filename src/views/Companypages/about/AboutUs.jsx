@@ -9,6 +9,12 @@ import AboutAdvantages from './AboutAdvantages'
 import AbtGetIn from './AbtGetIn'
 import OurExperts from './OurExperts'
 import PersonContact from '../contact/PersonContact'
+import AbtTextonimg from './AbtTextonimg'
+import DiscMoreServ from '../../products/DiscMoreServ'
+import ProductsSignup from '../../products/ProductsSignup'
+import Footer from "../../../components/Footer";
+import PhaseStrategy from './PhaseStrategy'
+import AboutBlog from './AboutBlog'
 
 const AboutUs = () => {
   return (
@@ -21,8 +27,14 @@ const AboutUs = () => {
     <AbtProcess />
     <AboutAdvantages/>
     <AbtGetIn />
+    <PhaseStrategy />
     <OurExperts />
     <PersonContact/>
+    <AbtTextonimg />
+    <DiscMoreServ />
+    <ProductsSignup />
+    <AboutBlog />
+    <Footer />
     </>
   )
 }

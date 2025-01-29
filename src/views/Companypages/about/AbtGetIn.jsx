@@ -1,18 +1,17 @@
 import React from "react";
-import img from "../../../assets/thomas_engelmaier.webp";
-import strategy from "../../../assets/about_purchasing_strategy-b9d82b1d.webp";
 import "../../../assets/scss/AbtGetIn.scss";
+import img from "../../../assets/thomas_engelmaier.webp";
 import { Link } from "react-router-dom";
 
 const AbtGetIn = () => {
   return (
     <>
       <div className="bg-[rgb(2,46,85)]">
-        <div className="pt-[70px] pb-[70px] abt-get">
-          <div className="max-w-[1410px] w-full mx-auto px-[15px] box-border">
-            <div className="flex items-center max-w-[1090px] w-full mt-[34px] mx-auto">
-              <div className="h-full">
-                <div className="w-[340px] h-[340px] relative border border-[#fff] rounded-full flex justify-center items-center">
+        <div className="bg-[rgb(2,46,85)] lg:py-[70px] mdLpy-[70px] py-[43px] abt-get">
+          <div className="lg:max-w-[1410px] w-full mx-auto px-[15px] box-border">
+            <div className="flex lg:flex-row flex-col items-center lg:max-w-[1090px] w-full mt-[34px] mx-auto">
+              <div className="">
+                <div className="lg:w-[340px] lg:h-[340px] w-[250px] h-[250px] relative border border-[#fff] rounded-full flex justify-center items-center">
                   <img
                     src={img}
                     alt="img"
@@ -20,17 +19,17 @@ const AbtGetIn = () => {
                   />
                 </div>
               </div>
-              <div className="text-container">
-                <blockquote className="getin-blockquote block">
+              <div className="text-container lg:pl-[53px] pl-0 lg:mt-0 mt-5">
+                <blockquote className="getin-blockquote lg:text-[23px] text-[14px] block">
                   <div className="quote-text">
-                    <p className="abtquote inline-block font-bold leading-[1.15789474] text-white">
+                    <p className="abtquote inline-block lg:font-bold leading-[1.15789474] text-white">
                       Through consistent and, above all, actively practiced
                       project management, we are able to implement your projects
                       not only in high quality, but also on time and on budget.
                     </p>
                   </div>
                 </blockquote>
-                <div className="mt-7 font-light text-[18px] leading-[1.2] text-[#41729c]">
+                <div className="mt-7 font-light lg:text-[18px] text-[13px] leading-[1.2] text-[#41729c]">
                   <strong>
                     Contact: <span>Thomas Engelmaier</span>
                   </strong>
@@ -64,10 +63,10 @@ const AbtGetIn = () => {
           </div>
         </div>
 
-        <div className="px-0 w-full pt-[50px]">
+        {/* <div className="px-0 w-full pt-[50px]">
           <div className="max-w-[1410px] w-full mx-auto px-[15px]">
-            <div className="max-w-[1310px] w-full mx-auto px-[15px] flex items-center justify-center">
-              {/* text-container */}
+            <div className="max-w-[1310px] w-full mx-auto px-[15px] flex lg:flex-row flex-col items-center justify-center">
+       
               <div className="max-w-[508px] w-full">
                 <h3 className="font-bold text-[40px] leading-[1.15] tracking-[0.025em] text-[#80acd3] uppercase">
                   Purchasing <br /> Strategy
@@ -96,7 +95,7 @@ const AbtGetIn = () => {
                   </p>
                 </div>
               </div>
-              {/* image-container */}
+              
               <div className="pl-[25px]">
                 <div className="w-[460px] h-[460px] relative border border-[#fff] rounded-full flex justify-center items-center">
                   <img
@@ -108,7 +107,7 @@ const AbtGetIn = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

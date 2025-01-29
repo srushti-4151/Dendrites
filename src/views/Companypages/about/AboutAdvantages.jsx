@@ -74,48 +74,52 @@ const AboutAdvantages = () => {
             <strong className="font-bold">ADVANTAGES</strong> of the Dendrites Project Management
           </h2>
 
-          <ul className="w-full mt-[85px]">
+          <ul className="w-full mt-[85px] lg:pl-0 md:pl-0 pl-[30px]">
             {steps.map((step) => (
               <li
                 key={step.number}
-                className={`mb-8 relative text-left align-top inline-block w-[33.33%] ${
+                className={`mb-8 mt-12 lg:mt-0 md:mt-0 relative text-left align-top lginline-block md:inline-block block lg:w-[33.33%] md:w-[33.33%] w-full ${
                   step.number === 1
-                    ? "pr-[30px]"
+                    ? "lg:pr-[30px] md:pr-[30px] pr-0"
                     : step.number === 2
-                    ? "px-[15px]"
+                    ? "lg:px-[15px] md:px-[15px] px-0"
                     : step.number === 3
-                    ? "pl-[30px]"
+                    ? "lg:pl-[30px] md:pl-[30px] pl-0"
                     : step.number === 4
-                    ? "pr-[30px] mt-[40px]"
+                    ? "lg:pr-[30px] md:pr-[30px] pr-0 lg:mt-[40px] md:mt-[40px] mt-0"
                     : step.number === 5
-                    ? "px-[15px] mt-[40px]"
-                    : "px-[15px] mt-0"
+                    ? "lg:px-[15px] md:px-[15px] px-0 lg:mt-[40px] md:mt-[40px] mt-0"
+                    : "lg:px-[15px] md:px-[15px] mt-0"
                 }`}
               >
                 <span
-                  className={`absolute font-bitter top-0 transform -translate-x-1/2 -translate-y-1/2 font-bold text-[120px] leading-[1.29166667] text-[#fff] text-opacity-[0.15] z-1 ${
+                  className={`absolute font-bitter top-0 transform -translate-x-1/2 -translate-y-1/2 font-bold lg:text-[120px] md:text-[120px] text-[72px] leading-[1.29166667] text-[#fff] text-opacity-[0.15] z-1 ${
                     step.number === 1
                       ? "left-0"
                       : step.number === 2
-                      ? "left-[15px]"
+                      ? "lg:left-[15px] md:left-[15px] left-0"
                       : step.number === 3
-                      ? "left-[30px]"
+                      ? "lg:left-[30px] md:left-[30px] left-0"
                       : step.number === 4
                       ? "left-0"
                       : step.number === 5
-                      ? "left-[15px]"
+                      ? "lg:left-[15px] md:left-[15px] left-0"
                       : "left-0"
                   }`}
                 >
                   {step.number}
                 </span>
                 <h4
-                  className="font-bold text-[30px] leading-[1.2] text-[#00223e] mb-[18.5px] relative z-2"
-                  style={{ minHeight: "72px" }}
+                  className="font-bold lg:text-[30px] md:text-[30px] text-[18px] leading-[1.2] text-[#00223e] mb-[18.5px] relative z-2"
+                  style={{
+                    minHeight: "22px", // Default (small screens)
+                    "@media (min-width: 768px)": { minHeight: "71px" }, // Medium screens (md)
+                    "@media (min-width: 1024px)": { minHeight: "72px" }, // Large screens (lg)
+                  }}
                 >
                   {step.title}
                 </h4>
-                <div className="font-light text-[18px] leading-[1.38888889] text-[#00223e] relative z-20">
+                <div className="font-light lg:text-[18px] md:text-[18px] text-[13px] leading-[1.38888889] text-[#00223e] relative z-20">
                   {step.description}
                 </div>
               </li>

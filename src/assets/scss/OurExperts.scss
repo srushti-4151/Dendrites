@@ -41,13 +41,14 @@
 }
 .name-circle {
   position: absolute;
-  bottom: -80px;
-  right: -60px;
+  bottom: 83px;
+  right: 54px;
+  transform: translate(0, 50%);
   width: 255px;
   height: 255px;
   border: 2px solid #dfe9f8;
   border-radius: 50%;
-  background: rgba(223, 233, 248, 0.9);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;

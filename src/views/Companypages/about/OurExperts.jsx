@@ -7,18 +7,17 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const OurExperts = () => {
-  
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeVideoIndex, setActiveVideoIndex] = useState(null); // Track active video
   useEffect(() => {
-    const slickDots = document.querySelectorAll('.slick-dots');
-    const dotContainer = document.querySelector('.dot-container');
+    const slickDots = document.querySelectorAll(".slick-dots");
+    const dotContainer = document.querySelector(".dot-container");
 
     if (slickDots.length && dotContainer) {
       dotContainer.appendChild(slickDots[0]); // Move the slick dots inside your custom container
     }
   }, []);
-  
+
   // const videos = [
   //   "https://www.youtube-nocookie.com/embed/L5S45u3gGMo?enablejsapi=1&origin=https://www.zeta.com",
   //   "https://www.youtube-nocookie.com/embed/Hij8QMAQkJ8?enablejsapi=1&origin=https://www.zeta.com",
@@ -90,7 +89,9 @@ const OurExperts = () => {
     // ),
     // customPaging: (i) => <div className="custom-dot"></div>,
     appendDots: (dots) => (
-      <div className="dot-container flex justify-center items-center">{dots}</div>
+      <div className="dot-container flex justify-center items-center">
+        {dots}
+      </div>
     ),
     customPaging: (i) => (
       <div className="custom-dot"></div> // Custom dot styling
@@ -139,72 +140,77 @@ const OurExperts = () => {
             </Slider>
             
           </div> */}
-          <div className="relative max-w-[835px] aspect-[16/9] w-full mx-auto mt-[35px] mb-0">
-            <div className="w-full h-full">
-              <Slider
-                {...settings}
-                customPaging={(i) => (
-                  <div
-                    className={`custom-dot ${
-                      i === currentSlide ? "active-dot" : ""
-                    }`}
-                  ></div>
-                )}
-              >
-                {videos.map((video, index) => (
-                  <div
-                    key={index}
-                    className={`h-full w-full ${
-                      index === currentSlide ? "active" : ""
-                    }`}
-                  >
-                    <div className="video-wrapper">
-                      <div
-                        className={`thumbnail-container ${
-                          activeVideoIndex === index ? "hidden" : ""
-                        }`}
-                        onClick={() => handleThumbnailClick(index)}
-                      >
-                        <img
-                          src={video.thumbnail}
-                          alt={`Video ${index + 1}`}
-                          className="thumbnail"
-                        />
-                      </div>
-                      {activeVideoIndex === index && (
-                        <div className="video-container">
-                          <iframe
-                            className="iframe-video w-full h-full"
-                            src={video.videoUrl}
-                            title={`Video ${index + 1}`}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
+          <div className="relative max-w-[1114px] w-full mx-auto mt-[35px] mb-0">
+            <div className="relative w-full">
+              <div className="w-full h-full ">
+                <Slider
+                  {...settings}
+                  customPaging={(i) => (
+                    <div
+                      className={`custom-dot ${
+                        i === currentSlide ? "active-dot" : ""
+                      }`}
+                    ></div>
+                  )}
+                >
+                  {videos.map((video, index) => (
+                    <div
+                      key={index}
+                      className={`h-full w-full relative max-w-[835px] aspect-[16/9] mx-auto ${
+                        index === currentSlide ? "active" : ""
+                      }`}
+                    >
+                      <div className="video-wrapper">
+                        <div
+                          className={`thumbnail-container ${
+                            activeVideoIndex === index ? "hidden" : ""
+                          }`}
+                          onClick={() => handleThumbnailClick(index)}
+                        >
+                          <img
+                            src={video.thumbnail}
+                            alt={`Video ${index + 1}`}
+                            className="thumbnail"
+                          />
                         </div>
-                      )}
+                        {activeVideoIndex === index && (
+                          <div className="video-container">
+                            <iframe
+                              className="iframe-video w-full h-full"
+                              src={video.videoUrl}
+                              title={`Video ${index + 1}`}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </Slider>
-              <div className="navigation-container flex items-center justify-center gap-4 mt-[33px]">
-                <button
-                  className="text-[#6a929c] text-3xl lg:text-4xl border border-[#6a929c] rounded-full p-2"
-                  onClick={() => document.querySelector(".slick-prev").click()}
-                >
-                  <IoIosArrowBack />
-                </button>
-                {/* Custom Dots */}
-                <div className="dot-container flex justify-center items-center"></div>
-                <button
-                  className="text-[#6a929c] text-3xl lg:text-4xl border border-[#6a929c] rounded-full p-2"
-                  onClick={() => document.querySelector(".slick-next").click()}
-                >
-                  <IoIosArrowForward />
-                </button>
+                  ))}
+                </Slider>
+                <div className="navigation-container flex items-center justify-center gap-4 mt-[33px]">
+                  <button
+                    className="text-[#6a929c] text-3xl lg:text-4xl border border-[#6a929c] rounded-full p-2"
+                    onClick={() =>
+                      document.querySelector(".slick-prev").click()
+                    }
+                  >
+                    <IoIosArrowBack />
+                  </button>
+                  {/* Custom Dots */}
+                  <div className="dot-container flex justify-center items-center"></div>
+                  <button
+                    className="text-[#6a929c] text-3xl lg:text-4xl border border-[#6a929c] rounded-full p-2"
+                    onClick={() =>
+                      document.querySelector(".slick-next").click()
+                    }
+                  >
+                    <IoIosArrowForward />
+                  </button>
+                </div>
               </div>
-            </div>
-            {/* Names circle  */}
-            {/* <div className="z-20 absolute bottom-[83px] right-[54px] transform translate-y-1/2 opacity-0 invisible pointer-events-none block w-[255px] h-[255px] rounded-full border border-[#dfe9f8] transition-opacity duration-300 ease-in-out">
+              {/* Names circle  */}
+              {/* <div className="z-20 absolute bottom-[83px] right-[54px] transform translate-y-1/2 opacity-0 invisible pointer-events-none block w-[255px] h-[255px] rounded-full border border-[#dfe9f8] transition-opacity duration-300 ease-in-out">
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 block w-[90.19607843%] h-[90.19607843%] rounded-full bg-[#dfe9f8]">
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center px-2.5 box-border">
                   <h2 className="relative font-bold text-[18px] leading-[1.38888889] text-[#00223e] mb-[14.5px] pb-[6.4px]">
@@ -216,19 +222,20 @@ const OurExperts = () => {
                 </div>
               </div>
             </div> */}
+            </div>
             {/* Circle with Name and Designation */}
-            {/* {activeVideoIndex !== null && (
-              <div className="name-circle">
-                <div className="inner-circle">
-                  <h2 className="expert-name">
-                    {videos[activeVideoIndex].name}
-                  </h2>
-                  <div className="expert-designation">
-                    {videos[activeVideoIndex].designation}
+            <div>
+              {activeVideoIndex === null && (
+                <div className="name-circle">
+                  <div className="inner-circle">
+                    <h2 className="expert-name">{videos[currentSlide].name}</h2>
+                    <div className="expert-designation">
+                      {videos[currentSlide].designation}
+                    </div>
                   </div>
                 </div>
-              </div>
-            )} */}
+              )}
+            </div>
           </div>
         </div>
       </div>

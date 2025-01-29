@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import img1 from "../../../assets/images1/Thumbnail_Nicole Zangl.webp";
 import img2 from "../../../assets/images1/Thumbnail_Expert Herzog.webp";
+import img3 from "../../../assets/images1/Thumbnail_Expert Koch.webp";
+import img4 from "../../../assets/images1/Thumbnail_Expert Haibl.webp";
+import img5 from "../../../assets/images1/thumbnail_martin_mayer.webp";
+import img6 from "../../../assets/images1/Thumbnail_Expert_Goriupp.webp";
 import "../../../assets/scss/OurExperts.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
@@ -37,23 +41,37 @@ const OurExperts = () => {
     {
       thumbnail: img2,
       videoUrl:
-        "https://www.youtube-nocookie.com/embed/Hij8QMAQkJ8?enablejsapi=1&origin=https://www.zeta.com",
+        "https://www.youtube-nocookie.com/embed/Hij8QMAQkJ8?enablejsapi=1&origin=https://www.zeta.com&autoplay=1",
       name: "Josef Herzog",
       designation: "Associate Director Business Line Automation",
     },
     {
-      thumbnail: img1,
+      thumbnail: img3,
       videoUrl:
-        "https://www.youtube-nocookie.com/embed/L5S45u3gGMo?enablejsapi=1&origin=https://www.zeta.com&autoplay=1",
-      name: "Nicole Zangl",
-      designation: "Business Development Mixing Technology",
+        "https://www.youtube-nocookie.com/embed/tNTkkHjGsyE?enablejsapi=1&origin=https://www.zeta.com&autoplay=1",
+      name: "Johannes Koch",
+      designation: "Associate Director Business Line Engineering",
     },
     {
-      thumbnail: img2,
+      thumbnail: img4,
       videoUrl:
-        "https://www.youtube-nocookie.com/embed/Hij8QMAQkJ8?enablejsapi=1&origin=https://www.zeta.com",
-      name: "Josef Herzog",
-      designation: "Associate Director Business Line Automation",
+        "https://www.youtube-nocookie.com/embed/-sIw4G3uWSs?enablejsapi=1&origin=https://www.zeta.com&autoplay=1",
+      name: "Marie-Astrid Haibl",
+      designation: "Head of Process Engineering",
+    },
+    {
+      thumbnail: img5,
+      videoUrl:
+        "https://www.youtube-nocookie.com/embed/Ts8daPJICdA?enablejsapi=1&origin=https://www.zeta.com&autoplay=1",
+      name: "Martin Mayer",
+      designation: "Business Development Digital Services",
+    },
+    {
+      thumbnail: img6,
+      videoUrl:
+        "https://www.youtube-nocookie.com/embed/DOnle9cJ6OE?enablejsapi=1&origin=https://www.zeta.com&autoplay=1",
+      name: "Matthias Goriupp",
+      designation: "Associate Director Business Line Customized Systems",
     },
   ];
 
@@ -209,19 +227,6 @@ const OurExperts = () => {
                   </button>
                 </div>
               </div>
-              {/* Names circle  */}
-              {/* <div className="z-20 absolute bottom-[83px] right-[54px] transform translate-y-1/2 opacity-0 invisible pointer-events-none block w-[255px] h-[255px] rounded-full border border-[#dfe9f8] transition-opacity duration-300 ease-in-out">
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 block w-[90.19607843%] h-[90.19607843%] rounded-full bg-[#dfe9f8]">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center px-2.5 box-border">
-                  <h2 className="relative font-bold text-[18px] leading-[1.38888889] text-[#00223e] mb-[14.5px] pb-[6.4px]">
-                    Nicole Zangl
-                  </h2>
-                  <div className="font-light text-[16px] leading-[1.25] text-[#80acd3]">
-                    Business Development Mixing Technology
-                  </div>
-                </div>
-              </div>
-            </div> */}
             </div>
             {/* Circle with Name and Designation */}
             <div>

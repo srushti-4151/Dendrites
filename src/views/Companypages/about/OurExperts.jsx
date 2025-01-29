@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import img1 from "../../../assets/images1/Thumbnail_Nicole Zangl.webp";
 import img2 from "../../../assets/images1/Thumbnail_Expert Herzog.webp";
@@ -7,8 +7,18 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const OurExperts = () => {
+  
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeVideoIndex, setActiveVideoIndex] = useState(null); // Track active video
+  useEffect(() => {
+    const slickDots = document.querySelectorAll('.slick-dots');
+    const dotContainer = document.querySelector('.dot-container');
+
+    if (slickDots.length && dotContainer) {
+      dotContainer.appendChild(slickDots[0]); // Move the slick dots inside your custom container
+    }
+  }, []);
+  
   // const videos = [
   //   "https://www.youtube-nocookie.com/embed/L5S45u3gGMo?enablejsapi=1&origin=https://www.zeta.com",
   //   "https://www.youtube-nocookie.com/embed/Hij8QMAQkJ8?enablejsapi=1&origin=https://www.zeta.com",
@@ -73,15 +83,19 @@ const OurExperts = () => {
     focusOnSelect: true,
     beforeChange: (_, newIndex) => setCurrentSlide(newIndex),
     dots: true,
+    // appendDots: (dots) => (
+    //   <div className="custom-dots-container">
+    //     <ul className="custom-dots">{dots}</ul>
+    //   </div>
+    // ),
+    // customPaging: (i) => <div className="custom-dot"></div>,
     appendDots: (dots) => (
-      <div className="dot-container flex justify-center items-center">
-        <ul className="custom-dots">{dots}</ul>
-      </div>
+      <div className="dot-container flex justify-center items-center">{dots}</div>
     ),
     customPaging: (i) => (
-      <div className="custom-dot"></div>
+      <div className="custom-dot"></div> // Custom dot styling
     ),
-    dotsClass:"slick-dots custom-dots",
+    dotsClass: "slick-dots custom-dots",
     prevArrow: prevArrow,
     nextArrow: nextArrow,
     responsive: [
@@ -128,10 +142,14 @@ const OurExperts = () => {
           <div className="relative max-w-[835px] aspect-[16/9] w-full mx-auto mt-[35px] mb-0">
             <div className="w-full h-full">
               <Slider
-               {...settings}
-               customPaging={(i) => (
-                <div className={`custom-dot ${i === currentSlide ? "active-dot" : ""}`}></div>
-              )}
+                {...settings}
+                customPaging={(i) => (
+                  <div
+                    className={`custom-dot ${
+                      i === currentSlide ? "active-dot" : ""
+                    }`}
+                  ></div>
+                )}
               >
                 {videos.map((video, index) => (
                   <div
@@ -168,26 +186,22 @@ const OurExperts = () => {
                   </div>
                 ))}
               </Slider>
-              {/* <div
-                className={` ${"navigation-container flex items-center justify-center bg-transparent mt-[33px]"}`}
-              >
+              <div className="navigation-container flex items-center justify-center gap-4 mt-[33px]">
                 <button
                   className="text-[#6a929c] text-3xl lg:text-4xl border border-[#6a929c] rounded-full p-2"
                   onClick={() => document.querySelector(".slick-prev").click()}
                 >
                   <IoIosArrowBack />
                 </button>
-                <div className="dot-container flex justify-center items-center">
-                  <ul className="custom-dots"></ul>
-                </div>
-
+                {/* Custom Dots */}
+                <div className="dot-container flex justify-center items-center"></div>
                 <button
                   className="text-[#6a929c] text-3xl lg:text-4xl border border-[#6a929c] rounded-full p-2"
                   onClick={() => document.querySelector(".slick-next").click()}
                 >
                   <IoIosArrowForward />
                 </button>
-              </div> */}
+              </div>
             </div>
             {/* Names circle  */}
             {/* <div className="z-20 absolute bottom-[83px] right-[54px] transform translate-y-1/2 opacity-0 invisible pointer-events-none block w-[255px] h-[255px] rounded-full border border-[#dfe9f8] transition-opacity duration-300 ease-in-out">

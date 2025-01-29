@@ -25,7 +25,7 @@ const AbtProcess = () => {
             <img
               src={projimage}
               alt=""
-              className="h-full w-full object-cover"
+              className="object-cover lg:object-fill"
             />
           </div>
 

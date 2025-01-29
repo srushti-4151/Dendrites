@@ -72,7 +72,7 @@ const Breadcrumb = () => {
           Home
         </NavLink>
         {paths.map((path, index) => (
-          <span key={index} className="inline-block">
+          <span key={index}>
             <MdOutlineKeyboardArrowRight
               size={27}
               className="inline-block font-medium text-gray-500 mr-1"

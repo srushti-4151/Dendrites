@@ -12,7 +12,7 @@ const HeroAbout = () => {
   ];
   return (
     <>
-      <div className="relative w-full min-h-screen h-auto overflow-hidden">
+      <div className="relative w-full min-h-screen pb-[100px] h-auto overflow-hidden">
         {/* Background Image */}
         <div className="absolute w-full h-full">
           <img
@@ -96,7 +96,7 @@ const HeroAbout = () => {
           </div>
         </div>
 
-        <div className="relative lg:mx-auto 2xl:mx-auto py-[15x] lg:mt-[150px] 2xl:mt-[150px] mt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 lg:w-[1400px] 2xl:w-[1400px] w-full z-20 px-3">
+        <div className="relative lg:mx-auto 2xl:mx-auto py-[80x] lg:pt-[150px] 2xl:pt-[150px] pt-[50px] mb-[30px] lg:mb-0 2xl:mb-0 lg:w-[1400px] 2xl:w-[1400px] w-full z-20 px-3">
           <div className="lg:mb-[48px] 2xl:mb-[48px] mb-[20px]">
             <div className="relative inline-block">
               <h3 className="inline-block align-middle m-0 font-ubuntu font-light text-[#00223e] lg:text-[23px] 2xl:text-[24px] text-[14px] leading-[1.13043478]">

@@ -177,8 +177,13 @@ const OurExperts = () => {
                       className={`h-full w-full relative max-w-[835px] aspect-[16/9] mx-auto ${
                         index === currentSlide ? "active" : ""
                       }`}
+                      aria-hidden={index !== currentSlide ? "true" : "false"} // Hide non-active slides
+                      inert={index !== currentSlide ? "true" : undefined} // Prevent focus on hidden slides
                     >
-                      <div className="video-wrapper">
+                      <div 
+                      className="video-wrapper"
+                      tabIndex={index === currentSlide ? "0" : "-1"} 
+                      >
                         <div
                           className={`thumbnail-container ${
                             activeVideoIndex === index ? "hidden" : ""
@@ -231,7 +236,8 @@ const OurExperts = () => {
             {/* Circle with Name and Designation */}
             <div>
               {activeVideoIndex === null && (
-                <div className="name-circle">
+                <div 
+                className="name-circle lg:flex hidden">
                   <div className="inner-circle">
                     <h2 className="expert-name">{videos[currentSlide].name}</h2>
                     <div className="expert-designation">

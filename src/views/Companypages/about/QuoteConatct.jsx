@@ -52,7 +52,7 @@ const QuoteConatct = () => {
                 className={`lg:pl-[58.5px] pl-0 ${
                   teamMembers.length % 2 !== 0 && index === teamMembers.length - 1
                     // ? "col-span-2 lg:col-span-0"
-                    ? "col-span-2 lg:col-span-0 mx-auto"
+                    ? ""
                     : ""
                 }`}
                 >

@@ -38,7 +38,7 @@ const Breadcrumb = () => {
 
   return paths.length > 0 ? (
     <div
-      className="text-[14px] w-full h-auto bg-[#F0F0F0] fixed shadow-[0_0_30px_rgba(0,0,0,0.5)] z-50"
+      className="text-[14px] w-full h-auto bg-[#DDE0E2] fixed shadow-[0_0_30px_rgba(0,0,0,0.5)] z-50"
       // style={{
       //   top: window.innerWidth >= 1024 ? topValue : 70,
       // }}
@@ -67,7 +67,7 @@ const Breadcrumb = () => {
           </span>
         ))}
       </div> */}
-      <div className="relative mx-auto max-w-[1410px] text-[14px] w-full h-auto py-3 px-4 text-left bg-[#F0F0F0]">
+      <div className="relative mx-auto max-w-[1410px] text-[16px] w-full h-auto py-3 px-4 text-left bg-[#DDE0E2]">
         <NavLink to="/" className="font-medium text-gray-600">
           Home
         </NavLink>
@@ -75,14 +75,14 @@ const Breadcrumb = () => {
           <span key={index} className="inline-block">
             <MdOutlineKeyboardArrowRight
               size={27}
-              className="inline-block text-gray-500 mr-1"
+              className="inline-block font-medium text-gray-500 mr-1"
             />
             <NavLink
               to={`/${paths.slice(0, index + 1).join("/")}`}
               className={
                 index === paths.length - 1
                   ? "text-[#00223E] font-medium"
-                  : "text-gray-600"
+                  : "text-gray-600 font-medium"
               }
             >
               {path.replace("-", " ")}

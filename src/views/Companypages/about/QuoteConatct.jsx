@@ -52,13 +52,13 @@ const QuoteConatct = () => {
                 className={`lg:pl-[58.5px] pl-0 ${
                   teamMembers.length % 2 !== 0 && index === teamMembers.length - 1
                     // ? "col-span-2 lg:col-span-0"
-                    ? ""
+                    ? "col-span-2 lg:col-span-0"
                     : ""
                 }`}
                 >
                   <div className="w-full h-full flex flex-col items-center">
                     <div
-                     className={`relative member-img w-full md:max-w-[200px] sm:max-w-[200px] lg:max-w-none aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
+                     className={`relative member-img w-full md:max-w-[200px] max-w-[165px] lg:max-w-none aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
                         index === teamMembers.length - 1 ? "no-line" : ""
                       }`}
                     >

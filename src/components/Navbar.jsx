@@ -68,7 +68,6 @@ const Navbar = () => {
     {
       name: "Services",
       onClick: () => {
-        // console.log("handlingg");
         handleModalOpen("Services");
       },
     },
@@ -151,7 +150,7 @@ const Navbar = () => {
   const getLineColor = () => {
     if (location.pathname.includes("/services")) return "bg-[#93D050]";
     if (location.pathname.includes("/solutions")) return "bg-blue-500";
-    return ""; 
+    return "";
   };
 
   return (
@@ -520,9 +519,10 @@ const Navbar = () => {
       </div>
 
       {/* Persistent Line */}
-      <div 
-       style={{ top: `${topValue + 70}px` }}
-       className={`fixed left-0 h-[3px] ${getLineColor()} z-50 w-full`}></div>
+      <div
+        style={{ top: `${topValue + 70}px` }}
+        className={`fixed left-0 h-[3px] ${getLineColor()} z-50 w-full`}
+      ></div>
     </>
   );
 };

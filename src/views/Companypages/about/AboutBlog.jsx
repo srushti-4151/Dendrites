@@ -18,9 +18,9 @@ const AboutBlog = () => {
           </h2>
 
           {/* Grid Layout */}
-          <div className="lg:grid 2xl:grid hidden 2xl:grid-cols-4 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Column 1 - Two Rows */}
-            <div className="grid grid-rows-2 gap-0 max-h-[428px] h-full overflow-hidden">
+            <div className="grid grid-rows-2 gap-0 max-h-full h-[428px] overflow-hidden">
               <div className="relative row-span-2 w-full h-full">
                 <div className="absolute w-full h-full bg-[#143e5c] rounded-lg shadow-lg overflow-hidden">
                   <Link to="#">
@@ -41,7 +41,7 @@ const AboutBlog = () => {
                   </a>
                 </div>
               </div>
-              <div className="relative bg-[#80acd3] rounded-lg shadow-lg h-[150px] overflow-hidden mb-4 mt-5">
+              <div className="relative bg-[#80acd3] rounded-lg shadow-lg h-[150px] overflow-hidden lg:mb-4 md:mb-0 mt-5">
                 <div className="p-5">
                   <p className="text-[#00223E] text-sm">15.02.2024</p>
                   <h3 className="text-[#00223E] leading-5 text-lg font-medium mb-5">
@@ -54,8 +54,8 @@ const AboutBlog = () => {
               </div>
             </div>
 
-            {/* Column 2 - one Row */}
-            <div className="grid grid-rows-1 gap-6 max-h-[428px] h-full">
+            {/* Column 2 - One Row */}
+            <div className="grid grid-rows-1 gap-6 max-h-full h-[428px]">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-[#143e5c] rounded-lg shadow-lg overflow-hidden">
                   <Link to="#">
@@ -79,42 +79,8 @@ const AboutBlog = () => {
               </div>
             </div>
 
-            {/* Column 3 - Two Rows */}
-            {/* <div className="grid grid-rows-2 gap-0 max-h-[428px] h-full">
-              <div className="relative bg-[#80acd3] rounded-lg shadow-lg h-[180px] overflow-hidden">
-                <div className="p-4">
-                  <p className="text-[#00223E] text-sm mb-2">06.07.2023</p>
-                  <h3 className="text-[#00223E] text-lg font-medium mb-2">
-                    Interview: Georg Pöschl - Product Development
-                  </h3>
-                  <a href="#" className="text-[#00223E] text-sm underline">
-                    Read now
-                  </a>
-                </div>
-              </div>
-              <div className="relative w-full h-full">
-                <div className="absolute w-full h-full bg-[#143e5c] rounded-lg shadow-lg overflow-hidden">
-                  <Link to="#">
-                    <img
-                      src={img3}
-                      alt="Event"
-                      className="w-full h-full object-cover"
-                    />
-                  </Link>
-                </div>
-                <div className="relative p-4 bg-white bg-opacity-70 rounded-lg mt-[135.984px] min-h-[95.984px]">
-                  <p className="text-[#00223E] text-sm">16.05.2023</p>
-                  <h3 className="text-[#00223E] text-[15px] font-medium mb-4">
-                     White Paper: Advancements in the field of high-shear mixers
-                  </h3>
-                  <a href="#" className="text-[#00223E] text-sm underline">
-                    Read now
-                  </a>
-                </div>
-              </div>
-            </div> */}
-            {/* Column 3 - Two Rows */}
-            <div className="grid gap-0 max-h-[428px] h-full overflow-hidden">
+            {/* Column 3 - Two Rows (Hidden on Medium Screens) */}
+            <div className="hidden lg:grid gap-0 max-h-full h-[428px] overflow-hidden">
               <div className="relative bg-[#80acd3] rounded-lg shadow-lg h-[150px] overflow-hidden">
                 <div className="p-5">
                   <p className="text-[#00223E] text-sm">08.01.2024</p>
@@ -127,7 +93,6 @@ const AboutBlog = () => {
                 </div>
               </div>
               <div className="relative w-full h-[248px] overflow-hidden mt-5">
-                {/* Adjusted height */}
                 <div className="absolute w-full h-full bg-[#143e5c] rounded-lg shadow-lg overflow-hidden">
                   <Link to="#">
                     <img
@@ -149,8 +114,8 @@ const AboutBlog = () => {
               </div>
             </div>
 
-            {/* Column 4 - one Row */}
-            <div className="grid grid-rows-1 gap-6 max-h-[428px] h-full">
+            {/* Column 4 - One Row (Hidden on Medium Screens) */}
+            <div className="hidden lg:grid grid-rows-1 gap-6 max-h-full h-[428px]">
               <div className="relative w-full h-full">
                 <div className="absolute w-full h-full bg-[#143e5c] rounded-lg shadow-lg overflow-hidden">
                   <Link to="#">
@@ -164,7 +129,7 @@ const AboutBlog = () => {
                 <div className="absolute p-4 bg-white bg-opacity-70 rounded-lg bottom-0 w-full">
                   <p className="text-[#00223E] text-sm">03.05.2023</p>
                   <h3 className="text-[#00223E] text-[15px] font-semibold mb-4 leading-[20px]">
-                    Product: Cleanroom wall ducts a
+                    Product: Cleanroom wall ducts
                   </h3>
                   <a href="#" className="text-[#00223E] text-sm underline">
                     Read now
@@ -175,7 +140,7 @@ const AboutBlog = () => {
           </div>
 
           {/*mobile view */}
-          <div className="lg:hidden 2xl:hidden grid grid-cols-1 gap-4">
+          <div className="lg:hidden 2xl:hidden md:hidden grid grid-cols-1 gap-4">
             <div className="relative w-full h-full max-h-[240px]">
               <div className="w-full h-full bg-[#143e5c] rounded-lg shadow-lg overflow-hidden">
                 <Link to="#">

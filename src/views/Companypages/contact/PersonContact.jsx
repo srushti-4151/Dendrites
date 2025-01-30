@@ -201,8 +201,8 @@ const PersonContact = () => {
             </strong>
           </div>
 
-          <div className="max-w-[1210px] w-full mt-[50px] mx-auto">
-            <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 bg-transparent">
+          <div className="md:hidden block max-w-[1210px] w-full mt-[50px] mx-auto">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 bg-transparent">
               {person.map((data, index) => (
                 <div
                   key={index}
@@ -236,7 +236,7 @@ const PersonContact = () => {
                       <div className="text-[#80acd3] text-[13px]">
                         {data.function}
                       </div>
-                   </div>
+                    </div>
                     <Link
                       to="#"
                       className="flex items-center gap-2 text-[#80acd3] mt-2"
@@ -245,6 +245,53 @@ const PersonContact = () => {
                       <div className="lg:text-[16px] text-[13px]">
                         {data.email}
                       </div>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="md:block hidden max-w-[1210px] w-full mt-[50px] mx-auto">
+            <div class="w-full hidden md:grid md:grid-cols-1 gap-6 bg-transparent">
+              {person.map((data, index) => (
+                <div
+                  key={index}
+                  className="flex w-full bg-[#022e55] p-7 rounded-lg shadow-lg"
+                >
+                  <div className="flex justify-center w-auto">
+                    <div className="flex items-center justify-center w-[180px] h-[180px] rounded-full border border-white flex-shrink-0 overflow-hidden">
+                      <div className="flex items-center justify-center w-[157px] h-[157px] rounded-full border border-white flex-shrink-0 overflow-hidden">
+                        <img
+                          src={data.image}
+                          alt={data.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pl-10 pt-0">
+                    <h3 className="text-2xl font-bold text-white block">
+                      {data.name}
+                    </h3>
+                    <h3 className="text-2xl font-bold text-white block ml-0">
+                      {data.surname}
+                    </h3>
+                    <div className="mt-1 h-[70px] pb-5">
+                      <div className="text-[13px] text-white pb-1">
+                        {data.job}
+                      </div>
+                      <div className="text-[#80acd3] text-[13px]">
+                        {data.function}
+                      </div>
+                    </div>
+                    <Link
+                      to="#"
+                      className="flex items-start gap-2 text-[#80acd3] mt-2 h-[80px]"
+                    >
+                      <div>{mailicon}</div>
+                      <div className="text-[16px]">{data.email}</div>
                     </Link>
                   </div>
                 </div>

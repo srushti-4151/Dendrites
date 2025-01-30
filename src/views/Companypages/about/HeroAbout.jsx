@@ -12,7 +12,7 @@ const HeroAbout = () => {
   ];
   return (
     <>
-      <div className="relative w-full min-h-screen lg:pb-[100px] pb-[40px] overflow-hidden">
+      <div className="relative w-full lg:min-h-screen lg:pb-[100px] pb-[40px] overflow-hidden">
         {/* Background Image */}
         <div className="absolute w-full h-full">
           <img

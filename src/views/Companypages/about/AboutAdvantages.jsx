@@ -78,13 +78,13 @@ const AboutAdvantages = () => {
             {steps.map((step) => (
               <li
                 key={step.number}
-                className={`mb-8 mt-12 lg:mt-0 md:mt-0 relative text-left align-top lginline-block md:inline-block block lg:w-[33.33%] md:w-[33.33%] w-full ${
+                className={`mb-8 mt-12 lg:mt-0 md:mt-7 relative text-left align-top lginline-block md:inline-block block lg:w-[33.33%] md:w-[50%] w-full ${
                   step.number === 1
-                    ? "lg:pr-[30px] md:pr-[30px] pr-0"
+                    ? "lg:pr-[30px] md:px-[30px] pr-0"
                     : step.number === 2
                     ? "lg:px-[15px] md:px-[15px] px-0"
                     : step.number === 3
-                    ? "lg:pl-[30px] md:pl-[30px] pl-0"
+                    ? "lg:pl-[30px] md:px-[30px] pl-0"
                     : step.number === 4
                     ? "lg:pr-[30px] md:pr-[30px] pr-0 lg:mt-[40px] md:mt-[40px] mt-0"
                     : step.number === 5
@@ -95,7 +95,7 @@ const AboutAdvantages = () => {
                 <span
                   className={`absolute font-bitter top-0 transform -translate-x-1/2 -translate-y-1/2 font-bold lg:text-[120px] md:text-[120px] text-[72px] leading-[1.29166667] text-[#fff] text-opacity-[0.15] z-1 ${
                     step.number === 1
-                      ? "left-0"
+                      ? "lg:left-0 md:left-[30px] left-0"
                       : step.number === 2
                       ? "lg:left-[15px] md:left-[15px] left-0"
                       : step.number === 3
@@ -110,7 +110,7 @@ const AboutAdvantages = () => {
                   {step.number}
                 </span>
                 <h4
-                  className="font-bold lg:text-[30px] md:text-[30px] text-[18px] leading-[1.2] text-[#00223e] mb-[18.5px] relative z-2"
+                  className="font-bold lg:text-[30px] md:text-[18px] text-[18px] leading-[1.2] text-[#00223e] mb-[18.5px] relative z-2"
                   style={{
                     minHeight: "22px", // Default (small screens)
                     "@media (min-width: 768px)": { minHeight: "71px" }, // Medium screens (md)
@@ -119,7 +119,7 @@ const AboutAdvantages = () => {
                 >
                   {step.title}
                 </h4>
-                <div className="font-light lg:text-[18px] md:text-[18px] text-[13px] leading-[1.38888889] text-[#00223e] relative z-20">
+                <div className="font-light lg:text-[18px] md:text-[13px] text-[13px] leading-[1.38888889] text-[#00223e] relative z-20">
                   {step.description}
                 </div>
               </li>

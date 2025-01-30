@@ -23,24 +23,6 @@
   }
 }
 
-// @keyframes slideDown {
-//   from {
-//     top: 100%
-//   }
-//   to {
-//     top: 0;
-//   }
-// }
-
-// @keyframes slideUp {
-//   from {
-//     top: 0;
-//   }
-//   to {
-//     top: 100%;
-//   }
-// }
-
 .nav-overlay {
   z-index: -1;
   position: fixed;
@@ -56,6 +38,7 @@
 .sub-outer1 {
   opacity: 0;
   animation: nav1-outer-in 1s forwards 0.5s;
+  width: 100wv;
   // background: rgba(1, 33, 63, 0.8);
   // background: transparent;
 

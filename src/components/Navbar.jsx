@@ -152,6 +152,7 @@ const Navbar = () => {
     if (location.pathname.includes("/solutions")) return "bg-blue-500";
     return "";
   };
+ 
 
   return (
     <>
@@ -324,7 +325,7 @@ const Navbar = () => {
           <>
             <div className="lg:hidden block md:block nav-overlay"></div>
             <nav
-              className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1"
+              className="fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1 overflow-hidden"
               // className={`fixed top-0 left-0 w-full h-screen bg-[#00223e] z-50 transition-transform duration-300 flex flex-col sub-outer1
               // ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"}`}
             >
@@ -519,10 +520,10 @@ const Navbar = () => {
       </div>
 
       {/* Persistent Line */}
-      <div
+      {/* <div
         style={{ top: `${topValue + 70}px` }}
         className={`fixed left-0 h-[3px] ${getLineColor()} z-50 w-full`}
-      ></div>
+      ></div> */}
     </>
   );
 };

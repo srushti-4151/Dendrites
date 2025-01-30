@@ -614,7 +614,7 @@ const ModalOf = ({ modalData, title }) => {
                   {title}
                 </div>
                 <ul className="">
-                  {modalData.map((service, index) => (
+                  {/* {modalData.map((service, index) => (
                     <div key={index} className="border-b border-gray-500 py-4">
                       <li className="flex items-center">
                         <div className="text-[23px] font-bold pl-3">
@@ -622,6 +622,23 @@ const ModalOf = ({ modalData, title }) => {
                         </div>
                       </li>
                     </div>
+                  ))} */}
+                  {modalData.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path} // Ensure each service has a `path` property
+                      onClick={() => {
+                        handleCloseModal(); // Call existing modal close function if needed
+                        dispatch(toggleDrawer());
+                      }}
+                      className="border-b border-gray-500 py-4 block"
+                    >
+                      <li className="flex items-center">
+                        <div className="text-[23px] font-bold pl-3">
+                          {service.title}
+                        </div>
+                      </li>
+                    </Link>
                   ))}
                 </ul>
               </div>

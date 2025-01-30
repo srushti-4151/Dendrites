@@ -40,9 +40,24 @@ const Navbar = () => {
     }
   };
 
+  // const handleScroll = () => {
+  //   const scrollPosition = window.scrollY;
+  //   const isLargeScreen = window.innerWidth >= 1024; // Check if screen is large
+
+  //   if (isLargeScreen) {
+  //     if (scrollPosition <= 40) {
+  //       setTopValue(40 - scrollPosition);
+  //     } else {
+  //       setTopValue(0);
+  //     }
+  //   } else {
+  //     setTopValue(0); // No extra top offset on small screens
+  //   }
+  // };
+
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const isLargeScreen = window.innerWidth >= 1024; // Check if screen is large
+    const isLargeScreen = window.innerWidth >= 1025; // Check if screen is large
 
     if (isLargeScreen) {
       if (scrollPosition <= 40) {
@@ -54,7 +69,7 @@ const Navbar = () => {
       setTopValue(0); // No extra top offset on small screens
     }
   };
-
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Call initially to set correct position on load
@@ -150,6 +165,7 @@ const Navbar = () => {
   const getLineColor = () => {
     if (location.pathname.includes("/services")) return "bg-[#93D050]";
     if (location.pathname.includes("/solutions")) return "bg-blue-500";
+    if (location.pathname.includes("/products")) return "bg-[#DFEAF8]";
     return "";
   };
  
@@ -520,10 +536,10 @@ const Navbar = () => {
       </div>
 
       {/* Persistent Line */}
-      {/* <div
+      <div
         style={{ top: `${topValue + 70}px` }}
         className={`fixed left-0 h-[3px] ${getLineColor()} z-50 w-full`}
-      ></div> */}
+      ></div>
     </>
   );
 };

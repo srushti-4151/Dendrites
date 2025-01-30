@@ -20,7 +20,7 @@ const Products = () => {
   return (
     <>
     <Navbar />
-    {!isDrawerOpen && ( <Breadcrumb/> )} 
+    <Breadcrumb/> 
     <HeroProduct/>
     <ProductOverview/>
     <CeoPartProduct/>

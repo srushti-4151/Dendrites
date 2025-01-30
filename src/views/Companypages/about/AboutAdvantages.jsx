@@ -11,26 +11,26 @@ const AboutAdvantages = () => {
     },
     {
       number: 2,
-      title: "Time to Market",
+      title: "Fast Development",
       description:
-        "Our innovative procurement and project management strategies shorten your project duration.",
+        "Clarity on customer requirement and use of latest technology helping us for fast new developments or re-developments.",
     },
     {
       number: 3,
-      title: "Management of Complexities",
+      title: "Product Selection",
       description:
-        "Whether greenfield or brownfield - no challenge is too big for us! We use innovative project management methods to handle your project transparently and professionally.",
+        "Latest product know-how and market research make product selection easy and cost effective",
     },
     {
       number: 4,
-      title: "Transparency in All Phases",
+      title: "Service & Support",
       description:
-        "Maintain an overview with full cost transparency, continuous performance progress and structured scheduling.",
+        "Dedicated and professional service team helps customer for quick on-site/off-site response.",
     },
     {
       number: 5,
-      title: "Comprehensive Partner Network",
-      description: "Bundled know-how and expertise: We take advantage of an established and reliable network of hand-selected partners.",
+      title: "Quality",
+      description: "Quality is not negotiable. it is the standard we set, the promise we keep, and the foundation upon which trust is built.",
     },
   ];
 

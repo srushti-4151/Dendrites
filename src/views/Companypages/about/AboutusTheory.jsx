@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../assets/scss/AboutusThoery.scss";
-import img from "../../../assets/Thumbnail_who.webp"
+import img from "../../../assets/Thumbnail_who.webp";
 
 const AboutusTheory = () => {
   return (
@@ -12,27 +12,22 @@ const AboutusTheory = () => {
           </h2>
           <div className="font-light lg:text-[30px] md:text-[24px] text-[18px] leading-[1.333] text-center">
             <p className="m-0 mb-6 leading-[1.4]">
-              The Dendrites Group is an{" "}
+              Dendrites Technology is an{" "}
               <span className="text-[#80acd3] font-bold">
-                end-to-end solution provider
+                end-to-end solution provider{" "}
               </span>
-              operating globally and specializing in the design, construction,
-              automation, digitalization, and qualification of{" "}
+              provider and specializing in the design, construction, automation,
+              digitalization and qualification of{" "}
               <span className="text-[#80acd3] font-bold">
-                customer-specific biopharmaceutical systems
+                customer-specific systems
               </span>{" "}
-              for aseptic process solutions.
             </p>
           </div>
         </div>
         <div className="max-w-[888px] w-full mx-auto lg:mt-[60px] text-center text-white lg:font-bold lg:text-[18px] md:text-[15px] text-[13px] leading-[1.388]">
           <p className="m-0 mb-[1.5em] leading-[1.4em]">
-            Dendrites offers comprehensive solutions and services along the
-            whole pathway of active substance development and manufacturing. In
-            addition, Dendrites serves as an <strong>EPCM contractor</strong>{" "}
-            for major pharmaceutical projects, drives{" "}
-            <strong>digital innovations</strong>, and develops comprehensive{" "}
-            <strong>decarbonization strategies.</strong>
+          20 years of experience and domain expertise in Industrial Automation, Information Technology,
+          Power Electronics, Energy Generation, Transmission & Distribution, Renewable Energy, Industry 4.0, IOT & Cloud Technologies
           </p>
         </div>
         <div className="relative rounded-[5px] overflow-hidden max-w-[835px] mx-auto aspect-[16/9]">

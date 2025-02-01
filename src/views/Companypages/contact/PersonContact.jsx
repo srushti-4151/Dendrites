@@ -206,10 +206,10 @@ const PersonContact = () => {
               {person.map((data, index) => (
                 <div
                   key={index}
-                  className="lg:flex inline-block w-full bg-[#022e55] p-7 rounded-lg shadow-lg"
+                  className="lg:flex md:flex inline-block w-full bg-[#022e55] p-7 rounded-lg shadow-lg"
                 >
                   {/* Image Section */}
-                  <div className="flex justify-center sm:w-full lg:w-auto">
+                  <div className="flex justify-center lg:w-auto 2xl:w-auto md:w-auto w-full">
                     <div className="flex items-center justify-center w-[180px] h-[180px] rounded-full border border-white flex-shrink-0 overflow-hidden">
                       <div className="flex items-center justify-center w-[157px] h-[157px] rounded-full border border-white flex-shrink-0 overflow-hidden">
                         <img
@@ -222,11 +222,11 @@ const PersonContact = () => {
                   </div>
 
                   {/* Details Section */}
-                  <div className="lg:pl-10 pl-0 lg:pt-0 pt-5">
-                    <h3 className="lg:text-3xl text-[18px] font-bold text-white lg:block inline-block">
+                  <div className="lg:pl-10 md:pl-10 pl-0 lg:pt-0 pt-5">
+                    <h3 className="lg:text-3xl md:text-3xl text-[18px] font-bold text-white lg:block inline-block">
                       {data.name}
                     </h3>
-                    <h3 className="lg:text-3xl text-[18px] font-bold text-white lg:block inline-block lg:ml-0 ml-2">
+                    <h3 className="lg:text-3xl md:text-3xl text-[18px] font-bold text-white lg:block md:block inline-block lg:ml-0 md:ml-0 ml-2">
                       {data.surname}
                     </h3>
                     <div className="mt-1 lg:h-[70px] pb-5">

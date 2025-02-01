@@ -159,7 +159,7 @@ const OurExperts = () => {
           </div> */}
           <div className="relative max-w-[1114px] w-full mx-auto mt-[35px] mb-0">
             <div className="relative w-full">
-              <div className="w-full h-full ">
+              <div className="w-full h-full our-experts-slider">
                 <Slider
                   {...settings}
                   customPaging={(i) => (

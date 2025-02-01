@@ -6,6 +6,7 @@ import image2 from "../../assets/Biotech_Opt1_final-ff592b8e.webp";
 import image3 from "../../assets/processengineering_banner.webp";
 import image4 from "../../assets/automation_opt2_final.webp";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import "../../assets/scss/HomeSliderSection.scss"
 
 const HomeSliderSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -106,7 +107,7 @@ const HomeSliderSection = () => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="homeslider-container">
       <Slider {...sliderSettings}>
         {homeSliderData.map((slide, index) => (
           <div key={index} className="relative w-full h-[340px] lg:h-[770px]">

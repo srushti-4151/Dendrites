@@ -47,6 +47,52 @@ const QuoteConatct = () => {
 
           <div className="mt-10">
             <ul className="lg:w-[1021px] w-full mx-auto grid grid-cols-2 lg:grid-cols-3 lg:gap-0 gap-3">
+              {/* {teamMembers.map((member, index) =>
+                teamMembers.length % 2 !== 0 &&
+                index === teamMembers.length - 1 ? (
+                  <div key={index} className="col-span-2 flex justify-center">
+                    <li className="lg:pl-[58.5px] pl-0">
+                      <div className="w-full h-full flex flex-col items-center">
+                        <div
+                          className={`relative member-img w-full md:max-w-[200px] sm:max-w-[200px] lg:max-w-none aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
+                            index === teamMembers.length - 1 ? "no-line" : ""
+                          }`}
+                        >
+                          <img
+                            src={member.imgSrc}
+                            alt={member.imgAlt}
+                            title={member.imgTitle}
+                            className="w-[90%] h-[90%] object-cover rounded-full object-center"
+                          />
+                        </div>
+                        <p className="font-medium text-[23px] text-[#80acd3] mt-4">
+                          {member.name}
+                        </p>
+                      </div>
+                    </li>
+                  </div>
+                ) : (
+                  <li key={index} className="lg:pl-[58.5px] pl-0">
+                    <div className="w-full h-full flex flex-col items-center">
+                      <div
+                        className={`relative member-img w-full md:max-w-[200px] sm:max-w-[200px] lg:max-w-none aspect-square border border-[#41729c] rounded-full flex justify-center items-center ${
+                          index === teamMembers.length - 1 ? "no-line" : ""
+                        }`}
+                      >
+                        <img
+                          src={member.imgSrc}
+                          alt={member.imgAlt}
+                          title={member.imgTitle}
+                          className="w-[90%] h-[90%] object-cover rounded-full object-center"
+                        />
+                      </div>
+                      <p className="font-medium text-[23px] text-[#80acd3] mt-4">
+                        {member.name}
+                      </p>
+                    </div>
+                  </li>
+                )
+              )} */}
               {teamMembers.map((member, index) => (
                 <li key={index}
                 className={`lg:pl-[58.5px] pl-0 ${
@@ -77,7 +123,6 @@ const QuoteConatct = () => {
               ))}
             </ul>
           </div>
-         
 
           <div className="max-w-[888px] w-full mx-auto mt-[60px] text-[#80acd3] font-bold leading-[1.388]">
             <h2 className="text-white font-light lg:text-[30px] text-[18px] leading-[1.333] mx-auto mt-[25px] max-w-full">

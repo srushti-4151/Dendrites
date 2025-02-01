@@ -201,7 +201,7 @@ const PersonContact = () => {
             </strong>
           </div>
 
-          <div className="md:hidden block 2xl:block max-w-[1210px] w-full mt-[50px] mx-auto">
+          <div className="max-w-[1210px] w-full mt-[50px] mx-auto">
             <div class="w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-2 gap-6 bg-transparent">
               {person.map((data, index) => (
                 <div
@@ -252,7 +252,7 @@ const PersonContact = () => {
             </div>
           </div>
 
-          <div className="md:block hidden 2xl:hidden max-w-[1210px] w-full mt-[50px] mx-auto">
+          {/* <div className="md:block hidden 2xl:hidden max-w-[1210px] w-full mt-[50px] mx-auto">
             <div class="w-full hidden md:grid md:grid-cols-1 gap-6 bg-transparent">
               {person.map((data, index) => (
                 <div
@@ -297,7 +297,7 @@ const PersonContact = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
